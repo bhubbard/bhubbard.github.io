@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Hubbard — Open Source Software & AI Specifications</title>
+  <meta name="description" content="Official open source software portal and Chrome Built-in AI & Astro engineering tools by Brandon Hubbard.">
+  <meta property="og:title" content="Brandon Hubbard — Open Source Engineering">
+  <meta property="og:description" content="High-performance Astro integrations, Chrome Built-in AI dev tools, and web infrastructure specifications.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Brandon Hubbard Swiss Grid Design System */
+    :root {
+      --void: #0a0a0a;
+      --charcoal: #121212;
+      --concrete: #262626;
+      --titanium: #ffffff;
+      --steel: #888888;
+      --cobalt: #3B82F6;
+      --cyan: #06B6D4;
+      --emerald: #10B981;
+      --crimson: #F43F5E;
+      --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important; /* Swiss Sharp 0px Rule */
+    }
+
+    body {
+      background-color: var(--void);
+      color: var(--titanium);
+      font-family: var(--font-ui);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .grid-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-left: 1px solid var(--concrete);
+      border-right: 1px solid var(--concrete);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Brand Navigation */
+    header {
+      border-bottom: 1px solid var(--concrete);
+      background: var(--void);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+    }
+
+    .brand-identity {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--titanium);
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      background: var(--titanium);
+      color: var(--void);
+      font-family: var(--font-ui);
+      font-weight: 800;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: -1px;
+    }
+
+    .brand-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .brand-title {
+      font-size: 0.72rem;
+      color: var(--steel);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--steel);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      transition: color 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--titanium);
+    }
+
+    nav a span.idx {
+      color: var(--cobalt);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 4.5rem 2rem;
+      border-bottom: 1px solid var(--concrete);
+      background: linear-gradient(180deg, var(--charcoal) 0%, var(--void) 100%);
+    }
+
+    .tag-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--concrete);
+      padding: 0.35rem 0.75rem;
+      background: var(--void);
+    }
+
+    .tag-strip .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--emerald);
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p.lead {
+      font-size: 1.25rem;
+      color: var(--steel);
+      max-width: 850px;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--concrete);
+    }
+
+    .metric-card {
+      font-family: var(--font-mono);
+    }
+
+    .metric-num {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--titanium);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--steel);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Section Headers */
+    .section-header {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--concrete);
+      background: var(--charcoal);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .section-title {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--titanium);
+    }
+
+    /* Project Directory Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      border-bottom: 1px solid var(--concrete);
+    }
+
+    .project-card {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid var(--concrete);
+      border-bottom: 1px solid var(--concrete);
+      background: var(--void);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background 0.15s ease;
+    }
+
+    .project-card:hover {
+      background: var(--charcoal);
+    }
+
+    .card-top {
+      margin-bottom: 1.5rem;
+    }
+
+    .card-category {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .project-card p {
+      color: var(--steel);
+      font-size: 0.92rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-cli {
+      background: var(--void);
+      border: 1px solid var(--concrete);
+      padding: 0.65rem 0.85rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--steel);
+      margin-bottom: 1.5rem;
+      user-select: all;
+    }
+
+    .card-cli code {
+      color: var(--titanium);
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid var(--concrete);
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--titanium);
+      color: var(--void);
+      border-color: var(--titanium);
+    }
+
+    .btn-primary:hover {
+      background: var(--cobalt);
+      border-color: var(--cobalt);
+      color: var(--titanium);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--titanium);
+    }
+
+    .btn-secondary:hover {
+      background: var(--concrete);
+    }
+
+    /* Engineering Principles */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      border-bottom: 1px solid var(--concrete);
+    }
+
+    .principle-card {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid var(--concrete);
+      border-bottom: 1px solid var(--concrete);
+      background: var(--void);
+    }
+
+    .principle-idx {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--cyan);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .principle-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .principle-card p {
+      color: var(--steel);
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 2.5rem 2rem;
+      border-top: 1px solid var(--concrete);
+      background: var(--void);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--steel);
+    }
+
+    footer a {
+      color: var(--titanium);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    footer a:hover {
+      color: var(--cobalt);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .project-card, .principle-card {
+        border-right: none;
+      }
+      nav ul {
+        display: none;
+      }
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <!-- Brand Header -->
+    <header>
+      <div class="nav-inner">
+        <a href="https://brandonhubbard.com/" class="brand-identity">
+          <div class="brand-mark">BH</div>
+          <div class="brand-meta">
+            <span class="brand-name">BRANDON HUBBARD</span>
+            <span class="brand-title">Open Source Engineering</span>
+          </div>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="https://brandonhubbard.com/"><span class="idx">01.</span> Home</a></li>
+            <li><a href="https://brandonhubbard.com/branding"><span class="idx">02.</span> Branding</a></li>
+            <li><a href="https://brandonhubbard.com/blog"><span class="idx">03.</span> Notes</a></li>
+            <li><a href="https://webtools.brandonhubbard.com/"><span class="idx">04.</span> Tools</a></li>
+            <li><a href="https://github.com/bhubbard" target="_blank" rel="noopener"><span class="idx">05.</span> GitHub ↗</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Hero -->
+    <main>
+      <section class="hero">
+        <div class="tag-strip">
+          <div class="dot"></div>
+          <span>ENGINEERING SPECIFICATION // CHROME BUILT-IN AI & ASTRO SUITE</span>
+        </div>
+        <h1>High-Performance Software & Local AI Tooling.</h1>
+        <p class="lead">A curated suite of zero-cost, zero-latency Astro integrations and developer productivity tools powered by on-device Gemini Nano and modern web APIs.</p>
+        
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <span class="metric-num">13</span>
+            <span class="metric-label">Astro AI Packages</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">236</span>
+            <span class="metric-label">Automated Tests Passing</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">0ms</span>
+            <span class="metric-label">Cloud API Network Latency</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">$0.00</span>
+            <span class="metric-label">On-Device Compute Cost</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Project Directory -->
+      <div class="section-header" id="projects">
+        <span class="section-title">01. The Astro + Chrome Built-in AI Suite</span>
+        <span class="section-title" style="color: var(--emerald);">13 PACKAGES VERIFIED</span>
+      </div>
+
+      <div class="project-grid">
+        <!-- Card 1 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Client Directive // Hydration ]</span>
+            <h3>astro-client-directive-ai</h3>
+            <p>A custom <code>client:ai-ready</code> directive that delays hydrating components until Chrome's on-device Gemini Nano model is fully resident in memory.</p>
+            <div class="card-cli"><code>bun add astro-client-directive-ai</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-client-directive-ai/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-client-directive-ai" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Rehype Plugin // Content ]</span>
+            <h3>astro-rehype-nano-code</h3>
+            <p>Zero-JS code block explainer. Injects build-time data attributes and streams step-by-step code annotations into an accessible drawer on-demand.</p>
+            <div class="card-cli"><code>bun add astro-rehype-nano-code</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-rehype-nano-code/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-rehype-nano-code" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--emerald);">[ Prefetch Hook // UX ]</span>
+            <h3>astro-prefetch-ai-brief</h3>
+            <p>Link hover intelligence. Automatically background-fetches target route HTML and produces instant 15-word preview tooltips via Chrome Summarizer.</p>
+            <div class="card-cli"><code>bun add astro-prefetch-ai-brief</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-prefetch-ai-brief/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-prefetch-ai-brief" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--crimson);">[ Dev Toolbar // Accessibility ]</span>
+            <h3>astro-dev-audit-nano</h3>
+            <p>Real-time WCAG 2.1 AA/AAA accessibility & SEO auditor. Scans heading hierarchy, contrast ratios, and drafts context-aware image alt-text.</p>
+            <div class="card-cli"><code>bun add astro-dev-audit-nano</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-dev-audit-nano/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-audit-nano" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Dev Toolbar // Copywriting ]</span>
+            <h3>astro-dev-copy-optimizer</h3>
+            <p>Point-and-click copy tuner in development. Inspects headings, CTAs, and paragraphs to audition tone adjustments with 1-click clipboard copy.</p>
+            <div class="card-cli"><code>bun add astro-dev-copy-optimizer</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-dev-copy-optimizer/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-copy-optimizer" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Middleware // Social SEO ]</span>
+            <h3>astro-og-smart-crop</h3>
+            <p>Simulates OpenGraph and Twitter card previews in dev mode, preventing awkward ellipsis cutoffs with character-budgeted headline alternatives.</p>
+            <div class="card-cli"><code>bun add astro-og-smart-crop</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-og-smart-crop/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-og-smart-crop" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--emerald);">[ Dev Toolbar // Semantics ]</span>
+            <h3>astro-schema-ld-verifier</h3>
+            <p>Dev-time JSON-LD structured data auditor. Checks rendered microdata against actual DOM content to flag ghost claims and mismatched authors.</p>
+            <div class="card-cli"><code>bun add astro-schema-ld-verifier</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-schema-ld-verifier/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-schema-ld-verifier" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Dev Toolbar // i18n ]</span>
+            <h3>astro-dev-i18n-coverage</h3>
+            <p>Finds missing localization keys directly in the rendered DOM and drafts contextual translations ready to export to your locale dictionary.</p>
+            <div class="card-cli"><code>bun add astro-dev-i18n-coverage</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-dev-i18n-coverage/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-i18n-coverage" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--crimson);">[ Dev Toolbar // Editorial ]</span>
+            <h3>astro-dev-content-linter</h3>
+            <p>Editorial voice and tone auditor. Evaluates reading grade levels, flags passive voice and corporate jargon, and suggests inline rewrites.</p>
+            <div class="card-cli"><code>bun add astro-dev-content-linter</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-dev-content-linter/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-content-linter" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--emerald);">[ Dev Toolbar // Microdata ]</span>
+            <h3>astro-dev-schema-scaffolder</h3>
+            <p>Scaffolds valid Schema.org microdata (TechArticle, FAQPage, Event, Product) by extracting page headings and structure via Gemini Nano.</p>
+            <div class="card-cli"><code>bun add astro-dev-schema-scaffolder</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-dev-schema-scaffolder/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-schema-scaffolder" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Dev Toolbar // Mock Data ]</span>
+            <h3>astro-dev-mock-generator</h3>
+            <p>Generates synthetic, realistic mock data matching your Astro Content Collections Zod schema without cluttering local markdown files.</p>
+            <div class="card-cli"><code>bun add astro-dev-mock-generator</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-dev-mock-generator/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-mock-generator" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Dev Toolbar // Navigation ]</span>
+            <h3>astro-dev-broken-anchor-healer</h3>
+            <p>Smart internal anchor link validator. Finds broken #anchor targets and fuzzy-matches renamed headings with 1-click DOM fixes.</p>
+            <div class="card-cli"><code>bun add astro-dev-broken-anchor-healer</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-dev-broken-anchor-healer/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-broken-anchor-healer" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--crimson);">[ Dev Toolbar // Performance ]</span>
+            <h3>astro-dev-island-hydration-advisor</h3>
+            <p>Island hydration advisor. Visualizes the viewport fold line and flags eager client:load directives on below-the-fold components.</p>
+            <div class="card-cli"><code>bun add astro-dev-island-hydration-advisor</code></div>
+          </div>
+          <div class="card-actions">
+            <a href="./astro-dev-island-hydration-advisor/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-island-hydration-advisor" class="btn btn-secondary" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Core Principles -->
+      <div class="section-header">
+        <span class="section-title">02. Engineering Principles</span>
+        <span class="section-title" style="color: var(--steel);">BRANDON HUBBARD STANDARDS</span>
+      </div>
+
+      <div class="principles-grid">
+        <div class="principle-card">
+          <span class="principle-idx">[ 01 // PRINCIPLE ]</span>
+          <h3>Intentional Velocity</h3>
+          <p>Speed is nothing without direction. We move fast because we know exactly where we are going. Zero guessing.</p>
+        </div>
+        <div class="principle-card">
+          <span class="principle-idx">[ 02 // PRINCIPLE ]</span>
+          <h3>Code as Craft</h3>
+          <p>The code you don’t see is as critical as the pixel you do. Clean, modular, typed, and engineered to survive growth.</p>
+        </div>
+        <div class="principle-card">
+          <span class="principle-idx">[ 03 // PRINCIPLE ]</span>
+          <h3>Radical Ownership</h3>
+          <p>Every line of code, component structure, and design decision is owned, defended, tested, and delivered.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Brand Footer -->
+    <footer>
+      <div>
+        <span>© 2026 BRANDON HUBBARD. CODE AS CRAFT. RADICAL OWNERSHIP.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://brandonhubbard.com/branding">Brand Identity</a>
+        <a href="https://brandonhubbard.com/blog">Engineering Notes</a>
+        <a href="https://webtools.brandonhubbard.com/">Web Tools</a>
+        <a href="https://github.com/bhubbard">GitHub Profile</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
