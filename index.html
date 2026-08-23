@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,16 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Immediate Theme Initialization (Prevent FOUC) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('bh-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'dark');
+      document.documentElement.setAttribute('data-theme', initialTheme);
+    })();
+  </script>
+
   <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +27,7 @@
 
   <style>
     /* Brandon Hubbard Swiss Grid Design System (brandonhubbard.com/branding) */
-    :root {
+    :root, [data-theme="dark"] {
       --void: #0a0a0a;
       --charcoal: #121212;
       --concrete: #262626;
@@ -29,6 +39,18 @@
       --crimson: #F43F5E;
       --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    [data-theme="light"] {
+      --void: #ffffff;
+      --charcoal: #f4f4f6;
+      --concrete: #e2e4e8;
+      --titanium: #0a0a0a;
+      --steel: #606470;
+      --cobalt: #2563EB;
+      --cyan: #0891B2;
+      --emerald: #059669;
+      --crimson: #E11D48;
     }
 
     * {
@@ -49,6 +71,7 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
     .grid-container {
@@ -60,6 +83,7 @@
       display: flex;
       flex-direction: column;
       background-color: var(--void);
+      transition: border-color 0.2s ease, background-color 0.2s ease;
     }
 
     /* -------------------------------------------------------------
@@ -71,6 +95,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
     }
 
     .nav-inner {
@@ -104,6 +129,7 @@
       justify-content: center;
       letter-spacing: -1px;
       flex-shrink: 0;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
     .brand-meta {
@@ -133,7 +159,7 @@
     .header-right {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 1.15rem;
     }
 
     /* Header Search Button (VitePlus inspiration in Swiss style) */
@@ -180,6 +206,40 @@
       color: var(--steel);
     }
 
+    /* Theme Toggle Button */
+    .theme-toggle-btn {
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
+      color: var(--steel);
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--cobalt);
+      color: var(--titanium);
+      background: var(--void);
+    }
+
+    [data-theme="dark"] .sun-icon {
+      display: block;
+    }
+    [data-theme="dark"] .moon-icon {
+      display: none;
+    }
+    [data-theme="light"] .sun-icon {
+      display: none;
+    }
+    [data-theme="light"] .moon-icon {
+      display: block;
+    }
+
     .mobile-search-btn {
       display: none;
       background: var(--charcoal);
@@ -192,7 +252,7 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 1.5rem;
+      gap: 1.4rem;
       align-items: center;
     }
 
@@ -222,6 +282,7 @@
       padding: 4.5rem 2rem 3.5rem;
       border-bottom: 1px solid var(--concrete);
       background: linear-gradient(180deg, var(--charcoal) 0%, var(--void) 100%);
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
 
     .tag-strip {
@@ -294,7 +355,7 @@
     .btn-primary:hover {
       background: var(--cobalt);
       border-color: var(--cobalt);
-      color: var(--titanium);
+      color: #ffffff;
     }
 
     .btn-secondary {
@@ -303,7 +364,7 @@
     }
 
     .btn-secondary:hover {
-      background: var(--concrete);
+      background: var(--charcoal);
     }
 
     .hero-metrics {
@@ -351,6 +412,7 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 1rem;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
     }
 
     .section-title {
@@ -390,7 +452,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: background 0.15s ease;
+      transition: background 0.15s ease, border-color 0.2s ease;
     }
 
     .project-card:hover {
@@ -472,6 +534,7 @@
       padding: 2.25rem 2rem;
       border-bottom: 1px solid var(--concrete);
       background: var(--void);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
     }
 
     .explorer-controls {
@@ -681,6 +744,7 @@
       font-family: var(--font-mono);
       font-size: 0.8rem;
       color: var(--steel);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
     }
 
     footer a {
@@ -699,7 +763,7 @@
     }
 
     /* -------------------------------------------------------------
-       Search Modal (VitePlus Functionality in Swiss 0px Architecture)
+       Search Modal (VitePlus Functionality in Swiss Sharp Styling)
        ------------------------------------------------------------- */
     .modal-overlay {
       position: fixed;
@@ -976,7 +1040,7 @@
           </div>
         </a>
 
-        <!-- Header Actions: Search Button (Cmd+K) & Navigation -->
+        <!-- Header Actions: Search Button (Cmd+K), Theme Toggle & Navigation -->
         <div class="header-right">
           <button type="button" class="header-search-btn" id="openSearchBtn" aria-label="Search open source repositories">
             <div class="search-btn-content">
@@ -993,6 +1057,26 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Theme Toggle Button -->
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+            <!-- Sun Icon (shown in dark mode to switch to light) -->
+            <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (shown in light mode to switch to dark) -->
+            <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
 
@@ -2018,6 +2102,7 @@
     const openSearchBtn = document.getElementById('openSearchBtn');
     const openSearchMobileBtn = document.getElementById('openSearchMobileBtn');
     const heroSearchTrigger = document.getElementById('heroSearchTrigger');
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
     const searchModalOverlay = document.getElementById('searchModalOverlay');
     const modalCloseBtn = document.getElementById('modalCloseBtn');
     const modalSearchInput = document.getElementById('modalSearchInput');
@@ -2029,6 +2114,19 @@
     const reposGridContainer = document.getElementById('reposGridContainer');
     const activeCategoryCount = document.getElementById('activeCategoryCount');
     const toast = document.getElementById('toast');
+
+    // Theme Toggle Logic
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('bh-theme', next);
+      showToast(`THEME: ${next.toUpperCase()} MODE`);
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', toggleTheme);
+    }
 
     // Detect OS for keyboard shortcut hint
     const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
