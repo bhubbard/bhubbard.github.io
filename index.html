@@ -208,8 +208,8 @@
       color: var(--steel);
     }
 
-    /* Theme Toggle Button */
-    .theme-toggle-btn {
+    /* Header Icon Buttons */
+    .header-icon-btn, .theme-toggle-btn {
       background: var(--charcoal);
       border: 1px solid var(--concrete);
       color: var(--steel);
@@ -219,11 +219,12 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      text-decoration: none;
       transition: all 0.15s ease;
       flex-shrink: 0;
     }
 
-    .theme-toggle-btn:hover {
+    .header-icon-btn:hover, .theme-toggle-btn:hover {
       border-color: var(--cobalt);
       color: var(--titanium);
       background: var(--void);
@@ -241,33 +242,6 @@
       color: var(--titanium);
       padding: 0.5rem;
       cursor: pointer;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.25rem;
-      align-items: center;
-    }
-
-    nav a {
-      color: var(--steel);
-      text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      transition: color 0.15s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      white-space: nowrap;
-    }
-
-    nav a:hover, nav a.active {
-      color: var(--titanium);
-    }
-
-    nav a span.idx {
-      color: var(--cobalt);
     }
 
     /* -------------------------------------------------------------
@@ -1193,9 +1167,6 @@
       .project-card, .principle-card {
         border-right: none;
       }
-      nav ul {
-        display: none;
-      }
       .header-search-btn {
         display: none;
       }
@@ -1227,7 +1198,7 @@
           </div>
         </a>
 
-        <!-- Header Actions: Search Button (Cmd+K), Theme Toggle & Navigation -->
+        <!-- Header Actions: Search Button (Cmd+K), Theme Toggle & GitHub Icon -->
         <div class="header-right">
           <button type="button" class="header-search-btn" id="openSearchBtn" aria-label="Search open source repositories">
             <div class="search-btn-content">
@@ -1267,15 +1238,12 @@
             </svg>
           </button>
 
-          <nav>
-            <ul>
-              <li><a href="#astro-suite"><span class="idx">01.</span> Astro</a></li>
-              <li><a href="#edge-rust"><span class="idx">02.</span> Cloudflare</a></li>
-              <li><a href="#wordpress-suite"><span class="idx">03.</span> WordPress</a></li>
-              <li><a href="#cloud-tools"><span class="idx">04.</span> Cloud &amp; Tools</a></li>
-              <li><a href="#all-repos"><span class="idx">05.</span> Index</a></li>
-            </ul>
-          </nav>
+          <!-- GitHub Icon Link -->
+          <a href="https://github.com/bhubbard" target="_blank" rel="noopener" class="header-icon-btn" aria-label="GitHub Profile" title="GitHub Profile (@bhubbard)">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </header>
