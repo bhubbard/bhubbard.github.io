@@ -1,445 +1,356 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Source by Brandon Hubbard — Web, AI & Edge Tooling</title>
-  <meta name="description" content="Open source software portal by Brandon Hubbard. Featuring Chrome Built-in AI & Astro integrations, Rust utilities, and Cloudflare edge systems.">
+  <title>Open Source by Brandon Hubbard — Web, AI & Edge Infrastructure</title>
+  <meta name="description" content="Official open source software portal and Chrome Built-in AI & Astro engineering tools by Brandon Hubbard.">
   <meta property="og:title" content="Open Source by Brandon Hubbard">
-  <meta property="og:description" content="The Open Source Suite for Modern Web, AI & Edge Infrastructure. Zero-latency Astro tools, Chrome Gemini Nano packages, and Rust edge utilities.">
+  <meta property="og:description" content="High-performance Astro integrations, Chrome Built-in AI dev tools, Rust CLIs, and Cloudflare web infrastructure specifications.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    /* Brandon Hubbard Swiss Grid Design System (brandonhubbard.com/branding) */
     :root {
-      --bg: #09090c;
-      --bg-alt: #0e0f15;
-      --surface: #14151f;
-      --surface-hover: #1c1d2b;
-      --surface-active: #242638;
-      --border: #222433;
-      --border-light: #2e3146;
-      --border-accent: rgba(116, 116, 251, 0.4);
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-subtle: #64748b;
-      --accent: #7474fb;
-      --accent-glow: rgba(116, 116, 251, 0.15);
-      --cyan: #38bdf8;
-      --emerald: #10b981;
-      --amber: #f59e0b;
-      --ruby: #f43f5e;
-      --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --void: #0a0a0a;
+      --charcoal: #121212;
+      --concrete: #262626;
+      --titanium: #ffffff;
+      --steel: #888888;
+      --cobalt: #3B82F6;
+      --cyan: #06B6D4;
+      --emerald: #10B981;
+      --crimson: #F43F5E;
+      --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      --max-width: 1240px;
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 14px;
-      --radius-full: 9999px;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      border-radius: 0 !important; /* Swiss Sharp 0px Rule */
     }
 
     html {
       scroll-behavior: smooth;
-      color-scheme: dark;
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: var(--void);
+      color: var(--titanium);
       font-family: var(--font-ui);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      min-height: 100vh;
     }
 
-    /* Subtle background grid inspired by VitePlus */
-    .bg-pattern {
-      position: fixed;
-      inset: 0;
-      background-image: 
-        radial-gradient(ellipse at 50% -20%, rgba(116, 116, 251, 0.12) 0%, transparent 70%),
-        linear-gradient(to bottom, transparent 0%, var(--bg) 100%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .app-container {
-      position: relative;
-      z-index: 1;
-      max-width: var(--max-width);
+    .grid-container {
+      max-width: 1240px;
       margin: 0 auto;
-      border-left: 1px solid var(--border);
-      border-right: 1px solid var(--border);
+      border-left: 1px solid var(--concrete);
+      border-right: 1px solid var(--concrete);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      background-color: rgba(9, 9, 12, 0.85);
-      backdrop-filter: blur(8px);
+      background-color: var(--void);
     }
 
     /* -------------------------------------------------------------
-       Header & Brand Navigation (VitePlus Inspired)
+       Top Brand Navigation
        ------------------------------------------------------------- */
     header {
+      border-bottom: 1px solid var(--concrete);
+      background: var(--void);
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: rgba(9, 9, 12, 0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
     }
 
-    .header-inner {
+    .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.85rem 1.75rem;
+      padding: 1rem 1.75rem;
       gap: 1.5rem;
     }
 
     /* Logo: "Open Source" with "by Brandon Hubbard" underneath */
-    .brand-link {
+    .brand-identity {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
+      gap: 1rem;
       text-decoration: none;
-      color: var(--text);
-      transition: opacity 0.15s ease;
-    }
-
-    .brand-link:hover {
-      opacity: 0.9;
-    }
-
-    .brand-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(135deg, #7474fb 0%, #38bdf8 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 1.15rem;
-      box-shadow: 0 0 16px rgba(116, 116, 251, 0.35);
+      color: var(--titanium);
       flex-shrink: 0;
     }
 
-    .brand-icon svg {
-      width: 20px;
-      height: 20px;
-      stroke-width: 2.2;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.15;
-    }
-
-    .brand-logo-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .brand-logo-tagline {
-      font-size: 0.72rem;
-      font-family: var(--font-mono);
-      color: var(--text-muted);
-      letter-spacing: 0.02em;
-      font-weight: 500;
-      margin-top: 2px;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-    }
-
-    /* Search Bar in Header (VitePlus Cmd+K) */
-    .header-search-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      background-color: var(--surface);
-      border: 1px solid var(--border-light);
-      color: var(--text-muted);
-      padding: 0.5rem 0.9rem;
-      border-radius: var(--radius-md);
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      background: var(--titanium);
+      color: var(--void);
       font-family: var(--font-ui);
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      min-width: 220px;
-      justify-content: space-between;
-    }
-
-    .header-search-btn:hover {
-      background-color: var(--surface-hover);
-      border-color: var(--accent);
-      color: var(--text);
-    }
-
-    .search-btn-left {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .search-btn-left svg {
-      width: 15px;
-      height: 15px;
-      opacity: 0.7;
-    }
-
-    .kbd-shortcut {
-      display: inline-flex;
-      align-items: center;
-      gap: 2px;
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      background-color: var(--bg);
-      border: 1px solid var(--border-light);
-      padding: 0.15rem 0.4rem;
-      border-radius: 4px;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-
-    /* Desktop Navigation */
-    nav.desktop-nav {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-    }
-
-    nav.desktop-nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: color 0.15s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    nav.desktop-nav a:hover {
-      color: var(--text);
-    }
-
-    .nav-divider {
-      width: 1px;
-      height: 16px;
-      background-color: var(--border-light);
-    }
-
-    .btn-github-icon {
-      color: var(--text-muted);
-      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.45rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 34px;
-      height: 34px;
-      border-radius: var(--radius-sm);
+      letter-spacing: -1px;
+      flex-shrink: 0;
+    }
+
+    .brand-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--titanium);
+      line-height: 1.2;
+    }
+
+    .brand-title {
+      font-size: 0.72rem;
+      color: var(--steel);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    /* Header Search Button (VitePlus inspiration in Swiss style) */
+    .header-search-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem;
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
+      color: var(--steel);
+      padding: 0.55rem 0.95rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      cursor: pointer;
+      min-width: 220px;
       transition: all 0.15s ease;
     }
 
-    .btn-github-icon:hover {
-      color: var(--text);
-      background-color: var(--surface);
+    .header-search-btn:hover {
+      border-color: var(--cobalt);
+      color: var(--titanium);
+      background: var(--void);
     }
 
-    /* Mobile Search & Menu Toggle */
+    .search-btn-content {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .search-btn-content svg {
+      width: 14px;
+      height: 14px;
+      stroke-width: 2.2;
+    }
+
+    .kbd-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      background: var(--void);
+      border: 1px solid var(--concrete);
+      padding: 0.1rem 0.4rem;
+      color: var(--steel);
+    }
+
     .mobile-search-btn {
       display: none;
-      background: none;
-      border: 1px solid var(--border-light);
-      color: var(--text);
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
+      color: var(--titanium);
       padding: 0.5rem;
-      border-radius: var(--radius-md);
       cursor: pointer;
     }
 
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--steel);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      transition: color 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--titanium);
+    }
+
+    nav a span.idx {
+      color: var(--cobalt);
+    }
+
     /* -------------------------------------------------------------
-       Hero Section (VitePlus Style)
+       Hero Section
        ------------------------------------------------------------- */
     .hero {
-      padding: 5rem 2rem 4rem;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-      background: radial-gradient(circle at 50% 0%, rgba(116, 116, 251, 0.08) 0%, transparent 60%);
+      padding: 4.5rem 2rem 3.5rem;
+      border-bottom: 1px solid var(--concrete);
+      background: linear-gradient(180deg, var(--charcoal) 0%, var(--void) 100%);
     }
 
-    .hero-pill {
+    .tag-strip {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.9rem;
-      border-radius: var(--radius-full);
-      background-color: var(--surface);
-      border: 1px solid var(--border-light);
+      gap: 0.75rem;
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: var(--cyan);
-      letter-spacing: 0.04em;
-      margin-bottom: 1.75rem;
       text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--concrete);
+      padding: 0.35rem 0.75rem;
+      background: var(--void);
     }
 
-    .hero-pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background-color: var(--emerald);
-      box-shadow: 0 0 8px var(--emerald);
+    .tag-strip .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--emerald);
     }
 
-    .hero h1 {
-      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
       font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 1.1;
-      max-width: 960px;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
       margin-bottom: 1.25rem;
     }
 
-    .gradient-text {
-      background: linear-gradient(135deg, #ffffff 30%, #7474fb 70%, #38bdf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
     .hero p.lead {
-      font-size: 1.18rem;
-      color: var(--text-muted);
-      max-width: 760px;
+      font-size: 1.2rem;
+      color: var(--steel);
+      max-width: 860px;
+      margin-bottom: 2rem;
+      font-weight: 400;
       line-height: 1.6;
-      margin-bottom: 2.25rem;
     }
 
     .hero-actions {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.9rem;
+      gap: 0.85rem;
       flex-wrap: wrap;
-      margin-bottom: 3.5rem;
+      margin-bottom: 2.75rem;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.7rem 1.4rem;
-      font-size: 0.88rem;
+      padding: 0.75rem 1.4rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
       font-weight: 600;
-      border-radius: var(--radius-md);
       text-decoration: none;
       cursor: pointer;
-      transition: all 0.18s ease;
-      font-family: var(--font-ui);
-      border: 1px solid transparent;
+      border: 1px solid var(--concrete);
+      transition: all 0.15s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
-    .btn-accent {
-      background: #7474fb;
-      color: #ffffff;
-      box-shadow: 0 4px 14px rgba(116, 116, 251, 0.35);
+    .btn-primary {
+      background: var(--titanium);
+      color: var(--void);
+      border-color: var(--titanium);
     }
 
-    .btn-accent:hover {
-      background: #6363f9;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(116, 116, 251, 0.45);
+    .btn-primary:hover {
+      background: var(--cobalt);
+      border-color: var(--cobalt);
+      color: var(--titanium);
     }
 
-    .btn-surface {
-      background-color: var(--surface);
-      border-color: var(--border-light);
-      color: var(--text);
+    .btn-secondary {
+      background: var(--void);
+      color: var(--titanium);
     }
 
-    .btn-surface:hover {
-      background-color: var(--surface-hover);
-      border-color: var(--accent);
-      transform: translateY(-1px);
+    .btn-secondary:hover {
+      background: var(--concrete);
     }
 
-    /* Hero Metrics Strip */
     .hero-metrics {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      width: 100%;
-      border-top: 1px solid var(--border);
-      background-color: rgba(14, 15, 21, 0.6);
+      gap: 0;
+      border-top: 1px solid var(--concrete);
     }
 
-    .metric-box {
+    .metric-card {
       padding: 1.75rem 1.25rem;
-      text-align: center;
-      border-right: 1px solid var(--border);
+      border-right: 1px solid var(--concrete);
+      font-family: var(--font-mono);
     }
 
-    .metric-box:last-child {
+    .metric-card:last-child {
       border-right: none;
     }
 
-    .metric-val {
+    .metric-num {
       font-size: 2rem;
-      font-weight: 800;
-      font-family: var(--font-mono);
-      color: var(--text);
+      font-weight: 700;
+      color: var(--titanium);
       display: block;
       line-height: 1;
       margin-bottom: 0.35rem;
     }
 
-    .metric-lbl {
+    .metric-label {
       font-size: 0.75rem;
-      color: var(--text-muted);
+      color: var(--steel);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      font-family: var(--font-mono);
     }
 
     /* -------------------------------------------------------------
-       Section Header
+       Section Headers
        ------------------------------------------------------------- */
-    .section-banner {
+    .section-header {
       padding: 1.25rem 2rem;
-      border-bottom: 1px solid var(--border);
-      background-color: var(--bg-alt);
+      border-bottom: 1px solid var(--concrete);
+      background: var(--charcoal);
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 1rem;
     }
 
     .section-title {
@@ -447,112 +358,90 @@
       font-size: 0.85rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text);
+      letter-spacing: 0.1em;
+      color: var(--titanium);
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.75rem;
     }
 
-    .badge-pill {
+    .section-badge {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--radius-full);
-      font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-
-    .badge-emerald {
-      background-color: rgba(16, 185, 129, 0.15);
-      color: var(--emerald);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-    }
-
-    .badge-cyan {
-      background-color: rgba(56, 189, 248, 0.15);
-      color: var(--cyan);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-    }
-
-    .badge-accent {
-      background-color: rgba(116, 116, 251, 0.15);
-      color: #9b9bff;
-      border: 1px solid rgba(116, 116, 251, 0.3);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
     }
 
     /* -------------------------------------------------------------
-       Cards & Grids (VitePlus Card Aesthetics)
+       Project Directory Grids (Swiss 1px Lines)
        ------------------------------------------------------------- */
-    .cards-grid {
+    .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      border-bottom: 1px solid var(--border);
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      border-bottom: 1px solid var(--concrete);
     }
 
-    .suite-card {
-      padding: 2rem 1.75rem;
-      background-color: var(--bg);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+    .project-card {
+      padding: 2.25rem 2rem;
+      border-right: 1px solid var(--concrete);
+      border-bottom: 1px solid var(--concrete);
+      background: var(--void);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.2s ease;
-      position: relative;
+      transition: background 0.15s ease;
     }
 
-    .suite-card:hover {
-      background-color: var(--surface);
+    .project-card:hover {
+      background: var(--charcoal);
     }
 
-    .card-meta-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.85rem;
+    .card-top {
+      margin-bottom: 1.5rem;
+    }
+
+    .card-category {
       font-family: var(--font-mono);
       font-size: 0.72rem;
-    }
-
-    .card-tag {
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 0.75rem;
       font-weight: 600;
     }
 
-    .suite-card h3 {
-      font-size: 1.25rem;
+    .project-card h3 {
+      font-size: 1.3rem;
       font-weight: 700;
-      margin-bottom: 0.65rem;
-      letter-spacing: -0.015em;
-      color: var(--text);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+      color: var(--titanium);
     }
 
-    .suite-card p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
+    .project-card p {
+      color: var(--steel);
+      font-size: 0.92rem;
       line-height: 1.55;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
 
-    .cli-box {
-      background-color: var(--bg);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-sm);
-      padding: 0.55rem 0.75rem;
+    .card-cli {
+      background: var(--void);
+      border: 1px solid var(--concrete);
+      padding: 0.65rem 0.85rem;
       font-family: var(--font-mono);
       font-size: 0.78rem;
-      color: var(--text-muted);
+      color: var(--steel);
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.25rem;
       gap: 0.5rem;
     }
 
-    .cli-box code {
-      color: var(--text);
+    .card-cli code {
+      color: var(--titanium);
       overflow-x: auto;
       white-space: nowrap;
     }
@@ -560,67 +449,29 @@
     .copy-btn {
       background: none;
       border: none;
-      color: var(--text-muted);
+      color: var(--steel);
       cursor: pointer;
       padding: 2px 4px;
-      border-radius: 4px;
-      transition: all 0.15s ease;
+      transition: color 0.15s ease;
       flex-shrink: 0;
     }
 
     .copy-btn:hover {
-      color: var(--text);
-      background-color: var(--surface-active);
+      color: var(--titanium);
     }
 
     .card-actions {
       display: flex;
-      gap: 0.65rem;
-      align-items: center;
-    }
-
-    .btn-card-primary {
-      padding: 0.45rem 0.95rem;
-      font-size: 0.8rem;
-      background-color: var(--surface-hover);
-      border: 1px solid var(--border-light);
-      color: var(--text);
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.15s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .btn-card-primary:hover {
-      background-color: var(--accent);
-      border-color: var(--accent);
-      color: #ffffff;
-    }
-
-    .btn-card-ghost {
-      padding: 0.45rem 0.85rem;
-      font-size: 0.8rem;
-      background: transparent;
-      color: var(--text-muted);
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      transition: color 0.15s ease;
-    }
-
-    .btn-card-ghost:hover {
-      color: var(--text);
+      gap: 0.75rem;
     }
 
     /* -------------------------------------------------------------
        All Repositories Interactive Explorer Section
        ------------------------------------------------------------- */
     .repo-explorer-section {
-      padding: 2.5rem 2rem;
-      border-bottom: 1px solid var(--border);
-      background-color: var(--bg);
+      padding: 2.25rem 2rem;
+      border-bottom: 1px solid var(--concrete);
+      background: var(--void);
     }
 
     .explorer-controls {
@@ -635,26 +486,24 @@
     .explorer-search-wrap {
       position: relative;
       flex: 1;
-      max-width: 450px;
+      max-width: 480px;
       min-width: 260px;
     }
 
     .explorer-search-input {
       width: 100%;
-      background-color: var(--surface);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      padding: 0.7rem 1rem 0.7rem 2.5rem;
-      color: var(--text);
-      font-family: var(--font-ui);
-      font-size: 0.9rem;
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
+      padding: 0.75rem 1rem 0.75rem 2.5rem;
+      color: var(--titanium);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
       outline: none;
       transition: border-color 0.15s ease;
     }
 
     .explorer-search-input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 2px var(--accent-glow);
+      border-color: var(--cobalt);
     }
 
     .explorer-search-icon {
@@ -662,7 +511,7 @@
       left: 0.85rem;
       top: 50%;
       transform: translateY(-50%);
-      color: var(--text-muted);
+      color: var(--steel);
       pointer-events: none;
     }
 
@@ -673,51 +522,51 @@
     }
 
     .filter-pill {
-      background-color: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      padding: 0.4rem 0.85rem;
-      border-radius: var(--radius-full);
-      font-size: 0.8rem;
-      font-weight: 500;
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
+      color: var(--steel);
+      padding: 0.5rem 0.95rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
       cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
       transition: all 0.15s ease;
     }
 
     .filter-pill:hover {
-      background-color: var(--surface-hover);
-      color: var(--text);
+      background: var(--concrete);
+      color: var(--titanium);
     }
 
     .filter-pill.active {
-      background-color: var(--accent);
-      border-color: var(--accent);
-      color: #ffffff;
+      background: var(--titanium);
+      border-color: var(--titanium);
+      color: var(--void);
+      font-weight: 700;
     }
 
     .repos-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 1.25rem;
     }
 
     .repo-card {
-      background-color: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
+      padding: 1.65rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.18s ease;
+      transition: border-color 0.15s ease, background 0.15s ease;
       text-decoration: none;
-      color: var(--text);
+      color: var(--titanium);
     }
 
     .repo-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      border-color: var(--cobalt);
+      background: var(--void);
     }
 
     .repo-card-top {
@@ -729,13 +578,13 @@
       align-items: center;
       justify-content: space-between;
       gap: 0.5rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.65rem;
     }
 
     .repo-title {
       font-size: 1.05rem;
       font-weight: 700;
-      color: var(--text);
+      color: var(--titanium);
       font-family: var(--font-mono);
       overflow: hidden;
       text-overflow: ellipsis;
@@ -743,8 +592,8 @@
     }
 
     .repo-card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      font-size: 0.86rem;
+      color: var(--steel);
       line-height: 1.5;
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -758,8 +607,8 @@
       justify-content: space-between;
       font-family: var(--font-mono);
       font-size: 0.75rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
+      color: var(--steel);
+      border-top: 1px solid var(--concrete);
       padding-top: 0.85rem;
       margin-top: 1rem;
     }
@@ -767,13 +616,12 @@
     .repo-lang-tag {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.4rem;
     }
 
-    .lang-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
+    .lang-box {
+      width: 7px;
+      height: 7px;
     }
 
     .repo-stats {
@@ -783,42 +631,37 @@
     }
 
     /* -------------------------------------------------------------
-       Principles Grid
+       Engineering Principles Grid
        ------------------------------------------------------------- */
     .principles-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--concrete);
     }
 
-    .principle-box {
+    .principle-card {
       padding: 2.5rem 2rem;
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background-color: var(--bg);
-    }
-
-    .principle-box:last-child {
-      border-right: none;
+      border-right: 1px solid var(--concrete);
+      border-bottom: 1px solid var(--concrete);
+      background: var(--void);
     }
 
     .principle-idx {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--cyan);
-      margin-bottom: 0.75rem;
       display: block;
-      font-weight: 600;
+      margin-bottom: 0.75rem;
     }
 
-    .principle-box h3 {
-      font-size: 1.25rem;
+    .principle-card h3 {
+      font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
-    .principle-box p {
-      color: var(--text-muted);
+    .principle-card p {
+      color: var(--steel);
       font-size: 0.9rem;
     }
 
@@ -826,57 +669,48 @@
        Footer
        ------------------------------------------------------------- */
     footer {
-      padding: 3rem 2rem;
-      border-top: 1px solid var(--border);
-      background-color: var(--bg-alt);
+      margin-top: auto;
+      padding: 2.5rem 2rem;
+      border-top: 1px solid var(--concrete);
+      background: var(--void);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 1.5rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--steel);
     }
 
-    .footer-brand {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .footer-brand strong {
-      color: var(--text);
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-nav a {
-      color: var(--text-muted);
+    footer a {
+      color: var(--titanium);
       text-decoration: none;
       transition: color 0.15s ease;
     }
 
-    .footer-nav a:hover {
-      color: var(--accent);
+    footer a:hover {
+      color: var(--cobalt);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
     }
 
     /* -------------------------------------------------------------
-       Interactive Search Modal / Command Palette (VitePlus Style)
+       Search Modal (VitePlus Functionality in Swiss 0px Architecture)
        ------------------------------------------------------------- */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background-color: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(8px);
+      background: rgba(10, 10, 10, 0.88);
+      backdrop-filter: blur(4px);
       z-index: 1000;
       display: none;
       align-items: flex-start;
       justify-content: center;
-      padding: 12vh 1rem 2rem;
+      padding: 10vh 1rem 2rem;
     }
 
     .modal-overlay.active {
@@ -885,93 +719,90 @@
 
     .search-modal {
       width: 100%;
-      max-width: 680px;
-      background-color: #12131c;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(116, 116, 251, 0.2);
-      overflow: hidden;
+      max-width: 720px;
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
       display: flex;
       flex-direction: column;
-      max-height: 75vh;
-      animation: modalPop 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      max-height: 80vh;
+      animation: modalPop 0.15s ease-out;
     }
 
     @keyframes modalPop {
-      0% { opacity: 0; transform: scale(0.97) translateY(-8px); }
-      100% { opacity: 1; transform: scale(1) translateY(0); }
+      0% { opacity: 0; transform: translateY(-8px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .modal-header {
-      padding: 1rem 1.25rem;
-      border-bottom: 1px solid var(--border);
+      padding: 1.15rem 1.5rem;
+      border-bottom: 1px solid var(--concrete);
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      position: relative;
+      gap: 0.85rem;
+      background: var(--void);
     }
 
     .modal-search-input {
       flex: 1;
       background: transparent;
       border: none;
-      color: var(--text);
+      color: var(--titanium);
       font-size: 1.05rem;
-      font-family: var(--font-ui);
+      font-family: var(--font-mono);
       outline: none;
     }
 
     .modal-search-input::placeholder {
-      color: var(--text-subtle);
+      color: var(--steel);
     }
 
     .modal-close-btn {
-      background: var(--surface);
-      border: 1px solid var(--border-light);
-      color: var(--text-muted);
-      border-radius: var(--radius-sm);
-      padding: 0.25rem 0.5rem;
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
+      color: var(--steel);
+      padding: 0.35rem 0.65rem;
       font-size: 0.75rem;
       font-family: var(--font-mono);
       cursor: pointer;
     }
 
     .modal-close-btn:hover {
-      color: var(--text);
-      background-color: var(--surface-hover);
+      color: var(--titanium);
+      border-color: var(--titanium);
     }
 
     .modal-filters {
       display: flex;
       gap: 0.4rem;
-      padding: 0.65rem 1.25rem;
-      background-color: rgba(9, 9, 12, 0.5);
-      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      background: var(--charcoal);
+      border-bottom: 1px solid var(--concrete);
       overflow-x: auto;
     }
 
     .modal-filter-btn {
-      background: transparent;
-      border: 1px solid transparent;
-      color: var(--text-muted);
-      padding: 0.25rem 0.65rem;
-      border-radius: var(--radius-full);
+      background: var(--void);
+      border: 1px solid var(--concrete);
+      color: var(--steel);
+      padding: 0.35rem 0.75rem;
       font-size: 0.75rem;
       font-family: var(--font-mono);
       cursor: pointer;
       white-space: nowrap;
+      text-transform: uppercase;
       transition: all 0.15s ease;
     }
 
     .modal-filter-btn:hover {
-      background-color: var(--surface);
-      color: var(--text);
+      color: var(--titanium);
+      border-color: var(--concrete);
     }
 
     .modal-filter-btn.active {
-      background-color: var(--surface-active);
-      border-color: var(--accent);
-      color: #ffffff;
+      background: var(--titanium);
+      border-color: var(--titanium);
+      color: var(--void);
+      font-weight: 700;
     }
 
     .modal-body {
@@ -980,76 +811,80 @@
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
+      background: var(--void);
     }
 
     .modal-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.75rem 1rem;
-      border-radius: var(--radius-md);
+      padding: 0.85rem 1rem;
+      border: 1px solid transparent;
       text-decoration: none;
-      color: var(--text);
-      transition: background-color 0.12s ease;
+      color: var(--titanium);
+      transition: background 0.12s ease;
       cursor: pointer;
     }
 
     .modal-item:hover, .modal-item.selected {
-      background-color: var(--surface-hover);
+      background: var(--charcoal);
+      border-color: var(--concrete);
     }
 
     .modal-item-info {
       display: flex;
       flex-direction: column;
-      gap: 0.2rem;
+      gap: 0.25rem;
       min-width: 0;
     }
 
     .modal-item-title {
-      font-weight: 600;
-      font-size: 0.92rem;
+      font-weight: 700;
+      font-size: 0.95rem;
       font-family: var(--font-mono);
-      color: var(--text);
+      color: var(--titanium);
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
 
     .modal-item-desc {
-      font-size: 0.8rem;
-      color: var(--text-muted);
+      font-size: 0.82rem;
+      color: var(--steel);
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      max-width: 480px;
+      max-width: 520px;
     }
 
     .modal-item-badge {
       font-size: 0.7rem;
-      padding: 0.15rem 0.45rem;
-      border-radius: 4px;
-      background-color: var(--surface-active);
-      color: var(--text-muted);
+      padding: 0.1rem 0.45rem;
+      background: var(--void);
+      border: 1px solid var(--concrete);
+      color: var(--steel);
       font-family: var(--font-mono);
+      text-transform: uppercase;
     }
 
     .modal-empty {
-      padding: 3rem 1rem;
+      padding: 3.5rem 1rem;
       text-align: center;
-      color: var(--text-muted);
+      color: var(--steel);
+      font-family: var(--font-mono);
       font-size: 0.9rem;
     }
 
     .modal-footer {
-      padding: 0.65rem 1.25rem;
-      background-color: var(--bg);
-      border-top: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      background: var(--charcoal);
+      border-top: 1px solid var(--concrete);
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 0.75rem;
       font-family: var(--font-mono);
-      color: var(--text-muted);
+      color: var(--steel);
     }
 
     .modal-hints {
@@ -1057,25 +892,28 @@
       gap: 1rem;
     }
 
-    /* -------------------------------------------------------------
-       Toast Notification for Copy
-       ------------------------------------------------------------- */
+    .modal-hints kbd {
+      color: var(--titanium);
+      border: 1px solid var(--concrete);
+      padding: 0.1rem 0.35rem;
+      background: var(--void);
+    }
+
+    /* Toast */
     .toast {
       position: fixed;
       bottom: 2rem;
       right: 2rem;
-      background-color: var(--surface);
-      border: 1px solid var(--accent);
-      color: var(--text);
-      padding: 0.65rem 1.25rem;
-      border-radius: var(--radius-md);
+      background: var(--charcoal);
+      border: 1px solid var(--cobalt);
+      color: var(--titanium);
+      padding: 0.75rem 1.25rem;
       font-family: var(--font-mono);
-      font-size: 0.82rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      font-size: 0.8rem;
       z-index: 2000;
       opacity: 0;
       transform: translateY(10px);
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       pointer-events: none;
     }
 
@@ -1084,26 +922,27 @@
       transform: translateY(0);
     }
 
-    /* -------------------------------------------------------------
-       Responsive Breakpoints
-       ------------------------------------------------------------- */
+    /* Responsive */
     @media (max-width: 900px) {
-      .header-search-btn {
-        min-width: 150px;
-      }
       .hero-metrics {
         grid-template-columns: repeat(2, 1fr);
       }
-      .metric-box:nth-child(2) {
+      .metric-card:nth-child(2) {
         border-right: none;
       }
-      .metric-box:nth-child(1), .metric-box:nth-child(2) {
-        border-bottom: 1px solid var(--border);
+      .metric-card:nth-child(1), .metric-card:nth-child(2) {
+        border-bottom: 1px solid var(--concrete);
+      }
+      .header-search-btn {
+        min-width: 160px;
       }
     }
 
     @media (max-width: 768px) {
-      nav.desktop-nav {
+      .project-card, .principle-card {
+        border-right: none;
+      }
+      nav ul {
         display: none;
       }
       .header-search-btn {
@@ -1112,580 +951,491 @@
       .mobile-search-btn {
         display: flex;
       }
-      .cards-grid, .principles-grid {
-        grid-template-columns: 1fr;
-      }
-      .suite-card, .principle-box {
-        border-right: none;
-      }
-      .hero {
-        padding: 3.5rem 1.25rem 2.5rem;
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
       }
       .modal-overlay {
-        padding: 4vh 0.75rem 1rem;
+        padding: 5vh 0.75rem 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="bg-pattern"></div>
-
-  <div class="app-container">
-    <!-- Header with VitePlus inspiration -->
+  <div class="grid-container">
+    <!-- Brand Header -->
     <header>
-      <div class="header-inner">
+      <div class="nav-inner">
         <!-- Logo: "Open Source" with "by Brandon Hubbard" underneath -->
-        <a href="https://brandonhubbard.com/" class="brand-link" title="Brandon Hubbard Open Source">
-          <div class="brand-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="brand-text">
-            <span class="brand-logo-title">Open Source</span>
-            <span class="brand-logo-tagline">by Brandon Hubbard</span>
+        <a href="https://brandonhubbard.com/" class="brand-identity" title="Brandon Hubbard Open Source">
+          <div class="brand-mark">BH</div>
+          <div class="brand-meta">
+            <span class="brand-name">OPEN SOURCE</span>
+            <span class="brand-title">BY BRANDON HUBBARD</span>
           </div>
         </a>
 
         <!-- Header Actions: Search Button (Cmd+K) & Navigation -->
-        <div class="header-actions">
-          <button type="button" class="header-search-btn" id="openSearchBtn" aria-label="Search repositories">
-            <div class="search-btn-left">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <div class="header-right">
+          <button type="button" class="header-search-btn" id="openSearchBtn" aria-label="Search open source repositories">
+            <div class="search-btn-content">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
-              <span>Search repos...</span>
+              <span>SEARCH REPOS...</span>
             </div>
-            <span class="kbd-shortcut"><span id="metaKey">⌘</span>K</span>
+            <span class="kbd-tag"><span id="metaKey">⌘</span>K</span>
           </button>
 
           <button type="button" class="mobile-search-btn" id="openSearchMobileBtn" aria-label="Search">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </button>
 
-          <nav class="desktop-nav">
-            <a href="#astro-ai">Astro + AI</a>
-            <a href="#edge-rust">Edge &amp; Rust</a>
-            <a href="#all-repos">All Repos</a>
-            <div class="nav-divider"></div>
-            <a href="https://github.com/bhubbard" target="_blank" rel="noopener" class="btn-github-icon" title="GitHub Profile">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
-            </a>
+          <nav>
+            <ul>
+              <li><a href="https://brandonhubbard.com/"><span class="idx">01.</span> Home</a></li>
+              <li><a href="#astro-ai"><span class="idx">02.</span> Astro AI</a></li>
+              <li><a href="#edge-rust"><span class="idx">03.</span> Edge &amp; Rust</a></li>
+              <li><a href="#all-repos"><span class="idx">04.</span> All Repos</a></li>
+              <li><a href="https://github.com/bhubbard" target="_blank" rel="noopener"><span class="idx">05.</span> GitHub ↗</a></li>
+            </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Main Hero -->
     <main>
-      <!-- Hero Section -->
       <section class="hero">
-        <div class="hero-pill">
-          <div class="hero-pill-dot"></div>
-          <span>OPEN SOURCE ECOSYSTEM // BRANDON HUBBARD</span>
+        <div class="tag-strip">
+          <div class="dot"></div>
+          <span>ENGINEERING SPECIFICATION // OPEN SOURCE ECOSYSTEM</span>
         </div>
-
-        <h1>
-          The Open Source Suite for <br>
-          <span class="gradient-text">Web, On-Device AI &amp; Edge.</span>
-        </h1>
-
-        <p class="lead">
-          A curated ecosystem of zero-cost, zero-latency Astro integrations, Chrome Built-in Gemini Nano tools, high-speed Rust CLIs, and Cloudflare edge systems.
-        </p>
+        <h1>High-Performance Software &amp; Local AI Tooling.</h1>
+        <p class="lead">A curated suite of zero-cost, zero-latency Astro integrations, Chrome Built-in Gemini Nano developer tools, Rust CLIs, and Cloudflare edge systems.</p>
 
         <div class="hero-actions">
-          <button type="button" class="btn btn-accent" id="heroSearchTrigger">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <button type="button" class="btn btn-primary" id="heroSearchTrigger">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <span>Search 59+ Repositories</span>
-            <span class="kbd-shortcut" style="background: rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.2); color: #fff;">⌘K</span>
+            <span>Search 59+ Repositories (⌘K)</span>
           </button>
-          <a href="#astro-ai" class="btn btn-surface">Explore Astro AI Suite</a>
-          <a href="https://github.com/bhubbard" target="_blank" rel="noopener" class="btn btn-surface">GitHub Profile ↗</a>
+          <a href="#astro-ai" class="btn btn-secondary">Explore Astro AI Suite</a>
+          <a href="https://github.com/bhubbard" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profile ↗</a>
         </div>
-
-        <!-- Metrics Strip -->
+        
         <div class="hero-metrics">
-          <div class="metric-box">
-            <span class="metric-val" id="metricRepoCount">59</span>
-            <span class="metric-lbl">Open Repositories</span>
+          <div class="metric-card">
+            <span class="metric-num" id="metricRepoCount">59</span>
+            <span class="metric-label">Open Repositories</span>
           </div>
-          <div class="metric-box">
-            <span class="metric-val">13</span>
-            <span class="metric-lbl">Astro AI Packages</span>
+          <div class="metric-card">
+            <span class="metric-num">13</span>
+            <span class="metric-label">Astro AI Packages</span>
           </div>
-          <div class="metric-box">
-            <span class="metric-val">10+</span>
-            <span class="metric-lbl">Rust &amp; Edge Tools</span>
+          <div class="metric-card">
+            <span class="metric-num">10+</span>
+            <span class="metric-label">Rust &amp; Edge Tools</span>
           </div>
-          <div class="metric-box">
-            <span class="metric-val">100%</span>
-            <span class="metric-lbl">Free &amp; Open Source</span>
+          <div class="metric-card">
+            <span class="metric-num">100%</span>
+            <span class="metric-label">Free &amp; Open Source</span>
           </div>
         </div>
       </section>
 
-      <!-- Section 1: Astro & Chrome Built-in AI Suite -->
-      <div class="section-banner" id="astro-ai">
-        <div class="section-title">
-          <span>01. Chrome Built-in AI &amp; Astro Suite</span>
-          <span class="badge-pill badge-emerald">13 PACKAGES VERIFIED</span>
-        </div>
-        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">ON-DEVICE GEMINI NANO // ZERO LATENCY</span>
+      <!-- Section: Project Directory -->
+      <div class="section-header" id="astro-ai">
+        <span class="section-title">01. Chrome Built-in AI &amp; Astro Suite</span>
+        <span class="section-badge" style="color: var(--emerald);">13 PACKAGES VERIFIED</span>
       </div>
 
-      <div class="cards-grid">
+      <div class="project-grid">
         <!-- Card 1 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--accent);">Hydration Directive</span>
-              <span class="badge-pill badge-accent">TypeScript</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Client Directive // Hydration ]</span>
             <h3>astro-client-directive-ai</h3>
             <p>A custom <code>client:ai-ready</code> directive that delays hydrating components until Chrome's on-device Gemini Nano model is fully resident in memory.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-client-directive-ai</code>
-              <button class="copy-btn" data-copy="bun add astro-client-directive-ai" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-client-directive-ai" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-client-directive-ai/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-client-directive-ai" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-client-directive-ai/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-client-directive-ai" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--cyan);">Rehype Plugin</span>
-              <span class="badge-pill badge-cyan">TypeScript</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Rehype Plugin // Content ]</span>
             <h3>astro-rehype-nano-code</h3>
             <p>Zero-JS code block explainer. Injects build-time data attributes and streams step-by-step code annotations into an accessible drawer on-demand.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-rehype-nano-code</code>
-              <button class="copy-btn" data-copy="bun add astro-rehype-nano-code" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-rehype-nano-code" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-rehype-nano-code/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-rehype-nano-code" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-rehype-nano-code/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-rehype-nano-code" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--emerald);">Prefetch UX</span>
-              <span class="badge-pill badge-emerald">TypeScript</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--emerald);">[ Prefetch Hook // UX ]</span>
             <h3>astro-prefetch-ai-brief</h3>
-            <p>Link hover intelligence. Background-fetches target route HTML and produces instant 15-word preview tooltips via Chrome Summarizer API.</p>
-            <div class="cli-box">
+            <p>Link hover intelligence. Automatically background-fetches target route HTML and produces instant 15-word preview tooltips via Chrome Summarizer.</p>
+            <div class="card-cli">
               <code>bun add astro-prefetch-ai-brief</code>
-              <button class="copy-btn" data-copy="bun add astro-prefetch-ai-brief" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-prefetch-ai-brief" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-prefetch-ai-brief/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-prefetch-ai-brief" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-prefetch-ai-brief/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-prefetch-ai-brief" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--ruby);">Dev Toolbar</span>
-              <span class="badge-pill badge-accent">TypeScript</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--crimson);">[ Dev Toolbar // Accessibility ]</span>
             <h3>astro-dev-audit-nano</h3>
             <p>Real-time WCAG 2.1 AA/AAA accessibility &amp; SEO auditor. Scans heading hierarchy, contrast ratios, and drafts context-aware image alt-text.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-dev-audit-nano</code>
-              <button class="copy-btn" data-copy="bun add astro-dev-audit-nano" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-dev-audit-nano" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-audit-nano/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-audit-nano" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-dev-audit-nano/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-audit-nano" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 5 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--accent);">Dev Toolbar</span>
-              <span class="badge-pill badge-accent">Astro App</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Dev Toolbar // Copywriting ]</span>
             <h3>astro-dev-copy-optimizer</h3>
             <p>Point-and-click copy tuner in development. Inspects headings, CTAs, and paragraphs to audition tone adjustments with 1-click clipboard copy.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-dev-copy-optimizer</code>
-              <button class="copy-btn" data-copy="bun add astro-dev-copy-optimizer" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-dev-copy-optimizer" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-copy-optimizer/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-copy-optimizer" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-dev-copy-optimizer/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-copy-optimizer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 6 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--cyan);">Social SEO</span>
-              <span class="badge-pill badge-cyan">Middleware</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Middleware // Social SEO ]</span>
             <h3>astro-og-smart-crop</h3>
             <p>Simulates OpenGraph and Twitter card previews in dev mode, preventing awkward ellipsis cutoffs with character-budgeted headline alternatives.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-og-smart-crop</code>
-              <button class="copy-btn" data-copy="bun add astro-og-smart-crop" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-og-smart-crop" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-og-smart-crop/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-og-smart-crop" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-og-smart-crop/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-og-smart-crop" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 7 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--emerald);">Semantics</span>
-              <span class="badge-pill badge-emerald">Dev Toolbar</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--emerald);">[ Dev Toolbar // Semantics ]</span>
             <h3>astro-schema-ld-verifier</h3>
             <p>Dev-time JSON-LD structured data auditor. Checks rendered microdata against actual DOM content to flag ghost claims and mismatched authors.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-schema-ld-verifier</code>
-              <button class="copy-btn" data-copy="bun add astro-schema-ld-verifier" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-schema-ld-verifier" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-schema-ld-verifier/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-schema-ld-verifier" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-schema-ld-verifier/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-schema-ld-verifier" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 8 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--accent);">i18n Coverage</span>
-              <span class="badge-pill badge-accent">Dev Toolbar</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Dev Toolbar // i18n ]</span>
             <h3>astro-dev-i18n-coverage</h3>
             <p>Finds missing localization keys directly in the rendered DOM and drafts contextual translations ready to export to your locale dictionary.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-dev-i18n-coverage</code>
-              <button class="copy-btn" data-copy="bun add astro-dev-i18n-coverage" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-dev-i18n-coverage" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-i18n-coverage/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-i18n-coverage" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-dev-i18n-coverage/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-i18n-coverage" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 9 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--ruby);">Editorial Linter</span>
-              <span class="badge-pill badge-accent">Dev Toolbar</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--crimson);">[ Dev Toolbar // Editorial ]</span>
             <h3>astro-dev-content-linter</h3>
-            <p>Editorial voice and tone auditor. Evaluates reading grade levels, flags passive voice and jargon, and suggests inline rewrites.</p>
-            <div class="cli-box">
+            <p>Editorial voice and tone auditor. Evaluates reading grade levels, flags passive voice and corporate jargon, and suggests inline rewrites.</p>
+            <div class="card-cli">
               <code>bun add astro-dev-content-linter</code>
-              <button class="copy-btn" data-copy="bun add astro-dev-content-linter" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-dev-content-linter" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-content-linter/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-content-linter" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-dev-content-linter/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-content-linter" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 10 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--emerald);">Microdata</span>
-              <span class="badge-pill badge-emerald">Dev Toolbar</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--emerald);">[ Dev Toolbar // Microdata ]</span>
             <h3>astro-dev-schema-scaffolder</h3>
-            <p>Scaffolds valid Schema.org microdata (TechArticle, FAQPage, Event) by extracting page structure with Gemini Nano.</p>
-            <div class="cli-box">
+            <p>Scaffolds valid Schema.org microdata (TechArticle, FAQPage, Event, Product) by extracting page headings and structure via Gemini Nano.</p>
+            <div class="card-cli">
               <code>bun add astro-dev-schema-scaffolder</code>
-              <button class="copy-btn" data-copy="bun add astro-dev-schema-scaffolder" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-dev-schema-scaffolder" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-schema-scaffolder/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-schema-scaffolder" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-dev-schema-scaffolder/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-schema-scaffolder" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 11 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--accent);">Mock Data</span>
-              <span class="badge-pill badge-accent">Dev Toolbar</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Dev Toolbar // Mock Data ]</span>
             <h3>astro-dev-mock-generator</h3>
             <p>Generates synthetic, realistic mock data matching your Astro Content Collections Zod schema without cluttering local markdown files.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-dev-mock-generator</code>
-              <button class="copy-btn" data-copy="bun add astro-dev-mock-generator" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-dev-mock-generator" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-mock-generator/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-mock-generator" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-dev-mock-generator/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-mock-generator" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 12 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--cyan);">Navigation</span>
-              <span class="badge-pill badge-cyan">Dev Toolbar</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Dev Toolbar // Navigation ]</span>
             <h3>astro-dev-broken-anchor-healer</h3>
             <p>Smart internal anchor link validator. Finds broken #anchor targets and fuzzy-matches renamed headings with 1-click DOM fixes.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-dev-broken-anchor-healer</code>
-              <button class="copy-btn" data-copy="bun add astro-dev-broken-anchor-healer" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-dev-broken-anchor-healer" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-broken-anchor-healer/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-broken-anchor-healer" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-dev-broken-anchor-healer/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-broken-anchor-healer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Card 13 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--ruby);">Performance</span>
-              <span class="badge-pill badge-accent">Dev Toolbar</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--crimson);">[ Dev Toolbar // Performance ]</span>
             <h3>astro-dev-island-hydration-advisor</h3>
             <p>Island hydration advisor. Visualizes the viewport fold line and flags eager client:load directives on below-the-fold components.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>bun add astro-dev-island-hydration-advisor</code>
-              <button class="copy-btn" data-copy="bun add astro-dev-island-hydration-advisor" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="bun add astro-dev-island-hydration-advisor" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-island-hydration-advisor/" class="btn-card-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-island-hydration-advisor" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
+            <a href="./astro-dev-island-hydration-advisor/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-island-hydration-advisor" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Section 2: Rust & Cloudflare Edge Toolchain -->
-      <div class="section-banner" id="edge-rust">
-        <div class="section-title">
-          <span>02. Rust &amp; Cloudflare Edge Toolchain</span>
-          <span class="badge-pill badge-cyan">HIGH-PERFORMANCE INFRASTRUCTURE</span>
-        </div>
-        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">COMPILED SPEED // STRICT EDGE VERIFICATION</span>
+      <!-- Section: Rust & Cloudflare Edge Toolchain -->
+      <div class="section-header" id="edge-rust">
+        <span class="section-title">02. Rust &amp; Cloudflare Edge Toolchain</span>
+        <span class="section-badge" style="color: var(--cyan);">HIGH-PERFORMANCE INFRASTRUCTURE</span>
       </div>
 
-      <div class="cards-grid">
+      <div class="project-grid">
         <!-- Rust Card 1 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--cyan);">MCP &amp; CLI</span>
-              <span class="badge-pill badge-cyan">Rust</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ MCP Server &amp; CLI // Tooling ]</span>
             <h3>wp-blockmarkup-mcp</h3>
             <p>A fast, lightweight Rust port of wp-blockmarkup-mcp. Functions as both an LLM Model Context Protocol server and CLI for linting and formatting Gutenberg blocks.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>cargo install wp-blockmarkup-mcp</code>
-              <button class="copy-btn" data-copy="cargo install wp-blockmarkup-mcp" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="cargo install wp-blockmarkup-mcp" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/wp-blockmarkup-mcp" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+            <a href="https://github.com/bhubbard/wp-blockmarkup-mcp" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
           </div>
         </div>
 
         <!-- Rust Card 2 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--cyan);">AST Linter</span>
-              <span class="badge-pill badge-cyan">Rust / Oxc</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Static AST Linter // Oxc ]</span>
             <h3>oxc-astro-cf</h3>
             <p>Static AST linter detecting illegal access to Cloudflare runtime bindings inside static prerendered Astro pages before deployment.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>cargo install oxc-astro-cf</code>
-              <button class="copy-btn" data-copy="cargo install oxc-astro-cf" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="cargo install oxc-astro-cf" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/oxc-astro-cf" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+            <a href="https://github.com/bhubbard/oxc-astro-cf" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
           </div>
         </div>
 
         <!-- Rust Card 3 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--cyan);">Budget Auditor</span>
-              <span class="badge-pill badge-cyan">Rust</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Quota Auditor // Wasm ]</span>
             <h3>edge-bundle-budget</h3>
-            <p>Audits gzip and brotli bundle sizes against Cloudflare Worker tier quotas, inspects sourcemaps, and decomposes .wasm binaries.</p>
-            <div class="cli-box">
+            <p>Audits gzip/brotli sizes against Cloudflare Worker tier quotas, inspects sourcemaps, and decomposes .wasm binaries.</p>
+            <div class="card-cli">
               <code>cargo install edge-bundle-budget</code>
-              <button class="copy-btn" data-copy="cargo install edge-bundle-budget" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="cargo install edge-bundle-budget" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/edge-bundle-budget" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+            <a href="https://github.com/bhubbard/edge-bundle-budget" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
           </div>
         </div>
 
         <!-- Rust Card 4 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--cyan);">Security Probe</span>
-              <span class="badge-pill badge-cyan">Rust</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Origin Recon // Security ]</span>
             <h3>cf-origin-hunter</h3>
             <p>Discovers unmasked origin IPs behind Cloudflare proxies via DNS historical records, Certificate Transparency logs, and direct HTTP probes.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>cargo install cf-origin-hunter</code>
-              <button class="copy-btn" data-copy="cargo install cf-origin-hunter" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="cargo install cf-origin-hunter" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/cf-origin-hunter" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+            <a href="https://github.com/bhubbard/cf-origin-hunter" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
           </div>
         </div>
 
         <!-- Rust Card 5 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--cyan);">Security Auditor</span>
-              <span class="badge-pill badge-cyan">Rust</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Zone Security // Verification ]</span>
             <h3>cf-zone-auditor</h3>
             <p>Multi-zone Cloudflare security auditor verifying SSL/TLS strictness, HSTS headers, WAF rulesets, and DNSSEC validation.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>cargo install cf-zone-auditor</code>
-              <button class="copy-btn" data-copy="cargo install cf-zone-auditor" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="cargo install cf-zone-auditor" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/cf-zone-auditor" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+            <a href="https://github.com/bhubbard/cf-zone-auditor" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
           </div>
         </div>
 
         <!-- Rust Card 6 -->
-        <div class="suite-card">
-          <div>
-            <div class="card-meta-top">
-              <span class="card-tag" style="color: var(--cyan);">Type Sync</span>
-              <span class="badge-pill badge-cyan">Rust</span>
-            </div>
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Binding Generator // Types ]</span>
             <h3>astro-binding-sync</h3>
             <p>Synchronizes wrangler.jsonc resources with TypeScript App.Locals and env.d.ts definitions to ensure complete type safety.</p>
-            <div class="cli-box">
+            <div class="card-cli">
               <code>cargo install astro-binding-sync</code>
-              <button class="copy-btn" data-copy="cargo install astro-binding-sync" title="Copy install command">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <button class="copy-btn" data-copy="cargo install astro-binding-sync" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/astro-binding-sync" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+            <a href="https://github.com/bhubbard/astro-binding-sync" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
           </div>
         </div>
       </div>
 
-      <!-- Section 3: All Repositories Interactive Explorer -->
-      <div class="section-banner" id="all-repos">
-        <div class="section-title">
-          <span>03. All Repositories Index</span>
-          <span class="badge-pill badge-accent" id="activeCategoryCount">59 REPOSITORIES</span>
-        </div>
-        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">REAL-TIME SEARCH &amp; CATEGORY FILTERS</span>
+      <!-- Section: All Repositories Interactive Explorer -->
+      <div class="section-header" id="all-repos">
+        <span class="section-title">03. All Repositories Index</span>
+        <span class="section-badge" style="color: var(--cobalt);" id="activeCategoryCount">59 REPOSITORIES</span>
       </div>
 
       <section class="repo-explorer-section">
         <div class="explorer-controls">
           <div class="explorer-search-wrap">
-            <svg class="explorer-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="explorer-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <input type="text" id="explorerSearchInput" class="explorer-search-input" placeholder="Filter repositories by name, language or keyword...">
+            <input type="text" id="explorerSearchInput" class="explorer-search-input" placeholder="FILTER BY NAME, LANGUAGE, KEYWORD...">
           </div>
 
           <div class="filter-pills" id="categoryFilterPills">
@@ -1698,63 +1448,58 @@
         </div>
 
         <div class="repos-grid" id="reposGridContainer">
-          <!-- Populated by JavaScript with full 59 repository dataset -->
+          <!-- Populated by JavaScript -->
         </div>
       </section>
 
-      <!-- Section 4: Engineering Principles -->
-      <div class="section-banner">
-        <div class="section-title">
-          <span>04. Engineering Principles</span>
-          <span class="badge-pill badge-emerald">STANDARDS &amp; CRAFT</span>
-        </div>
-        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">CODE AS CRAFT // RADICAL OWNERSHIP</span>
+      <!-- Section: Core Principles -->
+      <div class="section-header">
+        <span class="section-title">04. Engineering Principles</span>
+        <span class="section-badge" style="color: var(--steel);">BRANDON HUBBARD STANDARDS</span>
       </div>
 
       <div class="principles-grid">
-        <div class="principle-box">
+        <div class="principle-card">
           <span class="principle-idx">[ 01 // PRINCIPLE ]</span>
           <h3>Intentional Velocity</h3>
           <p>Speed is nothing without direction. We move fast because we know exactly where we are going. Zero guessing.</p>
         </div>
-        <div class="principle-box">
+        <div class="principle-card">
           <span class="principle-idx">[ 02 // PRINCIPLE ]</span>
           <h3>Code as Craft</h3>
-          <p>The code you don’t see is as critical as the pixel you do. Clean, modular, typed, and engineered to survive scale.</p>
+          <p>The code you don’t see is as critical as the pixel you do. Clean, modular, typed, and engineered to survive growth.</p>
         </div>
-        <div class="principle-box">
+        <div class="principle-card">
           <span class="principle-idx">[ 03 // PRINCIPLE ]</span>
           <h3>Radical Ownership</h3>
-          <p>Every line of code, component structure, and architectural decision is owned, defended, tested, and delivered.</p>
+          <p>Every line of code, component structure, and design decision is owned, defended, tested, and delivered.</p>
         </div>
       </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Brand Footer -->
     <footer>
-      <div class="footer-brand">
-        <strong>Open Source by Brandon Hubbard</strong>
-        <span>Code as Craft. Radical Ownership. © 2026 Brandon Hubbard.</span>
+      <div>
+        <span>© 2026 BRANDON HUBBARD. CODE AS CRAFT. RADICAL OWNERSHIP.</span>
       </div>
-      <div class="footer-nav">
-        <a href="https://brandonhubbard.com/">Home</a>
+      <div class="footer-links">
         <a href="https://brandonhubbard.com/branding">Brand Identity</a>
         <a href="https://brandonhubbard.com/blog">Engineering Notes</a>
         <a href="https://webtools.brandonhubbard.com/">Web Tools</a>
-        <a href="https://github.com/bhubbard" target="_blank" rel="noopener">GitHub Profile ↗</a>
+        <a href="https://github.com/bhubbard" target="_blank" rel="noopener">GitHub Profile</a>
       </div>
     </footer>
   </div>
 
-  <!-- Command Palette / Search Modal (VitePlus Style) -->
+  <!-- Command Palette / Search Modal (VitePlus Functionality in Swiss Sharp Styling) -->
   <div class="modal-overlay" id="searchModalOverlay">
     <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search repositories">
       <div class="modal-header">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="color: var(--accent);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="color: var(--cobalt);">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="modalSearchInput" class="modal-search-input" placeholder="Search open source repos, packages, and tools..." autocomplete="off">
+        <input type="text" id="modalSearchInput" class="modal-search-input" placeholder="SEARCH ALL OPEN SOURCE REPOSITORIES..." autocomplete="off">
         <button type="button" class="modal-close-btn" id="modalCloseBtn">ESC</button>
       </div>
 
@@ -1767,22 +1512,22 @@
       </div>
 
       <div class="modal-body" id="modalResultsList">
-        <!-- Results populated dynamically -->
+        <!-- Populated dynamically -->
       </div>
 
       <div class="modal-footer">
         <div class="modal-hints">
-          <span><kbd style="color: var(--text);">↑</kbd><kbd style="color: var(--text);">↓</kbd> Navigate</span>
-          <span><kbd style="color: var(--text);">↵</kbd> Open</span>
-          <span><kbd style="color: var(--text);">ESC</kbd> Close</span>
+          <span><kbd>↑</kbd><kbd>↓</kbd> NAVIGATE</span>
+          <span><kbd>↵</kbd> OPEN</span>
+          <span><kbd>ESC</kbd> CLOSE</span>
         </div>
-        <span id="modalMatchCount">Showing 59 repositories</span>
+        <span id="modalMatchCount">SHOWING 59 REPOSITORIES</span>
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification for Copy feedback -->
-  <div class="toast" id="toast">Command copied to clipboard</div>
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">COMMAND COPIED TO CLIPBOARD</div>
 
   <script>
     // Complete baked-in repository catalog (59 public repositories)
@@ -2260,13 +2005,13 @@
 
     // Language colors map
     const LANG_COLORS = {
-      "TypeScript": "#3178c6",
-      "Rust": "#dea584",
-      "JavaScript": "#f7df1e",
-      "PHP": "#4F5D95",
-      "HTML": "#e34c26",
-      "Shell": "#89e051",
-      "CSS": "#563d7c"
+      "TypeScript": "#3B82F6",
+      "Rust": "#06B6D4",
+      "JavaScript": "#10B981",
+      "PHP": "#3B82F6",
+      "HTML": "#F43F5E",
+      "Shell": "#10B981",
+      "CSS": "#3B82F6"
     };
 
     // DOM Elements
@@ -2313,27 +2058,27 @@
 
       if (filtered.length === 0) {
         reposGridContainer.innerHTML = `
-          <div style="grid-column: 1 / -1; padding: 3rem 1rem; text-align: center; color: var(--text-muted);">
-            No repositories matched "${query}". Try searching for another keyword.
+          <div style="grid-column: 1 / -1; padding: 3.5rem 1rem; text-align: center; color: var(--steel); font-family: var(--font-mono);">
+            NO REPOSITORIES MATCHED "${query}".
           </div>
         `;
         return;
       }
 
       reposGridContainer.innerHTML = filtered.map(repo => {
-        const langColor = LANG_COLORS[repo.language] || '#94a3b8';
+        const langColor = LANG_COLORS[repo.language] || 'var(--steel)';
         return `
           <a href="${repo.url}" target="_blank" rel="noopener" class="repo-card">
             <div class="repo-card-top">
               <div class="repo-name-row">
                 <span class="repo-title">${repo.name}</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.5; flex-shrink: 0;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.6; flex-shrink: 0;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
               </div>
               <p>${repo.description || 'Open source package by Brandon Hubbard.'}</p>
             </div>
             <div class="repo-card-bottom">
               <span class="repo-lang-tag">
-                <span class="lang-dot" style="background-color: ${langColor};"></span>
+                <span class="lang-box" style="background-color: ${langColor};"></span>
                 <span>${repo.language || 'Code'}</span>
               </span>
               <div class="repo-stats">
@@ -2358,12 +2103,12 @@
         return matchesCategory && matchesQuery;
       });
 
-      modalMatchCount.textContent = `Showing ${filteredModalRepos.length} of ${REPOSITORIES.length} repositories`;
+      modalMatchCount.textContent = `SHOWING ${filteredModalRepos.length} OF ${REPOSITORIES.length} REPOSITORIES`;
 
       if (filteredModalRepos.length === 0) {
         modalResultsList.innerHTML = `
           <div class="modal-empty">
-            No repositories found matching "<strong>${query}</strong>"
+            NO REPOSITORIES FOUND MATCHING "${query}"
           </div>
         `;
         return;
@@ -2375,26 +2120,25 @@
 
       modalResultsList.innerHTML = filteredModalRepos.map((repo, idx) => {
         const isSelected = idx === selectedModalIndex;
-        const langColor = LANG_COLORS[repo.language] || '#94a3b8';
+        const langColor = LANG_COLORS[repo.language] || 'var(--steel)';
         return `
           <a href="${repo.url}" target="_blank" rel="noopener" class="modal-item ${isSelected ? 'selected' : ''}" data-idx="${idx}">
             <div class="modal-item-info">
               <div class="modal-item-title">
                 <span>${repo.name}</span>
                 <span class="modal-item-badge" style="display: inline-flex; align-items: center; gap: 4px;">
-                  <span class="lang-dot" style="background-color: ${langColor}; width: 6px; height: 6px;"></span>
+                  <span class="lang-box" style="background-color: ${langColor};"></span>
                   ${repo.language || 'Code'}
                 </span>
                 ${repo.stars > 0 ? `<span class="modal-item-badge">★ ${repo.stars}</span>` : ''}
               </div>
               <div class="modal-item-desc">${repo.description || 'Open source repository by Brandon Hubbard.'}</div>
             </div>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.4; flex-shrink: 0;"><path d="M9 18l6-6-6-6"></path></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.5; flex-shrink: 0;"><path d="M9 18l6-6-6-6"></path></svg>
           </a>
         `;
       }).join('');
 
-      // Auto scroll selected item into view
       const selectedEl = modalResultsList.querySelector('.modal-item.selected');
       if (selectedEl) {
         selectedEl.scrollIntoView({ block: 'nearest' });
@@ -2422,7 +2166,6 @@
       document.body.style.overflow = '';
     }
 
-    // Event Listeners for Open / Close Modal
     if (openSearchBtn) openSearchBtn.addEventListener('click', () => openModal());
     if (openSearchMobileBtn) openSearchMobileBtn.addEventListener('click', () => openModal());
     if (heroSearchTrigger) heroSearchTrigger.addEventListener('click', () => openModal());
@@ -2432,9 +2175,8 @@
       if (e.target === searchModalOverlay) closeModal();
     });
 
-    // Keyboard Shortcuts (Cmd+K, Ctrl+K, /, Esc, Arrows, Enter)
+    // Keyboard Navigation
     window.addEventListener('keydown', (e) => {
-      // Toggle modal with Cmd+K or Ctrl+K
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
         if (searchModalOverlay.classList.contains('active')) {
@@ -2445,14 +2187,12 @@
         return;
       }
 
-      // Open with "/" when not typing in an input
       if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
         e.preventDefault();
         openModal();
         return;
       }
 
-      // Inside Modal Navigation
       if (searchModalOverlay.classList.contains('active')) {
         if (e.key === 'Escape') {
           e.preventDefault();
@@ -2478,7 +2218,6 @@
       }
     });
 
-    // Search Input listeners
     modalSearchInput.addEventListener('input', () => {
       selectedModalIndex = 0;
       renderModalResults();
@@ -2486,7 +2225,6 @@
 
     explorerSearchInput.addEventListener('input', renderExplorerGrid);
 
-    // Modal Filter buttons
     modalFilterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         modalFilterBtns.forEach(b => b.classList.remove('active'));
@@ -2497,7 +2235,6 @@
       });
     });
 
-    // Explorer Category Filter pills
     categoryFilterPills.forEach(pill => {
       pill.addEventListener('click', () => {
         categoryFilterPills.forEach(p => p.classList.remove('active'));
@@ -2507,13 +2244,12 @@
       });
     });
 
-    // Copy to clipboard functionality
     function showToast(text) {
-      toast.textContent = text || 'Copied to clipboard';
+      toast.textContent = text || 'COPIED TO CLIPBOARD';
       toast.classList.add('show');
       setTimeout(() => {
         toast.classList.remove('show');
-      }, 2200);
+      }, 2000);
     }
 
     document.querySelectorAll('.copy-btn').forEach(btn => {
@@ -2522,15 +2258,14 @@
         if (textToCopy) {
           try {
             await navigator.clipboard.writeText(textToCopy);
-            showToast(`Copied: ${textToCopy}`);
+            showToast(`COPIED: ${textToCopy}`);
           } catch (err) {
-            showToast('Copied to clipboard');
+            showToast('COPIED TO CLIPBOARD');
           }
         }
       });
     });
 
-    // Optional background sync with GitHub API to refresh stars/metrics
     async function syncGitHubRepos() {
       try {
         const res = await fetch('https://api.github.com/users/bhubbard/repos?per_page=100&sort=updated');
@@ -2540,7 +2275,6 @@
             const countEl = document.getElementById('metricRepoCount');
             if (countEl) countEl.textContent = liveRepos.length;
 
-            // Update stars in catalog
             liveRepos.forEach(live => {
               const match = REPOSITORIES.find(r => r.name.toLowerCase() === live.name.toLowerCase());
               if (match) {
@@ -2551,11 +2285,10 @@
           }
         }
       } catch (e) {
-        // Silently keep offline catalog
+        // Retain offline catalog
       }
     }
 
-    // Initial render
     renderExplorerGrid();
     renderModalResults();
     syncGitHubRepos();
