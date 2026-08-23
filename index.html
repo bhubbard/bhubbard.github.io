@@ -1,228 +1,445 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brandon Hubbard — Open Source Software & AI Specifications</title>
-  <meta name="description" content="Official open source software portal and Chrome Built-in AI & Astro engineering tools by Brandon Hubbard.">
-  <meta property="og:title" content="Brandon Hubbard — Open Source Engineering">
-  <meta property="og:description" content="High-performance Astro integrations, Chrome Built-in AI dev tools, and web infrastructure specifications.">
+  <title>Open Source by Brandon Hubbard — Web, AI & Edge Tooling</title>
+  <meta name="description" content="Open source software portal by Brandon Hubbard. Featuring Chrome Built-in AI & Astro integrations, Rust utilities, and Cloudflare edge systems.">
+  <meta property="og:title" content="Open Source by Brandon Hubbard">
+  <meta property="og:description" content="The Open Source Suite for Modern Web, AI & Edge Infrastructure. Zero-latency Astro tools, Chrome Gemini Nano packages, and Rust edge utilities.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Brandon Hubbard Swiss Grid Design System */
     :root {
-      --void: #0a0a0a;
-      --charcoal: #121212;
-      --concrete: #262626;
-      --titanium: #ffffff;
-      --steel: #888888;
-      --cobalt: #3B82F6;
-      --cyan: #06B6D4;
-      --emerald: #10B981;
-      --crimson: #F43F5E;
-      --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --bg: #09090c;
+      --bg-alt: #0e0f15;
+      --surface: #14151f;
+      --surface-hover: #1c1d2b;
+      --surface-active: #242638;
+      --border: #222433;
+      --border-light: #2e3146;
+      --border-accent: rgba(116, 116, 251, 0.4);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      --accent: #7474fb;
+      --accent-glow: rgba(116, 116, 251, 0.15);
+      --cyan: #38bdf8;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --ruby: #f43f5e;
+      --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
+      --max-width: 1240px;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-full: 9999px;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      border-radius: 0 !important; /* Swiss Sharp 0px Rule */
+    }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: dark;
     }
 
     body {
-      background-color: var(--void);
-      color: var(--titanium);
+      background-color: var(--bg);
+      color: var(--text);
       font-family: var(--font-ui);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      min-height: 100vh;
     }
 
-    .grid-container {
-      max-width: 1200px;
+    /* Subtle background grid inspired by VitePlus */
+    .bg-pattern {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        radial-gradient(ellipse at 50% -20%, rgba(116, 116, 251, 0.12) 0%, transparent 70%),
+        linear-gradient(to bottom, transparent 0%, var(--bg) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .app-container {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
       margin: 0 auto;
-      border-left: 1px solid var(--concrete);
-      border-right: 1px solid var(--concrete);
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      background-color: rgba(9, 9, 12, 0.85);
+      backdrop-filter: blur(8px);
     }
 
-    /* Top Brand Navigation */
+    /* -------------------------------------------------------------
+       Header & Brand Navigation (VitePlus Inspired)
+       ------------------------------------------------------------- */
     header {
-      border-bottom: 1px solid var(--concrete);
-      background: var(--void);
       position: sticky;
       top: 0;
       z-index: 100;
+      background-color: rgba(9, 9, 12, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
 
-    .nav-inner {
+    .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 1.5rem;
-    }
-
-    .brand-identity {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      text-decoration: none;
-      color: var(--titanium);
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      background: var(--titanium);
-      color: var(--void);
-      font-family: var(--font-ui);
-      font-weight: 800;
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      letter-spacing: -1px;
-    }
-
-    .brand-meta {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-name {
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .brand-title {
-      font-size: 0.72rem;
-      color: var(--steel);
-      font-family: var(--font-mono);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
+      padding: 0.85rem 1.75rem;
       gap: 1.5rem;
     }
 
-    nav a {
-      color: var(--steel);
-      text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      transition: color 0.15s ease;
+    /* Logo: "Open Source" with "by Brandon Hubbard" underneath */
+    .brand-link {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: opacity 0.15s ease;
     }
 
-    nav a:hover, nav a.active {
-      color: var(--titanium);
+    .brand-link:hover {
+      opacity: 0.9;
     }
 
-    nav a span.idx {
-      color: var(--cobalt);
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #7474fb 0%, #38bdf8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.15rem;
+      box-shadow: 0 0 16px rgba(116, 116, 251, 0.35);
+      flex-shrink: 0;
     }
 
-    /* Hero Section */
-    .hero {
-      padding: 4.5rem 2rem;
-      border-bottom: 1px solid var(--concrete);
-      background: linear-gradient(180deg, var(--charcoal) 0%, var(--void) 100%);
+    .brand-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2.2;
     }
 
-    .tag-strip {
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .brand-logo-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .brand-logo-tagline {
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    /* Search Bar in Header (VitePlus Cmd+K) */
+    .header-search-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.75rem;
+      background-color: var(--surface);
+      border: 1px solid var(--border-light);
+      color: var(--text-muted);
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-md);
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-width: 220px;
+      justify-content: space-between;
+    }
+
+    .header-search-btn:hover {
+      background-color: var(--surface-hover);
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    .search-btn-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .search-btn-left svg {
+      width: 15px;
+      height: 15px;
+      opacity: 0.7;
+    }
+
+    .kbd-shortcut {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.7rem;
+      background-color: var(--bg);
+      border: 1px solid var(--border-light);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Desktop Navigation */
+    nav.desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    nav.desktop-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    nav.desktop-nav a:hover {
+      color: var(--text);
+    }
+
+    .nav-divider {
+      width: 1px;
+      height: 16px;
+      background-color: var(--border-light);
+    }
+
+    .btn-github-icon {
+      color: var(--text-muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+    }
+
+    .btn-github-icon:hover {
+      color: var(--text);
+      background-color: var(--surface);
+    }
+
+    /* Mobile Search & Menu Toggle */
+    .mobile-search-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-light);
+      color: var(--text);
+      padding: 0.5rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+    }
+
+    /* -------------------------------------------------------------
+       Hero Section (VitePlus Style)
+       ------------------------------------------------------------- */
+    .hero {
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 0%, rgba(116, 116, 251, 0.08) 0%, transparent 60%);
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      background-color: var(--surface);
+      border: 1px solid var(--border-light);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
       color: var(--cyan);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 1.25rem;
-      border: 1px solid var(--concrete);
-      padding: 0.35rem 0.75rem;
-      background: var(--void);
     }
 
-    .tag-strip .dot {
-      width: 6px;
-      height: 6px;
-      background: var(--emerald);
+    .hero-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
     }
 
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
       font-weight: 800;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.035em;
       line-height: 1.1;
-      margin-bottom: 1rem;
+      max-width: 960px;
+      margin-bottom: 1.25rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 30%, #7474fb 70%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero p.lead {
-      font-size: 1.25rem;
-      color: var(--steel);
-      max-width: 850px;
-      margin-bottom: 2rem;
-      font-weight: 400;
+      font-size: 1.18rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      line-height: 1.6;
+      margin-bottom: 2.25rem;
     }
 
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.4rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-family: var(--font-ui);
+      border: 1px solid transparent;
+    }
+
+    .btn-accent {
+      background: #7474fb;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(116, 116, 251, 0.35);
+    }
+
+    .btn-accent:hover {
+      background: #6363f9;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(116, 116, 251, 0.45);
+    }
+
+    .btn-surface {
+      background-color: var(--surface);
+      border-color: var(--border-light);
+      color: var(--text);
+    }
+
+    .btn-surface:hover {
+      background-color: var(--surface-hover);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Metrics Strip */
     .hero-metrics {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 2.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--concrete);
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      border-top: 1px solid var(--border);
+      background-color: rgba(14, 15, 21, 0.6);
     }
 
-    .metric-card {
-      font-family: var(--font-mono);
+    .metric-box {
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      border-right: 1px solid var(--border);
     }
 
-    .metric-num {
+    .metric-box:last-child {
+      border-right: none;
+    }
+
+    .metric-val {
       font-size: 2rem;
-      font-weight: 700;
-      color: var(--titanium);
+      font-weight: 800;
+      font-family: var(--font-mono);
+      color: var(--text);
       display: block;
       line-height: 1;
       margin-bottom: 0.35rem;
     }
 
-    .metric-label {
+    .metric-lbl {
       font-size: 0.75rem;
-      color: var(--steel);
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      font-family: var(--font-mono);
     }
 
-    /* Section Headers */
-    .section-header {
-      padding: 1.5rem 2rem;
-      border-bottom: 1px solid var(--concrete);
-      background: var(--charcoal);
+    /* -------------------------------------------------------------
+       Section Header
+       ------------------------------------------------------------- */
+    .section-banner {
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background-color: var(--bg-alt);
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.75rem;
     }
 
     .section-title {
@@ -230,475 +447,2118 @@
       font-size: 0.85rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--titanium);
+      letter-spacing: 0.08em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
 
-    /* Project Directory Grid */
-    .project-grid {
+    .badge-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-emerald {
+      background-color: rgba(16, 185, 129, 0.15);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-cyan {
+      background-color: rgba(56, 189, 248, 0.15);
+      color: var(--cyan);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .badge-accent {
+      background-color: rgba(116, 116, 251, 0.15);
+      color: #9b9bff;
+      border: 1px solid rgba(116, 116, 251, 0.3);
+    }
+
+    /* -------------------------------------------------------------
+       Cards & Grids (VitePlus Card Aesthetics)
+       ------------------------------------------------------------- */
+    .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      border-bottom: 1px solid var(--concrete);
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      border-bottom: 1px solid var(--border);
     }
 
-    .project-card {
-      padding: 2.5rem 2rem;
-      border-right: 1px solid var(--concrete);
-      border-bottom: 1px solid var(--concrete);
-      background: var(--void);
+    .suite-card {
+      padding: 2rem 1.75rem;
+      background-color: var(--bg);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: background 0.15s ease;
+      transition: all 0.2s ease;
+      position: relative;
     }
 
-    .project-card:hover {
-      background: var(--charcoal);
+    .suite-card:hover {
+      background-color: var(--surface);
     }
 
-    .card-top {
-      margin-bottom: 1.5rem;
-    }
-
-    .card-category {
+    .card-meta-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
       font-family: var(--font-mono);
       font-size: 0.72rem;
+    }
+
+    .card-tag {
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      display: block;
-      margin-bottom: 0.75rem;
+      letter-spacing: 0.06em;
+      font-weight: 600;
     }
 
-    .project-card h3 {
-      font-size: 1.35rem;
+    .suite-card h3 {
+      font-size: 1.25rem;
       font-weight: 700;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.02em;
+      margin-bottom: 0.65rem;
+      letter-spacing: -0.015em;
+      color: var(--text);
     }
 
-    .project-card p {
-      color: var(--steel);
-      font-size: 0.92rem;
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
+    .suite-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
     }
 
-    .card-cli {
-      background: var(--void);
-      border: 1px solid var(--concrete);
-      padding: 0.65rem 0.85rem;
+    .cli-box {
+      background-color: var(--bg);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 0.55rem 0.75rem;
       font-family: var(--font-mono);
       font-size: 0.78rem;
-      color: var(--steel);
-      margin-bottom: 1.5rem;
-      user-select: all;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      gap: 0.5rem;
     }
 
-    .card-cli code {
-      color: var(--titanium);
+    .cli-box code {
+      color: var(--text);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 2px 4px;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+
+    .copy-btn:hover {
+      color: var(--text);
+      background-color: var(--surface-active);
     }
 
     .card-actions {
       display: flex;
-      gap: 0.75rem;
+      gap: 0.65rem;
+      align-items: center;
     }
 
-    .btn {
+    .btn-card-primary {
+      padding: 0.45rem 0.95rem;
+      font-size: 0.8rem;
+      background-color: var(--surface-hover);
+      border: 1px solid var(--border-light);
+      color: var(--text);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.15s ease;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.65rem 1.25rem;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 600;
+      gap: 0.35rem;
+    }
+
+    .btn-card-primary:hover {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-card-ghost {
+      padding: 0.45rem 0.85rem;
+      font-size: 0.8rem;
+      background: transparent;
+      color: var(--text-muted);
+      border-radius: var(--radius-sm);
       text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .btn-card-ghost:hover {
+      color: var(--text);
+    }
+
+    /* -------------------------------------------------------------
+       All Repositories Interactive Explorer Section
+       ------------------------------------------------------------- */
+    .repo-explorer-section {
+      padding: 2.5rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background-color: var(--bg);
+    }
+
+    .explorer-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .explorer-search-wrap {
+      position: relative;
+      flex: 1;
+      max-width: 450px;
+      min-width: 260px;
+    }
+
+    .explorer-search-input {
+      width: 100%;
+      background-color: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 0.7rem 1rem 0.7rem 2.5rem;
+      color: var(--text);
+      font-family: var(--font-ui);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .explorer-search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    .explorer-search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 500;
       cursor: pointer;
-      border: 1px solid var(--concrete);
       transition: all 0.15s ease;
     }
 
-    .btn-primary {
-      background: var(--titanium);
-      color: var(--void);
-      border-color: var(--titanium);
+    .filter-pill:hover {
+      background-color: var(--surface-hover);
+      color: var(--text);
     }
 
-    .btn-primary:hover {
-      background: var(--cobalt);
-      border-color: var(--cobalt);
-      color: var(--titanium);
+    .filter-pill.active {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
     }
 
-    .btn-secondary {
-      background: transparent;
-      color: var(--titanium);
+    .repos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
     }
 
-    .btn-secondary:hover {
-      background: var(--concrete);
+    .repo-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.18s ease;
+      text-decoration: none;
+      color: var(--text);
     }
 
-    /* Engineering Principles */
+    .repo-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .repo-card-top {
+      margin-bottom: 1rem;
+    }
+
+    .repo-name-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .repo-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      font-family: var(--font-mono);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .repo-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .repo-card-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .repo-lang-tag {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .lang-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .repo-stats {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* -------------------------------------------------------------
+       Principles Grid
+       ------------------------------------------------------------- */
     .principles-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      border-bottom: 1px solid var(--concrete);
+      border-bottom: 1px solid var(--border);
     }
 
-    .principle-card {
+    .principle-box {
       padding: 2.5rem 2rem;
-      border-right: 1px solid var(--concrete);
-      border-bottom: 1px solid var(--concrete);
-      background: var(--void);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background-color: var(--bg);
+    }
+
+    .principle-box:last-child {
+      border-right: none;
     }
 
     .principle-idx {
       font-family: var(--font-mono);
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--cyan);
-      display: block;
       margin-bottom: 0.75rem;
+      display: block;
+      font-weight: 600;
     }
 
-    .principle-card h3 {
-      font-size: 1.2rem;
+    .principle-box h3 {
+      font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
-    .principle-card p {
-      color: var(--steel);
+    .principle-box p {
+      color: var(--text-muted);
       font-size: 0.9rem;
     }
 
-    /* Footer */
+    /* -------------------------------------------------------------
+       Footer
+       ------------------------------------------------------------- */
     footer {
-      margin-top: auto;
-      padding: 2.5rem 2rem;
-      border-top: 1px solid var(--concrete);
-      background: var(--void);
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+      background-color: var(--bg-alt);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 1.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--steel);
+      font-size: 0.85rem;
+      color: var(--text-muted);
     }
 
-    footer a {
-      color: var(--titanium);
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .footer-brand strong {
+      color: var(--text);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      color: var(--text-muted);
       text-decoration: none;
       transition: color 0.15s ease;
     }
 
-    footer a:hover {
-      color: var(--cobalt);
+    .footer-nav a:hover {
+      color: var(--accent);
     }
 
-    .footer-links {
+    /* -------------------------------------------------------------
+       Interactive Search Modal / Command Palette (VitePlus Style)
+       ------------------------------------------------------------- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 12vh 1rem 2rem;
+    }
+
+    .modal-overlay.active {
       display: flex;
-      gap: 1.5rem;
+    }
+
+    .search-modal {
+      width: 100%;
+      max-width: 680px;
+      background-color: #12131c;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(116, 116, 251, 0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      max-height: 75vh;
+      animation: modalPop 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalPop {
+      0% { opacity: 0; transform: scale(0.97) translateY(-8px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .modal-header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      position: relative;
+    }
+
+    .modal-search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-size: 1.05rem;
+      font-family: var(--font-ui);
+      outline: none;
+    }
+
+    .modal-search-input::placeholder {
+      color: var(--text-subtle);
+    }
+
+    .modal-close-btn {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      color: var(--text-muted);
+      border-radius: var(--radius-sm);
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--text);
+      background-color: var(--surface-hover);
+    }
+
+    .modal-filters {
+      display: flex;
+      gap: 0.4rem;
+      padding: 0.65rem 1.25rem;
+      background-color: rgba(9, 9, 12, 0.5);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }
+
+    .modal-filter-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .modal-filter-btn:hover {
+      background-color: var(--surface);
+      color: var(--text);
+    }
+
+    .modal-filter-btn.active {
+      background-color: var(--surface-active);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .modal-body {
+      overflow-y: auto;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .modal-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--text);
+      transition: background-color 0.12s ease;
+      cursor: pointer;
+    }
+
+    .modal-item:hover, .modal-item.selected {
+      background-color: var(--surface-hover);
+    }
+
+    .modal-item-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      min-width: 0;
+    }
+
+    .modal-item-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      font-family: var(--font-mono);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .modal-item-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 480px;
+    }
+
+    .modal-item-badge {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background-color: var(--surface-active);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    .modal-empty {
+      padding: 3rem 1rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .modal-footer {
+      padding: 0.65rem 1.25rem;
+      background-color: var(--bg);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+    }
+
+    .modal-hints {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* -------------------------------------------------------------
+       Toast Notification for Copy
+       ------------------------------------------------------------- */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: var(--surface);
+      border: 1px solid var(--accent);
+      color: var(--text);
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      z-index: 2000;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.2s ease;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* -------------------------------------------------------------
+       Responsive Breakpoints
+       ------------------------------------------------------------- */
+    @media (max-width: 900px) {
+      .header-search-btn {
+        min-width: 150px;
+      }
+      .hero-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .metric-box:nth-child(2) {
+        border-right: none;
+      }
+      .metric-box:nth-child(1), .metric-box:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+      }
     }
 
     @media (max-width: 768px) {
-      .project-card, .principle-card {
-        border-right: none;
-      }
-      nav ul {
+      nav.desktop-nav {
         display: none;
       }
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
+      .header-search-btn {
+        display: none;
+      }
+      .mobile-search-btn {
+        display: flex;
+      }
+      .cards-grid, .principles-grid {
+        grid-template-columns: 1fr;
+      }
+      .suite-card, .principle-box {
+        border-right: none;
+      }
+      .hero {
+        padding: 3.5rem 1.25rem 2.5rem;
+      }
+      .modal-overlay {
+        padding: 4vh 0.75rem 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="grid-container">
-    <!-- Brand Header -->
+  <div class="bg-pattern"></div>
+
+  <div class="app-container">
+    <!-- Header with VitePlus inspiration -->
     <header>
-      <div class="nav-inner">
-        <a href="https://brandonhubbard.com/" class="brand-identity">
-          <div class="brand-mark">BH</div>
-          <div class="brand-meta">
-            <span class="brand-name">BRANDON HUBBARD</span>
-            <span class="brand-title">Open Source Engineering</span>
+      <div class="header-inner">
+        <!-- Logo: "Open Source" with "by Brandon Hubbard" underneath -->
+        <a href="https://brandonhubbard.com/" class="brand-link" title="Brandon Hubbard Open Source">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-logo-title">Open Source</span>
+            <span class="brand-logo-tagline">by Brandon Hubbard</span>
           </div>
         </a>
-        <nav>
-          <ul>
-            <li><a href="https://brandonhubbard.com/"><span class="idx">01.</span> Home</a></li>
-            <li><a href="https://brandonhubbard.com/branding"><span class="idx">02.</span> Branding</a></li>
-            <li><a href="https://brandonhubbard.com/blog"><span class="idx">03.</span> Notes</a></li>
-            <li><a href="https://webtools.brandonhubbard.com/"><span class="idx">04.</span> Tools</a></li>
-            <li><a href="https://github.com/bhubbard" target="_blank" rel="noopener"><span class="idx">05.</span> GitHub ↗</a></li>
-          </ul>
-        </nav>
+
+        <!-- Header Actions: Search Button (Cmd+K) & Navigation -->
+        <div class="header-actions">
+          <button type="button" class="header-search-btn" id="openSearchBtn" aria-label="Search repositories">
+            <div class="search-btn-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Search repos...</span>
+            </div>
+            <span class="kbd-shortcut"><span id="metaKey">⌘</span>K</span>
+          </button>
+
+          <button type="button" class="mobile-search-btn" id="openSearchMobileBtn" aria-label="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <nav class="desktop-nav">
+            <a href="#astro-ai">Astro + AI</a>
+            <a href="#edge-rust">Edge &amp; Rust</a>
+            <a href="#all-repos">All Repos</a>
+            <div class="nav-divider"></div>
+            <a href="https://github.com/bhubbard" target="_blank" rel="noopener" class="btn-github-icon" title="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <!-- Main Hero -->
+    <!-- Main Content Area -->
     <main>
+      <!-- Hero Section -->
       <section class="hero">
-        <div class="tag-strip">
-          <div class="dot"></div>
-          <span>ENGINEERING SPECIFICATION // CHROME BUILT-IN AI & ASTRO SUITE</span>
+        <div class="hero-pill">
+          <div class="hero-pill-dot"></div>
+          <span>OPEN SOURCE ECOSYSTEM // BRANDON HUBBARD</span>
         </div>
-        <h1>High-Performance Software & Local AI Tooling.</h1>
-        <p class="lead">A curated suite of zero-cost, zero-latency Astro integrations and developer productivity tools powered by on-device Gemini Nano and modern web APIs.</p>
-        
+
+        <h1>
+          The Open Source Suite for <br>
+          <span class="gradient-text">Web, On-Device AI &amp; Edge.</span>
+        </h1>
+
+        <p class="lead">
+          A curated ecosystem of zero-cost, zero-latency Astro integrations, Chrome Built-in Gemini Nano tools, high-speed Rust CLIs, and Cloudflare edge systems.
+        </p>
+
+        <div class="hero-actions">
+          <button type="button" class="btn btn-accent" id="heroSearchTrigger">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Search 59+ Repositories</span>
+            <span class="kbd-shortcut" style="background: rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.2); color: #fff;">⌘K</span>
+          </button>
+          <a href="#astro-ai" class="btn btn-surface">Explore Astro AI Suite</a>
+          <a href="https://github.com/bhubbard" target="_blank" rel="noopener" class="btn btn-surface">GitHub Profile ↗</a>
+        </div>
+
+        <!-- Metrics Strip -->
         <div class="hero-metrics">
-          <div class="metric-card">
-            <span class="metric-num">13</span>
-            <span class="metric-label">Astro AI Packages</span>
+          <div class="metric-box">
+            <span class="metric-val" id="metricRepoCount">59</span>
+            <span class="metric-lbl">Open Repositories</span>
           </div>
-          <div class="metric-card">
-            <span class="metric-num">236</span>
-            <span class="metric-label">Automated Tests Passing</span>
+          <div class="metric-box">
+            <span class="metric-val">13</span>
+            <span class="metric-lbl">Astro AI Packages</span>
           </div>
-          <div class="metric-card">
-            <span class="metric-num">0ms</span>
-            <span class="metric-label">Cloud API Network Latency</span>
+          <div class="metric-box">
+            <span class="metric-val">10+</span>
+            <span class="metric-lbl">Rust &amp; Edge Tools</span>
           </div>
-          <div class="metric-card">
-            <span class="metric-num">$0.00</span>
-            <span class="metric-label">On-Device Compute Cost</span>
+          <div class="metric-box">
+            <span class="metric-val">100%</span>
+            <span class="metric-lbl">Free &amp; Open Source</span>
           </div>
         </div>
       </section>
 
-      <!-- Section: Project Directory -->
-      <div class="section-header" id="projects">
-        <span class="section-title">01. The Astro + Chrome Built-in AI Suite</span>
-        <span class="section-title" style="color: var(--emerald);">13 PACKAGES VERIFIED</span>
+      <!-- Section 1: Astro & Chrome Built-in AI Suite -->
+      <div class="section-banner" id="astro-ai">
+        <div class="section-title">
+          <span>01. Chrome Built-in AI &amp; Astro Suite</span>
+          <span class="badge-pill badge-emerald">13 PACKAGES VERIFIED</span>
+        </div>
+        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">ON-DEVICE GEMINI NANO // ZERO LATENCY</span>
       </div>
 
-      <div class="project-grid">
+      <div class="cards-grid">
         <!-- Card 1 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Client Directive // Hydration ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--accent);">Hydration Directive</span>
+              <span class="badge-pill badge-accent">TypeScript</span>
+            </div>
             <h3>astro-client-directive-ai</h3>
             <p>A custom <code>client:ai-ready</code> directive that delays hydrating components until Chrome's on-device Gemini Nano model is fully resident in memory.</p>
-            <div class="card-cli"><code>bun add astro-client-directive-ai</code></div>
+            <div class="cli-box">
+              <code>bun add astro-client-directive-ai</code>
+              <button class="copy-btn" data-copy="bun add astro-client-directive-ai" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-client-directive-ai/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-client-directive-ai" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-client-directive-ai/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-client-directive-ai" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Rehype Plugin // Content ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--cyan);">Rehype Plugin</span>
+              <span class="badge-pill badge-cyan">TypeScript</span>
+            </div>
             <h3>astro-rehype-nano-code</h3>
             <p>Zero-JS code block explainer. Injects build-time data attributes and streams step-by-step code annotations into an accessible drawer on-demand.</p>
-            <div class="card-cli"><code>bun add astro-rehype-nano-code</code></div>
+            <div class="cli-box">
+              <code>bun add astro-rehype-nano-code</code>
+              <button class="copy-btn" data-copy="bun add astro-rehype-nano-code" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-rehype-nano-code/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-rehype-nano-code" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-rehype-nano-code/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-rehype-nano-code" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--emerald);">[ Prefetch Hook // UX ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--emerald);">Prefetch UX</span>
+              <span class="badge-pill badge-emerald">TypeScript</span>
+            </div>
             <h3>astro-prefetch-ai-brief</h3>
-            <p>Link hover intelligence. Automatically background-fetches target route HTML and produces instant 15-word preview tooltips via Chrome Summarizer.</p>
-            <div class="card-cli"><code>bun add astro-prefetch-ai-brief</code></div>
+            <p>Link hover intelligence. Background-fetches target route HTML and produces instant 15-word preview tooltips via Chrome Summarizer API.</p>
+            <div class="cli-box">
+              <code>bun add astro-prefetch-ai-brief</code>
+              <button class="copy-btn" data-copy="bun add astro-prefetch-ai-brief" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-prefetch-ai-brief/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-prefetch-ai-brief" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-prefetch-ai-brief/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-prefetch-ai-brief" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--crimson);">[ Dev Toolbar // Accessibility ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--ruby);">Dev Toolbar</span>
+              <span class="badge-pill badge-accent">TypeScript</span>
+            </div>
             <h3>astro-dev-audit-nano</h3>
-            <p>Real-time WCAG 2.1 AA/AAA accessibility & SEO auditor. Scans heading hierarchy, contrast ratios, and drafts context-aware image alt-text.</p>
-            <div class="card-cli"><code>bun add astro-dev-audit-nano</code></div>
+            <p>Real-time WCAG 2.1 AA/AAA accessibility &amp; SEO auditor. Scans heading hierarchy, contrast ratios, and drafts context-aware image alt-text.</p>
+            <div class="cli-box">
+              <code>bun add astro-dev-audit-nano</code>
+              <button class="copy-btn" data-copy="bun add astro-dev-audit-nano" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-audit-nano/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-audit-nano" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-dev-audit-nano/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-audit-nano" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 5 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Dev Toolbar // Copywriting ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--accent);">Dev Toolbar</span>
+              <span class="badge-pill badge-accent">Astro App</span>
+            </div>
             <h3>astro-dev-copy-optimizer</h3>
             <p>Point-and-click copy tuner in development. Inspects headings, CTAs, and paragraphs to audition tone adjustments with 1-click clipboard copy.</p>
-            <div class="card-cli"><code>bun add astro-dev-copy-optimizer</code></div>
+            <div class="cli-box">
+              <code>bun add astro-dev-copy-optimizer</code>
+              <button class="copy-btn" data-copy="bun add astro-dev-copy-optimizer" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-copy-optimizer/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-copy-optimizer" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-dev-copy-optimizer/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-copy-optimizer" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 6 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Middleware // Social SEO ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--cyan);">Social SEO</span>
+              <span class="badge-pill badge-cyan">Middleware</span>
+            </div>
             <h3>astro-og-smart-crop</h3>
             <p>Simulates OpenGraph and Twitter card previews in dev mode, preventing awkward ellipsis cutoffs with character-budgeted headline alternatives.</p>
-            <div class="card-cli"><code>bun add astro-og-smart-crop</code></div>
+            <div class="cli-box">
+              <code>bun add astro-og-smart-crop</code>
+              <button class="copy-btn" data-copy="bun add astro-og-smart-crop" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-og-smart-crop/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-og-smart-crop" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-og-smart-crop/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-og-smart-crop" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 7 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--emerald);">[ Dev Toolbar // Semantics ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--emerald);">Semantics</span>
+              <span class="badge-pill badge-emerald">Dev Toolbar</span>
+            </div>
             <h3>astro-schema-ld-verifier</h3>
             <p>Dev-time JSON-LD structured data auditor. Checks rendered microdata against actual DOM content to flag ghost claims and mismatched authors.</p>
-            <div class="card-cli"><code>bun add astro-schema-ld-verifier</code></div>
+            <div class="cli-box">
+              <code>bun add astro-schema-ld-verifier</code>
+              <button class="copy-btn" data-copy="bun add astro-schema-ld-verifier" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-schema-ld-verifier/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-schema-ld-verifier" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-schema-ld-verifier/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-schema-ld-verifier" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 8 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Dev Toolbar // i18n ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--accent);">i18n Coverage</span>
+              <span class="badge-pill badge-accent">Dev Toolbar</span>
+            </div>
             <h3>astro-dev-i18n-coverage</h3>
             <p>Finds missing localization keys directly in the rendered DOM and drafts contextual translations ready to export to your locale dictionary.</p>
-            <div class="card-cli"><code>bun add astro-dev-i18n-coverage</code></div>
+            <div class="cli-box">
+              <code>bun add astro-dev-i18n-coverage</code>
+              <button class="copy-btn" data-copy="bun add astro-dev-i18n-coverage" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-i18n-coverage/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-i18n-coverage" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-dev-i18n-coverage/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-i18n-coverage" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 9 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--crimson);">[ Dev Toolbar // Editorial ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--ruby);">Editorial Linter</span>
+              <span class="badge-pill badge-accent">Dev Toolbar</span>
+            </div>
             <h3>astro-dev-content-linter</h3>
-            <p>Editorial voice and tone auditor. Evaluates reading grade levels, flags passive voice and corporate jargon, and suggests inline rewrites.</p>
-            <div class="card-cli"><code>bun add astro-dev-content-linter</code></div>
+            <p>Editorial voice and tone auditor. Evaluates reading grade levels, flags passive voice and jargon, and suggests inline rewrites.</p>
+            <div class="cli-box">
+              <code>bun add astro-dev-content-linter</code>
+              <button class="copy-btn" data-copy="bun add astro-dev-content-linter" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-content-linter/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-content-linter" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-dev-content-linter/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-content-linter" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 10 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--emerald);">[ Dev Toolbar // Microdata ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--emerald);">Microdata</span>
+              <span class="badge-pill badge-emerald">Dev Toolbar</span>
+            </div>
             <h3>astro-dev-schema-scaffolder</h3>
-            <p>Scaffolds valid Schema.org microdata (TechArticle, FAQPage, Event, Product) by extracting page headings and structure via Gemini Nano.</p>
-            <div class="card-cli"><code>bun add astro-dev-schema-scaffolder</code></div>
+            <p>Scaffolds valid Schema.org microdata (TechArticle, FAQPage, Event) by extracting page structure with Gemini Nano.</p>
+            <div class="cli-box">
+              <code>bun add astro-dev-schema-scaffolder</code>
+              <button class="copy-btn" data-copy="bun add astro-dev-schema-scaffolder" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-schema-scaffolder/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-schema-scaffolder" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-dev-schema-scaffolder/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-schema-scaffolder" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 11 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Dev Toolbar // Mock Data ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--accent);">Mock Data</span>
+              <span class="badge-pill badge-accent">Dev Toolbar</span>
+            </div>
             <h3>astro-dev-mock-generator</h3>
             <p>Generates synthetic, realistic mock data matching your Astro Content Collections Zod schema without cluttering local markdown files.</p>
-            <div class="card-cli"><code>bun add astro-dev-mock-generator</code></div>
+            <div class="cli-box">
+              <code>bun add astro-dev-mock-generator</code>
+              <button class="copy-btn" data-copy="bun add astro-dev-mock-generator" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-mock-generator/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-mock-generator" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-dev-mock-generator/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-mock-generator" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 12 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Dev Toolbar // Navigation ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--cyan);">Navigation</span>
+              <span class="badge-pill badge-cyan">Dev Toolbar</span>
+            </div>
             <h3>astro-dev-broken-anchor-healer</h3>
             <p>Smart internal anchor link validator. Finds broken #anchor targets and fuzzy-matches renamed headings with 1-click DOM fixes.</p>
-            <div class="card-cli"><code>bun add astro-dev-broken-anchor-healer</code></div>
+            <div class="cli-box">
+              <code>bun add astro-dev-broken-anchor-healer</code>
+              <button class="copy-btn" data-copy="bun add astro-dev-broken-anchor-healer" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-broken-anchor-healer/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-broken-anchor-healer" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-dev-broken-anchor-healer/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-broken-anchor-healer" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
 
         <!-- Card 13 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--crimson);">[ Dev Toolbar // Performance ]</span>
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--ruby);">Performance</span>
+              <span class="badge-pill badge-accent">Dev Toolbar</span>
+            </div>
             <h3>astro-dev-island-hydration-advisor</h3>
             <p>Island hydration advisor. Visualizes the viewport fold line and flags eager client:load directives on below-the-fold components.</p>
-            <div class="card-cli"><code>bun add astro-dev-island-hydration-advisor</code></div>
+            <div class="cli-box">
+              <code>bun add astro-dev-island-hydration-advisor</code>
+              <button class="copy-btn" data-copy="bun add astro-dev-island-hydration-advisor" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-island-hydration-advisor/" class="btn btn-primary">View Docs ↗</a>
-            <a href="https://github.com/bhubbard/astro-dev-island-hydration-advisor" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="./astro-dev-island-hydration-advisor/" class="btn-card-primary">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/astro-dev-island-hydration-advisor" target="_blank" rel="noopener" class="btn-card-ghost">GitHub</a>
           </div>
         </div>
       </div>
 
-      <!-- Section: Core Principles -->
-      <div class="section-header">
-        <span class="section-title">02. Engineering Principles</span>
-        <span class="section-title" style="color: var(--steel);">BRANDON HUBBARD STANDARDS</span>
+      <!-- Section 2: Rust & Cloudflare Edge Toolchain -->
+      <div class="section-banner" id="edge-rust">
+        <div class="section-title">
+          <span>02. Rust &amp; Cloudflare Edge Toolchain</span>
+          <span class="badge-pill badge-cyan">HIGH-PERFORMANCE INFRASTRUCTURE</span>
+        </div>
+        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">COMPILED SPEED // STRICT EDGE VERIFICATION</span>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Rust Card 1 -->
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--cyan);">MCP &amp; CLI</span>
+              <span class="badge-pill badge-cyan">Rust</span>
+            </div>
+            <h3>wp-blockmarkup-mcp</h3>
+            <p>A fast, lightweight Rust port of wp-blockmarkup-mcp. Functions as both an LLM Model Context Protocol server and CLI for linting and formatting Gutenberg blocks.</p>
+            <div class="cli-box">
+              <code>cargo install wp-blockmarkup-mcp</code>
+              <button class="copy-btn" data-copy="cargo install wp-blockmarkup-mcp" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/bhubbard/wp-blockmarkup-mcp" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+          </div>
+        </div>
+
+        <!-- Rust Card 2 -->
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--cyan);">AST Linter</span>
+              <span class="badge-pill badge-cyan">Rust / Oxc</span>
+            </div>
+            <h3>oxc-astro-cf</h3>
+            <p>Static AST linter detecting illegal access to Cloudflare runtime bindings inside static prerendered Astro pages before deployment.</p>
+            <div class="cli-box">
+              <code>cargo install oxc-astro-cf</code>
+              <button class="copy-btn" data-copy="cargo install oxc-astro-cf" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/bhubbard/oxc-astro-cf" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+          </div>
+        </div>
+
+        <!-- Rust Card 3 -->
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--cyan);">Budget Auditor</span>
+              <span class="badge-pill badge-cyan">Rust</span>
+            </div>
+            <h3>edge-bundle-budget</h3>
+            <p>Audits gzip and brotli bundle sizes against Cloudflare Worker tier quotas, inspects sourcemaps, and decomposes .wasm binaries.</p>
+            <div class="cli-box">
+              <code>cargo install edge-bundle-budget</code>
+              <button class="copy-btn" data-copy="cargo install edge-bundle-budget" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/bhubbard/edge-bundle-budget" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+          </div>
+        </div>
+
+        <!-- Rust Card 4 -->
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--cyan);">Security Probe</span>
+              <span class="badge-pill badge-cyan">Rust</span>
+            </div>
+            <h3>cf-origin-hunter</h3>
+            <p>Discovers unmasked origin IPs behind Cloudflare proxies via DNS historical records, Certificate Transparency logs, and direct HTTP probes.</p>
+            <div class="cli-box">
+              <code>cargo install cf-origin-hunter</code>
+              <button class="copy-btn" data-copy="cargo install cf-origin-hunter" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/bhubbard/cf-origin-hunter" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+          </div>
+        </div>
+
+        <!-- Rust Card 5 -->
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--cyan);">Security Auditor</span>
+              <span class="badge-pill badge-cyan">Rust</span>
+            </div>
+            <h3>cf-zone-auditor</h3>
+            <p>Multi-zone Cloudflare security auditor verifying SSL/TLS strictness, HSTS headers, WAF rulesets, and DNSSEC validation.</p>
+            <div class="cli-box">
+              <code>cargo install cf-zone-auditor</code>
+              <button class="copy-btn" data-copy="cargo install cf-zone-auditor" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/bhubbard/cf-zone-auditor" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+          </div>
+        </div>
+
+        <!-- Rust Card 6 -->
+        <div class="suite-card">
+          <div>
+            <div class="card-meta-top">
+              <span class="card-tag" style="color: var(--cyan);">Type Sync</span>
+              <span class="badge-pill badge-cyan">Rust</span>
+            </div>
+            <h3>astro-binding-sync</h3>
+            <p>Synchronizes wrangler.jsonc resources with TypeScript App.Locals and env.d.ts definitions to ensure complete type safety.</p>
+            <div class="cli-box">
+              <code>cargo install astro-binding-sync</code>
+              <button class="copy-btn" data-copy="cargo install astro-binding-sync" title="Copy install command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/bhubbard/astro-binding-sync" target="_blank" rel="noopener" class="btn-card-primary">GitHub Repository ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: All Repositories Interactive Explorer -->
+      <div class="section-banner" id="all-repos">
+        <div class="section-title">
+          <span>03. All Repositories Index</span>
+          <span class="badge-pill badge-accent" id="activeCategoryCount">59 REPOSITORIES</span>
+        </div>
+        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">REAL-TIME SEARCH &amp; CATEGORY FILTERS</span>
+      </div>
+
+      <section class="repo-explorer-section">
+        <div class="explorer-controls">
+          <div class="explorer-search-wrap">
+            <svg class="explorer-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="explorerSearchInput" class="explorer-search-input" placeholder="Filter repositories by name, language or keyword...">
+          </div>
+
+          <div class="filter-pills" id="categoryFilterPills">
+            <button type="button" class="filter-pill active" data-filter="all">All Repos</button>
+            <button type="button" class="filter-pill" data-filter="astro">Astro &amp; AI</button>
+            <button type="button" class="filter-pill" data-filter="rust">Rust &amp; Edge</button>
+            <button type="button" class="filter-pill" data-filter="wordpress">WordPress</button>
+            <button type="button" class="filter-pill" data-filter="tools">Cloud &amp; Tools</button>
+          </div>
+        </div>
+
+        <div class="repos-grid" id="reposGridContainer">
+          <!-- Populated by JavaScript with full 59 repository dataset -->
+        </div>
+      </section>
+
+      <!-- Section 4: Engineering Principles -->
+      <div class="section-banner">
+        <div class="section-title">
+          <span>04. Engineering Principles</span>
+          <span class="badge-pill badge-emerald">STANDARDS &amp; CRAFT</span>
+        </div>
+        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">CODE AS CRAFT // RADICAL OWNERSHIP</span>
       </div>
 
       <div class="principles-grid">
-        <div class="principle-card">
+        <div class="principle-box">
           <span class="principle-idx">[ 01 // PRINCIPLE ]</span>
           <h3>Intentional Velocity</h3>
           <p>Speed is nothing without direction. We move fast because we know exactly where we are going. Zero guessing.</p>
         </div>
-        <div class="principle-card">
+        <div class="principle-box">
           <span class="principle-idx">[ 02 // PRINCIPLE ]</span>
           <h3>Code as Craft</h3>
-          <p>The code you don’t see is as critical as the pixel you do. Clean, modular, typed, and engineered to survive growth.</p>
+          <p>The code you don’t see is as critical as the pixel you do. Clean, modular, typed, and engineered to survive scale.</p>
         </div>
-        <div class="principle-card">
+        <div class="principle-box">
           <span class="principle-idx">[ 03 // PRINCIPLE ]</span>
           <h3>Radical Ownership</h3>
-          <p>Every line of code, component structure, and design decision is owned, defended, tested, and delivered.</p>
+          <p>Every line of code, component structure, and architectural decision is owned, defended, tested, and delivered.</p>
         </div>
       </div>
     </main>
 
-    <!-- Brand Footer -->
+    <!-- Footer -->
     <footer>
-      <div>
-        <span>© 2026 BRANDON HUBBARD. CODE AS CRAFT. RADICAL OWNERSHIP.</span>
+      <div class="footer-brand">
+        <strong>Open Source by Brandon Hubbard</strong>
+        <span>Code as Craft. Radical Ownership. © 2026 Brandon Hubbard.</span>
       </div>
-      <div class="footer-links">
+      <div class="footer-nav">
+        <a href="https://brandonhubbard.com/">Home</a>
         <a href="https://brandonhubbard.com/branding">Brand Identity</a>
         <a href="https://brandonhubbard.com/blog">Engineering Notes</a>
         <a href="https://webtools.brandonhubbard.com/">Web Tools</a>
-        <a href="https://github.com/bhubbard">GitHub Profile</a>
+        <a href="https://github.com/bhubbard" target="_blank" rel="noopener">GitHub Profile ↗</a>
       </div>
     </footer>
   </div>
 
+  <!-- Command Palette / Search Modal (VitePlus Style) -->
+  <div class="modal-overlay" id="searchModalOverlay">
+    <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search repositories">
+      <div class="modal-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="color: var(--accent);">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="modalSearchInput" class="modal-search-input" placeholder="Search open source repos, packages, and tools..." autocomplete="off">
+        <button type="button" class="modal-close-btn" id="modalCloseBtn">ESC</button>
+      </div>
+
+      <div class="modal-filters">
+        <button type="button" class="modal-filter-btn active" data-filter="all">All (59)</button>
+        <button type="button" class="modal-filter-btn" data-filter="astro">Astro &amp; AI</button>
+        <button type="button" class="modal-filter-btn" data-filter="rust">Rust &amp; Edge</button>
+        <button type="button" class="modal-filter-btn" data-filter="wordpress">WordPress</button>
+        <button type="button" class="modal-filter-btn" data-filter="tools">Cloud &amp; Tools</button>
+      </div>
+
+      <div class="modal-body" id="modalResultsList">
+        <!-- Results populated dynamically -->
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-hints">
+          <span><kbd style="color: var(--text);">↑</kbd><kbd style="color: var(--text);">↓</kbd> Navigate</span>
+          <span><kbd style="color: var(--text);">↵</kbd> Open</span>
+          <span><kbd style="color: var(--text);">ESC</kbd> Close</span>
+        </div>
+        <span id="modalMatchCount">Showing 59 repositories</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification for Copy feedback -->
+  <div class="toast" id="toast">Command copied to clipboard</div>
+
+  <script>
+    // Complete baked-in repository catalog (59 public repositories)
+    const REPOSITORIES = [
+      {
+        name: "astro-client-directive-ai",
+        description: "Custom Astro client directive (client:ai-ready) delaying component hydration until on-device Gemini Nano is ready.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-client-directive-ai",
+        docs: "./astro-client-directive-ai/"
+      },
+      {
+        name: "astro-rehype-nano-code",
+        description: "Zero-JS interactive code block explainer for Astro using build-time Rehype attributes and on-device Chrome AI.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-rehype-nano-code",
+        docs: "./astro-rehype-nano-code/"
+      },
+      {
+        name: "astro-prefetch-ai-brief",
+        description: "Intelligent link hover briefs for Astro with ultra-compact previews generated by Chrome Built-in Summarizer API.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-prefetch-ai-brief",
+        docs: "./astro-prefetch-ai-brief/"
+      },
+      {
+        name: "astro-dev-audit-nano",
+        description: "Astro Dev Toolbar app auditing WCAG a11y, heading hierarchy, and SEO with real-time Gemini Nano remediations.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-dev-audit-nano",
+        docs: "./astro-dev-audit-nano/"
+      },
+      {
+        name: "astro-dev-copy-optimizer",
+        description: "In-browser copy tuner and rewriter inside the Astro Dev Toolbar powered by Chrome Built-in AI.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-dev-copy-optimizer",
+        docs: "./astro-dev-copy-optimizer/"
+      },
+      {
+        name: "astro-og-smart-crop",
+        description: "Client-side OpenGraph and Twitter card preview simulator with AI character-budgeted headline optimization.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-og-smart-crop",
+        docs: "./astro-og-smart-crop/"
+      },
+      {
+        name: "astro-schema-ld-verifier",
+        description: "Dev-time semantic consistency auditor verifying JSON-LD structured data against rendered DOM content.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-schema-ld-verifier",
+        docs: "./astro-schema-ld-verifier/"
+      },
+      {
+        name: "astro-dev-i18n-coverage",
+        description: "Dev Toolbar missing translation finder with contextual on-device translation and 1-click locale JSON export.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-dev-i18n-coverage",
+        docs: "./astro-dev-i18n-coverage/"
+      },
+      {
+        name: "astro-dev-content-linter",
+        description: "Editorial tone, reading grade level, and brand voice auditor inside the Astro Dev Toolbar with AI rewrites.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-dev-content-linter",
+        docs: "./astro-dev-content-linter/"
+      },
+      {
+        name: "astro-dev-schema-scaffolder",
+        description: "Instant Schema.org JSON-LD microdata generator for Astro Dev Toolbar powered by on-device Gemini Nano.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-dev-schema-scaffolder",
+        docs: "./astro-dev-schema-scaffolder/"
+      },
+      {
+        name: "astro-dev-mock-generator",
+        description: "Synthetic Zod-compliant mock data generator for Astro Content Collections using on-device Gemini Nano.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-dev-mock-generator",
+        docs: "./astro-dev-mock-generator/"
+      },
+      {
+        name: "astro-dev-broken-anchor-healer",
+        description: "Smart internal anchor link validator and semantic heading ID matcher for Astro Dev Toolbar.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-dev-broken-anchor-healer",
+        docs: "./astro-dev-broken-anchor-healer/"
+      },
+      {
+        name: "astro-dev-island-hydration-advisor",
+        description: "Astro Dev Toolbar island hydration analyzer flagging eager below-the-fold directives with performance advice.",
+        language: "TypeScript",
+        category: "astro",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-dev-island-hydration-advisor",
+        docs: "./astro-dev-island-hydration-advisor/"
+      },
+      {
+        name: "wp-blockmarkup-mcp",
+        description: "A fast, lightweight Rust port of wp-blockmarkup-mcp. MCP server and CLI for auditing, linting, and previewing Gutenberg block markups.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/wp-blockmarkup-mcp"
+      },
+      {
+        name: "oxc-astro-cf",
+        description: "Static AST linter detecting illegal access to Cloudflare runtime bindings inside static prerendered Astro pages.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/oxc-astro-cf"
+      },
+      {
+        name: "edge-bundle-budget",
+        description: "Audits gzip/brotli sizes against Cloudflare Worker tier quotas, inspects sourcemaps, and decomposes .wasm binaries.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/edge-bundle-budget"
+      },
+      {
+        name: "cf-origin-hunter",
+        description: "Discovers unmasked origin IPs behind Cloudflare proxies via DNS records, Certificate Transparency, and direct probes.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/cf-origin-hunter"
+      },
+      {
+        name: "cf-zone-auditor",
+        description: "Multi-zone Cloudflare security auditor verifying SSL/TLS strictness, HSTS, WAF rulesets, and DNSSEC.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/cf-zone-auditor"
+      },
+      {
+        name: "astro-env-migration",
+        description: "AST codemod migrating deprecated Astro.locals.runtime.* references to modern standard Cloudflare bindings.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-env-migration"
+      },
+      {
+        name: "cf-binding-validator",
+        description: "Eliminates ghost bindings in wrangler.jsonc and flags runtime crashes from undeclared env.* access.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/cf-binding-validator"
+      },
+      {
+        name: "cf-secret-leak-guard",
+        description: "High-throughput scanner preventing Cloudflare tokens, Turnstile keys, and secrets from leaking into client builds.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/cf-secret-leak-guard"
+      },
+      {
+        name: "astro-cf-session",
+        description: "Validates Astro Session API configurations against Wrangler KV bindings to prevent auto-provisioning errors.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-cf-session"
+      },
+      {
+        name: "astro-binding-sync",
+        description: "Synchronizes wrangler.jsonc resources with TypeScript App.Locals and env.d.ts definitions.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-binding-sync"
+      },
+      {
+        name: "cf-routes-json",
+        description: "Validates, minimizes, and detects route conflicts in Cloudflare Pages _routes.json files.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/cf-routes-json"
+      },
+      {
+        name: "astro-asset-headers",
+        description: "Validates and generates Cloudflare Pages _headers caching and security rules for Astro assets.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/astro-asset-headers"
+      },
+      {
+        name: "clippy-cf-reporter",
+        description: "Translates worker-rs Clippy compiler diagnostics into Code Climate JSON, SARIF v2.1.0, and PR annotations.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/clippy-cf-reporter"
+      },
+      {
+        name: "vite-plus-commitlint",
+        description: "A commitlint plugin tailored for Vite+ toolchain workflows.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/vite-plus-commitlint"
+      },
+      {
+        name: "vite-plus-kumo-ui",
+        description: "High-performance Rust integration bindings for Kumo UI inside Vite+ stacks.",
+        language: "Rust",
+        category: "rust",
+        stars: 1,
+        url: "https://github.com/bhubbard/vite-plus-kumo-ui"
+      },
+      {
+        name: "vite-plus-wrangler",
+        description: "Direct Wrangler Cloudflare bindings integration for the Vite+ unified toolchain.",
+        language: "Rust",
+        category: "rust",
+        stars: 0,
+        url: "https://github.com/bhubbard/vite-plus-wrangler"
+      },
+      {
+        name: "wp-cloudflare-kv",
+        description: "A modern WordPress library to interface with Cloudflare KV storage at the edge.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 1,
+        url: "https://github.com/bhubbard/wp-cloudflare-kv"
+      },
+      {
+        name: "wp-cloudflare-d1",
+        description: "A PHP class to query and utilize Cloudflare D1 serverless SQL database within WordPress.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 2,
+        url: "https://github.com/bhubbard/wp-cloudflare-d1"
+      },
+      {
+        name: "wp-gemini-cleaner",
+        description: "A WordPress tool for cleaning and sanitizing Gemini AI-generated editorial content.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 1,
+        url: "https://github.com/bhubbard/wp-gemini-cleaner"
+      },
+      {
+        name: "wp-theme-check-cli",
+        description: "A TypeScript CLI port of the WordPress Theme Check tool with modern auditing extras.",
+        language: "TypeScript",
+        category: "wordpress",
+        stars: 0,
+        url: "https://github.com/bhubbard/wp-theme-check-cli"
+      },
+      {
+        name: "wp-pressable-api",
+        description: "PHP client library for the Pressable Managed Hosting API.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 1,
+        url: "https://github.com/bhubbard/wp-pressable-api"
+      },
+      {
+        name: "wp-givebutter-api",
+        description: "A WordPress integration library for the GiveButter public fundraising API.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 0,
+        url: "https://github.com/bhubbard/wp-givebutter-api"
+      },
+      {
+        name: "wp-lawmatics-api",
+        description: "A WordPress integration client for the Lawmatics Legal CRM API.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 0,
+        url: "https://github.com/bhubbard/wp-lawmatics-api"
+      },
+      {
+        name: "wp-clio-api",
+        description: "A WordPress library for communicating with the Clio Legal Practice Management API.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 0,
+        url: "https://github.com/bhubbard/wp-clio-api"
+      },
+      {
+        name: "wp-spinupwp-api",
+        description: "A WordPress PHP wrapper for the SpinupWP cloud server management API.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 1,
+        url: "https://github.com/bhubbard/wp-spinupwp-api"
+      },
+      {
+        name: "wp-cleanup-scripts",
+        description: "A collection of bash scripts and SQL routines to purge leftover data from WP plugins and themes.",
+        language: "Shell",
+        category: "wordpress",
+        stars: 0,
+        url: "https://github.com/bhubbard/wp-cleanup-scripts"
+      },
+      {
+        name: "wp-plugin-uninstalls",
+        description: "A curated collection of clean WordPress plugin uninstall handlers and database purgers.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 0,
+        url: "https://github.com/bhubbard/wp-plugin-uninstalls"
+      },
+      {
+        name: "rest-api-examples",
+        description: "Clean boilerplate examples of custom REST endpoints for high-throughput WordPress apps.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 2,
+        url: "https://github.com/bhubbard/rest-api-examples"
+      },
+      {
+        name: "alt-text-ai",
+        description: "Generate SEO-friendly, accessibility-focused alt text for images using Cloudflare Workers AI.",
+        language: "TypeScript",
+        category: "tools",
+        stars: 0,
+        url: "https://github.com/bhubbard/alt-text-ai"
+      },
+      {
+        name: "antispambot-cf-worker",
+        description: "A lightweight Cloudflare Worker that dynamically obfuscates email addresses to eliminate spam harvesters.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 4,
+        url: "https://github.com/bhubbard/antispambot-cf-worker"
+      },
+      {
+        name: "pressable-cli",
+        description: "Fast command-line interface for provisioning, cloning, and managing Pressable WordPress sites.",
+        language: "TypeScript",
+        category: "tools",
+        stars: 1,
+        url: "https://github.com/bhubbard/pressable-cli"
+      },
+      {
+        name: "sitemap-scan",
+        description: "A fast Node CLI utility to crawl, discover, validate, and extract XML sitemaps.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 0,
+        url: "https://github.com/bhubbard/sitemap-scan"
+      },
+      {
+        name: "kumo-drift-checks",
+        description: "Continuous infrastructure drift verification and compliance auditor.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 1,
+        url: "https://github.com/bhubbard/kumo-drift-checks"
+      },
+      {
+        name: "skills",
+        description: "Autonomous agent skill definitions and execution patterns for AI pair programmers.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 1,
+        url: "https://github.com/bhubbard/skills"
+      },
+      {
+        name: "plugin-updater-cf-worker",
+        description: "A Cloudflare Worker proxying private WordPress plugin updates with license key authentication.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 0,
+        url: "https://github.com/bhubbard/plugin-updater-cf-worker"
+      },
+      {
+        name: "send-to-pubsub",
+        description: "High-concurrency HTTP Cloud Function to stream webhook events directly into Google Cloud Pub/Sub.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 1,
+        url: "https://github.com/bhubbard/send-to-pubsub"
+      },
+      {
+        name: "gcf-pubsub-webhook",
+        description: "A resilient cloud function to receive incoming webhooks and broadcast to Pub/Sub topics.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 1,
+        url: "https://github.com/bhubbard/gcf-pubsub-webhook"
+      },
+      {
+        name: "woo-order-to-google-storage",
+        description: "Streams WooCommerce order JSON backups directly into Google Cloud Storage via Pub/Sub.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 1,
+        url: "https://github.com/bhubbard/woo-order-to-google-storage"
+      },
+      {
+        name: "yoast-seo-audit",
+        description: "Automated SEO meta tag and schema integrity verification tool for Yoast SEO installations.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 1,
+        url: "https://github.com/bhubbard/yoast-seo-audit"
+      },
+      {
+        name: "sensitive-image-block",
+        description: "A WordPress Gutenberg block for blurring sensitive imagery behind an interactive user reveal toggle.",
+        language: "JavaScript",
+        category: "wordpress",
+        stars: 0,
+        url: "https://github.com/bhubbard/sensitive-image-block"
+      },
+      {
+        name: "post-navigation-block",
+        description: "A Gutenberg block providing accessible prev/next post navigation links.",
+        language: "PHP",
+        category: "wordpress",
+        stars: 0,
+        url: "https://github.com/bhubbard/post-navigation-block"
+      },
+      {
+        name: "animated-gradient-cover-block",
+        description: "An animated gradient cover block for modern WordPress Gutenberg layouts.",
+        language: "JavaScript",
+        category: "wordpress",
+        stars: 1,
+        url: "https://github.com/bhubbard/animated-gradient-cover-block"
+      },
+      {
+        name: "talks",
+        description: "Brandon Hubbard's conference talks, slides, and technical presentations.",
+        language: "JavaScript",
+        category: "tools",
+        stars: 1,
+        url: "https://github.com/bhubbard/talks"
+      },
+      {
+        name: "bhubbard.github.io",
+        description: "Official Open Source Software Portal & Chrome Built-in AI Specification Hub by Brandon Hubbard.",
+        language: "HTML",
+        category: "tools",
+        stars: 0,
+        url: "https://github.com/bhubbard/bhubbard.github.io"
+      }
+    ];
+
+    // Language colors map
+    const LANG_COLORS = {
+      "TypeScript": "#3178c6",
+      "Rust": "#dea584",
+      "JavaScript": "#f7df1e",
+      "PHP": "#4F5D95",
+      "HTML": "#e34c26",
+      "Shell": "#89e051",
+      "CSS": "#563d7c"
+    };
+
+    // DOM Elements
+    const openSearchBtn = document.getElementById('openSearchBtn');
+    const openSearchMobileBtn = document.getElementById('openSearchMobileBtn');
+    const heroSearchTrigger = document.getElementById('heroSearchTrigger');
+    const searchModalOverlay = document.getElementById('searchModalOverlay');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalSearchInput = document.getElementById('modalSearchInput');
+    const modalResultsList = document.getElementById('modalResultsList');
+    const modalMatchCount = document.getElementById('modalMatchCount');
+    const modalFilterBtns = document.querySelectorAll('.modal-filter-btn');
+    const explorerSearchInput = document.getElementById('explorerSearchInput');
+    const categoryFilterPills = document.querySelectorAll('.filter-pill');
+    const reposGridContainer = document.getElementById('reposGridContainer');
+    const activeCategoryCount = document.getElementById('activeCategoryCount');
+    const toast = document.getElementById('toast');
+
+    // Detect OS for keyboard shortcut hint
+    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+    const metaKeyElement = document.getElementById('metaKey');
+    if (metaKeyElement && !isMac) {
+      metaKeyElement.textContent = 'Ctrl ';
+    }
+
+    let activeModalFilter = 'all';
+    let activeExplorerFilter = 'all';
+    let selectedModalIndex = 0;
+    let filteredModalRepos = [];
+
+    // Render Explorer Grid
+    function renderExplorerGrid() {
+      const query = (explorerSearchInput.value || '').toLowerCase().trim();
+      const filtered = REPOSITORIES.filter(repo => {
+        const matchesCategory = activeExplorerFilter === 'all' || repo.category === activeExplorerFilter;
+        const matchesQuery = !query || 
+          repo.name.toLowerCase().includes(query) || 
+          (repo.description && repo.description.toLowerCase().includes(query)) ||
+          (repo.language && repo.language.toLowerCase().includes(query));
+        return matchesCategory && matchesQuery;
+      });
+
+      activeCategoryCount.textContent = `${filtered.length} REPOSITORIES`;
+
+      if (filtered.length === 0) {
+        reposGridContainer.innerHTML = `
+          <div style="grid-column: 1 / -1; padding: 3rem 1rem; text-align: center; color: var(--text-muted);">
+            No repositories matched "${query}". Try searching for another keyword.
+          </div>
+        `;
+        return;
+      }
+
+      reposGridContainer.innerHTML = filtered.map(repo => {
+        const langColor = LANG_COLORS[repo.language] || '#94a3b8';
+        return `
+          <a href="${repo.url}" target="_blank" rel="noopener" class="repo-card">
+            <div class="repo-card-top">
+              <div class="repo-name-row">
+                <span class="repo-title">${repo.name}</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.5; flex-shrink: 0;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <p>${repo.description || 'Open source package by Brandon Hubbard.'}</p>
+            </div>
+            <div class="repo-card-bottom">
+              <span class="repo-lang-tag">
+                <span class="lang-dot" style="background-color: ${langColor};"></span>
+                <span>${repo.language || 'Code'}</span>
+              </span>
+              <div class="repo-stats">
+                ${repo.stars > 0 ? `<span>★ ${repo.stars}</span>` : ''}
+                ${repo.docs ? `<span style="color: var(--cyan);">Docs Available</span>` : ''}
+              </div>
+            </div>
+          </a>
+        `;
+      }).join('');
+    }
+
+    // Render Modal Search Results
+    function renderModalResults() {
+      const query = (modalSearchInput.value || '').toLowerCase().trim();
+      filteredModalRepos = REPOSITORIES.filter(repo => {
+        const matchesCategory = activeModalFilter === 'all' || repo.category === activeModalFilter;
+        const matchesQuery = !query || 
+          repo.name.toLowerCase().includes(query) || 
+          (repo.description && repo.description.toLowerCase().includes(query)) ||
+          (repo.language && repo.language.toLowerCase().includes(query));
+        return matchesCategory && matchesQuery;
+      });
+
+      modalMatchCount.textContent = `Showing ${filteredModalRepos.length} of ${REPOSITORIES.length} repositories`;
+
+      if (filteredModalRepos.length === 0) {
+        modalResultsList.innerHTML = `
+          <div class="modal-empty">
+            No repositories found matching "<strong>${query}</strong>"
+          </div>
+        `;
+        return;
+      }
+
+      if (selectedModalIndex >= filteredModalRepos.length) {
+        selectedModalIndex = 0;
+      }
+
+      modalResultsList.innerHTML = filteredModalRepos.map((repo, idx) => {
+        const isSelected = idx === selectedModalIndex;
+        const langColor = LANG_COLORS[repo.language] || '#94a3b8';
+        return `
+          <a href="${repo.url}" target="_blank" rel="noopener" class="modal-item ${isSelected ? 'selected' : ''}" data-idx="${idx}">
+            <div class="modal-item-info">
+              <div class="modal-item-title">
+                <span>${repo.name}</span>
+                <span class="modal-item-badge" style="display: inline-flex; align-items: center; gap: 4px;">
+                  <span class="lang-dot" style="background-color: ${langColor}; width: 6px; height: 6px;"></span>
+                  ${repo.language || 'Code'}
+                </span>
+                ${repo.stars > 0 ? `<span class="modal-item-badge">★ ${repo.stars}</span>` : ''}
+              </div>
+              <div class="modal-item-desc">${repo.description || 'Open source repository by Brandon Hubbard.'}</div>
+            </div>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.4; flex-shrink: 0;"><path d="M9 18l6-6-6-6"></path></svg>
+          </a>
+        `;
+      }).join('');
+
+      // Auto scroll selected item into view
+      const selectedEl = modalResultsList.querySelector('.modal-item.selected');
+      if (selectedEl) {
+        selectedEl.scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    // Modal Controls
+    function openModal(initialCategory) {
+      if (initialCategory) {
+        activeModalFilter = initialCategory;
+        modalFilterBtns.forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.filter === initialCategory);
+        });
+      }
+      searchModalOverlay.classList.add('active');
+      modalSearchInput.value = '';
+      selectedModalIndex = 0;
+      renderModalResults();
+      setTimeout(() => modalSearchInput.focus(), 50);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      searchModalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Event Listeners for Open / Close Modal
+    if (openSearchBtn) openSearchBtn.addEventListener('click', () => openModal());
+    if (openSearchMobileBtn) openSearchMobileBtn.addEventListener('click', () => openModal());
+    if (heroSearchTrigger) heroSearchTrigger.addEventListener('click', () => openModal());
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+
+    searchModalOverlay.addEventListener('click', (e) => {
+      if (e.target === searchModalOverlay) closeModal();
+    });
+
+    // Keyboard Shortcuts (Cmd+K, Ctrl+K, /, Esc, Arrows, Enter)
+    window.addEventListener('keydown', (e) => {
+      // Toggle modal with Cmd+K or Ctrl+K
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (searchModalOverlay.classList.contains('active')) {
+          closeModal();
+        } else {
+          openModal();
+        }
+        return;
+      }
+
+      // Open with "/" when not typing in an input
+      if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        e.preventDefault();
+        openModal();
+        return;
+      }
+
+      // Inside Modal Navigation
+      if (searchModalOverlay.classList.contains('active')) {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeModal();
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          if (filteredModalRepos.length > 0) {
+            selectedModalIndex = (selectedModalIndex + 1) % filteredModalRepos.length;
+            renderModalResults();
+          }
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (filteredModalRepos.length > 0) {
+            selectedModalIndex = (selectedModalIndex - 1 + filteredModalRepos.length) % filteredModalRepos.length;
+            renderModalResults();
+          }
+        } else if (e.key === 'Enter') {
+          if (filteredModalRepos.length > 0 && filteredModalRepos[selectedModalIndex]) {
+            e.preventDefault();
+            window.open(filteredModalRepos[selectedModalIndex].url, '_blank');
+          }
+        }
+      }
+    });
+
+    // Search Input listeners
+    modalSearchInput.addEventListener('input', () => {
+      selectedModalIndex = 0;
+      renderModalResults();
+    });
+
+    explorerSearchInput.addEventListener('input', renderExplorerGrid);
+
+    // Modal Filter buttons
+    modalFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modalFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeModalFilter = btn.dataset.filter;
+        selectedModalIndex = 0;
+        renderModalResults();
+      });
+    });
+
+    // Explorer Category Filter pills
+    categoryFilterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        categoryFilterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        activeExplorerFilter = pill.dataset.filter;
+        renderExplorerGrid();
+      });
+    });
+
+    // Copy to clipboard functionality
+    function showToast(text) {
+      toast.textContent = text || 'Copied to clipboard';
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2200);
+    }
+
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const textToCopy = btn.dataset.copy;
+        if (textToCopy) {
+          try {
+            await navigator.clipboard.writeText(textToCopy);
+            showToast(`Copied: ${textToCopy}`);
+          } catch (err) {
+            showToast('Copied to clipboard');
+          }
+        }
+      });
+    });
+
+    // Optional background sync with GitHub API to refresh stars/metrics
+    async function syncGitHubRepos() {
+      try {
+        const res = await fetch('https://api.github.com/users/bhubbard/repos?per_page=100&sort=updated');
+        if (res.ok) {
+          const liveRepos = await res.json();
+          if (Array.isArray(liveRepos) && liveRepos.length > 0) {
+            const countEl = document.getElementById('metricRepoCount');
+            if (countEl) countEl.textContent = liveRepos.length;
+
+            // Update stars in catalog
+            liveRepos.forEach(live => {
+              const match = REPOSITORIES.find(r => r.name.toLowerCase() === live.name.toLowerCase());
+              if (match) {
+                match.stars = live.stargazers_count || match.stars;
+              }
+            });
+            renderExplorerGrid();
+          }
+        }
+      } catch (e) {
+        // Silently keep offline catalog
+      }
+    }
+
+    // Initial render
+    renderExplorerGrid();
+    renderModalResults();
+    syncGitHubRepos();
+  </script>
 </body>
 </html>
