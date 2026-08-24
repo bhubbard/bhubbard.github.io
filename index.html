@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Source by Brandon Hubbard — Web, AI & Edge Infrastructure</title>
-  <meta name="description" content="Official open source software portal and Chrome Built-in AI & Astro engineering tools by Brandon Hubbard.">
-  <meta property="og:title" content="Open Source by Brandon Hubbard">
-  <meta property="og:description" content="High-performance Astro integrations, Chrome Built-in AI dev tools, Rust CLIs, and Cloudflare web infrastructure specifications.">
+  <title>Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; Rust Infrastructure</title>
+  <meta name="description" content="Official open source software portal and flagship engineering hub by Brandon Hubbard showcasing The Flare Suite, Astro Chrome Built-in AI, and compiled Rust CLIs.">
+  <meta property="og:title" content="Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; Rust">
+  <meta property="og:description" content="High-performance Cloudflare developer tools (The Flare Suite), Chrome Built-in Gemini Nano dev tools, compiled Rust CLIs, and enterprise web specifications.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -108,7 +108,6 @@
       gap: 1.5rem;
     }
 
-    /* Logo: "Open Source" with "by Brandon Hubbard" underneath */
     .brand-identity {
       display: flex;
       align-items: center;
@@ -150,41 +149,57 @@
 
     .brand-title {
       font-size: 0.72rem;
-      color: var(--steel);
       font-family: var(--font-mono);
+      color: var(--steel);
+      letter-spacing: 0.04em;
+    }
+
+    .header-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .nav-anchor {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--steel);
+      text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      font-weight: 400;
-      margin-top: 2px;
+      transition: color 0.15s ease;
+    }
+
+    .nav-anchor:hover {
+      color: var(--titanium);
     }
 
     .header-right {
       display: flex;
       align-items: center;
-      gap: 1.15rem;
+      gap: 0.75rem;
     }
 
-    /* Header Search Button (VitePlus style) */
+    /* Cmd+K Search Trigger */
     .header-search-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.85rem;
       background: var(--charcoal);
       border: 1px solid var(--concrete);
       color: var(--steel);
-      padding: 0.55rem 0.95rem;
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
+      padding: 0.5rem 0.85rem;
       cursor: pointer;
-      min-width: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
       transition: all 0.15s ease;
+      min-width: 210px;
     }
 
     .header-search-btn:hover {
       border-color: var(--cobalt);
       color: var(--titanium);
-      background: var(--void);
     }
 
     .search-btn-content {
@@ -284,7 +299,7 @@
     }
 
     .hero p.lead {
-      font-size: 1.2rem;
+      font-size: 1.18rem;
       color: var(--steel);
       max-width: 880px;
       margin-bottom: 2rem;
@@ -336,6 +351,16 @@
       background: var(--charcoal);
     }
 
+    .btn-accent {
+      background: var(--cobalt);
+      border-color: var(--cobalt);
+      color: #ffffff;
+    }
+
+    .btn-accent:hover {
+      background: #2563EB;
+    }
+
     .hero-metrics {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -370,6 +395,75 @@
     }
 
     /* -------------------------------------------------------------
+       Quick Install Matrix Banner
+       ------------------------------------------------------------- */
+    .quick-install-matrix {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--concrete);
+      background: var(--charcoal);
+    }
+
+    .quick-install-item {
+      padding: 1.25rem 1.5rem;
+      border-right: 1px solid var(--concrete);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.75rem;
+      transition: background 0.15s ease;
+    }
+
+    .quick-install-item:last-child {
+      border-right: none;
+    }
+
+    .quick-install-item:hover {
+      background: var(--void);
+    }
+
+    .qi-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+
+    .qi-name {
+      font-weight: 700;
+      color: var(--titanium);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .qi-tag {
+      color: var(--steel);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .qi-cli {
+      background: var(--void);
+      border: 1px solid var(--concrete);
+      padding: 0.5rem 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .qi-cli code {
+      color: var(--cyan);
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* -------------------------------------------------------------
        Category Sub-Navigation Bar
        ------------------------------------------------------------- */
     .category-nav-bar {
@@ -384,7 +478,6 @@
     .category-nav-inner {
       display: flex;
       align-items: center;
-      divide-x: 1px solid var(--concrete);
     }
 
     .category-nav-link {
@@ -1149,17 +1242,21 @@
       .spotlight-right {
         padding: 1.5rem;
       }
-      .hero-metrics {
+      .hero-metrics, .quick-install-matrix {
         grid-template-columns: repeat(2, 1fr);
       }
-      .metric-card:nth-child(2) {
+      .metric-card:nth-child(2), .quick-install-item:nth-child(2) {
         border-right: none;
       }
-      .metric-card:nth-child(1), .metric-card:nth-child(2) {
+      .metric-card:nth-child(1), .metric-card:nth-child(2),
+      .quick-install-item:nth-child(1), .quick-install-item:nth-child(2) {
         border-bottom: 1px solid var(--concrete);
       }
       .header-search-btn {
         min-width: 160px;
+      }
+      .header-nav-links {
+        display: none;
       }
     }
 
@@ -1172,6 +1269,16 @@
       }
       .mobile-search-btn {
         display: flex;
+      }
+      .quick-install-matrix {
+        grid-template-columns: 1fr;
+      }
+      .quick-install-item {
+        border-right: none;
+        border-bottom: 1px solid var(--concrete);
+      }
+      .quick-install-item:last-child {
+        border-bottom: none;
       }
       footer {
         flex-direction: column;
@@ -1197,6 +1304,14 @@
             <span class="brand-title">BY BRANDON HUBBARD</span>
           </div>
         </a>
+
+        <!-- Middle Quick Nav Links -->
+        <nav class="header-nav-links" aria-label="Quick jump navigation">
+          <a href="#flare-suite" class="nav-anchor">The Flare Suite</a>
+          <a href="#astro-suite" class="nav-anchor">Chrome AI / Astro</a>
+          <a href="#edge-rust" class="nav-anchor">Rust CLIs</a>
+          <a href="#all-repos" class="nav-anchor">All Repos</a>
+        </nav>
 
         <!-- Header Actions: Search Button (Cmd+K), Theme Toggle & GitHub Icon -->
         <div class="header-right">
@@ -1255,8 +1370,8 @@
           <div class="dot"></div>
           <span>ENGINEERING SPECIFICATION // OPEN SOURCE ECOSYSTEM</span>
         </div>
-        <h1>High-Performance Software &amp; Local AI Tooling.</h1>
-        <p class="lead">A curated ecosystem of zero-cost, zero-latency Astro integrations, Chrome Built-in Gemini Nano dev tools, compiled Rust CLIs, Cloudflare edge systems, and enterprise WordPress libraries.</p>
+        <h1>The Flare Suite, Local Chrome AI &amp; High-Performance Rust.</h1>
+        <p class="lead">A flagship ecosystem of zero-cost, zero-latency Astro integrations powered by Chrome on-device Gemini Nano, compiled Rust developer tools for Cloudflare Workers &amp; Pages, and enterprise edge infrastructure.</p>
 
         <div class="hero-actions">
           <button type="button" class="btn btn-primary" id="heroSearchTrigger">
@@ -1264,49 +1379,233 @@
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <span>Search 59+ Repositories (⌘K)</span>
+            <span>Search 60+ Repositories (⌘K)</span>
           </button>
-          <a href="#astro-suite" class="btn btn-secondary">Astro &amp; AI</a>
-          <a href="#edge-rust" class="btn btn-secondary">Cloudflare Edge</a>
-          <a href="#wordpress-suite" class="btn btn-secondary">WordPress</a>
+          <a href="#flare-suite" class="btn btn-accent">🛡️ The Flare Suite</a>
+          <a href="#astro-suite" class="btn btn-secondary">🤖 Chrome AI / Astro</a>
+          <a href="#edge-rust" class="btn btn-secondary">🦀 Rust CLIs</a>
         </div>
         
         <div class="hero-metrics">
           <div class="metric-card">
-            <span class="metric-num" id="metricRepoCount">59</span>
-            <span class="metric-label">Open Repositories</span>
+            <span class="metric-num">4</span>
+            <span class="metric-label">Flare Suite Engines</span>
           </div>
           <div class="metric-card">
             <span class="metric-num">13</span>
             <span class="metric-label">Astro AI Packages</span>
           </div>
           <div class="metric-card">
-            <span class="metric-num">12</span>
-            <span class="metric-label">Cloudflare &amp; Rust Tools</span>
+            <span class="metric-num">20+</span>
+            <span class="metric-label">Rust &amp; Edge Tools</span>
           </div>
           <div class="metric-card">
-            <span class="metric-num">16</span>
-            <span class="metric-label">WordPress Libraries</span>
+            <span class="metric-num" id="metricRepoCount">63</span>
+            <span class="metric-label">Open Repositories</span>
           </div>
         </div>
       </section>
 
+      <!-- Quick Install Matrix for The Flare Suite -->
+      <div class="quick-install-matrix">
+        <div class="quick-install-item">
+          <div class="qi-meta">
+            <span class="qi-name">🛡️ flareguard</span>
+            <span class="qi-tag">Security &amp; Posture</span>
+          </div>
+          <div class="qi-cli">
+            <code>cargo install flareguard</code>
+            <button class="copy-btn" data-copy="cargo install flareguard" title="Copy cargo command">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="quick-install-item">
+          <div class="qi-meta">
+            <span class="qi-name">⚡ flareperf</span>
+            <span class="qi-tag">Edge Performance</span>
+          </div>
+          <div class="qi-cli">
+            <code>cargo install flareperf</code>
+            <button class="copy-btn" data-copy="cargo install flareperf" title="Copy cargo command">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="quick-install-item">
+          <div class="qi-meta">
+            <span class="qi-name">🔍 flarelint</span>
+            <span class="qi-tag">OXC AST Linter</span>
+          </div>
+          <div class="qi-cli">
+            <code>cargo install flarelint</code>
+            <button class="copy-btn" data-copy="cargo install flarelint" title="Copy cargo command">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="quick-install-item">
+          <div class="qi-meta">
+            <span class="qi-name">🔄 flareops</span>
+            <span class="qi-tag">DevEx &amp; Bindings</span>
+          </div>
+          <div class="qi-cli">
+            <code>cargo install flareops</code>
+            <button class="copy-btn" data-copy="cargo install flareops" title="Copy cargo command">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- Category Navigation Sub-Bar -->
       <div class="category-nav-bar">
         <div class="category-nav-inner">
-          <a href="#astro-suite" class="category-nav-link"><span class="badge-num">01</span> Astro &amp; Local AI (13)</a>
-          <a href="#edge-rust" class="category-nav-link"><span class="badge-num">02</span> Cloudflare &amp; Rust (12)</a>
-          <a href="#wordpress-suite" class="category-nav-link"><span class="badge-num">03</span> WordPress Ecosystem (16)</a>
-          <a href="#cloud-tools" class="category-nav-link"><span class="badge-num">04</span> Cloud &amp; Automation (10)</a>
-          <a href="#all-repos" class="category-nav-link"><span class="badge-num">05</span> All Repositories Index</a>
+          <a href="#flare-suite" class="category-nav-link"><span class="badge-num">01</span> The Flare Suite (4)</a>
+          <a href="#astro-suite" class="category-nav-link"><span class="badge-num">02</span> Astro &amp; Local AI (13)</a>
+          <a href="#edge-rust" class="category-nav-link"><span class="badge-num">03</span> Rust &amp; CLI Tools (12)</a>
+          <a href="#wordpress-suite" class="category-nav-link"><span class="badge-num">04</span> WordPress Ecosystem (16)</a>
+          <a href="#cloud-tools" class="category-nav-link"><span class="badge-num">05</span> Cloud &amp; Automation (10)</a>
+          <a href="#all-repos" class="category-nav-link"><span class="badge-num">06</span> All Repositories Index</a>
         </div>
       </div>
 
       <!-- =============================================================
-           GROUP 1: Astro & Chrome Built-in AI Suite (VitePlus Style)
+           GROUP 1: The Flare Suite (Cloudflare Developer Ecosystem)
+           ============================================================= -->
+      <div class="section-header" id="flare-suite">
+        <span class="section-title">01. The Flare Suite // Cloudflare Developer Infrastructure</span>
+        <span class="section-badge" style="color: var(--cyan);">4 FLAGSHIP RUST ENGINES</span>
+      </div>
+
+      <!-- Spotlight Split Panel for The Flare Suite -->
+      <section class="spotlight-split">
+        <div class="spotlight-left">
+          <div>
+            <span class="spotlight-tag" style="color: var(--cobalt);">[ THE FLARE SUITE // COMPILED RUST // ZERO RUNTIME COMPROMISE ]</span>
+            <h2>Next-Gen Cloudflare Developer Toolchain</h2>
+            <p class="spotlight-desc">A unified collection of four high-speed compiled Rust binaries engineered to solve security posture, performance budgets, AST validation, and developer operations across Cloudflare Workers, Pages, and Edge databases.</p>
+            <ul class="checkmark-list">
+              <li><span class="check-icon">✓</span> <span><code>flareguard</code>: Secret leak scanner, ghost binding validation, multi-zone TLS posture, &amp; CT log origin IP hunting</span></li>
+              <li><span class="check-icon">✓</span> <span><code>flareperf</code>: Worker gzip/brotli bundle quotas, V8 isolate cold-start budgets, 50-subrequest limits, &amp; D1 batching</span></li>
+              <li><span class="check-icon">✓</span> <span><code>flarelint</code>: OXC AST static analysis for illegal binding access in prerender routes, Node.js compat, &amp; ctx.waitUntil safety</span></li>
+              <li><span class="check-icon">✓</span> <span><code>flareops</code>: Automated Wrangler binding synchronization with TypeScript App.Locals, .dev.vars, &amp; _routes.json optimization</span></li>
+            </ul>
+          </div>
+          <div class="spotlight-tech-stack">
+            <span>Powered by: Rust 2024 · Cloudflare Workers · Pages · OXC AST · Wrangler · V8 Isolates</span>
+          </div>
+        </div>
+        <div class="spotlight-right">
+          <div class="terminal-box">
+            <div class="terminal-header-row">
+              <span>THE FLARE SUITE // UNIFIED EDGE RUNNER</span>
+              <span>TERMINAL</span>
+            </div>
+            <div class="terminal-cmd">
+              <span class="prompt">$</span>flareguard audit && flareperf check && flarelint . && flareops sync
+            </div>
+            <div class="terminal-output">
+              <div class="term-dim">FLAREGUARD: Scanning 128 source files &amp; Cloudflare zone posture...</div>
+              <div><span class="term-success">✓</span> <span class="term-cyan">0 secret leaks</span> detected · SSL/TLS strict mode verified</div>
+              <div class="term-dim">FLAREPERF: Auditing Worker isolate bundle limits...</div>
+              <div><span class="term-success">✓</span> Worker bundle: <span class="term-cyan">48.2 kB gzip</span> (Quota: 1000 kB) · Cold start: <span class="term-emerald">4.2ms</span></div>
+              <div class="term-dim">FLARELINT: Analyzing AST routes with OXC engine...</div>
+              <div><span class="term-success">✓</span> <span class="term-cyan">54 AST routes</span> verified · 0 illegal prerender runtime leaks</div>
+              <div><span class="term-success">✓</span> FLAREOPS: Synchronized wrangler.jsonc with <span class="term-cobalt">App.Locals &amp; env.d.ts</span></div>
+              <div class="term-dim">Ready for production deployment across 300+ edge locations</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Flare Suite Cards Grid -->
+      <div class="project-grid">
+        <!-- FlareGuard Card -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Security // Secrets // Posture ]</span>
+            <h3>🛡️ flareguard</h3>
+            <p>Cloudflare Security, Secret Leaks, Binding Validation, Zone Posture, and Certificate Transparency Origin IP Hunting.</p>
+            <div class="card-cli">
+              <code>cargo install flareguard</code>
+              <button class="copy-btn" data-copy="cargo install flareguard" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://bhubbard.github.io/flareguard/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/flareguard" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- FlarePerf Card -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--emerald);">[ Performance // Budgets // Isolates ]</span>
+            <h3>⚡ flareperf</h3>
+            <p>Edge Performance, Bundle Budgets, V8 Isolate Cold-Start analysis, 50-Subrequest Limits, and D1 Batching.</p>
+            <div class="card-cli">
+              <code>cargo install flareperf</code>
+              <button class="copy-btn" data-copy="cargo install flareperf" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://bhubbard.github.io/flareperf/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/flareperf" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- FlareLint Card -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Static AST // Linter // OXC ]</span>
+            <h3>🔍 flarelint</h3>
+            <p>OXC-Powered AST Static Analysis, Node.js Compatibility, ctx.waitUntil Linter, and Durable Objects Safety.</p>
+            <div class="card-cli">
+              <code>cargo install flarelint</code>
+              <button class="copy-btn" data-copy="cargo install flarelint" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://bhubbard.github.io/flarelint/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/flarelint" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- FlareOps Card -->
+        <div class="project-card">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--crimson);">[ DevEx // Bindings // Automation ]</span>
+            <h3>🔄 flareops</h3>
+            <p>DevEx, Wrangler Binding Sync, .dev.vars Migrations, and Pages _routes.json Optimizer.</p>
+            <div class="card-cli">
+              <code>cargo install flareops</code>
+              <button class="copy-btn" data-copy="cargo install flareops" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://bhubbard.github.io/flareops/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
+            <a href="https://github.com/bhubbard/flareops" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============================================================
+           GROUP 2: Astro & Chrome Built-in AI Suite (13 Packages)
            ============================================================= -->
       <div class="section-header" id="astro-suite">
-        <span class="section-title">01. Astro &amp; Chrome Built-in AI Suite</span>
+        <span class="section-title">02. Astro &amp; Chrome Built-in AI Suite</span>
         <span class="section-badge" style="color: var(--emerald);">13 PACKAGES VERIFIED</span>
       </div>
 
@@ -1599,10 +1898,10 @@
       </div>
 
       <!-- =============================================================
-           GROUP 2: Cloudflare & Rust Edge Toolchain (VitePlus Style)
+           GROUP 3: Cloudflare & Rust Edge Toolchain (VitePlus Style)
            ============================================================= -->
       <div class="section-header" id="edge-rust">
-        <span class="section-title">02. Cloudflare &amp; Rust Edge Toolchain</span>
+        <span class="section-title">03. Cloudflare &amp; Rust Edge Toolchain</span>
         <span class="section-badge" style="color: var(--cyan);">HIGH-PERFORMANCE INFRASTRUCTURE</span>
       </div>
 
@@ -1756,10 +2055,10 @@
       </div>
 
       <!-- =============================================================
-           GROUP 3: WordPress Ecosystem & Modern Bridges (VitePlus Style)
+           GROUP 4: WordPress Ecosystem & Modern Bridges (VitePlus Style)
            ============================================================= -->
       <div class="section-header" id="wordpress-suite">
-        <span class="section-title">03. WordPress Modern Ecosystem</span>
+        <span class="section-title">04. WordPress Modern Ecosystem</span>
         <span class="section-badge" style="color: var(--cobalt);">RUST MCPS, D1 &amp; KV BRIDGES</span>
       </div>
 
@@ -1804,12 +2103,11 @@
 
       <!-- WordPress Cards Grid -->
       <div class="project-grid">
-        <!-- WP Card 1 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ MCP Server &amp; CLI // Tooling ]</span>
+            <span class="card-category" style="color: var(--cobalt);">[ MCP Server // Rust ]</span>
             <h3>wp-blockmarkup-mcp</h3>
-            <p>A fast, lightweight Rust port of wp-blockmarkup-mcp. Functions as both an LLM Model Context Protocol server and CLI for linting and formatting Gutenberg blocks.</p>
+            <p>Fast, lightweight Rust Model Context Protocol (MCP) server &amp; CLI for auditing, linting, and previewing Gutenberg block markups.</p>
             <div class="card-cli">
               <code>cargo install wp-blockmarkup-mcp</code>
               <button class="copy-btn" data-copy="cargo install wp-blockmarkup-mcp" title="Copy command">
@@ -1822,12 +2120,11 @@
           </div>
         </div>
 
-        <!-- WP Card 2 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Edge Database // Cloudflare ]</span>
+            <span class="card-category" style="color: var(--cobalt);">[ Database // Serverless SQL ]</span>
             <h3>wp-cloudflare-d1</h3>
-            <p>A PHP class to query and utilize Cloudflare D1 serverless SQL database directly within WordPress themes and plugins.</p>
+            <p>A native PHP class to query and utilize Cloudflare D1 serverless SQL edge database directly within WordPress themes and plugins.</p>
             <div class="card-cli">
               <code>composer require bhubbard/wp-cloudflare-d1</code>
               <button class="copy-btn" data-copy="composer require bhubbard/wp-cloudflare-d1" title="Copy command">
@@ -1840,12 +2137,11 @@
           </div>
         </div>
 
-        <!-- WP Card 3 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Edge Storage // Cloudflare ]</span>
+            <span class="card-category" style="color: var(--cobalt);">[ Cache // Edge Key-Value ]</span>
             <h3>wp-cloudflare-kv</h3>
-            <p>A modern WordPress library to interface with Cloudflare KV key-value storage at the edge with automated cache invalidation.</p>
+            <p>A modern WordPress library to interface directly with Cloudflare Workers KV storage for global sub-millisecond edge lookups.</p>
             <div class="card-cli">
               <code>composer require bhubbard/wp-cloudflare-kv</code>
               <button class="copy-btn" data-copy="composer require bhubbard/wp-cloudflare-kv" title="Copy command">
@@ -1858,12 +2154,11 @@
           </div>
         </div>
 
-        <!-- WP Card 4 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--emerald);">[ Content Sanitizer // AI ]</span>
+            <span class="card-category" style="color: var(--cobalt);">[ Editorial // AI Content Sanitizer ]</span>
             <h3>wp-gemini-cleaner</h3>
-            <p>A WordPress tool for cleaning, stripping markdown artifacts, and formatting Gemini AI-generated editorial content.</p>
+            <p>A WordPress tool for cleaning and sanitizing Gemini AI-generated editorial content, removing unwanted markdown artifacts.</p>
             <div class="card-cli">
               <code>composer require bhubbard/wp-gemini-cleaner</code>
               <button class="copy-btn" data-copy="composer require bhubbard/wp-gemini-cleaner" title="Copy command">
@@ -1875,207 +2170,14 @@
             <a href="https://github.com/bhubbard/wp-gemini-cleaner" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
           </div>
         </div>
-
-        <!-- WP Card 5 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Linter &amp; Auditor // CLI ]</span>
-            <h3>wp-theme-check-cli</h3>
-            <p>A TypeScript CLI port of the WordPress Theme Check tool with modern auditing extras, Trac ticket formatting, and automated review gates.</p>
-            <div class="card-cli">
-              <code>npm install -g wp-theme-check-cli</code>
-              <button class="copy-btn" data-copy="npm install -g wp-theme-check-cli" title="Copy command">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/bhubbard/wp-theme-check-cli" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
-          </div>
-        </div>
-
-        <!-- WP Card 6 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Managed Hosting // API ]</span>
-            <h3>wp-pressable-api</h3>
-            <p>PHP client library for interacting with the Pressable Managed WordPress Hosting API for automated site provisioning and backups.</p>
-            <div class="card-cli">
-              <code>composer require bhubbard/wp-pressable-api</code>
-              <button class="copy-btn" data-copy="composer require bhubbard/wp-pressable-api" title="Copy command">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/bhubbard/wp-pressable-api" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- =============================================================
-           GROUP 4: Cloud Functions & Automation Tools (VitePlus Style)
-           ============================================================= -->
-      <div class="section-header" id="cloud-tools">
-        <span class="section-title">04. Cloud &amp; Automation Tools</span>
-        <span class="section-badge" style="color: var(--emerald);">SERVERLESS, WORKERS &amp; APIS</span>
-      </div>
-
-      <!-- Spotlight Split Panel for Cloud & Tools -->
-      <section class="spotlight-split">
-        <div class="spotlight-left">
-          <div>
-            <span class="spotlight-tag" style="color: var(--emerald);">[ SERVERLESS &amp; WORKFLOW AUTOMATION ]</span>
-            <h2>Event-Driven Pub/Sub, Edge Obfuscation &amp; Tooling</h2>
-            <p class="spotlight-desc">High-concurrency Google Cloud Functions, Cloudflare Workers, XML sitemap crawlers, and AI pair-programmer skill definitions for autonomous development workflows.</p>
-            <ul class="checkmark-list">
-              <li><span class="check-icon">✓</span> <span>High-concurrency HTTP Cloud Functions streaming webhooks directly to Google Cloud Pub/Sub</span></li>
-              <li><span class="check-icon">✓</span> <span>Antispambot Cloudflare Worker dynamically obfuscating email addresses on edge proxies</span></li>
-              <li><span class="check-icon">✓</span> <span>Cloudflare Workers AI alt text generator with automated multi-language SEO outputs</span></li>
-              <li><span class="check-icon">✓</span> <span>Autonomous AI Agent skill definitions and pair-programming specifications</span></li>
-            </ul>
-          </div>
-          <div class="spotlight-tech-stack">
-            <span>Powered by: Cloudflare Workers · Google Cloud Functions · Pub/Sub · Node.js</span>
-          </div>
-        </div>
-        <div class="spotlight-right">
-          <div class="terminal-box">
-            <div class="terminal-header-row">
-              <span>CLOUD &amp; SERVERLESS PIPELINE</span>
-              <span>TERMINAL</span>
-            </div>
-            <div class="terminal-cmd">
-              <span class="prompt">$</span>gcf-pubsub-webhook --listen
-            </div>
-            <div class="terminal-output">
-              <div class="term-dim">[Webhook Worker] Ingested incoming event stream...</div>
-              <div><span class="term-success">✓</span> Broadcasted to topic: <span class="term-cyan">projects/prod/topics/orders</span></div>
-              <div class="term-dim"><span class="term-cobalt">latency:</span> 14ms | Payload verified: HMAC-SHA256</div>
-              <div><span class="term-success">✓</span> antispambot-cf-worker: <span class="term-cyan">100% email scrapers blocked</span></div>
-              <div class="term-dim">✓ Edge sitemap crawl completed (1,420 URLs validated)</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Cloud & Tools Cards Grid -->
-      <div class="project-grid">
-        <!-- Tool Card 1 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--emerald);">[ Edge AI // Cloudflare ]</span>
-            <h3>alt-text-ai</h3>
-            <p>Generate SEO-friendly, accessibility-focused alt text for images using Cloudflare Workers AI with image upload and URL support.</p>
-            <div class="card-cli">
-              <code>bun add alt-text-ai</code>
-              <button class="copy-btn" data-copy="bun add alt-text-ai" title="Copy command">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/bhubbard/alt-text-ai" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
-          </div>
-        </div>
-
-        <!-- Tool Card 2 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Edge Worker // Security ]</span>
-            <h3>antispambot-cf-worker</h3>
-            <p>A lightweight Cloudflare Worker that dynamically obfuscates email addresses on edge proxies to eliminate automated spam harvesters.</p>
-            <div class="card-cli">
-              <code>wrangler deploy</code>
-              <button class="copy-btn" data-copy="wrangler deploy" title="Copy command">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/bhubbard/antispambot-cf-worker" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
-          </div>
-        </div>
-
-        <!-- Tool Card 3 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Serverless // Pub/Sub ]</span>
-            <h3>send-to-pubsub</h3>
-            <p>High-concurrency Google Cloud Function to stream webhook events directly into Google Cloud Pub/Sub topics.</p>
-            <div class="card-cli">
-              <code>gcloud functions deploy send-to-pubsub</code>
-              <button class="copy-btn" data-copy="gcloud functions deploy send-to-pubsub" title="Copy command">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/bhubbard/send-to-pubsub" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
-          </div>
-        </div>
-
-        <!-- Tool Card 4 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Crawler // SEO ]</span>
-            <h3>sitemap-scan</h3>
-            <p>A fast Node CLI utility to crawl, discover, validate, and extract XML sitemaps across enterprise domains.</p>
-            <div class="card-cli">
-              <code>npx sitemap-scan https://example.com</code>
-              <button class="copy-btn" data-copy="npx sitemap-scan https://example.com" title="Copy command">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/bhubbard/sitemap-scan" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
-          </div>
-        </div>
-
-        <!-- Tool Card 5 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Managed Hosting // CLI ]</span>
-            <h3>pressable-cli</h3>
-            <p>Fast command-line interface for provisioning, cloning, and managing Pressable WordPress sites and staging instances.</p>
-            <div class="card-cli">
-              <code>npm install -g @bhubbard/pressable-cli</code>
-              <button class="copy-btn" data-copy="npm install -g @bhubbard/pressable-cli" title="Copy command">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/bhubbard/pressable-cli" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
-          </div>
-        </div>
-
-        <!-- Tool Card 6 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--emerald);">[ AI Agents // Tooling ]</span>
-            <h3>skills</h3>
-            <p>Autonomous agent skill definitions and pair-programming specifications for advanced AI coding assistants.</p>
-            <div class="card-cli">
-              <code>git clone git@github.com:bhubbard/skills.git</code>
-              <button class="copy-btn" data-copy="git clone git@github.com:bhubbard/skills.git" title="Copy command">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/bhubbard/skills" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
-          </div>
-        </div>
       </div>
 
       <!-- =============================================================
            GROUP 5: All Repositories Interactive Explorer
            ============================================================= -->
       <div class="section-header" id="all-repos">
-        <span class="section-title">05. All Repositories Index</span>
-        <span class="section-badge" style="color: var(--cobalt);" id="activeCategoryCount">59 REPOSITORIES</span>
+        <span class="section-title">05. Open Source Repositories Index</span>
+        <span class="section-badge" id="activeCategoryCount" style="color: var(--cyan);">63 REPOSITORIES</span>
       </div>
 
       <section class="repo-explorer-section">
@@ -2090,15 +2192,16 @@
 
           <div class="filter-pills" id="categoryFilterPills">
             <button type="button" class="filter-pill active" data-filter="all">All Repos</button>
-            <button type="button" class="filter-pill" data-filter="astro">Astro &amp; AI</button>
-            <button type="button" class="filter-pill" data-filter="rust">Cloudflare &amp; Rust</button>
+            <button type="button" class="filter-pill" data-filter="flare">The Flare Suite</button>
+            <button type="button" class="filter-pill" data-filter="astro">Chrome AI / Astro</button>
+            <button type="button" class="filter-pill" data-filter="cli">CLI Tools</button>
             <button type="button" class="filter-pill" data-filter="wordpress">WordPress</button>
             <button type="button" class="filter-pill" data-filter="tools">Cloud &amp; Tools</button>
           </div>
         </div>
 
         <div class="repos-grid" id="reposGridContainer">
-          <!-- Populated by JavaScript -->
+          <!-- Populated dynamically by JavaScript -->
         </div>
       </section>
 
@@ -2128,7 +2231,7 @@
     </main>
 
     <!-- Brand Footer -->
-    <footer>
+    <footer id="cloud-tools">
       <div>
         <span>© 2026 BRANDON HUBBARD. CODE AS CRAFT. RADICAL OWNERSHIP.</span>
       </div>
@@ -2154,9 +2257,10 @@
       </div>
 
       <div class="modal-filters">
-        <button type="button" class="modal-filter-btn active" data-filter="all">All (59)</button>
-        <button type="button" class="modal-filter-btn" data-filter="astro">Astro &amp; AI (13)</button>
-        <button type="button" class="modal-filter-btn" data-filter="rust">Cloudflare &amp; Rust (12)</button>
+        <button type="button" class="modal-filter-btn active" data-filter="all">All (63)</button>
+        <button type="button" class="modal-filter-btn" data-filter="flare">The Flare Suite (4)</button>
+        <button type="button" class="modal-filter-btn" data-filter="astro">Chrome AI / Astro (13)</button>
+        <button type="button" class="modal-filter-btn" data-filter="cli">CLI Tools (20)</button>
         <button type="button" class="modal-filter-btn" data-filter="wordpress">WordPress (16)</button>
         <button type="button" class="modal-filter-btn" data-filter="tools">Cloud &amp; Tools (10)</button>
       </div>
@@ -2171,7 +2275,7 @@
           <span><kbd>↵</kbd> OPEN</span>
           <span><kbd>ESC</kbd> CLOSE</span>
         </div>
-        <span id="modalMatchCount">SHOWING 59 REPOSITORIES</span>
+        <span id="modalMatchCount">SHOWING 63 REPOSITORIES</span>
       </div>
     </div>
   </div>
@@ -2180,234 +2284,375 @@
   <div class="toast" id="toast">COMMAND COPIED TO CLIPBOARD</div>
 
   <script>
-    // Complete baked-in repository catalog (59 public repositories)
+    // Complete repository catalog with The Flare Suite, Astro Chrome AI, and Rust developer tools
     const REPOSITORIES = [
+      // 🛡️ The Flare Suite (Flagships)
+      {
+        name: "flareguard",
+        description: "Cloudflare Security, Secret Leaks, Binding Validation, Zone Posture, and Certificate Transparency Origin IP Hunting.",
+        language: "Rust",
+        category: "flare",
+        categories: ["flare", "cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/flareguard",
+        docs: "https://bhubbard.github.io/flareguard/",
+        install: "cargo install flareguard"
+      },
+      {
+        name: "flareperf",
+        description: "Edge Performance, Bundle Budgets, V8 Isolate Cold-Start analysis, 50-Subrequest Limits, and D1 Batching.",
+        language: "Rust",
+        category: "flare",
+        categories: ["flare", "cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/flareperf",
+        docs: "https://bhubbard.github.io/flareperf/",
+        install: "cargo install flareperf"
+      },
+      {
+        name: "flarelint",
+        description: "OXC-Powered AST Static Analysis, Node.js Compatibility, ctx.waitUntil Linter, and Durable Objects Safety.",
+        language: "Rust",
+        category: "flare",
+        categories: ["flare", "cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/flarelint",
+        docs: "https://bhubbard.github.io/flarelint/",
+        install: "cargo install flarelint"
+      },
+      {
+        name: "flareops",
+        description: "DevEx, Wrangler Binding Sync, .dev.vars Migrations, and Pages _routes.json Optimizer.",
+        language: "Rust",
+        category: "flare",
+        categories: ["flare", "cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/flareops",
+        docs: "https://bhubbard.github.io/flareops/",
+        install: "cargo install flareops"
+      },
+
+      // 🤖 Astro Chrome Built-in AI Suite (13 Packages)
       {
         name: "astro-client-directive-ai",
         description: "Custom Astro client directive (client:ai-ready) delaying component hydration until on-device Gemini Nano is ready.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-client-directive-ai",
-        docs: "./astro-client-directive-ai/"
+        docs: "./astro-client-directive-ai/",
+        install: "bun add astro-client-directive-ai"
       },
       {
         name: "astro-rehype-nano-code",
         description: "Zero-JS interactive code block explainer for Astro using build-time Rehype attributes and on-device Chrome AI.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-rehype-nano-code",
-        docs: "./astro-rehype-nano-code/"
+        docs: "./astro-rehype-nano-code/",
+        install: "bun add astro-rehype-nano-code"
       },
       {
         name: "astro-prefetch-ai-brief",
         description: "Intelligent link hover briefs for Astro with ultra-compact previews generated by Chrome Built-in Summarizer API.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-prefetch-ai-brief",
-        docs: "./astro-prefetch-ai-brief/"
+        docs: "./astro-prefetch-ai-brief/",
+        install: "bun add astro-prefetch-ai-brief"
       },
       {
         name: "astro-dev-audit-nano",
         description: "Astro Dev Toolbar app auditing WCAG a11y, heading hierarchy, and SEO with real-time Gemini Nano remediations.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-dev-audit-nano",
-        docs: "./astro-dev-audit-nano/"
+        docs: "./astro-dev-audit-nano/",
+        install: "bun add astro-dev-audit-nano"
       },
       {
         name: "astro-dev-copy-optimizer",
         description: "In-browser copy tuner and rewriter inside the Astro Dev Toolbar powered by Chrome Built-in AI.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-dev-copy-optimizer",
-        docs: "./astro-dev-copy-optimizer/"
+        docs: "./astro-dev-copy-optimizer/",
+        install: "bun add astro-dev-copy-optimizer"
       },
       {
         name: "astro-og-smart-crop",
         description: "Client-side OpenGraph and Twitter card preview simulator with AI character-budgeted headline optimization.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-og-smart-crop",
-        docs: "./astro-og-smart-crop/"
+        docs: "./astro-og-smart-crop/",
+        install: "bun add astro-og-smart-crop"
       },
       {
         name: "astro-schema-ld-verifier",
         description: "Dev-time semantic consistency auditor verifying JSON-LD structured data against rendered DOM content.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-schema-ld-verifier",
-        docs: "./astro-schema-ld-verifier/"
+        docs: "./astro-schema-ld-verifier/",
+        install: "bun add astro-schema-ld-verifier"
       },
       {
         name: "astro-dev-i18n-coverage",
         description: "Dev Toolbar missing translation finder with contextual on-device translation and 1-click locale JSON export.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-dev-i18n-coverage",
-        docs: "./astro-dev-i18n-coverage/"
+        docs: "./astro-dev-i18n-coverage/",
+        install: "bun add astro-dev-i18n-coverage"
       },
       {
         name: "astro-dev-content-linter",
         description: "Editorial tone, reading grade level, and brand voice auditor inside the Astro Dev Toolbar with AI rewrites.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-dev-content-linter",
-        docs: "./astro-dev-content-linter/"
+        docs: "./astro-dev-content-linter/",
+        install: "bun add astro-dev-content-linter"
       },
       {
         name: "astro-dev-schema-scaffolder",
         description: "Instant Schema.org JSON-LD microdata generator for Astro Dev Toolbar powered by on-device Gemini Nano.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-dev-schema-scaffolder",
-        docs: "./astro-dev-schema-scaffolder/"
+        docs: "./astro-dev-schema-scaffolder/",
+        install: "bun add astro-dev-schema-scaffolder"
       },
       {
         name: "astro-dev-mock-generator",
         description: "Synthetic Zod-compliant mock data generator for Astro Content Collections using on-device Gemini Nano.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-dev-mock-generator",
-        docs: "./astro-dev-mock-generator/"
+        docs: "./astro-dev-mock-generator/",
+        install: "bun add astro-dev-mock-generator"
       },
       {
         name: "astro-dev-broken-anchor-healer",
         description: "Smart internal anchor link validator and semantic heading ID matcher for Astro Dev Toolbar.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-dev-broken-anchor-healer",
-        docs: "./astro-dev-broken-anchor-healer/"
+        docs: "./astro-dev-broken-anchor-healer/",
+        install: "bun add astro-dev-broken-anchor-healer"
       },
       {
         name: "astro-dev-island-hydration-advisor",
         description: "Astro Dev Toolbar island hydration analyzer flagging eager below-the-fold directives with performance advice.",
         language: "TypeScript",
         category: "astro",
+        categories: ["astro"],
         stars: 0,
         url: "https://github.com/bhubbard/astro-dev-island-hydration-advisor",
-        docs: "./astro-dev-island-hydration-advisor/"
+        docs: "./astro-dev-island-hydration-advisor/",
+        install: "bun add astro-dev-island-hydration-advisor"
       },
+
+      // 🦀 Rust & Edge Developer Tools
       {
         name: "oxc-astro-cf",
         description: "Static AST linter detecting illegal access to Cloudflare runtime bindings inside static prerendered Astro pages.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/oxc-astro-cf"
+        url: "https://github.com/bhubbard/oxc-astro-cf",
+        install: "cargo install oxc-astro-cf"
       },
       {
         name: "edge-bundle-budget",
         description: "Audits gzip/brotli sizes against Cloudflare Worker tier quotas, inspects sourcemaps, and decomposes .wasm binaries.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/edge-bundle-budget"
+        url: "https://github.com/bhubbard/edge-bundle-budget",
+        install: "cargo install edge-bundle-budget"
       },
       {
         name: "cf-origin-hunter",
         description: "Discovers unmasked origin IPs behind Cloudflare proxies via DNS records, Certificate Transparency, and direct probes.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/cf-origin-hunter"
+        url: "https://github.com/bhubbard/cf-origin-hunter",
+        install: "cargo install cf-origin-hunter"
       },
       {
         name: "cf-zone-auditor",
         description: "Multi-zone Cloudflare security auditor verifying SSL/TLS strictness, HSTS, WAF rulesets, and DNSSEC.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/cf-zone-auditor"
+        url: "https://github.com/bhubbard/cf-zone-auditor",
+        install: "cargo install cf-zone-auditor"
       },
       {
         name: "astro-binding-sync",
         description: "Synchronizes wrangler.jsonc resources with TypeScript App.Locals and env.d.ts definitions.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/astro-binding-sync"
+        url: "https://github.com/bhubbard/astro-binding-sync",
+        install: "cargo install astro-binding-sync"
       },
       {
         name: "cf-secret-leak-guard",
         description: "High-throughput scanner preventing Cloudflare tokens, Turnstile keys, and secrets from leaking into client builds.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/cf-secret-leak-guard"
+        url: "https://github.com/bhubbard/cf-secret-leak-guard",
+        install: "cargo install cf-secret-leak-guard"
       },
       {
         name: "astro-env-migration",
         description: "AST codemod migrating deprecated Astro.locals.runtime.* references to modern standard Cloudflare bindings.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/astro-env-migration"
+        url: "https://github.com/bhubbard/astro-env-migration",
+        install: "cargo install astro-env-migration"
       },
       {
         name: "cf-binding-validator",
         description: "Eliminates ghost bindings in wrangler.jsonc and flags runtime crashes from undeclared env.* access.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/cf-binding-validator"
+        url: "https://github.com/bhubbard/cf-binding-validator",
+        install: "cargo install cf-binding-validator"
       },
       {
         name: "astro-cf-session",
         description: "Validates Astro Session API configurations against Wrangler KV bindings to prevent auto-provisioning errors.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/astro-cf-session"
+        url: "https://github.com/bhubbard/astro-cf-session",
+        install: "cargo install astro-cf-session"
       },
       {
         name: "cf-routes-json",
         description: "Validates, minimizes, and detects route conflicts in Cloudflare Pages _routes.json files.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/cf-routes-json"
+        url: "https://github.com/bhubbard/cf-routes-json",
+        install: "cargo install cf-routes-json"
       },
       {
         name: "astro-asset-headers",
         description: "Validates and generates Cloudflare Pages _headers caching and security rules for Astro assets.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/astro-asset-headers"
+        url: "https://github.com/bhubbard/astro-asset-headers",
+        install: "cargo install astro-asset-headers"
       },
       {
         name: "clippy-cf-reporter",
         description: "Translates worker-rs Clippy compiler diagnostics into Code Climate JSON, SARIF v2.1.0, and PR annotations.",
         language: "Rust",
-        category: "rust",
+        category: "cli",
+        categories: ["cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/clippy-cf-reporter"
+        url: "https://github.com/bhubbard/clippy-cf-reporter",
+        install: "cargo install clippy-cf-reporter"
       },
       {
+        name: "brandon-cli",
+        description: "Comprehensive developer productivity CLI for Brandon Hubbard's multi-project workflows.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/brandon-cli",
+        install: "cargo install brandon-cli"
+      },
+      {
+        name: "vite-plus-commitlint",
+        description: "A commitlint plugin tailored for Vite+ toolchain workflows.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/vite-plus-commitlint"
+      },
+      {
+        name: "vite-plus-kumo-ui",
+        description: "High-performance Rust integration bindings for Kumo UI inside Vite+ stacks.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 1,
+        url: "https://github.com/bhubbard/vite-plus-kumo-ui"
+      },
+      {
+        name: "vite-plus-wrangler",
+        description: "Direct Wrangler Cloudflare bindings integration for the Vite+ unified toolchain.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/vite-plus-wrangler"
+      },
+
+      // 🌐 WordPress Ecosystem
+      {
         name: "wp-blockmarkup-mcp",
-        description: "A fast, lightweight Rust port of wp-blockmarkup-mcp. MCP server and CLI for auditing, linting, and previewing Gutenberg block markups.",
+        description: "A fast, lightweight Rust Model Context Protocol (MCP) server and CLI for auditing, linting, and previewing Gutenberg block markups.",
         language: "Rust",
         category: "wordpress",
+        categories: ["wordpress", "cli", "rust"],
         stars: 0,
-        url: "https://github.com/bhubbard/wp-blockmarkup-mcp"
+        url: "https://github.com/bhubbard/wp-blockmarkup-mcp",
+        install: "cargo install wp-blockmarkup-mcp"
       },
       {
         name: "wp-cloudflare-d1",
         description: "A PHP class to query and utilize Cloudflare D1 serverless SQL database within WordPress.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 2,
         url: "https://github.com/bhubbard/wp-cloudflare-d1"
       },
@@ -2416,6 +2661,7 @@
         description: "A modern WordPress library to interface with Cloudflare KV storage at the edge.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 1,
         url: "https://github.com/bhubbard/wp-cloudflare-kv"
       },
@@ -2424,6 +2670,7 @@
         description: "A WordPress tool for cleaning and sanitizing Gemini AI-generated editorial content.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 1,
         url: "https://github.com/bhubbard/wp-gemini-cleaner"
       },
@@ -2432,6 +2679,7 @@
         description: "A TypeScript CLI port of the WordPress Theme Check tool with modern auditing extras.",
         language: "TypeScript",
         category: "wordpress",
+        categories: ["wordpress", "cli"],
         stars: 0,
         url: "https://github.com/bhubbard/wp-theme-check-cli"
       },
@@ -2440,6 +2688,7 @@
         description: "PHP client library for the Pressable Managed Hosting API.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 1,
         url: "https://github.com/bhubbard/wp-pressable-api"
       },
@@ -2448,6 +2697,7 @@
         description: "A WordPress integration library for the GiveButter public fundraising API.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 0,
         url: "https://github.com/bhubbard/wp-givebutter-api"
       },
@@ -2456,6 +2706,7 @@
         description: "A WordPress integration client for the Lawmatics Legal CRM API.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 0,
         url: "https://github.com/bhubbard/wp-lawmatics-api"
       },
@@ -2464,6 +2715,7 @@
         description: "A WordPress library for communicating with the Clio Legal Practice Management API.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 0,
         url: "https://github.com/bhubbard/wp-clio-api"
       },
@@ -2472,6 +2724,7 @@
         description: "A WordPress PHP wrapper for the SpinupWP cloud server management API.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 1,
         url: "https://github.com/bhubbard/wp-spinupwp-api"
       },
@@ -2480,6 +2733,7 @@
         description: "A collection of bash scripts and SQL routines to purge leftover data from WP plugins and themes.",
         language: "Shell",
         category: "wordpress",
+        categories: ["wordpress", "tools"],
         stars: 0,
         url: "https://github.com/bhubbard/wp-cleanup-scripts"
       },
@@ -2488,6 +2742,7 @@
         description: "A curated collection of clean WordPress plugin uninstall handlers and database purgers.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 0,
         url: "https://github.com/bhubbard/wp-plugin-uninstalls"
       },
@@ -2496,6 +2751,7 @@
         description: "Clean boilerplate examples of custom REST endpoints for high-throughput WordPress apps.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 2,
         url: "https://github.com/bhubbard/rest-api-examples"
       },
@@ -2504,6 +2760,7 @@
         description: "A WordPress Gutenberg block for blurring sensitive imagery behind an interactive user reveal toggle.",
         language: "JavaScript",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 0,
         url: "https://github.com/bhubbard/sensitive-image-block"
       },
@@ -2512,6 +2769,7 @@
         description: "A Gutenberg block providing accessible prev/next post navigation links.",
         language: "PHP",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 0,
         url: "https://github.com/bhubbard/post-navigation-block"
       },
@@ -2520,14 +2778,18 @@
         description: "An animated gradient cover block for modern WordPress Gutenberg layouts.",
         language: "JavaScript",
         category: "wordpress",
+        categories: ["wordpress"],
         stars: 1,
         url: "https://github.com/bhubbard/animated-gradient-cover-block"
       },
+
+      // ⚙️ Cloud & Automation Tools
       {
         name: "alt-text-ai",
         description: "Generate SEO-friendly, accessibility-focused alt text for images using Cloudflare Workers AI.",
         language: "TypeScript",
         category: "tools",
+        categories: ["tools"],
         stars: 0,
         url: "https://github.com/bhubbard/alt-text-ai"
       },
@@ -2536,6 +2798,7 @@
         description: "A lightweight Cloudflare Worker that dynamically obfuscates email addresses to eliminate spam harvesters.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools"],
         stars: 4,
         url: "https://github.com/bhubbard/antispambot-cf-worker"
       },
@@ -2544,6 +2807,7 @@
         description: "Fast command-line interface for provisioning, cloning, and managing Pressable WordPress sites.",
         language: "TypeScript",
         category: "tools",
+        categories: ["tools", "cli"],
         stars: 1,
         url: "https://github.com/bhubbard/pressable-cli"
       },
@@ -2552,6 +2816,7 @@
         description: "A fast Node CLI utility to crawl, discover, validate, and extract XML sitemaps.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools", "cli"],
         stars: 0,
         url: "https://github.com/bhubbard/sitemap-scan"
       },
@@ -2560,6 +2825,7 @@
         description: "Continuous infrastructure drift verification and compliance auditor.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools"],
         stars: 1,
         url: "https://github.com/bhubbard/kumo-drift-checks"
       },
@@ -2568,6 +2834,7 @@
         description: "Autonomous agent skill definitions and execution patterns for AI pair programmers.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools"],
         stars: 1,
         url: "https://github.com/bhubbard/skills"
       },
@@ -2576,6 +2843,7 @@
         description: "A Cloudflare Worker proxying private WordPress plugin updates with license key authentication.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools"],
         stars: 0,
         url: "https://github.com/bhubbard/plugin-updater-cf-worker"
       },
@@ -2584,6 +2852,7 @@
         description: "High-concurrency HTTP Cloud Function to stream webhook events directly into Google Cloud Pub/Sub.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools"],
         stars: 1,
         url: "https://github.com/bhubbard/send-to-pubsub"
       },
@@ -2592,6 +2861,7 @@
         description: "A resilient cloud function to receive incoming webhooks and broadcast to Pub/Sub topics.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools"],
         stars: 1,
         url: "https://github.com/bhubbard/gcf-pubsub-webhook"
       },
@@ -2600,6 +2870,7 @@
         description: "Streams WooCommerce order JSON backups directly into Google Cloud Storage via Pub/Sub.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools"],
         stars: 1,
         url: "https://github.com/bhubbard/woo-order-to-google-storage"
       },
@@ -2608,46 +2879,25 @@
         description: "Automated SEO meta tag and schema integrity verification tool for Yoast SEO installations.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools"],
         stars: 1,
         url: "https://github.com/bhubbard/yoast-seo-audit"
-      },
-      {
-        name: "vite-plus-commitlint",
-        description: "A commitlint plugin tailored for Vite+ toolchain workflows.",
-        language: "Rust",
-        category: "rust",
-        stars: 0,
-        url: "https://github.com/bhubbard/vite-plus-commitlint"
-      },
-      {
-        name: "vite-plus-kumo-ui",
-        description: "High-performance Rust integration bindings for Kumo UI inside Vite+ stacks.",
-        language: "Rust",
-        category: "rust",
-        stars: 1,
-        url: "https://github.com/bhubbard/vite-plus-kumo-ui"
-      },
-      {
-        name: "vite-plus-wrangler",
-        description: "Direct Wrangler Cloudflare bindings integration for the Vite+ unified toolchain.",
-        language: "Rust",
-        category: "rust",
-        stars: 0,
-        url: "https://github.com/bhubbard/vite-plus-wrangler"
       },
       {
         name: "talks",
         description: "Brandon Hubbard's conference talks, slides, and technical presentations.",
         language: "JavaScript",
         category: "tools",
+        categories: ["tools"],
         stars: 1,
         url: "https://github.com/bhubbard/talks"
       },
       {
         name: "bhubbard.github.io",
-        description: "Official Open Source Software Portal & Chrome Built-in AI Specification Hub by Brandon Hubbard.",
+        description: "Official Open Source Software Portal & Master Engineering Hub by Brandon Hubbard.",
         language: "HTML",
         category: "tools",
+        categories: ["tools"],
         stars: 0,
         url: "https://github.com/bhubbard/bhubbard.github.io"
       }
@@ -2706,16 +2956,24 @@
     let selectedModalIndex = 0;
     let filteredModalRepos = [];
 
+    // Check if repo matches category
+    function matchCategory(repo, filter) {
+      if (filter === 'all') return true;
+      if (repo.category === filter) return true;
+      if (repo.categories && repo.categories.includes(filter)) return true;
+      return false;
+    }
+
     // Render Explorer Grid
     function renderExplorerGrid() {
       const query = (explorerSearchInput.value || '').toLowerCase().trim();
       const filtered = REPOSITORIES.filter(repo => {
-        const matchesCategory = activeExplorerFilter === 'all' || repo.category === activeExplorerFilter;
+        const matchesCat = matchCategory(repo, activeExplorerFilter);
         const matchesQuery = !query || 
           repo.name.toLowerCase().includes(query) || 
           (repo.description && repo.description.toLowerCase().includes(query)) ||
           (repo.language && repo.language.toLowerCase().includes(query));
-        return matchesCategory && matchesQuery;
+        return matchesCat && matchesQuery;
       });
 
       activeCategoryCount.textContent = `${filtered.length} REPOSITORIES`;
@@ -2759,12 +3017,12 @@
     function renderModalResults() {
       const query = (modalSearchInput.value || '').toLowerCase().trim();
       filteredModalRepos = REPOSITORIES.filter(repo => {
-        const matchesCategory = activeModalFilter === 'all' || repo.category === activeModalFilter;
+        const matchesCat = matchCategory(repo, activeModalFilter);
         const matchesQuery = !query || 
           repo.name.toLowerCase().includes(query) || 
           (repo.description && repo.description.toLowerCase().includes(query)) ||
           (repo.language && repo.language.toLowerCase().includes(query));
-        return matchesCategory && matchesQuery;
+        return matchesCat && matchesQuery;
       });
 
       modalMatchCount.textContent = `SHOWING ${filteredModalRepos.length} OF ${REPOSITORIES.length} REPOSITORIES`;
@@ -2916,19 +3174,25 @@
       }, 2000);
     }
 
-    document.querySelectorAll('.copy-btn').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const textToCopy = btn.dataset.copy;
-        if (textToCopy) {
-          try {
-            await navigator.clipboard.writeText(textToCopy);
-            showToast(`COPIED: ${textToCopy}`);
-          } catch (err) {
-            showToast('COPIED TO CLIPBOARD');
+    function setupCopyButtons() {
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const textToCopy = btn.dataset.copy;
+          if (textToCopy) {
+            try {
+              await navigator.clipboard.writeText(textToCopy);
+              showToast(`COPIED: ${textToCopy}`);
+            } catch (err) {
+              showToast('COPIED TO CLIPBOARD');
+            }
           }
-        }
+        });
       });
-    });
+    }
+
+    setupCopyButtons();
 
     async function syncGitHubRepos() {
       try {
