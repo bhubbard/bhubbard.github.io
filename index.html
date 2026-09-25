@@ -5,10 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; Rust Infrastructure</title>
   <meta name="description" content="Official open source software portal and flagship engineering hub by Brandon Hubbard showcasing The Flare Suite, Astro Chrome Built-in AI, and compiled Rust CLIs.">
+  <link rel="canonical" href="https://bhubbard.github.io/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta property="og:title" content="Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; Rust">
   <meta property="og:description" content="High-performance Cloudflare developer tools (The Flare Suite), Chrome Built-in Gemini Nano dev tools, compiled Rust CLIs, and enterprise web specifications.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bhubbard.github.io/">
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://bhubbard.github.io/#website",
+        "url": "https://bhubbard.github.io/",
+        "name": "Brandon Hubbard Engineering & Open Source",
+        "description": "Flagship engineering portal showcasing high-performance Rust CLIs, Apple Intelligence FoundationModels, zero-token decision engines, Cloudflare Flare Suite, and Astro Chrome Built-in AI tools.",
+        "publisher": {
+          "@type": "Person",
+          "name": "Brandon Hubbard",
+          "url": "https://brandonhubbard.com"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://brandonhubbard.com/#person",
+        "name": "Brandon Hubbard",
+        "url": "https://brandonhubbard.com",
+        "jobTitle": "Principal Engineer & Systems Architect",
+        "sameAs": [
+          "https://github.com/bhubbard",
+          "https://bhubbard.github.io/"
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Immediate Theme Initialization (Prevent FOUC) -->
   <script>
@@ -1945,6 +1981,63 @@
 
       <!-- Cloudflare & Rust Cards Grid -->
       <div class="project-grid">
+        <!-- Flagship Rust & Local AI 1: apfel-rs -->
+        <div class="project-card" style="border-top: 3px solid var(--emerald);">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--emerald);">[ Apple Intelligence // Native Rust ]</span>
+            <h3>🍏 apfel-rs</h3>
+            <p>Apple Intelligence on-device FoundationModels in pure Rust. UNIX CLI &amp; OpenAI-compatible HTTP daemon with zero network latency and 4,160 req/s throughput.</p>
+            <div class="card-cli">
+              <code>cargo install apfel-rs</code>
+              <button class="copy-btn" data-copy="cargo install apfel-rs" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://bhubbard.github.io/apfel-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/apfel-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Flagship Rust & Local AI 2: zev-rs -->
+        <div class="project-card" style="border-top: 3px solid var(--cobalt);">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ Zero-Token Decision Engine // Rust ]</span>
+            <h3>⚡ zev-rs</h3>
+            <p>Ultra-fast zero-token LLM decision engine. Evaluates classification, routing, and scoring schemas in 0.37ms with 70.1% JevBench accuracy, 0% order bias, and zero GPU requirement.</p>
+            <div class="card-cli">
+              <code>cargo install zev-rs</code>
+              <button class="copy-btn" data-copy="cargo install zev-rs" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://bhubbard.github.io/zev-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/zev-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Flagship Rust & Local AI 3: video-use-rs -->
+        <div class="project-card" style="border-top: 3px solid var(--crimson);">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--crimson);">[ AI Video Editing // Coding Agents ]</span>
+            <h3>🎬 video-use-rs</h3>
+            <p>High-performance Rust toolkit for conversation-driven video editing with AI coding agents. Word-level transcripts, phrase packing, lossless cuts, and automated color grading.</p>
+            <div class="card-cli">
+              <code>cargo install video-use-rs</code>
+              <button class="copy-btn" data-copy="cargo install video-use-rs" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://bhubbard.github.io/video-use-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/video-use-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
         <!-- Rust Card 1 -->
         <div class="project-card">
           <div class="card-top">
@@ -2286,6 +2379,40 @@
   <script>
     // Complete repository catalog with The Flare Suite, Astro Chrome AI, and Rust developer tools
     const REPOSITORIES = [
+      // 🚀 Flagship Rust & Local AI Systems
+      {
+        name: "apfel-rs",
+        description: "Apple Intelligence on-device FoundationModels in pure Rust. UNIX CLI & OpenAI-compatible HTTP daemon with 4,160 req/s throughput.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust", "ai"],
+        stars: 0,
+        url: "https://github.com/bhubbard/apfel-rs",
+        docs: "https://bhubbard.github.io/apfel-rs/",
+        install: "cargo install apfel-rs"
+      },
+      {
+        name: "zev-rs",
+        description: "Ultra-fast zero-token LLM decision engine. 0.37ms latency, 70.1% JevBench accuracy, 0% order bias, and zero GPU requirement.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust", "ai"],
+        stars: 0,
+        url: "https://github.com/bhubbard/zev-rs",
+        docs: "https://bhubbard.github.io/zev-rs/",
+        install: "cargo install zev-rs"
+      },
+      {
+        name: "video-use-rs",
+        description: "High-performance Rust toolkit for conversation-driven video editing with AI coding agents. Phrase packing, lossless concat, and auto grading.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust", "ai"],
+        stars: 0,
+        url: "https://github.com/bhubbard/video-use-rs",
+        docs: "https://bhubbard.github.io/video-use-rs/",
+        install: "cargo install video-use-rs"
+      },
       // 🛡️ The Flare Suite (Flagships)
       {
         name: "flareguard",
