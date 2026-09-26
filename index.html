@@ -85,6 +85,15 @@
       --terminal-bg: #0f1015;
       --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
+
+      /* brandonhubbard.com color system tokens */
+      --color-bg-primary: #0a0a0a;
+      --color-bg-surface: #121212;
+      --color-border: #262626;
+      --color-border-light: #333333;
+      --color-text-primary: #ffffff;
+      --color-text-secondary: #888888;
+      --color-accent-cyan: #06B6D4;
     }
 
     [data-theme="light"] {
@@ -98,6 +107,23 @@
       --emerald: #059669;
       --crimson: #E11D48;
       --terminal-bg: #181920;
+
+      /* brandonhubbard.com color system tokens */
+      --color-bg-primary: #ffffff;
+      --color-bg-surface: #f4f4f6;
+      --color-border: #e2e4e8;
+      --color-border-light: #d1d5db;
+      --color-text-primary: #0a0a0a;
+      --color-text-secondary: #606470;
+      --color-accent-cyan: #0891B2;
+    }
+
+    /* Container constraints */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
 
     * {
@@ -1338,6 +1364,9 @@
       .modal-overlay {
         padding: 5vh 0.75rem 1rem;
       }
+      .header-content, .subnav-inner, .container {
+        padding: 0 1rem;
+      }
     }
   /* =============================================================
        SITE HEADER (EXACT REPLICA FROM BRANDONHUBBARD.COM)
@@ -1368,6 +1397,10 @@
       align-items: center;
       justify-content: space-between;
       height: 64px;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
 
     .brand-link {
@@ -1564,6 +1597,10 @@
       align-items: center;
       justify-content: space-between;
       height: 48px;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 2rem;
       gap: 1rem;
     }
 
