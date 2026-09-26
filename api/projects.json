@@ -40,7 +40,7 @@
       "vite"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:05Z"
+    "pushed_at": "2026-09-26T18:56:30Z"
   },
   {
     "name": "vite-plus-kumo-ui",
@@ -61,14 +61,14 @@
       "cloudflare",
       "cloudflare-workers",
       "design-system",
+      "kumo-ui",
       "react",
       "serverless",
       "typescript",
-      "vite",
-      "kumo-ui"
+      "vite"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:07Z"
+    "pushed_at": "2026-09-26T18:56:29Z"
   },
   {
     "name": "zev-rs",
@@ -95,7 +95,7 @@
       "zero-token"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:11Z"
+    "pushed_at": "2026-09-26T18:53:30Z"
   },
   {
     "name": "active-ragdoll-rs",
@@ -113,7 +113,7 @@
     "target_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:23:34Z"
+    "pushed_at": "2026-09-26T18:56:54Z"
   },
   {
     "name": "aesir-utils-rs",
@@ -131,7 +131,7 @@
     "target_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:23:36Z"
+    "pushed_at": "2026-09-26T18:56:53Z"
   },
   {
     "name": "apfel-rs",
@@ -157,7 +157,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:23:38Z"
+    "pushed_at": "2026-09-26T18:56:52Z"
   },
   {
     "name": "astro-client-directive-ai",
@@ -178,7 +178,7 @@
       "cli"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:02Z"
+    "pushed_at": "2026-09-26T18:56:27Z"
   },
   {
     "name": "astro-dev-audit-nano",
@@ -199,7 +199,7 @@
       "seo"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:22Z"
+    "pushed_at": "2026-09-26T18:56:26Z"
   },
   {
     "name": "astro-dev-broken-anchor-healer",
@@ -220,7 +220,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:24Z"
+    "pushed_at": "2026-09-26T18:56:25Z"
   },
   {
     "name": "astro-dev-content-linter",
@@ -242,7 +242,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:27Z"
+    "pushed_at": "2026-09-26T18:56:24Z"
   },
   {
     "name": "astro-dev-copy-optimizer",
@@ -263,7 +263,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:29Z"
+    "pushed_at": "2026-09-26T18:56:23Z"
   },
   {
     "name": "astro-dev-i18n-coverage",
@@ -285,7 +285,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:31Z"
+    "pushed_at": "2026-09-26T18:56:22Z"
   },
   {
     "name": "astro-dev-island-hydration-advisor",
@@ -306,7 +306,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:33Z"
+    "pushed_at": "2026-09-26T18:56:21Z"
   },
   {
     "name": "astro-dev-mock-generator",
@@ -327,7 +327,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:35Z"
+    "pushed_at": "2026-09-26T18:56:20Z"
   },
   {
     "name": "astro-dev-schema-scaffolder",
@@ -348,7 +348,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:38Z"
+    "pushed_at": "2026-09-26T18:56:19Z"
   },
   {
     "name": "astro-og-smart-crop",
@@ -370,7 +370,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:40Z"
+    "pushed_at": "2026-09-26T18:56:18Z"
   },
   {
     "name": "astro-prefetch-ai-brief",
@@ -392,7 +392,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:42Z"
+    "pushed_at": "2026-09-26T18:56:17Z"
   },
   {
     "name": "astro-rehype-nano-code",
@@ -413,7 +413,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:45Z"
+    "pushed_at": "2026-09-26T18:56:16Z"
   },
   {
     "name": "astro-schema-ld-verifier",
@@ -435,7 +435,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:47Z"
+    "pushed_at": "2026-09-26T18:56:15Z"
   },
   {
     "name": "bhubbard.github.io",
@@ -460,7 +460,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:27:31Z"
+    "pushed_at": "2026-09-26T18:56:13Z"
   },
   {
     "name": "bullet3-rs",
@@ -478,7 +478,7 @@
     "target_url": "https://code.brandonhubbard.com/bullet3-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:13Z"
+    "pushed_at": "2026-09-26T18:56:50Z"
   },
   {
     "name": "clippy-cf-reporter",
@@ -501,7 +501,7 @@
       "serverless"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:15Z"
+    "pushed_at": "2026-09-26T18:56:49Z"
   },
   {
     "name": "defy-rs",
@@ -519,7 +519,7 @@
     "target_url": "https://code.brandonhubbard.com/defy-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:17Z"
+    "pushed_at": "2026-09-26T18:56:48Z"
   },
   {
     "name": "detour-crowd-rs",
@@ -537,7 +537,7 @@
     "target_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:20Z"
+    "pushed_at": "2026-09-26T18:56:47Z"
   },
   {
     "name": "dialogger-rs",
@@ -555,7 +555,7 @@
     "target_url": "https://code.brandonhubbard.com/dialogger-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:22Z"
+    "pushed_at": "2026-09-26T18:56:46Z"
   },
   {
     "name": "flareguard",
@@ -574,18 +574,18 @@
     "target_url": "https://code.brandonhubbard.com/flareguard/",
     "topics": [
       "ast",
+      "audit",
       "cli",
       "cloudflare",
+      "cloudflare-workers",
       "devops",
       "rust",
       "security",
-      "waf",
-      "audit",
-      "cloudflare-workers",
-      "serverless"
+      "serverless",
+      "waf"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:49Z"
+    "pushed_at": "2026-09-26T17:46:04Z"
   },
   {
     "name": "flarelint",
@@ -615,7 +615,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:26Z"
+    "pushed_at": "2026-09-26T18:55:17Z"
   },
   {
     "name": "flareops",
@@ -634,18 +634,18 @@
     "target_url": "https://code.brandonhubbard.com/flareops/",
     "topics": [
       "astro",
+      "caching",
       "cli",
       "cloudflare",
       "cloudflare-pages",
       "cloudflare-workers",
-      "dx",
-      "caching",
       "devops",
+      "dx",
       "headers",
       "pages"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:29Z"
+    "pushed_at": "2026-09-26T17:46:09Z"
   },
   {
     "name": "flareperf",
@@ -666,15 +666,15 @@
       "ast",
       "cli",
       "cloudflare",
+      "cloudflare-workers",
       "d1",
       "performance",
+      "serverless",
       "subrequests",
-      "workers",
-      "cloudflare-workers",
-      "serverless"
+      "workers"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:31Z"
+    "pushed_at": "2026-09-26T17:46:11Z"
   },
   {
     "name": "gambetta-netcode-rs",
@@ -692,7 +692,7 @@
     "target_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:33Z"
+    "pushed_at": "2026-09-26T18:56:45Z"
   },
   {
     "name": "godot-rs",
@@ -710,7 +710,7 @@
     "target_url": "https://code.brandonhubbard.com/godot-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:34Z"
+    "pushed_at": "2026-09-26T18:56:44Z"
   },
   {
     "name": "hyperframes-rs",
@@ -728,7 +728,7 @@
     "target_url": "https://code.brandonhubbard.com/hyperframes-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:36Z"
+    "pushed_at": "2026-09-26T18:56:43Z"
   },
   {
     "name": "minimal-hud-rs",
@@ -746,7 +746,7 @@
     "target_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:14:20Z"
+    "pushed_at": "2026-09-26T18:53:17Z"
   },
   {
     "name": "npwd-rs",
@@ -764,7 +764,7 @@
     "target_url": "https://code.brandonhubbard.com/npwd-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:39Z"
+    "pushed_at": "2026-09-26T18:56:42Z"
   },
   {
     "name": "openrw-rs",
@@ -782,7 +782,7 @@
     "target_url": "https://code.brandonhubbard.com/openrw-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:41Z"
+    "pushed_at": "2026-09-26T18:56:41Z"
   },
   {
     "name": "poormans-camera-rs",
@@ -800,7 +800,7 @@
     "target_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:43Z"
+    "pushed_at": "2026-09-26T18:56:40Z"
   },
   {
     "name": "radial-menu-rs",
@@ -818,7 +818,7 @@
     "target_url": "https://code.brandonhubbard.com/radial-menu-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:45Z"
+    "pushed_at": "2026-09-26T18:56:39Z"
   },
   {
     "name": "sdf-math-rs",
@@ -836,7 +836,7 @@
     "target_url": "https://code.brandonhubbard.com/sdf-math-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:47Z"
+    "pushed_at": "2026-09-26T18:56:39Z"
   },
   {
     "name": "sfxr-rs",
@@ -854,7 +854,7 @@
     "target_url": "https://code.brandonhubbard.com/sfxr-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:49Z"
+    "pushed_at": "2026-09-26T18:56:37Z"
   },
   {
     "name": "simplecar2-rs",
@@ -872,7 +872,7 @@
     "target_url": "https://code.brandonhubbard.com/simplecar2-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:51Z"
+    "pushed_at": "2026-09-26T18:56:36Z"
   },
   {
     "name": "sumo-rs",
@@ -890,7 +890,7 @@
     "target_url": "https://code.brandonhubbard.com/sumo-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:52Z"
+    "pushed_at": "2026-09-26T18:56:35Z"
   },
   {
     "name": "tactical-ai-rs",
@@ -908,7 +908,7 @@
     "target_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:54Z"
+    "pushed_at": "2026-09-26T18:56:34Z"
   },
   {
     "name": "tlab-vehicle-physics-rs",
@@ -926,7 +926,7 @@
     "target_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:58Z"
+    "pushed_at": "2026-09-26T18:56:33Z"
   },
   {
     "name": "uxsim-rs",
@@ -944,7 +944,7 @@
     "target_url": "https://code.brandonhubbard.com/uxsim-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:59Z"
+    "pushed_at": "2026-09-26T18:56:32Z"
   },
   {
     "name": "vhud-rs",
@@ -962,7 +962,7 @@
     "target_url": "https://code.brandonhubbard.com/vhud-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:01Z"
+    "pushed_at": "2026-09-26T18:56:31Z"
   },
   {
     "name": "video-use-rs",
@@ -987,7 +987,7 @@
       "video-editing"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:03Z"
+    "pushed_at": "2026-09-26T18:56:14Z"
   },
   {
     "name": "vite-plus-wrangler",
@@ -1014,7 +1014,30 @@
       "wrangler"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:09Z"
+    "pushed_at": "2026-09-26T18:56:28Z"
+  },
+  {
+    "name": "antispambot-cf-worker",
+    "description": "A CloudFlare Worker to return antispambot email.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 4,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/antispambot-cf-worker",
+    "target_url": "https://github.com/bhubbard/antispambot-cf-worker",
+    "topics": [
+      "cloudflare",
+      "cloudflare-workers",
+      "serverless",
+      "spam",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2022-09-29T15:56:00Z"
   },
   {
     "name": "wp-cloudflare-d1",
@@ -1032,14 +1055,35 @@
     "target_url": "https://github.com/bhubbard/wp-cloudflare-d1",
     "topics": [
       "cloudflare",
+      "cloudflare-workers",
       "d1",
       "php",
-      "wordpress",
-      "cloudflare-workers",
-      "serverless"
+      "serverless",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-11-12T14:45:32Z"
+    "pushed_at": "2026-09-26T18:57:23Z"
+  },
+  {
+    "name": "rest-api-examples",
+    "description": "Simple examples of custom rest endpoints for common WordPress functions",
+    "language": "PHP",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 2,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/rest-api-examples",
+    "target_url": "https://github.com/bhubbard/rest-api-examples",
+    "topics": [
+      "rest-api",
+      "tutorial",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2024-12-16T18:37:06Z"
   },
   {
     "name": "animated-gradient-cover-block",
@@ -1060,7 +1104,28 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-09-18T17:32:02Z"
+    "pushed_at": "2026-09-26T18:57:25Z"
+  },
+  {
+    "name": "gcf-pubsub-webhook",
+    "description": "A simple cloud function to receive message and post to PubSub Topic. ",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/gcf-pubsub-webhook",
+    "target_url": "https://github.com/bhubbard/gcf-pubsub-webhook",
+    "topics": [
+      "google-cloud",
+      "pubsub",
+      "webhook"
+    ],
+    "is_archived": true,
+    "pushed_at": "2020-02-04T18:14:34Z"
   },
   {
     "name": "kumo-drift-checks",
@@ -1086,7 +1151,7 @@
       "ui-components"
     ],
     "is_archived": false,
-    "pushed_at": "2026-08-06T04:41:01Z"
+    "pushed_at": "2026-09-26T18:57:07Z"
   },
   {
     "name": "pressable-cli",
@@ -1102,16 +1167,38 @@
     "github_url": "https://github.com/bhubbard/pressable-cli",
     "target_url": "https://github.com/bhubbard/pressable-cli",
     "topics": [
-      "cli",
-      "hosting",
-      "pressable",
-      "wordpress",
       "api-client",
       "automation",
-      "devops"
+      "cli",
+      "devops",
+      "hosting",
+      "pressable",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-04-09T06:13:03Z"
+    "pushed_at": "2026-09-26T18:57:12Z"
+  },
+  {
+    "name": "send-to-pubsub",
+    "description": "HTTP Cloud Function to send data to PubSub.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/send-to-pubsub",
+    "target_url": "https://github.com/bhubbard/send-to-pubsub",
+    "topics": [
+      "automation",
+      "developer-tools",
+      "google-cloud",
+      "pubsub"
+    ],
+    "is_archived": true,
+    "pushed_at": "2022-09-20T17:37:33Z"
   },
   {
     "name": "skills",
@@ -1128,17 +1215,38 @@
     "target_url": "https://github.com/bhubbard/skills",
     "topics": [
       "agent",
-      "ai",
-      "claude",
       "agent-skills",
+      "ai",
       "ai-agents",
       "antigravity",
+      "claude",
       "claude-code",
       "developer-productivity",
       "prompt-engineering"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T15:45:02Z"
+    "pushed_at": "2026-09-26T18:56:55Z"
+  },
+  {
+    "name": "woo-order-to-google-storage",
+    "description": "Backup woo order to Google Storage, ideally via pub/sub.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/woo-order-to-google-storage",
+    "target_url": "https://github.com/bhubbard/woo-order-to-google-storage",
+    "topics": [
+      "google-cloud",
+      "storage",
+      "woocommerce"
+    ],
+    "is_archived": true,
+    "pushed_at": "2022-09-20T17:35:22Z"
   },
   {
     "name": "wp-cloudflare-kv",
@@ -1156,14 +1264,14 @@
     "target_url": "https://github.com/bhubbard/wp-cloudflare-kv",
     "topics": [
       "cloudflare",
+      "cloudflare-workers",
       "kv",
       "php",
-      "wordpress",
-      "cloudflare-workers",
-      "serverless"
+      "serverless",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-11-12T14:52:00Z"
+    "pushed_at": "2026-09-26T18:57:21Z"
   },
   {
     "name": "wp-gemini-cleaner",
@@ -1209,7 +1317,33 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-11-20T15:39:31Z"
+    "pushed_at": "2026-09-26T18:57:19Z"
+  },
+  {
+    "name": "wp-spinupwp-api",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "PHP",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-spinupwp-api",
+    "target_url": "https://github.com/bhubbard/wp-spinupwp-api",
+    "topics": [
+      "cli",
+      "devops",
+      "hosting-automation",
+      "php",
+      "rest-api",
+      "server-management",
+      "spinupwp",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2025-06-15T14:52:56Z"
   },
   {
     "name": "yoast-seo-audit",
@@ -1235,7 +1369,7 @@
       "yoast-seo"
     ],
     "is_archived": false,
-    "pushed_at": "2025-08-01T19:20:41Z"
+    "pushed_at": "2026-09-26T18:57:27Z"
   },
   {
     "name": ".github",
@@ -1259,7 +1393,7 @@
       "security-policy"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T15:20:28Z"
+    "pushed_at": "2026-09-26T18:57:03Z"
   },
   {
     "name": "alt-text-ai",
@@ -1277,13 +1411,13 @@
     "topics": [
       "accessibility",
       "ai",
+      "cloudflare",
       "cloudflare-workers",
       "seo",
-      "cloudflare",
       "serverless"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-30T14:28:14Z"
+    "pushed_at": "2026-09-26T18:57:14Z"
   },
   {
     "name": "astro-compress-rs",
@@ -1310,7 +1444,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T16:26:49Z"
+    "pushed_at": "2026-09-26T18:57:02Z"
   },
   {
     "name": "fonoster",
@@ -1351,20 +1485,20 @@
     "target_url": "https://github.com/bhubbard/homebrew-tap",
     "topics": [
       "binary-distribution",
+      "cli",
       "cli-tools",
       "homebrew",
       "homebrew-tap",
       "macos",
-      "package-manager",
-      "cli"
+      "package-manager"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-24T17:29:15Z"
+    "pushed_at": "2026-09-26T18:57:04Z"
   },
   {
     "name": "hyperframes",
     "description": "Write HTML. Render video. Built for agents.",
-    "language": "TypeScript",
+    "language": "Code",
     "category": "tools",
     "categories": [
       "tools"
@@ -1376,7 +1510,30 @@
     "target_url": "https://github.com/bhubbard/hyperframes",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T15:40:26Z"
+    "pushed_at": "2026-09-26T18:56:56Z"
+  },
+  {
+    "name": "image-altext",
+    "description": "Cloudflare-powered AI image alt text generator using TypeScript and Hono framework for edge environments.",
+    "language": "Code",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/image-altext",
+    "target_url": "https://github.com/bhubbard/image-altext",
+    "topics": [
+      "accessibility",
+      "ai",
+      "cloudflare",
+      "cloudflare-workers",
+      "serverless"
+    ],
+    "is_archived": true,
+    "pushed_at": "2024-04-11T09:43:13Z"
   },
   {
     "name": "opendental",
@@ -1403,7 +1560,7 @@
       "serverless"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T16:27:18Z"
+    "pushed_at": "2026-09-26T18:57:00Z"
   },
   {
     "name": "plugin-updater-cf-worker",
@@ -1419,14 +1576,14 @@
     "github_url": "https://github.com/bhubbard/plugin-updater-cf-worker",
     "target_url": "https://github.com/bhubbard/plugin-updater-cf-worker",
     "topics": [
+      "cloudflare",
       "cloudflare-workers",
       "plugins",
-      "wordpress",
-      "cloudflare",
-      "serverless"
+      "serverless",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-28T16:42:58Z"
+    "pushed_at": "2026-09-26T18:57:16Z"
   },
   {
     "name": "post-navigation-block",
@@ -1447,7 +1604,7 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-09-18T17:29:54Z"
+    "pushed_at": "2026-09-26T18:57:26Z"
   },
   {
     "name": "searchphone",
@@ -1472,7 +1629,7 @@
       "telephony"
     ],
     "is_archived": false,
-    "pushed_at": "2026-08-25T06:13:29Z"
+    "pushed_at": "2026-09-26T18:57:06Z"
   },
   {
     "name": "sensitive-image-block",
@@ -1493,7 +1650,7 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-09-18T17:57:52Z"
+    "pushed_at": "2026-09-26T18:57:24Z"
   },
   {
     "name": "serpbear",
@@ -1518,7 +1675,7 @@
       "serp"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T16:27:25Z"
+    "pushed_at": "2026-09-26T18:56:59Z"
   },
   {
     "name": "sitemap-scan",
@@ -1539,7 +1696,7 @@
       "sitemap"
     ],
     "is_archived": false,
-    "pushed_at": "2025-08-01T18:16:42Z"
+    "pushed_at": "2026-09-26T18:57:28Z"
   },
   {
     "name": "timesfm-rs",
@@ -1565,7 +1722,7 @@
       "timesfm"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T16:27:31Z"
+    "pushed_at": "2026-09-26T18:56:58Z"
   },
   {
     "name": "unified-audit-rs",
@@ -1591,7 +1748,7 @@
       "web-standards"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T16:27:57Z"
+    "pushed_at": "2026-09-26T18:56:57Z"
   },
   {
     "name": "unlighthouse-rs",
@@ -1608,11 +1765,11 @@
     "github_url": "https://github.com/bhubbard/unlighthouse-rs",
     "target_url": "https://github.com/bhubbard/unlighthouse-rs",
     "topics": [
+      "audit",
       "cli",
       "lighthouse",
       "performance",
-      "rust",
-      "audit"
+      "rust"
     ],
     "is_archived": false,
     "pushed_at": "2026-06-01T05:24:35Z"
@@ -1633,16 +1790,16 @@
     "github_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
     "target_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
     "topics": [
+      "ai",
+      "audit",
       "cli",
       "gutenberg",
       "mcp",
       "rust",
-      "wordpress",
-      "ai",
-      "audit"
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-05-31T05:42:00Z"
+    "pushed_at": "2026-09-26T18:57:09Z"
   },
   {
     "name": "wp-cleanup-scripts",
@@ -1658,13 +1815,13 @@
     "github_url": "https://github.com/bhubbard/wp-cleanup-scripts",
     "target_url": "https://github.com/bhubbard/wp-cleanup-scripts",
     "topics": [
-      "wordpress",
       "bash",
       "cleanup",
-      "database"
+      "database",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-29T16:01:26Z"
+    "pushed_at": "2026-09-26T18:57:15Z"
   },
   {
     "name": "wp-clio-api",
@@ -1681,13 +1838,13 @@
     "target_url": "https://github.com/bhubbard/wp-clio-api",
     "topics": [
       "api",
+      "cli",
       "clio",
       "php",
-      "wordpress",
-      "cli"
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-02T22:57:27Z"
+    "pushed_at": "2026-09-26T18:57:17Z"
   },
   {
     "name": "wp-givebutter-api",
@@ -1709,7 +1866,7 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-11-17T16:15:54Z"
+    "pushed_at": "2026-09-26T18:57:20Z"
   },
   {
     "name": "wp-lawmatics-api",
@@ -1726,12 +1883,12 @@
     "target_url": "https://github.com/bhubbard/wp-lawmatics-api",
     "topics": [
       "api",
+      "lawmatics",
       "php",
-      "wordpress",
-      "lawmatics"
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-02T22:54:44Z"
+    "pushed_at": "2026-09-26T18:57:18Z"
   },
   {
     "name": "wp-plugin-uninstalls",
@@ -1752,7 +1909,7 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-02-27T16:21:37Z"
+    "pushed_at": "2026-09-26T18:57:13Z"
   },
   {
     "name": "wp-theme-check-cli",
@@ -1778,6 +1935,6 @@
       "wp-cli"
     ],
     "is_archived": false,
-    "pushed_at": "2026-04-10T06:22:56Z"
+    "pushed_at": "2026-09-26T18:57:11Z"
   }
 ]
