@@ -1,103 +1,5 @@
 [
   {
-    "name": "talks",
-    "description": "My talks and presentations!",
-    "language": "JavaScript",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://talks.brandonhubbard.com/",
-    "github_url": "https://github.com/bhubbard/talks",
-    "target_url": "https://talks.brandonhubbard.com/",
-    "topics": [
-      "presentations",
-      "talks",
-      "wordpress"
-    ],
-    "is_archived": true,
-    "pushed_at": "2026-09-26T16:29:54Z"
-  },
-  {
-    "name": "vite-plus-commitlint",
-    "description": "A commitlint plugin for vite plus",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
-    "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
-    "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
-    "topics": [
-      "automation",
-      "developer-tools",
-      "vite"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:30Z"
-  },
-  {
-    "name": "vite-plus-kumo-ui",
-    "description": "Vite development preset and bundler plugins tailored for Cloudflare's internal Kumo UI component library.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
-    "github_url": "https://github.com/bhubbard/vite-plus-kumo-ui",
-    "target_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
-    "topics": [
-      "bundler",
-      "cloudflare",
-      "cloudflare-workers",
-      "design-system",
-      "kumo-ui",
-      "react",
-      "serverless",
-      "typescript",
-      "vite"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:29Z"
-  },
-  {
-    "name": "zev-rs",
-    "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/zev-rs/",
-    "github_url": "https://github.com/bhubbard/zev-rs",
-    "target_url": "https://code.brandonhubbard.com/zev-rs/",
-    "topics": [
-      "ai",
-      "ai-inference",
-      "decision-engine",
-      "heuristics",
-      "llm-orchestration",
-      "performance",
-      "rust",
-      "zero-token"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:53:30Z"
-  },
-  {
     "name": "active-ragdoll-rs",
     "description": "Open source software and systems engineering by Brandon Hubbard.",
     "language": "Rust",
@@ -767,6 +669,16 @@
     "pushed_at": "2026-09-26T18:56:42Z"
   },
   {
+    "name": "open-higgsfield-ai-rs",
+    "fullName": "bhubbard/open-higgsfield-ai-rs",
+    "description": "Native Rust engine and studio client for Open-Higgsfield-AI: 220+ image, video, lipsync, and cinema camera models with Axum web studio and CLI.",
+    "url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
+    "pagesUrl": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "primaryLanguage": "Rust",
+    "stars": 0,
+    "latestRelease": "v0.0.1"
+  },
+  {
     "name": "openrw-rs",
     "description": "Pure Rust port of GTA III camera follow, weapon targeting math, and player state machines from OpenRW",
     "language": "Rust",
@@ -911,6 +823,27 @@
     "pushed_at": "2026-09-26T18:56:34Z"
   },
   {
+    "name": "talks",
+    "description": "My talks and presentations!",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://talks.brandonhubbard.com/",
+    "github_url": "https://github.com/bhubbard/talks",
+    "target_url": "https://talks.brandonhubbard.com/",
+    "topics": [
+      "presentations",
+      "talks",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2026-09-26T16:29:54Z"
+  },
+  {
     "name": "tlab-vehicle-physics-rs",
     "description": "Pure Rust Pacejka Magic Formula tire friction and drift physics model from TLabVehiclePhysics",
     "language": "Rust",
@@ -990,6 +923,56 @@
     "pushed_at": "2026-09-26T18:56:14Z"
   },
   {
+    "name": "vite-plus-commitlint",
+    "description": "A commitlint plugin for vite plus",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "topics": [
+      "automation",
+      "developer-tools",
+      "vite"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:30Z"
+  },
+  {
+    "name": "vite-plus-kumo-ui",
+    "description": "Vite development preset and bundler plugins tailored for Cloudflare's internal Kumo UI component library.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
+    "github_url": "https://github.com/bhubbard/vite-plus-kumo-ui",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
+    "topics": [
+      "bundler",
+      "cloudflare",
+      "cloudflare-workers",
+      "design-system",
+      "kumo-ui",
+      "react",
+      "serverless",
+      "typescript",
+      "vite"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:29Z"
+  },
+  {
     "name": "vite-plus-wrangler",
     "description": "Vite plugin for seamless integration with Cloudflare Wrangler and local Cloudflare Workers / Pages development.",
     "language": "Rust",
@@ -1015,5 +998,32 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:56:28Z"
+  },
+  {
+    "name": "zev-rs",
+    "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/zev-rs/",
+    "github_url": "https://github.com/bhubbard/zev-rs",
+    "target_url": "https://code.brandonhubbard.com/zev-rs/",
+    "topics": [
+      "ai",
+      "ai-inference",
+      "decision-engine",
+      "heuristics",
+      "llm-orchestration",
+      "performance",
+      "rust",
+      "zero-token"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:53:30Z"
   }
 ]
