@@ -740,7 +740,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: background 0.15s ease, border-color 0.2s ease;
+      transition: background 0.15s ease, border-color 0.2s ease, transform 0.15s ease;
+      cursor: pointer;
     }
 
     .project-card:hover {
@@ -767,6 +768,11 @@
       margin-bottom: 0.75rem;
       letter-spacing: -0.02em;
       color: var(--titanium);
+      transition: color 0.15s ease;
+    }
+
+    .project-card:hover h3 {
+      color: var(--cyan);
     }
 
     .project-card p {
@@ -1990,6 +1996,25 @@
 
       <!-- Cloudflare & Rust Cards Grid -->
       <div class="project-grid">
+        <!-- Flagship Rust Physics: bullet3-rs -->
+        <div class="project-card" style="border-top: 3px solid var(--cobalt);">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ 3D Physics Engine // Real-Time Simulation ]</span>
+            <h3>🎯 bullet3-rs</h3>
+            <p>Pure Rust multi-threaded 3D physics simulation engine with SIMD vectorization, GJK/EPA narrowphase collision detection, and rigid/soft body dynamics.</p>
+            <div class="card-cli">
+              <code>cargo add bullet3-rs</code>
+              <button class="copy-btn" data-copy="cargo add bullet3-rs" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://code.brandonhubbard.com/bullet3-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/bullet3-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
         <!-- Flagship Rust & Local AI 1: apfel-rs -->
         <div class="project-card" style="border-top: 3px solid var(--emerald);">
           <div class="card-top">
@@ -2294,9 +2319,10 @@
 
           <div class="filter-pills" id="categoryFilterPills">
             <button type="button" class="filter-pill active" data-filter="all">All Repos</button>
+            <button type="button" class="filter-pill" data-filter="pages">GitHub Pages (48)</button>
             <button type="button" class="filter-pill" data-filter="flare">The Flare Suite</button>
             <button type="button" class="filter-pill" data-filter="astro">Chrome AI / Astro</button>
-            <button type="button" class="filter-pill" data-filter="cli">CLI Tools</button>
+            <button type="button" class="filter-pill" data-filter="cli">Rust &amp; CLI</button>
             <button type="button" class="filter-pill" data-filter="wordpress">WordPress</button>
             <button type="button" class="filter-pill" data-filter="tools">Cloud &amp; Tools</button>
           </div>
@@ -2359,12 +2385,13 @@
       </div>
 
       <div class="modal-filters">
-        <button type="button" class="modal-filter-btn active" data-filter="all">All (63)</button>
+        <button type="button" class="modal-filter-btn active" data-filter="all">All</button>
+        <button type="button" class="modal-filter-btn" data-filter="pages">GitHub Pages (48)</button>
         <button type="button" class="modal-filter-btn" data-filter="flare">The Flare Suite (4)</button>
         <button type="button" class="modal-filter-btn" data-filter="astro">Chrome AI / Astro (13)</button>
-        <button type="button" class="modal-filter-btn" data-filter="cli">CLI Tools (20)</button>
+        <button type="button" class="modal-filter-btn" data-filter="cli">Rust &amp; CLI</button>
         <button type="button" class="modal-filter-btn" data-filter="wordpress">WordPress (16)</button>
-        <button type="button" class="modal-filter-btn" data-filter="tools">Cloud &amp; Tools (10)</button>
+        <button type="button" class="modal-filter-btn" data-filter="tools">Cloud &amp; Tools</button>
       </div>
 
       <div class="modal-body" id="modalResultsList">
@@ -2386,8 +2413,315 @@
   <div class="toast" id="toast">COMMAND COPIED TO CLIPBOARD</div>
 
   <script>
+    // Comprehensive map of all 48 repositories with GitHub Pages enabled
+    const GITHUB_PAGES_MAP = {
+      "active-ragdoll-rs": "https://code.brandonhubbard.com/active-ragdoll-rs/",
+      "aesir-utils-rs": "https://code.brandonhubbard.com/aesir-utils-rs/",
+      "apfel-rs": "https://code.brandonhubbard.com/apfel-rs/",
+      "astro-client-directive-ai": "https://code.brandonhubbard.com/astro-client-directive-ai/",
+      "astro-dev-audit-nano": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
+      "astro-dev-broken-anchor-healer": "https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/",
+      "astro-dev-content-linter": "https://code.brandonhubbard.com/astro-dev-content-linter/",
+      "astro-dev-copy-optimizer": "https://code.brandonhubbard.com/astro-dev-copy-optimizer/",
+      "astro-dev-i18n-coverage": "https://code.brandonhubbard.com/astro-dev-i18n-coverage/",
+      "astro-dev-island-hydration-advisor": "https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/",
+      "astro-dev-mock-generator": "https://code.brandonhubbard.com/astro-dev-mock-generator/",
+      "astro-dev-schema-scaffolder": "https://code.brandonhubbard.com/astro-dev-schema-scaffolder/",
+      "astro-og-smart-crop": "https://code.brandonhubbard.com/astro-og-smart-crop/",
+      "astro-prefetch-ai-brief": "https://code.brandonhubbard.com/astro-prefetch-ai-brief/",
+      "astro-rehype-nano-code": "https://code.brandonhubbard.com/astro-rehype-nano-code/",
+      "astro-schema-ld-verifier": "https://code.brandonhubbard.com/astro-schema-ld-verifier/",
+      "bhubbard.github.io": "https://code.brandonhubbard.com/",
+      "bullet3-rs": "https://code.brandonhubbard.com/bullet3-rs/",
+      "clippy-cf-reporter": "https://code.brandonhubbard.com/clippy-cf-reporter/",
+      "defy-rs": "https://code.brandonhubbard.com/defy-rs/",
+      "detour-crowd-rs": "https://code.brandonhubbard.com/detour-crowd-rs/",
+      "dialogger-rs": "https://code.brandonhubbard.com/dialogger-rs/",
+      "flareguard": "https://code.brandonhubbard.com/flareguard/",
+      "flarelint": "https://code.brandonhubbard.com/flarelint/",
+      "flareops": "https://code.brandonhubbard.com/flareops/",
+      "flareperf": "https://code.brandonhubbard.com/flareperf/",
+      "gambetta-netcode-rs": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
+      "godot-rs": "https://code.brandonhubbard.com/godot-rs/",
+      "hyperframes-rs": "https://code.brandonhubbard.com/hyperframes-rs/",
+      "minimal-hud-rs": "https://code.brandonhubbard.com/minimal-hud-rs/",
+      "npwd-rs": "https://code.brandonhubbard.com/npwd-rs/",
+      "openrw-rs": "https://code.brandonhubbard.com/openrw-rs/",
+      "poormans-camera-rs": "https://code.brandonhubbard.com/poormans-camera-rs/",
+      "radial-menu-rs": "https://code.brandonhubbard.com/radial-menu-rs/",
+      "sdf-math-rs": "https://code.brandonhubbard.com/sdf-math-rs/",
+      "sfxr-rs": "https://code.brandonhubbard.com/sfxr-rs/",
+      "simplecar2-rs": "https://code.brandonhubbard.com/simplecar2-rs/",
+      "sumo-rs": "https://code.brandonhubbard.com/sumo-rs/",
+      "tactical-ai-rs": "https://code.brandonhubbard.com/tactical-ai-rs/",
+      "talks": "https://talks.brandonhubbard.com/",
+      "tlab-vehicle-physics-rs": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
+      "uxsim-rs": "https://code.brandonhubbard.com/uxsim-rs/",
+      "vhud-rs": "https://code.brandonhubbard.com/vhud-rs/",
+      "video-use-rs": "https://code.brandonhubbard.com/video-use-rs/",
+      "vite-plus-commitlint": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+      "vite-plus-kumo-ui": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
+      "vite-plus-wrangler": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+      "zev-rs": "https://code.brandonhubbard.com/zev-rs/"
+    };
+
+    function getProjectTargetUrl(repo) {
+      if (!repo) return "#";
+      const name = (repo.name || "").toLowerCase().trim();
+      if (GITHUB_PAGES_MAP[name]) {
+        return GITHUB_PAGES_MAP[name];
+      }
+      if (repo.docs && repo.docs !== "#") {
+        return repo.docs;
+      }
+      return repo.url || `https://github.com/bhubbard/${name}`;
+    }
+
     // Complete repository catalog with The Flare Suite, Astro Chrome AI, and Rust developer tools
     const REPOSITORIES = [
+      // 🎯 Flagship 3D Physics & Simulation Systems
+      {
+        name: "bullet3-rs",
+        description: "Pure Rust real-time rigid body and multi-body 3D physics simulation engine with SIMD vectorization, GJK/EPA collision, and constraint solver.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust", "physics"],
+        stars: 0,
+        url: "https://github.com/bhubbard/bullet3-rs",
+        docs: "https://code.brandonhubbard.com/bullet3-rs/",
+        install: "cargo add bullet3-rs"
+      },
+      {
+        name: "active-ragdoll-rs",
+        description: "Pure Rust active ragdoll physics, PID balance controllers, and animated skeletal joint torque simulation.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust", "physics"],
+        stars: 0,
+        url: "https://github.com/bhubbard/active-ragdoll-rs",
+        docs: "https://code.brandonhubbard.com/active-ragdoll-rs/",
+        install: "cargo add active-ragdoll-rs"
+      },
+      {
+        name: "detour-crowd-rs",
+        description: "Pure Rust port of DetourCrowd from RecastNavigation: RVO collision avoidance, proximity grid, and crowd path steering.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/detour-crowd-rs",
+        docs: "https://code.brandonhubbard.com/detour-crowd-rs/",
+        install: "cargo add detour-crowd-rs"
+      },
+      {
+        name: "tlab-vehicle-physics-rs",
+        description: "Pure Rust Pacejka Magic Formula tire friction and drift physics model from TLabVehiclePhysics.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust", "physics"],
+        stars: 0,
+        url: "https://github.com/bhubbard/tlab-vehicle-physics-rs",
+        docs: "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
+        install: "cargo add tlab-vehicle-physics-rs"
+      },
+      {
+        name: "simplecar2-rs",
+        description: "Pure Rust arcade-sim vehicle dynamics, raycast suspension, drivetrain, and transmission from SimpleCar2.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust", "physics"],
+        stars: 0,
+        url: "https://github.com/bhubbard/simplecar2-rs",
+        docs: "https://code.brandonhubbard.com/simplecar2-rs/",
+        install: "cargo add simplecar2-rs"
+      },
+      {
+        name: "sumo-rs",
+        description: "Pure Rust microscopic traffic simulation engine featuring IDM, Krauss car-following, MOBIL lane changing, and intersection right-of-way from SUMO.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/sumo-rs",
+        docs: "https://code.brandonhubbard.com/sumo-rs/",
+        install: "cargo add sumo-rs"
+      },
+      {
+        name: "uxsim-rs",
+        description: "Pure Rust macroscopic city-wide traffic network flow simulator from UXsim.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/uxsim-rs",
+        docs: "https://code.brandonhubbard.com/uxsim-rs/",
+        install: "cargo add uxsim-rs"
+      },
+      {
+        name: "openrw-rs",
+        description: "Pure Rust port of GTA III camera follow, weapon targeting math, and player state machines from OpenRW.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/openrw-rs",
+        docs: "https://code.brandonhubbard.com/openrw-rs/",
+        install: "cargo add openrw-rs"
+      },
+      {
+        name: "godot-rs",
+        description: "Pure Rust port and architecture fork of Godot Engine (godotengine/godot).",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/godot-rs",
+        docs: "https://code.brandonhubbard.com/godot-rs/",
+        install: "cargo add godot-rs"
+      },
+      {
+        name: "tactical-ai-rs",
+        description: "Pure Rust tactical influence maps, spatial reasoning, cover finding, and flanking pathfinder from Game AI Pro.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust", "ai"],
+        stars: 0,
+        url: "https://github.com/bhubbard/tactical-ai-rs",
+        docs: "https://code.brandonhubbard.com/tactical-ai-rs/",
+        install: "cargo add tactical-ai-rs"
+      },
+      {
+        name: "dialogger-rs",
+        description: "Pure Rust branching dialogue graph evaluator and NPC bark engine from Dialogger.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/dialogger-rs",
+        docs: "https://code.brandonhubbard.com/dialogger-rs/",
+        install: "cargo add dialogger-rs"
+      },
+      {
+        name: "sfxr-rs",
+        description: "Pure Rust procedural 8-bit/16-bit sound effect generator and synthesizer from SFXR.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/sfxr-rs",
+        docs: "https://code.brandonhubbard.com/sfxr-rs/",
+        install: "cargo add sfxr-rs"
+      },
+      {
+        name: "sdf-math-rs",
+        description: "Pure Rust 2D and 3D Signed Distance Fields, CSG smooth blending, and ray marching from Inigo Quilez.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/sdf-math-rs",
+        docs: "https://code.brandonhubbard.com/sdf-math-rs/",
+        install: "cargo add sdf-math-rs"
+      },
+      {
+        name: "hyperframes-rs",
+        description: "High-performance Rust sprite sheet, skeletal animation frames, and procedural tweening engine.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/hyperframes-rs",
+        docs: "https://code.brandonhubbard.com/hyperframes-rs/",
+        install: "cargo add hyperframes-rs"
+      },
+      {
+        name: "gambetta-netcode-rs",
+        description: "Pure Rust client-side prediction, server reconciliation, entity interpolation, and lag compensation netcode from Gabriel Gambetta.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/gambetta-netcode-rs",
+        docs: "https://code.brandonhubbard.com/gambetta-netcode-rs/",
+        install: "cargo add gambetta-netcode-rs"
+      },
+      {
+        name: "poormans-camera-rs",
+        description: "Pure Rust 3D third-person camera rig with sphere-cast collision avoidance and spring damping from Evan Todd.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/poormans-camera-rs",
+        docs: "https://code.brandonhubbard.com/poormans-camera-rs/",
+        install: "cargo add poormans-camera-rs"
+      },
+      {
+        name: "minimal-hud-rs",
+        description: "Pure Rust event-driven HUD state tracking, dirty change detection, vital stats, and vehicle telemetry from minimal-hud.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/minimal-hud-rs",
+        docs: "https://code.brandonhubbard.com/minimal-hud-rs/",
+        install: "cargo add minimal-hud-rs"
+      },
+      {
+        name: "npwd-rs",
+        description: "Pure Rust simulated in-game smartphone architecture, OS state machine, apps, and game-world event bridge from NPWD.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/npwd-rs",
+        docs: "https://code.brandonhubbard.com/npwd-rs/",
+        install: "cargo add npwd-rs"
+      },
+      {
+        name: "vhud-rs",
+        description: "Pure Rust GTA V radar, minimap projection, blip clamping, GPS route, and HUD ring meter engine.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/vhud-rs",
+        docs: "https://code.brandonhubbard.com/vhud-rs/",
+        install: "cargo add vhud-rs"
+      },
+      {
+        name: "radial-menu-rs",
+        description: "Pure Rust radial menu and weapon wheel system with angle math, deadzone filtering, and easing animations.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/radial-menu-rs",
+        docs: "https://code.brandonhubbard.com/radial-menu-rs/",
+        install: "cargo add radial-menu-rs"
+      },
+      {
+        name: "aesir-utils-rs",
+        description: "Pure Rust screen safezone, aspect ratio correction, and UI anchor positioning engine from FiveM aesir_utils.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/aesir-utils-rs",
+        docs: "https://code.brandonhubbard.com/aesir-utils-rs/",
+        install: "cargo add aesir-utils-rs"
+      },
+      {
+        name: "defy-rs",
+        description: "Pure Rust port of police wanted-level, pursuit dispatch, and NPC crime interaction systems from Defy.",
+        language: "Rust",
+        category: "cli",
+        categories: ["cli", "rust"],
+        stars: 0,
+        url: "https://github.com/bhubbard/defy-rs",
+        docs: "https://code.brandonhubbard.com/defy-rs/",
+        install: "cargo add defy-rs"
+      },
       // 🚀 Flagship Rust & Local AI Systems
       {
         name: "apfel-rs",
@@ -3095,6 +3429,7 @@
     // Check if repo matches category
     function matchCategory(repo, filter) {
       if (filter === 'all') return true;
+      if (filter === 'pages') return Boolean(GITHUB_PAGES_MAP[(repo.name || '').toLowerCase()] || repo.docs);
       if (repo.category === filter) return true;
       if (repo.categories && repo.categories.includes(filter)) return true;
       return false;
@@ -3125,8 +3460,10 @@
 
       reposGridContainer.innerHTML = filtered.map(repo => {
         const langColor = LANG_COLORS[repo.language] || 'var(--steel)';
+        const targetUrl = getProjectTargetUrl(repo);
+        const hasPage = Boolean(GITHUB_PAGES_MAP[(repo.name || '').toLowerCase()] || repo.docs);
         return `
-          <a href="${repo.url}" target="_blank" rel="noopener" class="repo-card">
+          <a href="${targetUrl}" target="_blank" rel="noopener" class="repo-card">
             <div class="repo-card-top">
               <div class="repo-name-row">
                 <span class="repo-title">${repo.name}</span>
@@ -3141,7 +3478,7 @@
               </span>
               <div class="repo-stats">
                 ${repo.stars > 0 ? `<span>★ ${repo.stars}</span>` : ''}
-                ${repo.docs ? `<span style="color: var(--cyan);">Docs Available</span>` : ''}
+                ${hasPage ? `<span style="color: var(--cyan); font-weight: 600;">GitHub Page ↗</span>` : `<span>GitHub Repo ↗</span>`}
               </div>
             </div>
           </a>
@@ -3179,8 +3516,10 @@
       modalResultsList.innerHTML = filteredModalRepos.map((repo, idx) => {
         const isSelected = idx === selectedModalIndex;
         const langColor = LANG_COLORS[repo.language] || 'var(--steel)';
+        const targetUrl = getProjectTargetUrl(repo);
+        const hasPage = Boolean(GITHUB_PAGES_MAP[(repo.name || '').toLowerCase()] || repo.docs);
         return `
-          <a href="${repo.url}" target="_blank" rel="noopener" class="modal-item ${isSelected ? 'selected' : ''}" data-idx="${idx}">
+          <a href="${targetUrl}" target="_blank" rel="noopener" class="modal-item ${isSelected ? 'selected' : ''}" data-idx="${idx}">
             <div class="modal-item-info">
               <div class="modal-item-title">
                 <span>${repo.name}</span>
@@ -3189,6 +3528,7 @@
                   ${repo.language || 'Code'}
                 </span>
                 ${repo.stars > 0 ? `<span class="modal-item-badge">★ ${repo.stars}</span>` : ''}
+                ${hasPage ? `<span class="modal-item-badge" style="color: var(--cyan); border-color: rgba(6,182,212,0.3); font-weight: 600;">GitHub Page</span>` : ''}
               </div>
               <div class="modal-item-desc">${repo.description || 'Open source repository by Brandon Hubbard.'}</div>
             </div>
@@ -3270,7 +3610,8 @@
         } else if (e.key === 'Enter') {
           if (filteredModalRepos.length > 0 && filteredModalRepos[selectedModalIndex]) {
             e.preventDefault();
-            window.open(filteredModalRepos[selectedModalIndex].url, '_blank');
+            const targetUrl = getProjectTargetUrl(filteredModalRepos[selectedModalIndex]);
+            window.open(targetUrl, '_blank');
           }
         }
       }
@@ -3330,6 +3671,39 @@
 
     setupCopyButtons();
 
+    function setupProjectCardClicks() {
+      // Make all featured project cards interactive: clicking anywhere on the card opens the project's GitHub Page
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('a') || e.target.closest('button')) {
+            return;
+          }
+          const primaryLink = card.querySelector('.btn-primary') || card.querySelector('.card-actions a') || card.querySelector('a');
+          if (primaryLink && primaryLink.href) {
+            window.open(primaryLink.href, primaryLink.target || '_blank');
+          }
+        });
+      });
+
+      // Make quick install item names clickable to open their GitHub Page
+      document.querySelectorAll('.quick-install-item').forEach(item => {
+        const qiName = item.querySelector('.qi-name');
+        if (qiName) {
+          qiName.style.cursor = 'pointer';
+          qiName.title = 'Open GitHub Page';
+          qiName.addEventListener('click', () => {
+            const rawText = qiName.textContent.toLowerCase();
+            for (const [key, pageUrl] of Object.entries(GITHUB_PAGES_MAP)) {
+              if (rawText.includes(key)) {
+                window.open(pageUrl, '_blank');
+                break;
+              }
+            }
+          });
+        }
+      });
+    }
+
     async function syncGitHubRepos() {
       try {
         const res = await fetch('https://api.github.com/users/bhubbard/repos?per_page=100&sort=updated');
@@ -3340,9 +3714,30 @@
             if (countEl) countEl.textContent = liveRepos.length;
 
             liveRepos.forEach(live => {
-              const match = REPOSITORIES.find(r => r.name.toLowerCase() === live.name.toLowerCase());
+              const lower = (live.name || '').toLowerCase();
+              const match = REPOSITORIES.find(r => (r.name || '').toLowerCase() === lower);
               if (match) {
                 match.stars = live.stargazers_count || match.stars;
+                if (live.has_pages && !GITHUB_PAGES_MAP[lower]) {
+                  GITHUB_PAGES_MAP[lower] = `https://code.brandonhubbard.com/${live.name}/`;
+                }
+              } else if (live.name !== 'bhubbard') {
+                const isRust = live.language === 'Rust';
+                const newRepo = {
+                  name: live.name,
+                  description: live.description || 'Open source repository by Brandon Hubbard.',
+                  language: live.language || 'Code',
+                  category: isRust ? 'cli' : 'tools',
+                  categories: isRust ? ['cli', 'rust'] : ['tools'],
+                  stars: live.stargazers_count || 0,
+                  url: live.html_url
+                };
+                if (live.has_pages) {
+                  const pUrl = `https://code.brandonhubbard.com/${live.name}/`;
+                  newRepo.docs = pUrl;
+                  GITHUB_PAGES_MAP[lower] = pUrl;
+                }
+                REPOSITORIES.push(newRepo);
               }
             });
             renderExplorerGrid();
@@ -3353,6 +3748,7 @@
       }
     }
 
+    setupProjectCardClicks();
     renderExplorerGrid();
     renderModalResults();
     syncGitHubRepos();
