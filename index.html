@@ -58,9 +58,9 @@
   <!-- Immediate Theme Initialization (Prevent FOUC) -->
   <script>
     (function() {
-      const savedTheme = localStorage.getItem('bh-theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'dark');
+      const savedTheme = localStorage.getItem('theme') || localStorage.getItem('bh-theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
       document.documentElement.setAttribute('data-theme', initialTheme);
     })();
   </script>
@@ -1064,7 +1064,7 @@
       inset: 0;
       background: rgba(10, 10, 10, 0.88);
       backdrop-filter: blur(4px);
-      z-index: 1000;
+      z-index: 99999;
       display: none;
       align-items: flex-start;
       justify-content: center;
@@ -2330,13 +2330,13 @@
               <span>TERMINAL</span>
             </div>
             <div class="terminal-cmd">
-              <span class="prompt">$</span>cargo install oxc-astro-cf edge-bundle-budget
+              <span class="prompt">$</span>cargo install flareops flarelint
             </div>
             <div class="terminal-output">
-              <div class="term-dim">OXC-ASTRO-CF: Inspecting static prerender routes...</div>
+              <div class="term-dim">FLARELINT: Inspecting static prerender routes...</div>
               <div><span class="term-success">✓</span> Verified <span class="term-cyan">54 AST routes</span> across Cloudflare runtime bindings</div>
               <div class="term-dim"><span class="term-cobalt">pass:</span> 0 illegal env.* runtime leaks in prerendered pages</div>
-              <div><span class="term-success">✓</span> edge-bundle-budget: Worker gzip size <span class="term-cyan">48.2 kB</span> (Quota: 1000 kB)</div>
+              <div><span class="term-success">✓</span> flareops: Worker gzip size <span class="term-cyan">48.2 kB</span> (Quota: 1000 kB)</div>
               <div class="term-dim">✓ All Wrangler KV / D1 resources synchronized with TypeScript App.Locals</div>
             </div>
           </div>
@@ -2424,108 +2424,112 @@
         <!-- Rust Card 1 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Static AST Linter // Oxc ]</span>
-            <h3>oxc-astro-cf</h3>
-            <p>Static AST linter detecting illegal access to Cloudflare runtime bindings inside static prerendered Astro pages before deployment.</p>
+            <span class="card-category" style="color: var(--cyan);">[ Cloudflare Ops // CLI ]</span>
+            <h3>flareops</h3>
+            <p>Developer operations & workflow CLI for Cloudflare Workers, Pages, and Astro — type generation, secret sync, and unified verification.</p>
             <div class="card-cli">
-              <code>cargo install oxc-astro-cf</code>
-              <button class="copy-btn" data-copy="cargo install oxc-astro-cf" title="Copy command">
+              <code>cargo install flareops</code>
+              <button class="copy-btn" data-copy="cargo install flareops" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/oxc-astro-cf" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
+            <a href="./flareops/" class="btn btn-primary">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/flareops" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Rust Card 2 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Quota Auditor // Wasm ]</span>
-            <h3>edge-bundle-budget</h3>
-            <p>Audits gzip/brotli sizes against Cloudflare Worker tier quotas, inspects sourcemaps, and decomposes .wasm binaries.</p>
+            <span class="card-category" style="color: var(--cyan);">[ AST Static Analysis // Linter ]</span>
+            <h3>flarelint</h3>
+            <p>Unified, nanosecond-fast Rust AST static analysis and edge compatibility linter for Cloudflare Workers & Astro applications.</p>
             <div class="card-cli">
-              <code>cargo install edge-bundle-budget</code>
-              <button class="copy-btn" data-copy="cargo install edge-bundle-budget" title="Copy command">
+              <code>cargo install flarelint</code>
+              <button class="copy-btn" data-copy="cargo install flarelint" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/edge-bundle-budget" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
+            <a href="./flarelint/" class="btn btn-primary">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/flarelint" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Rust Card 3 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Origin Recon // Security ]</span>
-            <h3>cf-origin-hunter</h3>
-            <p>Discovers unmasked origin IPs behind Cloudflare proxies via DNS historical records, Certificate Transparency logs, and direct HTTP probes.</p>
+            <span class="card-category" style="color: var(--cyan);">[ Edge Latency // Benchmarking ]</span>
+            <h3>flareperf</h3>
+            <p>High-performance Core Web Vitals, edge latency, and TTFB benchmarker for Cloudflare edge deployments.</p>
             <div class="card-cli">
-              <code>cargo install cf-origin-hunter</code>
-              <button class="copy-btn" data-copy="cargo install cf-origin-hunter" title="Copy command">
+              <code>cargo install flareperf</code>
+              <button class="copy-btn" data-copy="cargo install flareperf" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/cf-origin-hunter" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
+            <a href="./flareperf/" class="btn btn-primary">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/flareperf" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Rust Card 4 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Zone Security // Verification ]</span>
-            <h3>cf-zone-auditor</h3>
-            <p>Multi-zone Cloudflare security auditor verifying SSL/TLS strictness, HSTS headers, WAF rulesets, and DNSSEC validation.</p>
+            <span class="card-category" style="color: var(--cyan);">[ Clippy Diagnostics // CI Gate ]</span>
+            <h3>clippy-cf-reporter</h3>
+            <p>Translates worker-rs Clippy compiler diagnostics into Code Climate JSON, SARIF v2.1.0, and PR annotations.</p>
             <div class="card-cli">
-              <code>cargo install cf-zone-auditor</code>
-              <button class="copy-btn" data-copy="cargo install cf-zone-auditor" title="Copy command">
+              <code>cargo install clippy-cf-reporter</code>
+              <button class="copy-btn" data-copy="cargo install clippy-cf-reporter" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/cf-zone-auditor" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
+            <a href="./clippy-cf-reporter/" class="btn btn-primary">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/clippy-cf-reporter" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <!-- Rust Card 5 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Binding Generator // Types ]</span>
-            <h3>astro-binding-sync</h3>
-            <p>Synchronizes wrangler.jsonc resources with TypeScript App.Locals and env.d.ts definitions to ensure complete type safety.</p>
+            <span class="card-category" style="color: var(--cyan);">[ Post-Build CI // Audit Gate ]</span>
+            <h3>unified-audit-rs</h3>
+            <p>Consolidated high-performance post-build CI verification and auditing gate for Astro and static sites in Rust.</p>
             <div class="card-cli">
-              <code>cargo install astro-binding-sync</code>
-              <button class="copy-btn" data-copy="cargo install astro-binding-sync" title="Copy command">
+              <code>cargo install unified-audit-rs</code>
+              <button class="copy-btn" data-copy="cargo install unified-audit-rs" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/astro-binding-sync" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
+            <a href="https://github.com/bhubbard/unified-audit-rs" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
           </div>
         </div>
 
         <!-- Rust Card 6 -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Secret Leak Scanner // CLI ]</span>
-            <h3>cf-secret-leak-guard</h3>
-            <p>High-throughput scanner preventing Cloudflare tokens, Turnstile keys, and secrets from leaking into client-side production builds.</p>
+            <span class="card-category" style="color: var(--cyan);">[ Head Optimizer // Compressor ]</span>
+            <h3>astro-compress-rs</h3>
+            <p>Blazingly fast post-build compressor, CSS inliner, and HTML head optimizer written in Rust for Astro and static sites.</p>
             <div class="card-cli">
-              <code>cargo install cf-secret-leak-guard</code>
-              <button class="copy-btn" data-copy="cargo install cf-secret-leak-guard" title="Copy command">
+              <code>cargo install astro-compress-rs</code>
+              <button class="copy-btn" data-copy="cargo install astro-compress-rs" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/cf-secret-leak-guard" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
+            <a href="https://github.com/bhubbard/astro-compress-rs" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
           </div>
         </div>
       </div>
@@ -2910,900 +2914,1789 @@
     }
 
     // Complete repository catalog with The Flare Suite, Astro Chrome AI, and Rust developer tools
-    const REPOSITORIES = [
-      // 🎯 Flagship 3D Physics & Simulation Systems
-      {
-        name: "bullet3-rs",
-        description: "Pure Rust real-time rigid body and multi-body 3D physics simulation engine with SIMD vectorization, GJK/EPA collision, and constraint solver.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust", "physics"],
-        stars: 0,
-        url: "https://github.com/bhubbard/bullet3-rs",
-        docs: "https://code.brandonhubbard.com/bullet3-rs/",
-        install: "cargo add bullet3-rs"
-      },
-      {
-        name: "active-ragdoll-rs",
-        description: "Pure Rust active ragdoll physics, PID balance controllers, and animated skeletal joint torque simulation.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust", "physics"],
-        stars: 0,
-        url: "https://github.com/bhubbard/active-ragdoll-rs",
-        docs: "https://code.brandonhubbard.com/active-ragdoll-rs/",
-        install: "cargo add active-ragdoll-rs"
-      },
-      {
-        name: "detour-crowd-rs",
-        description: "Pure Rust port of DetourCrowd from RecastNavigation: RVO collision avoidance, proximity grid, and crowd path steering.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/detour-crowd-rs",
-        docs: "https://code.brandonhubbard.com/detour-crowd-rs/",
-        install: "cargo add detour-crowd-rs"
-      },
-      {
-        name: "tlab-vehicle-physics-rs",
-        description: "Pure Rust Pacejka Magic Formula tire friction and drift physics model from TLabVehiclePhysics.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust", "physics"],
-        stars: 0,
-        url: "https://github.com/bhubbard/tlab-vehicle-physics-rs",
-        docs: "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
-        install: "cargo add tlab-vehicle-physics-rs"
-      },
-      {
-        name: "simplecar2-rs",
-        description: "Pure Rust arcade-sim vehicle dynamics, raycast suspension, drivetrain, and transmission from SimpleCar2.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust", "physics"],
-        stars: 0,
-        url: "https://github.com/bhubbard/simplecar2-rs",
-        docs: "https://code.brandonhubbard.com/simplecar2-rs/",
-        install: "cargo add simplecar2-rs"
-      },
-      {
-        name: "sumo-rs",
-        description: "Pure Rust microscopic traffic simulation engine featuring IDM, Krauss car-following, MOBIL lane changing, and intersection right-of-way from SUMO.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/sumo-rs",
-        docs: "https://code.brandonhubbard.com/sumo-rs/",
-        install: "cargo add sumo-rs"
-      },
-      {
-        name: "uxsim-rs",
-        description: "Pure Rust macroscopic city-wide traffic network flow simulator from UXsim.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/uxsim-rs",
-        docs: "https://code.brandonhubbard.com/uxsim-rs/",
-        install: "cargo add uxsim-rs"
-      },
-      {
-        name: "openrw-rs",
-        description: "Pure Rust port of GTA III camera follow, weapon targeting math, and player state machines from OpenRW.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/openrw-rs",
-        docs: "https://code.brandonhubbard.com/openrw-rs/",
-        install: "cargo add openrw-rs"
-      },
-      {
-        name: "godot-rs",
-        description: "Pure Rust port and architecture fork of Godot Engine (godotengine/godot).",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/godot-rs",
-        docs: "https://code.brandonhubbard.com/godot-rs/",
-        install: "cargo add godot-rs"
-      },
-      {
-        name: "tactical-ai-rs",
-        description: "Pure Rust tactical influence maps, spatial reasoning, cover finding, and flanking pathfinder from Game AI Pro.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust", "ai"],
-        stars: 0,
-        url: "https://github.com/bhubbard/tactical-ai-rs",
-        docs: "https://code.brandonhubbard.com/tactical-ai-rs/",
-        install: "cargo add tactical-ai-rs"
-      },
-      {
-        name: "dialogger-rs",
-        description: "Pure Rust branching dialogue graph evaluator and NPC bark engine from Dialogger.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/dialogger-rs",
-        docs: "https://code.brandonhubbard.com/dialogger-rs/",
-        install: "cargo add dialogger-rs"
-      },
-      {
-        name: "sfxr-rs",
-        description: "Pure Rust procedural 8-bit/16-bit sound effect generator and synthesizer from SFXR.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/sfxr-rs",
-        docs: "https://code.brandonhubbard.com/sfxr-rs/",
-        install: "cargo add sfxr-rs"
-      },
-      {
-        name: "sdf-math-rs",
-        description: "Pure Rust 2D and 3D Signed Distance Fields, CSG smooth blending, and ray marching from Inigo Quilez.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/sdf-math-rs",
-        docs: "https://code.brandonhubbard.com/sdf-math-rs/",
-        install: "cargo add sdf-math-rs"
-      },
-      {
-        name: "hyperframes-rs",
-        description: "High-performance Rust sprite sheet, skeletal animation frames, and procedural tweening engine.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/hyperframes-rs",
-        docs: "https://code.brandonhubbard.com/hyperframes-rs/",
-        install: "cargo add hyperframes-rs"
-      },
-      {
-        name: "gambetta-netcode-rs",
-        description: "Pure Rust client-side prediction, server reconciliation, entity interpolation, and lag compensation netcode from Gabriel Gambetta.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/gambetta-netcode-rs",
-        docs: "https://code.brandonhubbard.com/gambetta-netcode-rs/",
-        install: "cargo add gambetta-netcode-rs"
-      },
-      {
-        name: "poormans-camera-rs",
-        description: "Pure Rust 3D third-person camera rig with sphere-cast collision avoidance and spring damping from Evan Todd.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/poormans-camera-rs",
-        docs: "https://code.brandonhubbard.com/poormans-camera-rs/",
-        install: "cargo add poormans-camera-rs"
-      },
-      {
-        name: "minimal-hud-rs",
-        description: "Pure Rust event-driven HUD state tracking, dirty change detection, vital stats, and vehicle telemetry from minimal-hud.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/minimal-hud-rs",
-        docs: "https://code.brandonhubbard.com/minimal-hud-rs/",
-        install: "cargo add minimal-hud-rs"
-      },
-      {
-        name: "npwd-rs",
-        description: "Pure Rust simulated in-game smartphone architecture, OS state machine, apps, and game-world event bridge from NPWD.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/npwd-rs",
-        docs: "https://code.brandonhubbard.com/npwd-rs/",
-        install: "cargo add npwd-rs"
-      },
-      {
-        name: "vhud-rs",
-        description: "Pure Rust GTA V radar, minimap projection, blip clamping, GPS route, and HUD ring meter engine.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/vhud-rs",
-        docs: "https://code.brandonhubbard.com/vhud-rs/",
-        install: "cargo add vhud-rs"
-      },
-      {
-        name: "radial-menu-rs",
-        description: "Pure Rust radial menu and weapon wheel system with angle math, deadzone filtering, and easing animations.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/radial-menu-rs",
-        docs: "https://code.brandonhubbard.com/radial-menu-rs/",
-        install: "cargo add radial-menu-rs"
-      },
-      {
-        name: "aesir-utils-rs",
-        description: "Pure Rust screen safezone, aspect ratio correction, and UI anchor positioning engine from FiveM aesir_utils.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/aesir-utils-rs",
-        docs: "https://code.brandonhubbard.com/aesir-utils-rs/",
-        install: "cargo add aesir-utils-rs"
-      },
-      {
-        name: "defy-rs",
-        description: "Pure Rust port of police wanted-level, pursuit dispatch, and NPC crime interaction systems from Defy.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/defy-rs",
-        docs: "https://code.brandonhubbard.com/defy-rs/",
-        install: "cargo add defy-rs"
-      },
-      // 🚀 Flagship Rust & Local AI Systems
-      {
-        name: "apfel-rs",
-        description: "Apple Intelligence on-device FoundationModels in pure Rust. UNIX CLI & OpenAI-compatible HTTP daemon with 4,160 req/s throughput.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust", "ai"],
-        stars: 0,
-        url: "https://github.com/bhubbard/apfel-rs",
-        docs: "https://bhubbard.github.io/apfel-rs/",
-        install: "cargo install apfel-rs"
-      },
-      {
-        name: "zev-rs",
-        description: "Ultra-fast zero-token LLM decision engine. 0.37ms latency, 70.1% JevBench accuracy, 0% order bias, and zero GPU requirement.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust", "ai"],
-        stars: 0,
-        url: "https://github.com/bhubbard/zev-rs",
-        docs: "https://bhubbard.github.io/zev-rs/",
-        install: "cargo install zev-rs"
-      },
-      {
-        name: "video-use-rs",
-        description: "High-performance Rust toolkit for conversation-driven video editing with AI coding agents. Phrase packing, lossless concat, and auto grading.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust", "ai"],
-        stars: 0,
-        url: "https://github.com/bhubbard/video-use-rs",
-        docs: "https://bhubbard.github.io/video-use-rs/",
-        install: "cargo install video-use-rs"
-      },
-      // 🛡️ The Flare Suite (Flagships)
-      {
-        name: "flareguard",
-        description: "Cloudflare Security, Secret Leaks, Binding Validation, Zone Posture, and Certificate Transparency Origin IP Hunting.",
-        language: "Rust",
-        category: "flare",
-        categories: ["flare", "cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/flareguard",
-        docs: "https://bhubbard.github.io/flareguard/",
-        install: "cargo install flareguard"
-      },
-      {
-        name: "flareperf",
-        description: "Edge Performance, Bundle Budgets, V8 Isolate Cold-Start analysis, 50-Subrequest Limits, and D1 Batching.",
-        language: "Rust",
-        category: "flare",
-        categories: ["flare", "cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/flareperf",
-        docs: "https://bhubbard.github.io/flareperf/",
-        install: "cargo install flareperf"
-      },
-      {
-        name: "flarelint",
-        description: "OXC-Powered AST Static Analysis, Node.js Compatibility, ctx.waitUntil Linter, and Durable Objects Safety.",
-        language: "Rust",
-        category: "flare",
-        categories: ["flare", "cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/flarelint",
-        docs: "https://bhubbard.github.io/flarelint/",
-        install: "cargo install flarelint"
-      },
-      {
-        name: "flareops",
-        description: "DevEx, Wrangler Binding Sync, .dev.vars Migrations, and Pages _routes.json Optimizer.",
-        language: "Rust",
-        category: "flare",
-        categories: ["flare", "cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/flareops",
-        docs: "https://bhubbard.github.io/flareops/",
-        install: "cargo install flareops"
-      },
-
-      // 🤖 Astro Chrome Built-in AI Suite (13 Packages)
-      {
-        name: "astro-client-directive-ai",
-        description: "Custom Astro client directive (client:ai-ready) delaying component hydration until on-device Gemini Nano is ready.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-client-directive-ai",
-        docs: "./astro-client-directive-ai/",
-        install: "bun add astro-client-directive-ai"
-      },
-      {
-        name: "astro-rehype-nano-code",
-        description: "Zero-JS interactive code block explainer for Astro using build-time Rehype attributes and on-device Chrome AI.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-rehype-nano-code",
-        docs: "./astro-rehype-nano-code/",
-        install: "bun add astro-rehype-nano-code"
-      },
-      {
-        name: "astro-prefetch-ai-brief",
-        description: "Intelligent link hover briefs for Astro with ultra-compact previews generated by Chrome Built-in Summarizer API.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-prefetch-ai-brief",
-        docs: "./astro-prefetch-ai-brief/",
-        install: "bun add astro-prefetch-ai-brief"
-      },
-      {
-        name: "astro-dev-audit-nano",
-        description: "Astro Dev Toolbar app auditing WCAG a11y, heading hierarchy, and SEO with real-time Gemini Nano remediations.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-dev-audit-nano",
-        docs: "./astro-dev-audit-nano/",
-        install: "bun add astro-dev-audit-nano"
-      },
-      {
-        name: "astro-dev-copy-optimizer",
-        description: "In-browser copy tuner and rewriter inside the Astro Dev Toolbar powered by Chrome Built-in AI.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-dev-copy-optimizer",
-        docs: "./astro-dev-copy-optimizer/",
-        install: "bun add astro-dev-copy-optimizer"
-      },
-      {
-        name: "astro-og-smart-crop",
-        description: "Client-side OpenGraph and Twitter card preview simulator with AI character-budgeted headline optimization.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-og-smart-crop",
-        docs: "./astro-og-smart-crop/",
-        install: "bun add astro-og-smart-crop"
-      },
-      {
-        name: "astro-schema-ld-verifier",
-        description: "Dev-time semantic consistency auditor verifying JSON-LD structured data against rendered DOM content.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-schema-ld-verifier",
-        docs: "./astro-schema-ld-verifier/",
-        install: "bun add astro-schema-ld-verifier"
-      },
-      {
-        name: "astro-dev-i18n-coverage",
-        description: "Dev Toolbar missing translation finder with contextual on-device translation and 1-click locale JSON export.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-dev-i18n-coverage",
-        docs: "./astro-dev-i18n-coverage/",
-        install: "bun add astro-dev-i18n-coverage"
-      },
-      {
-        name: "astro-dev-content-linter",
-        description: "Editorial tone, reading grade level, and brand voice auditor inside the Astro Dev Toolbar with AI rewrites.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-dev-content-linter",
-        docs: "./astro-dev-content-linter/",
-        install: "bun add astro-dev-content-linter"
-      },
-      {
-        name: "astro-dev-schema-scaffolder",
-        description: "Instant Schema.org JSON-LD microdata generator for Astro Dev Toolbar powered by on-device Gemini Nano.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-dev-schema-scaffolder",
-        docs: "./astro-dev-schema-scaffolder/",
-        install: "bun add astro-dev-schema-scaffolder"
-      },
-      {
-        name: "astro-dev-mock-generator",
-        description: "Synthetic Zod-compliant mock data generator for Astro Content Collections using on-device Gemini Nano.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-dev-mock-generator",
-        docs: "./astro-dev-mock-generator/",
-        install: "bun add astro-dev-mock-generator"
-      },
-      {
-        name: "astro-dev-broken-anchor-healer",
-        description: "Smart internal anchor link validator and semantic heading ID matcher for Astro Dev Toolbar.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-dev-broken-anchor-healer",
-        docs: "./astro-dev-broken-anchor-healer/",
-        install: "bun add astro-dev-broken-anchor-healer"
-      },
-      {
-        name: "astro-dev-island-hydration-advisor",
-        description: "Astro Dev Toolbar island hydration analyzer flagging eager below-the-fold directives with performance advice.",
-        language: "TypeScript",
-        category: "astro",
-        categories: ["astro"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-dev-island-hydration-advisor",
-        docs: "./astro-dev-island-hydration-advisor/",
-        install: "bun add astro-dev-island-hydration-advisor"
-      },
-
-      // 🦀 Rust & Edge Developer Tools
-      {
-        name: "oxc-astro-cf",
-        description: "Static AST linter detecting illegal access to Cloudflare runtime bindings inside static prerendered Astro pages.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/oxc-astro-cf",
-        install: "cargo install oxc-astro-cf"
-      },
-      {
-        name: "edge-bundle-budget",
-        description: "Audits gzip/brotli sizes against Cloudflare Worker tier quotas, inspects sourcemaps, and decomposes .wasm binaries.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/edge-bundle-budget",
-        install: "cargo install edge-bundle-budget"
-      },
-      {
-        name: "cf-origin-hunter",
-        description: "Discovers unmasked origin IPs behind Cloudflare proxies via DNS records, Certificate Transparency, and direct probes.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/cf-origin-hunter",
-        install: "cargo install cf-origin-hunter"
-      },
-      {
-        name: "cf-zone-auditor",
-        description: "Multi-zone Cloudflare security auditor verifying SSL/TLS strictness, HSTS, WAF rulesets, and DNSSEC.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/cf-zone-auditor",
-        install: "cargo install cf-zone-auditor"
-      },
-      {
-        name: "astro-binding-sync",
-        description: "Synchronizes wrangler.jsonc resources with TypeScript App.Locals and env.d.ts definitions.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-binding-sync",
-        install: "cargo install astro-binding-sync"
-      },
-      {
-        name: "cf-secret-leak-guard",
-        description: "High-throughput scanner preventing Cloudflare tokens, Turnstile keys, and secrets from leaking into client builds.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/cf-secret-leak-guard",
-        install: "cargo install cf-secret-leak-guard"
-      },
-      {
-        name: "astro-env-migration",
-        description: "AST codemod migrating deprecated Astro.locals.runtime.* references to modern standard Cloudflare bindings.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-env-migration",
-        install: "cargo install astro-env-migration"
-      },
-      {
-        name: "cf-binding-validator",
-        description: "Eliminates ghost bindings in wrangler.jsonc and flags runtime crashes from undeclared env.* access.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/cf-binding-validator",
-        install: "cargo install cf-binding-validator"
-      },
-      {
-        name: "astro-cf-session",
-        description: "Validates Astro Session API configurations against Wrangler KV bindings to prevent auto-provisioning errors.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-cf-session",
-        install: "cargo install astro-cf-session"
-      },
-      {
-        name: "cf-routes-json",
-        description: "Validates, minimizes, and detects route conflicts in Cloudflare Pages _routes.json files.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/cf-routes-json",
-        install: "cargo install cf-routes-json"
-      },
-      {
-        name: "astro-asset-headers",
-        description: "Validates and generates Cloudflare Pages _headers caching and security rules for Astro assets.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/astro-asset-headers",
-        install: "cargo install astro-asset-headers"
-      },
-      {
-        name: "clippy-cf-reporter",
-        description: "Translates worker-rs Clippy compiler diagnostics into Code Climate JSON, SARIF v2.1.0, and PR annotations.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/clippy-cf-reporter",
-        install: "cargo install clippy-cf-reporter"
-      },
-      {
-        name: "brandon-cli",
-        description: "Comprehensive developer productivity CLI for Brandon Hubbard's multi-project workflows.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/brandon-cli",
-        install: "cargo install brandon-cli"
-      },
-      {
-        name: "vite-plus-commitlint",
-        description: "A commitlint plugin tailored for Vite+ toolchain workflows.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/vite-plus-commitlint"
-      },
-      {
-        name: "vite-plus-kumo-ui",
-        description: "High-performance Rust integration bindings for Kumo UI inside Vite+ stacks.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 1,
-        url: "https://github.com/bhubbard/vite-plus-kumo-ui"
-      },
-      {
-        name: "vite-plus-wrangler",
-        description: "Direct Wrangler Cloudflare bindings integration for the Vite+ unified toolchain.",
-        language: "Rust",
-        category: "cli",
-        categories: ["cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/vite-plus-wrangler"
-      },
-
-      // 🌐 WordPress Ecosystem
-      {
-        name: "wp-blockmarkup-mcp",
-        description: "A fast, lightweight Rust Model Context Protocol (MCP) server and CLI for auditing, linting, and previewing Gutenberg block markups.",
-        language: "Rust",
-        category: "wordpress",
-        categories: ["wordpress", "cli", "rust"],
-        stars: 0,
-        url: "https://github.com/bhubbard/wp-blockmarkup-mcp",
-        install: "cargo install wp-blockmarkup-mcp"
-      },
-      {
-        name: "wp-cloudflare-d1",
-        description: "A PHP class to query and utilize Cloudflare D1 serverless SQL database within WordPress.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 2,
-        url: "https://github.com/bhubbard/wp-cloudflare-d1"
-      },
-      {
-        name: "wp-cloudflare-kv",
-        description: "A modern WordPress library to interface with Cloudflare KV storage at the edge.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 1,
-        url: "https://github.com/bhubbard/wp-cloudflare-kv"
-      },
-      {
-        name: "wp-gemini-cleaner",
-        description: "A WordPress tool for cleaning and sanitizing Gemini AI-generated editorial content.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 1,
-        url: "https://github.com/bhubbard/wp-gemini-cleaner"
-      },
-      {
-        name: "wp-theme-check-cli",
-        description: "A TypeScript CLI port of the WordPress Theme Check tool with modern auditing extras.",
-        language: "TypeScript",
-        category: "wordpress",
-        categories: ["wordpress", "cli"],
-        stars: 0,
-        url: "https://github.com/bhubbard/wp-theme-check-cli"
-      },
-      {
-        name: "wp-pressable-api",
-        description: "PHP client library for the Pressable Managed Hosting API.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 1,
-        url: "https://github.com/bhubbard/wp-pressable-api"
-      },
-      {
-        name: "wp-givebutter-api",
-        description: "A WordPress integration library for the GiveButter public fundraising API.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 0,
-        url: "https://github.com/bhubbard/wp-givebutter-api"
-      },
-      {
-        name: "wp-lawmatics-api",
-        description: "A WordPress integration client for the Lawmatics Legal CRM API.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 0,
-        url: "https://github.com/bhubbard/wp-lawmatics-api"
-      },
-      {
-        name: "wp-clio-api",
-        description: "A WordPress library for communicating with the Clio Legal Practice Management API.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 0,
-        url: "https://github.com/bhubbard/wp-clio-api"
-      },
-      {
-        name: "wp-spinupwp-api",
-        description: "A WordPress PHP wrapper for the SpinupWP cloud server management API.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 1,
-        url: "https://github.com/bhubbard/wp-spinupwp-api"
-      },
-      {
-        name: "wp-cleanup-scripts",
-        description: "A collection of bash scripts and SQL routines to purge leftover data from WP plugins and themes.",
-        language: "Shell",
-        category: "wordpress",
-        categories: ["wordpress", "tools"],
-        stars: 0,
-        url: "https://github.com/bhubbard/wp-cleanup-scripts"
-      },
-      {
-        name: "wp-plugin-uninstalls",
-        description: "A curated collection of clean WordPress plugin uninstall handlers and database purgers.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 0,
-        url: "https://github.com/bhubbard/wp-plugin-uninstalls"
-      },
-      {
-        name: "rest-api-examples",
-        description: "Clean boilerplate examples of custom REST endpoints for high-throughput WordPress apps.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 2,
-        url: "https://github.com/bhubbard/rest-api-examples"
-      },
-      {
-        name: "sensitive-image-block",
-        description: "A WordPress Gutenberg block for blurring sensitive imagery behind an interactive user reveal toggle.",
-        language: "JavaScript",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 0,
-        url: "https://github.com/bhubbard/sensitive-image-block"
-      },
-      {
-        name: "post-navigation-block",
-        description: "A Gutenberg block providing accessible prev/next post navigation links.",
-        language: "PHP",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 0,
-        url: "https://github.com/bhubbard/post-navigation-block"
-      },
-      {
-        name: "animated-gradient-cover-block",
-        description: "An animated gradient cover block for modern WordPress Gutenberg layouts.",
-        language: "JavaScript",
-        category: "wordpress",
-        categories: ["wordpress"],
-        stars: 1,
-        url: "https://github.com/bhubbard/animated-gradient-cover-block"
-      },
-
-      // ⚙️ Cloud & Automation Tools
-      {
-        name: "alt-text-ai",
-        description: "Generate SEO-friendly, accessibility-focused alt text for images using Cloudflare Workers AI.",
-        language: "TypeScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 0,
-        url: "https://github.com/bhubbard/alt-text-ai"
-      },
-      {
-        name: "antispambot-cf-worker",
-        description: "A lightweight Cloudflare Worker that dynamically obfuscates email addresses to eliminate spam harvesters.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 4,
-        url: "https://github.com/bhubbard/antispambot-cf-worker"
-      },
-      {
-        name: "pressable-cli",
-        description: "Fast command-line interface for provisioning, cloning, and managing Pressable WordPress sites.",
-        language: "TypeScript",
-        category: "tools",
-        categories: ["tools", "cli"],
-        stars: 1,
-        url: "https://github.com/bhubbard/pressable-cli"
-      },
-      {
-        name: "sitemap-scan",
-        description: "A fast Node CLI utility to crawl, discover, validate, and extract XML sitemaps.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools", "cli"],
-        stars: 0,
-        url: "https://github.com/bhubbard/sitemap-scan"
-      },
-      {
-        name: "kumo-drift-checks",
-        description: "Continuous infrastructure drift verification and compliance auditor.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 1,
-        url: "https://github.com/bhubbard/kumo-drift-checks"
-      },
-      {
-        name: "skills",
-        description: "Autonomous agent skill definitions and execution patterns for AI pair programmers.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 1,
-        url: "https://github.com/bhubbard/skills"
-      },
-      {
-        name: "plugin-updater-cf-worker",
-        description: "A Cloudflare Worker proxying private WordPress plugin updates with license key authentication.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 0,
-        url: "https://github.com/bhubbard/plugin-updater-cf-worker"
-      },
-      {
-        name: "send-to-pubsub",
-        description: "High-concurrency HTTP Cloud Function to stream webhook events directly into Google Cloud Pub/Sub.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 1,
-        url: "https://github.com/bhubbard/send-to-pubsub"
-      },
-      {
-        name: "gcf-pubsub-webhook",
-        description: "A resilient cloud function to receive incoming webhooks and broadcast to Pub/Sub topics.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 1,
-        url: "https://github.com/bhubbard/gcf-pubsub-webhook"
-      },
-      {
-        name: "woo-order-to-google-storage",
-        description: "Streams WooCommerce order JSON backups directly into Google Cloud Storage via Pub/Sub.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 1,
-        url: "https://github.com/bhubbard/woo-order-to-google-storage"
-      },
-      {
-        name: "yoast-seo-audit",
-        description: "Automated SEO meta tag and schema integrity verification tool for Yoast SEO installations.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 1,
-        url: "https://github.com/bhubbard/yoast-seo-audit"
-      },
-      {
-        name: "talks",
-        description: "Brandon Hubbard's conference talks, slides, and technical presentations.",
-        language: "JavaScript",
-        category: "tools",
-        categories: ["tools"],
-        stars: 1,
-        url: "https://github.com/bhubbard/talks"
-      },
-      {
-        name: "bhubbard.github.io",
-        description: "Official Open Source Software Portal & Master Engineering Hub by Brandon Hubbard.",
-        language: "HTML",
-        category: "tools",
-        categories: ["tools"],
-        stars: 0,
-        url: "https://github.com/bhubbard/bhubbard.github.io"
-      }
-    ];
+    let REPOSITORIES = [
+  {
+    "name": "talks",
+    "description": "My talks and presentations!",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://talks.brandonhubbard.com/",
+    "github_url": "https://github.com/bhubbard/talks",
+    "target_url": "https://talks.brandonhubbard.com/",
+    "topics": [
+      "presentations",
+      "talks",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2026-09-26T16:29:54Z"
+  },
+  {
+    "name": "vite-plus-commitlint",
+    "description": "A commitlint plugin for vite plus",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "topics": [
+      "automation",
+      "developer-tools",
+      "vite"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:25:05Z"
+  },
+  {
+    "name": "vite-plus-kumo-ui",
+    "description": "Vite development preset and bundler plugins tailored for Cloudflare's internal Kumo UI component library.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
+    "github_url": "https://github.com/bhubbard/vite-plus-kumo-ui",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
+    "topics": [
+      "bundler",
+      "cloudflare",
+      "cloudflare-workers",
+      "design-system",
+      "react",
+      "serverless",
+      "typescript",
+      "vite",
+      "kumo-ui"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:25:07Z"
+  },
+  {
+    "name": "zev-rs",
+    "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/zev-rs/",
+    "github_url": "https://github.com/bhubbard/zev-rs",
+    "target_url": "https://code.brandonhubbard.com/zev-rs/",
+    "topics": [
+      "ai",
+      "ai-inference",
+      "decision-engine",
+      "heuristics",
+      "llm-orchestration",
+      "performance",
+      "rust",
+      "zero-token"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:25:11Z"
+  },
+  {
+    "name": "active-ragdoll-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
+    "github_url": "https://github.com/bhubbard/active-ragdoll-rs",
+    "target_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:23:34Z"
+  },
+  {
+    "name": "aesir-utils-rs",
+    "description": "Pure Rust screen safezone, aspect ratio correction, and UI anchor positioning engine from FiveM aesir_utils",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
+    "github_url": "https://github.com/bhubbard/aesir-utils-rs",
+    "target_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:23:36Z"
+  },
+  {
+    "name": "apfel-rs",
+    "description": "High-performance Rust fork of apfel: Apple Intelligence on-device FoundationModels from the CLI and OpenAI-compatible server.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/apfel-rs/",
+    "github_url": "https://github.com/bhubbard/apfel-rs",
+    "target_url": "https://code.brandonhubbard.com/apfel-rs/",
+    "topics": [
+      "apple-intelligence",
+      "cli",
+      "foundation-models",
+      "local-ai",
+      "on-device-ai",
+      "openai-compatible",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:23:38Z"
+  },
+  {
+    "name": "astro-client-directive-ai",
+    "description": "Custom Astro client directive (client:ai-ready) delaying component hydration until on-device Gemini Nano is ready.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-client-directive-ai/",
+    "github_url": "https://github.com/bhubbard/astro-client-directive-ai",
+    "target_url": "https://code.brandonhubbard.com/astro-client-directive-ai/",
+    "topics": [
+      "ai",
+      "astro",
+      "cli"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:02Z"
+  },
+  {
+    "name": "astro-dev-audit-nano",
+    "description": "Astro Dev Toolbar app auditing WCAG a11y, heading hierarchy, and SEO with real-time Gemini Nano remediations.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
+    "github_url": "https://github.com/bhubbard/astro-dev-audit-nano",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
+    "topics": [
+      "astro",
+      "audit",
+      "seo"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:22Z"
+  },
+  {
+    "name": "astro-dev-broken-anchor-healer",
+    "description": "Smart internal anchor link validator and semantic heading ID matcher for Astro Dev Toolbar.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/",
+    "github_url": "https://github.com/bhubbard/astro-dev-broken-anchor-healer",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:24Z"
+  },
+  {
+    "name": "astro-dev-content-linter",
+    "description": "Editorial tone, reading grade level, and brand voice auditor inside the Astro Dev Toolbar with AI rewrites.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-content-linter/",
+    "github_url": "https://github.com/bhubbard/astro-dev-content-linter",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-content-linter/",
+    "topics": [
+      "astro",
+      "audit",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:27Z"
+  },
+  {
+    "name": "astro-dev-copy-optimizer",
+    "description": "In-browser copy tuner and rewriter inside the Astro Dev Toolbar powered by Chrome Built-in AI.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-copy-optimizer/",
+    "github_url": "https://github.com/bhubbard/astro-dev-copy-optimizer",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-copy-optimizer/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:29Z"
+  },
+  {
+    "name": "astro-dev-i18n-coverage",
+    "description": "Dev Toolbar missing translation finder with contextual on-device translation and 1-click locale JSON export.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-i18n-coverage/",
+    "github_url": "https://github.com/bhubbard/astro-dev-i18n-coverage",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-i18n-coverage/",
+    "topics": [
+      "astro",
+      "automation",
+      "cli",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:31Z"
+  },
+  {
+    "name": "astro-dev-island-hydration-advisor",
+    "description": "Astro Dev Toolbar island hydration analyzer flagging eager below-the-fold directives with performance advice.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/",
+    "github_url": "https://github.com/bhubbard/astro-dev-island-hydration-advisor",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:33Z"
+  },
+  {
+    "name": "astro-dev-mock-generator",
+    "description": "Synthetic Zod-compliant mock data generator for Astro Content Collections using on-device Gemini Nano.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-mock-generator/",
+    "github_url": "https://github.com/bhubbard/astro-dev-mock-generator",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-mock-generator/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:35Z"
+  },
+  {
+    "name": "astro-dev-schema-scaffolder",
+    "description": "Instant Schema.org JSON-LD microdata generator for Astro Dev Toolbar powered by on-device Gemini Nano.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-schema-scaffolder/",
+    "github_url": "https://github.com/bhubbard/astro-dev-schema-scaffolder",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-schema-scaffolder/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:38Z"
+  },
+  {
+    "name": "astro-og-smart-crop",
+    "description": "Client-side OpenGraph and Twitter card preview simulator with AI character-budgeted headline optimization.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-og-smart-crop/",
+    "github_url": "https://github.com/bhubbard/astro-og-smart-crop",
+    "target_url": "https://code.brandonhubbard.com/astro-og-smart-crop/",
+    "topics": [
+      "astro",
+      "automation",
+      "cli",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:40Z"
+  },
+  {
+    "name": "astro-prefetch-ai-brief",
+    "description": "Intelligent link hover briefs for Astro with ultra-compact previews generated by Chrome Built-in Summarizer API.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-prefetch-ai-brief/",
+    "github_url": "https://github.com/bhubbard/astro-prefetch-ai-brief",
+    "target_url": "https://code.brandonhubbard.com/astro-prefetch-ai-brief/",
+    "topics": [
+      "ai",
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:42Z"
+  },
+  {
+    "name": "astro-rehype-nano-code",
+    "description": "Zero-JS interactive code block explainer for Astro using build-time Rehype attributes and on-device Chrome AI.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-rehype-nano-code/",
+    "github_url": "https://github.com/bhubbard/astro-rehype-nano-code",
+    "target_url": "https://code.brandonhubbard.com/astro-rehype-nano-code/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:45Z"
+  },
+  {
+    "name": "astro-schema-ld-verifier",
+    "description": "Dev-time semantic consistency auditor verifying JSON-LD structured data against rendered DOM content.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-schema-ld-verifier/",
+    "github_url": "https://github.com/bhubbard/astro-schema-ld-verifier",
+    "target_url": "https://code.brandonhubbard.com/astro-schema-ld-verifier/",
+    "topics": [
+      "astro",
+      "audit",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:47Z"
+  },
+  {
+    "name": "bhubbard.github.io",
+    "description": "Official Open Source Software Portal & Chrome Built-in AI Specification Hub by Brandon Hubbard.",
+    "language": "HTML",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/",
+    "github_url": "https://github.com/bhubbard/bhubbard.github.io",
+    "target_url": "https://code.brandonhubbard.com/",
+    "topics": [
+      "astro",
+      "chrome-ai",
+      "developer-tools",
+      "gemini-nano",
+      "open-source",
+      "swiss-design",
+      "web-performance"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:27:31Z"
+  },
+  {
+    "name": "bullet3-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/bullet3-rs/",
+    "github_url": "https://github.com/bhubbard/bullet3-rs",
+    "target_url": "https://code.brandonhubbard.com/bullet3-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:13Z"
+  },
+  {
+    "name": "clippy-cf-reporter",
+    "description": "Translates worker-rs Clippy compiler diagnostics into Code Climate JSON, SARIF v2.1.0, and GitHub PR annotations.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/clippy-cf-reporter/",
+    "github_url": "https://github.com/bhubbard/clippy-cf-reporter",
+    "target_url": "https://code.brandonhubbard.com/clippy-cf-reporter/",
+    "topics": [
+      "cli",
+      "cloudflare",
+      "cloudflare-workers",
+      "serverless"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:15Z"
+  },
+  {
+    "name": "defy-rs",
+    "description": "Pure Rust port of police wanted-level, pursuit dispatch, and NPC crime interaction systems from Defy",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/defy-rs/",
+    "github_url": "https://github.com/bhubbard/defy-rs",
+    "target_url": "https://code.brandonhubbard.com/defy-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:17Z"
+  },
+  {
+    "name": "detour-crowd-rs",
+    "description": "Pure Rust port of DetourCrowd from RecastNavigation: RVO collision avoidance, proximity grid, and crowd path steering",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
+    "github_url": "https://github.com/bhubbard/detour-crowd-rs",
+    "target_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:20Z"
+  },
+  {
+    "name": "dialogger-rs",
+    "description": "Pure Rust branching dialogue graph evaluator and NPC bark engine from Dialogger",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/dialogger-rs/",
+    "github_url": "https://github.com/bhubbard/dialogger-rs",
+    "target_url": "https://code.brandonhubbard.com/dialogger-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:22Z"
+  },
+  {
+    "name": "flareguard",
+    "description": "\ud83d\udee1\ufe0f Unified Cloudflare Security Guardian \u2014 AST secret scanning, Worker binding verification, Zone posture auditing, and origin IP leak hunting.",
+    "language": "Rust",
+    "category": "flare",
+    "categories": [
+      "cli",
+      "rust",
+      "flare"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/flareguard/",
+    "github_url": "https://github.com/bhubbard/flareguard",
+    "target_url": "https://code.brandonhubbard.com/flareguard/",
+    "topics": [
+      "ast",
+      "cli",
+      "cloudflare",
+      "devops",
+      "rust",
+      "security",
+      "waf",
+      "audit",
+      "cloudflare-workers",
+      "serverless"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:35:49Z"
+  },
+  {
+    "name": "flarelint",
+    "description": "Unified, nanosecond-fast Rust AST static analysis and edge compatibility linter for Cloudflare Workers & Astro applications",
+    "language": "Rust",
+    "category": "flare",
+    "categories": [
+      "cli",
+      "rust",
+      "flare"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/flarelint/",
+    "github_url": "https://github.com/bhubbard/flarelint",
+    "target_url": "https://code.brandonhubbard.com/flarelint/",
+    "topics": [
+      "ast",
+      "astro",
+      "cloudflare",
+      "cloudflare-pages",
+      "cloudflare-workers",
+      "durable-objects",
+      "edge-computing",
+      "linter",
+      "oxc",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:26Z"
+  },
+  {
+    "name": "flareops",
+    "description": "\u26a1 Developer operations & workflow CLI for Cloudflare Workers, Pages, and Astro \u2014 type generation, secret sync, route optimization, and unified verification.",
+    "language": "Rust",
+    "category": "flare",
+    "categories": [
+      "cli",
+      "rust",
+      "flare"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/flareops/",
+    "github_url": "https://github.com/bhubbard/flareops",
+    "target_url": "https://code.brandonhubbard.com/flareops/",
+    "topics": [
+      "astro",
+      "cli",
+      "cloudflare",
+      "cloudflare-pages",
+      "cloudflare-workers",
+      "dx",
+      "caching",
+      "devops",
+      "headers",
+      "pages"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:29Z"
+  },
+  {
+    "name": "flareperf",
+    "description": "Unified Cloudflare Edge Performance & Budget Guardian \u2014 Bundle size budgets, V8 isolate cold-start analysis, 50-subrequest limits, and D1 batching.",
+    "language": "Rust",
+    "category": "flare",
+    "categories": [
+      "cli",
+      "rust",
+      "flare"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/flareperf/",
+    "github_url": "https://github.com/bhubbard/flareperf",
+    "target_url": "https://code.brandonhubbard.com/flareperf/",
+    "topics": [
+      "ast",
+      "cli",
+      "cloudflare",
+      "d1",
+      "performance",
+      "subrequests",
+      "workers",
+      "cloudflare-workers",
+      "serverless"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:31Z"
+  },
+  {
+    "name": "gambetta-netcode-rs",
+    "description": "Pure Rust client-side prediction, server reconciliation, entity interpolation, and lag compensation netcode from Gabriel Gambetta",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
+    "github_url": "https://github.com/bhubbard/gambetta-netcode-rs",
+    "target_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:33Z"
+  },
+  {
+    "name": "godot-rs",
+    "description": "Pure Rust port and architecture fork of Godot Engine (godotengine/godot)",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/godot-rs/",
+    "github_url": "https://github.com/bhubbard/godot-rs",
+    "target_url": "https://code.brandonhubbard.com/godot-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:34Z"
+  },
+  {
+    "name": "hyperframes-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/hyperframes-rs/",
+    "github_url": "https://github.com/bhubbard/hyperframes-rs",
+    "target_url": "https://code.brandonhubbard.com/hyperframes-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:36Z"
+  },
+  {
+    "name": "minimal-hud-rs",
+    "description": "Pure Rust event-driven HUD state tracking, dirty change detection, vital stats, and vehicle telemetry from minimal-hud",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
+    "github_url": "https://github.com/bhubbard/minimal-hud-rs",
+    "target_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:14:20Z"
+  },
+  {
+    "name": "npwd-rs",
+    "description": "Pure Rust simulated in-game smartphone architecture, OS state machine, apps, and game-world event bridge from NPWD",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/npwd-rs/",
+    "github_url": "https://github.com/bhubbard/npwd-rs",
+    "target_url": "https://code.brandonhubbard.com/npwd-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:39Z"
+  },
+  {
+    "name": "openrw-rs",
+    "description": "Pure Rust port of GTA III camera follow, weapon targeting math, and player state machines from OpenRW",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/openrw-rs/",
+    "github_url": "https://github.com/bhubbard/openrw-rs",
+    "target_url": "https://code.brandonhubbard.com/openrw-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:41Z"
+  },
+  {
+    "name": "poormans-camera-rs",
+    "description": "Pure Rust 3D third-person camera rig with sphere-cast collision avoidance and spring damping from Evan Todd",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
+    "github_url": "https://github.com/bhubbard/poormans-camera-rs",
+    "target_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:43Z"
+  },
+  {
+    "name": "radial-menu-rs",
+    "description": "Pure Rust radial menu and weapon wheel system with angle math, deadzone filtering, and easing animations",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/radial-menu-rs/",
+    "github_url": "https://github.com/bhubbard/radial-menu-rs",
+    "target_url": "https://code.brandonhubbard.com/radial-menu-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:45Z"
+  },
+  {
+    "name": "sdf-math-rs",
+    "description": "Pure Rust 2D and 3D Signed Distance Fields, CSG smooth blending, and ray marching from Inigo Quilez",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/sdf-math-rs/",
+    "github_url": "https://github.com/bhubbard/sdf-math-rs",
+    "target_url": "https://code.brandonhubbard.com/sdf-math-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:47Z"
+  },
+  {
+    "name": "sfxr-rs",
+    "description": "Pure Rust procedural 8-bit/16-bit sound effect generator and synthesizer from SFXR",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/sfxr-rs/",
+    "github_url": "https://github.com/bhubbard/sfxr-rs",
+    "target_url": "https://code.brandonhubbard.com/sfxr-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:49Z"
+  },
+  {
+    "name": "simplecar2-rs",
+    "description": "Pure Rust arcade-sim vehicle dynamics, raycast suspension, drivetrain, and transmission from SimpleCar2",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/simplecar2-rs/",
+    "github_url": "https://github.com/bhubbard/simplecar2-rs",
+    "target_url": "https://code.brandonhubbard.com/simplecar2-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:51Z"
+  },
+  {
+    "name": "sumo-rs",
+    "description": "Pure Rust microscopic traffic simulation engine featuring IDM, Krauss car-following, MOBIL lane changing, and intersection right-of-way from SUMO",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/sumo-rs/",
+    "github_url": "https://github.com/bhubbard/sumo-rs",
+    "target_url": "https://code.brandonhubbard.com/sumo-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:52Z"
+  },
+  {
+    "name": "tactical-ai-rs",
+    "description": "Pure Rust tactical influence maps, spatial reasoning, cover finding, and flanking pathfinder from Game AI Pro",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
+    "github_url": "https://github.com/bhubbard/tactical-ai-rs",
+    "target_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:54Z"
+  },
+  {
+    "name": "tlab-vehicle-physics-rs",
+    "description": "Pure Rust Pacejka Magic Formula tire friction and drift physics model from TLabVehiclePhysics",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
+    "github_url": "https://github.com/bhubbard/tlab-vehicle-physics-rs",
+    "target_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:58Z"
+  },
+  {
+    "name": "uxsim-rs",
+    "description": "Pure Rust macroscopic city-wide traffic network flow simulator from UXsim",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/uxsim-rs/",
+    "github_url": "https://github.com/bhubbard/uxsim-rs",
+    "target_url": "https://code.brandonhubbard.com/uxsim-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:24:59Z"
+  },
+  {
+    "name": "vhud-rs",
+    "description": "Pure Rust GTA V radar, minimap projection, blip clamping, GPS route, and HUD ring meter engine",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vhud-rs/",
+    "github_url": "https://github.com/bhubbard/vhud-rs",
+    "target_url": "https://code.brandonhubbard.com/vhud-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:25:01Z"
+  },
+  {
+    "name": "video-use-rs",
+    "description": "Fast, production-grade Rust port of browser-use/video-use for conversation-driven video editing and timeline generation.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/video-use-rs/",
+    "github_url": "https://github.com/bhubbard/video-use-rs",
+    "target_url": "https://code.brandonhubbard.com/video-use-rs/",
+    "topics": [
+      "ai-agents",
+      "automation",
+      "media-processing",
+      "rust",
+      "timeline-editor",
+      "video-editing"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:25:03Z"
+  },
+  {
+    "name": "vite-plus-wrangler",
+    "description": "Vite plugin for seamless integration with Cloudflare Wrangler and local Cloudflare Workers / Pages development.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+    "github_url": "https://github.com/bhubbard/vite-plus-wrangler",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+    "topics": [
+      "cloudflare",
+      "cloudflare-workers",
+      "dx",
+      "edge-computing",
+      "serverless",
+      "vite",
+      "vite-plugin",
+      "wrangler"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T17:25:09Z"
+  },
+  {
+    "name": "wp-cloudflare-d1",
+    "description": "A php class to use CloudFlare D1 database within WordPress.",
+    "language": "PHP",
+    "category": "flare",
+    "categories": [
+      "flare",
+      "wordpress"
+    ],
+    "stars": 3,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-cloudflare-d1",
+    "target_url": "https://github.com/bhubbard/wp-cloudflare-d1",
+    "topics": [
+      "cloudflare",
+      "d1",
+      "php",
+      "wordpress",
+      "cloudflare-workers",
+      "serverless"
+    ],
+    "is_archived": false,
+    "pushed_at": "2025-11-12T14:45:32Z"
+  },
+  {
+    "name": "animated-gradient-cover-block",
+    "description": "A WordPress block with animated gradient cover.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/animated-gradient-cover-block",
+    "target_url": "https://github.com/bhubbard/animated-gradient-cover-block",
+    "topics": [
+      "block-editor",
+      "gutenberg",
+      "wordpress"
+    ],
+    "is_archived": false,
+    "pushed_at": "2025-09-18T17:32:02Z"
+  },
+  {
+    "name": "kumo-drift-checks",
+    "description": "Automated drift detection and consistency verification utility for Cloudflare Kumo UI components and design tokens.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/kumo-drift-checks",
+    "target_url": "https://github.com/bhubbard/kumo-drift-checks",
+    "topics": [
+      "cloudflare",
+      "cloudflare-workers",
+      "design-system",
+      "drift-detection",
+      "kumo-ui",
+      "serverless",
+      "typescript",
+      "ui-components"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-08-06T04:41:01Z"
+  },
+  {
+    "name": "pressable-cli",
+    "description": "Command-line interface (CLI) for managing Pressable WordPress sites, collaborators, backups, and deployments.",
+    "language": "TypeScript",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/pressable-cli",
+    "target_url": "https://github.com/bhubbard/pressable-cli",
+    "topics": [
+      "cli",
+      "hosting",
+      "pressable",
+      "wordpress",
+      "api-client",
+      "automation",
+      "devops"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-04-09T06:13:03Z"
+  },
+  {
+    "name": "skills",
+    "description": "Comprehensive repository of production AI Agent Skills and workflows for Antigravity, Claude, and AI coding assistants.",
+    "language": "HTML",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/skills",
+    "target_url": "https://github.com/bhubbard/skills",
+    "topics": [
+      "agent",
+      "ai",
+      "claude",
+      "agent-skills",
+      "ai-agents",
+      "antigravity",
+      "claude-code",
+      "developer-productivity",
+      "prompt-engineering"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T15:45:02Z"
+  },
+  {
+    "name": "wp-cloudflare-kv",
+    "description": "A WordPress library to work with CloudFlare KV storage.",
+    "language": "PHP",
+    "category": "flare",
+    "categories": [
+      "flare",
+      "wordpress"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-cloudflare-kv",
+    "target_url": "https://github.com/bhubbard/wp-cloudflare-kv",
+    "topics": [
+      "cloudflare",
+      "kv",
+      "php",
+      "wordpress",
+      "cloudflare-workers",
+      "serverless"
+    ],
+    "is_archived": false,
+    "pushed_at": "2025-11-12T14:52:00Z"
+  },
+  {
+    "name": "wp-gemini-cleaner",
+    "description": "A WordPress tool for cleaning up Gemini AI-generated content.",
+    "language": "PHP",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-gemini-cleaner",
+    "target_url": "https://github.com/bhubbard/wp-gemini-cleaner",
+    "topics": [
+      "ai",
+      "gemini",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2025-06-24T12:17:47Z"
+  },
+  {
+    "name": "wp-pressable-api",
+    "description": "Comprehensive PHP/WordPress client library and wrapper for the Pressable Managed WordPress Hosting REST API.",
+    "language": "PHP",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-pressable-api",
+    "target_url": "https://github.com/bhubbard/wp-pressable-api",
+    "topics": [
+      "cli",
+      "cloud-hosting",
+      "managed-wordpress",
+      "php-sdk",
+      "pressable",
+      "rest-api",
+      "wordpress"
+    ],
+    "is_archived": false,
+    "pushed_at": "2025-11-20T15:39:31Z"
+  },
+  {
+    "name": "yoast-seo-audit",
+    "description": "Automated SEO schema, graph validation, and meta tag audit tool for WordPress sites utilizing Yoast SEO.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/yoast-seo-audit",
+    "target_url": "https://github.com/bhubbard/yoast-seo-audit",
+    "topics": [
+      "audit",
+      "json-ld",
+      "schema-markup",
+      "search-engine-optimization",
+      "seo",
+      "seo-audit",
+      "wordpress",
+      "yoast-seo"
+    ],
+    "is_archived": false,
+    "pushed_at": "2025-08-01T19:20:41Z"
+  },
+  {
+    "name": ".github",
+    "description": "Default community health files, contributing guidelines, security policies, and issue/PR templates for bhubbard repositories.",
+    "language": "Code",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/.github",
+    "target_url": "https://github.com/bhubbard/.github",
+    "topics": [
+      "community-health",
+      "contributing",
+      "github-templates",
+      "issue-templates",
+      "oss-standards",
+      "security-policy"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-25T15:20:28Z"
+  },
+  {
+    "name": "alt-text-ai",
+    "description": "Generate SEO-friendly, accessibility-focused alt text for images using Cloudflare\u2019s AI. Supports image uploads or URLs with multi-language options.",
+    "language": "TypeScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/alt-text-ai",
+    "target_url": "https://github.com/bhubbard/alt-text-ai",
+    "topics": [
+      "accessibility",
+      "ai",
+      "cloudflare-workers",
+      "seo",
+      "cloudflare",
+      "serverless"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-01-30T14:28:14Z"
+  },
+  {
+    "name": "astro-compress-rs",
+    "description": "Blazingly fast post-build compressor, CSS inliner, and HTML head optimizer written in Rust for Astro and static sites.",
+    "language": "Rust",
+    "category": "astro",
+    "categories": [
+      "cli",
+      "rust",
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/astro-compress-rs",
+    "target_url": "https://github.com/bhubbard/astro-compress-rs",
+    "topics": [
+      "astro",
+      "compression",
+      "css-inliner",
+      "html-minifier",
+      "rust",
+      "static-site",
+      "web-performance"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-25T16:26:49Z"
+  },
+  {
+    "name": "fonoster",
+    "description": "The open-source alternative to Twilio - programmable telecommunications stack with Node.js and VoIP APIs.",
+    "language": "TypeScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/fonoster",
+    "target_url": "https://github.com/bhubbard/fonoster",
+    "topics": [
+      "nodejs",
+      "sip",
+      "telecommunications",
+      "telephony",
+      "twilio-alternative",
+      "voip"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-25T16:27:07Z"
+  },
+  {
+    "name": "homebrew-tap",
+    "description": "Official Homebrew tap for CLI developer tools and native binary distributions maintained by bhubbard.",
+    "language": "Ruby",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/homebrew-tap",
+    "target_url": "https://github.com/bhubbard/homebrew-tap",
+    "topics": [
+      "binary-distribution",
+      "cli-tools",
+      "homebrew",
+      "homebrew-tap",
+      "macos",
+      "package-manager",
+      "cli"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-24T17:29:15Z"
+  },
+  {
+    "name": "hyperframes",
+    "description": "Write HTML. Render video. Built for agents.",
+    "language": "TypeScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/hyperframes",
+    "target_url": "https://github.com/bhubbard/hyperframes",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T15:40:26Z"
+  },
+  {
+    "name": "opendental",
+    "description": "High-performance edge-native serverless fork of Open Dental Practice Management Software on Cloudflare Workers and D1.",
+    "language": "C#",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/opendental",
+    "target_url": "https://github.com/bhubbard/opendental",
+    "topics": [
+      "cloudflare",
+      "cloudflare-workers",
+      "d1-database",
+      "dental",
+      "dental-software",
+      "healthcare",
+      "opendental",
+      "practice-management",
+      "serverless"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-25T16:27:18Z"
+  },
+  {
+    "name": "plugin-updater-cf-worker",
+    "description": "A Cloudflare Worker for WordPress plugin updates.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/plugin-updater-cf-worker",
+    "target_url": "https://github.com/bhubbard/plugin-updater-cf-worker",
+    "topics": [
+      "cloudflare-workers",
+      "plugins",
+      "wordpress",
+      "cloudflare",
+      "serverless"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-01-28T16:42:58Z"
+  },
+  {
+    "name": "post-navigation-block",
+    "description": "A WordPress block for post navigation.",
+    "language": "PHP",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/post-navigation-block",
+    "target_url": "https://github.com/bhubbard/post-navigation-block",
+    "topics": [
+      "block-editor",
+      "gutenberg",
+      "wordpress"
+    ],
+    "is_archived": false,
+    "pushed_at": "2025-09-18T17:29:54Z"
+  },
+  {
+    "name": "searchphone",
+    "description": "Fast, privacy-focused reverse phone lookup and telephony carrier metadata inspection tool.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/searchphone",
+    "target_url": "https://github.com/bhubbard/searchphone",
+    "topics": [
+      "caller-id",
+      "carrier-lookup",
+      "lookup-tool",
+      "phone-lookup",
+      "privacy",
+      "telephony"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-08-25T06:13:29Z"
+  },
+  {
+    "name": "sensitive-image-block",
+    "description": "A WordPress block for sensitive images with a reveal toggle.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/sensitive-image-block",
+    "target_url": "https://github.com/bhubbard/sensitive-image-block",
+    "topics": [
+      "block-editor",
+      "gutenberg",
+      "wordpress"
+    ],
+    "is_archived": false,
+    "pushed_at": "2025-09-18T17:57:52Z"
+  },
+  {
+    "name": "serpbear",
+    "description": "Open-source search engine position and keyword rank tracking app built with Next.js.",
+    "language": "TypeScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/serpbear",
+    "target_url": "https://github.com/bhubbard/serpbear",
+    "topics": [
+      "keyword-ranking",
+      "nextjs",
+      "rank-tracker",
+      "rank-tracking",
+      "search-engine",
+      "seo",
+      "serp"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-25T16:27:25Z"
+  },
+  {
+    "name": "sitemap-scan",
+    "description": "A simple node package to find and crawl sitemaps",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/sitemap-scan",
+    "target_url": "https://github.com/bhubbard/sitemap-scan",
+    "topics": [
+      "nodejs",
+      "seo",
+      "sitemap"
+    ],
+    "is_archived": false,
+    "pushed_at": "2025-08-01T18:16:42Z"
+  },
+  {
+    "name": "timesfm-rs",
+    "description": "Native Rust implementation of Google Research's TimesFM foundation model for zero-shot time series forecasting via Candle.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/timesfm-rs",
+    "target_url": "https://github.com/bhubbard/timesfm-rs",
+    "topics": [
+      "candle",
+      "forecasting",
+      "google-research",
+      "machine-learning",
+      "rust",
+      "time-series",
+      "timesfm"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-25T16:27:31Z"
+  },
+  {
+    "name": "unified-audit-rs",
+    "description": "Consolidated high-performance post-build CI verification and auditing gate for Astro and static sites in Rust.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/unified-audit-rs",
+    "target_url": "https://github.com/bhubbard/unified-audit-rs",
+    "topics": [
+      "astro",
+      "audit",
+      "ci-cd",
+      "quality-gate",
+      "rust",
+      "static-analysis",
+      "web-standards"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-25T16:27:57Z"
+  },
+  {
+    "name": "unlighthouse-rs",
+    "description": "A Rust port of the Unlighthouse Lighthouse auditing tool.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/unlighthouse-rs",
+    "target_url": "https://github.com/bhubbard/unlighthouse-rs",
+    "topics": [
+      "cli",
+      "lighthouse",
+      "performance",
+      "rust",
+      "audit"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-06-01T05:24:35Z"
+  },
+  {
+    "name": "wp-blockmarkup-mcp",
+    "description": "A fast, lightweight, and modern Rust port of wp-blockmarkup-mcp. This tool functions as both a Model Context Protocol (MCP) server for LLMs (like Claude Desktop) and a robust Command Line Interface (CLI) for auditing, linting, formatting, searching, and previewing Gutenberg block markups.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust",
+      "wordpress"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
+    "target_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
+    "topics": [
+      "cli",
+      "gutenberg",
+      "mcp",
+      "rust",
+      "wordpress",
+      "ai",
+      "audit"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-05-31T05:42:00Z"
+  },
+  {
+    "name": "wp-cleanup-scripts",
+    "description": "A collection of bash scripts and sql queries to cleanup various database leftovers from WordPress plugins and themes.",
+    "language": "Shell",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-cleanup-scripts",
+    "target_url": "https://github.com/bhubbard/wp-cleanup-scripts",
+    "topics": [
+      "wordpress",
+      "bash",
+      "cleanup",
+      "database"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-01-29T16:01:26Z"
+  },
+  {
+    "name": "wp-clio-api",
+    "description": "A WordPress library for the Clio legal API.",
+    "language": "PHP",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-clio-api",
+    "target_url": "https://github.com/bhubbard/wp-clio-api",
+    "topics": [
+      "api",
+      "clio",
+      "php",
+      "wordpress",
+      "cli"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-01-02T22:57:27Z"
+  },
+  {
+    "name": "wp-givebutter-api",
+    "description": "A WordPress library to work with the GiveButter Public API.",
+    "language": "PHP",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-givebutter-api",
+    "target_url": "https://github.com/bhubbard/wp-givebutter-api",
+    "topics": [
+      "api",
+      "givebutter",
+      "php",
+      "wordpress"
+    ],
+    "is_archived": false,
+    "pushed_at": "2025-11-17T16:15:54Z"
+  },
+  {
+    "name": "wp-lawmatics-api",
+    "description": "A WordPress library for the Lawmatics CRM API.",
+    "language": "PHP",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-lawmatics-api",
+    "target_url": "https://github.com/bhubbard/wp-lawmatics-api",
+    "topics": [
+      "api",
+      "php",
+      "wordpress",
+      "lawmatics"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-01-02T22:54:44Z"
+  },
+  {
+    "name": "wp-plugin-uninstalls",
+    "description": "A collection of WordPress plugin uninstall scripts.",
+    "language": "PHP",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-plugin-uninstalls",
+    "target_url": "https://github.com/bhubbard/wp-plugin-uninstalls",
+    "topics": [
+      "cleanup",
+      "plugins",
+      "wordpress"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-02-27T16:21:37Z"
+  },
+  {
+    "name": "wp-theme-check-cli",
+    "description": "CLI utility and automated CI quality gate for running WordPress Theme Check audits against modern block themes.",
+    "language": "TypeScript",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-theme-check-cli",
+    "target_url": "https://github.com/bhubbard/wp-theme-check-cli",
+    "topics": [
+      "audit",
+      "ci-cd",
+      "cli",
+      "code-quality",
+      "gutenberg",
+      "theme-check",
+      "wordpress",
+      "wp-cli"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-04-10T06:22:56Z"
+  }
+];
 
     // Language colors map
     const LANG_COLORS = {
@@ -3833,16 +4726,21 @@
     const activeCategoryCount = document.getElementById('activeCategoryCount');
     const toast = document.getElementById('toast');
 
-    // Theme Toggle Logic
+    // Theme Toggle Logic (Unified with brandonhubbard.com)
     function toggleTheme() {
       const current = document.documentElement.getAttribute('data-theme') || 'dark';
       const next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
       localStorage.setItem('bh-theme', next);
       showToast(`THEME: ${next.toUpperCase()} MODE`);
     }
 
-    if (themeToggleBtn) {
+    const headerThemeToggle = document.getElementById('theme-toggle');
+    if (headerThemeToggle) {
+      headerThemeToggle.addEventListener('click', toggleTheme);
+    }
+    if (themeToggleBtn && themeToggleBtn !== headerThemeToggle) {
       themeToggleBtn.addEventListener('click', toggleTheme);
     }
 
@@ -3996,8 +4894,16 @@
       document.body.style.overflow = '';
     }
 
+    const mobileNavSearchBtn = document.getElementById('mobileNavSearchBtn');
     if (openSearchBtn) openSearchBtn.addEventListener('click', () => openModal());
     if (openSearchMobileBtn) openSearchMobileBtn.addEventListener('click', () => openModal());
+    if (mobileNavSearchBtn) mobileNavSearchBtn.addEventListener('click', () => {
+      const mobileNav = document.getElementById('mobile-nav');
+      const mobileToggle = document.getElementById('mobile-toggle');
+      if (mobileNav) mobileNav.classList.remove('open');
+      if (mobileToggle) mobileToggle.classList.remove('active');
+      openModal();
+    });
     if (heroSearchTrigger) heroSearchTrigger.addEventListener('click', () => openModal());
     if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
 
@@ -4005,11 +4911,13 @@
       if (e.target === searchModalOverlay) closeModal();
     });
 
-    // Keyboard Navigation
+    // Keyboard Navigation (Top-Priority Command+K Engine)
     window.addEventListener('keydown', (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      const isCmdK = (e.metaKey || e.ctrlKey) && (e.code === 'KeyK' || (e.key && e.key.toLowerCase() === 'k'));
+      if (isCmdK) {
         e.preventDefault();
-        if (searchModalOverlay.classList.contains('active')) {
+        e.stopPropagation();
+        if (searchModalOverlay && searchModalOverlay.classList.contains('active')) {
           closeModal();
         } else {
           openModal();
@@ -4017,35 +4925,42 @@
         return;
       }
 
-      if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
-        e.preventDefault();
-        openModal();
-        return;
-      }
-
-      if (searchModalOverlay.classList.contains('active')) {
+      if (searchModalOverlay && searchModalOverlay.classList.contains('active')) {
         if (e.key === 'Escape') {
           e.preventDefault();
           closeModal();
-        } else if (e.key === 'ArrowDown') {
+          return;
+        }
+        if (e.key === 'ArrowDown') {
           e.preventDefault();
           if (filteredModalRepos.length > 0) {
             selectedModalIndex = (selectedModalIndex + 1) % filteredModalRepos.length;
             renderModalResults();
           }
-        } else if (e.key === 'ArrowUp') {
+          return;
+        }
+        if (e.key === 'ArrowUp') {
           e.preventDefault();
           if (filteredModalRepos.length > 0) {
             selectedModalIndex = (selectedModalIndex - 1 + filteredModalRepos.length) % filteredModalRepos.length;
             renderModalResults();
           }
-        } else if (e.key === 'Enter') {
+          return;
+        }
+        if (e.key === 'Enter') {
           if (filteredModalRepos.length > 0 && filteredModalRepos[selectedModalIndex]) {
             e.preventDefault();
             const targetUrl = getProjectTargetUrl(filteredModalRepos[selectedModalIndex]);
             window.open(targetUrl, '_blank');
           }
+          return;
         }
+      }
+
+      if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        e.preventDefault();
+        openModal();
+        return;
       }
     });
 
@@ -4135,6 +5050,24 @@
         }
       });
     }
+
+    // Load canonical API data
+    async function loadProjectsApi() {
+      try {
+        const res = await fetch('/api/projects.json');
+        if (res.ok) {
+          const apiProjects = await res.json();
+          if (Array.isArray(apiProjects) && apiProjects.length > 0) {
+            REPOSITORIES = apiProjects;
+            renderExplorerGrid();
+            renderModalResults();
+          }
+        }
+      } catch (err) {
+        // Retain static inlined catalog
+      }
+    }
+    loadProjectsApi();
 
     async function syncGitHubRepos() {
       try {
