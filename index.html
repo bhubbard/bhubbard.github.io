@@ -4,86 +4,6 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFEM8TN9ZM"></script>
   <script>
-
-    // ─── Header & Subnav Interactions ───────────────────────────
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    if (mobileToggle && mobileNav) {
-      mobileToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('open');
-        mobileToggle.classList.toggle('active');
-      });
-    }
-
-    // Theme Switcher Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        localStorage.setItem('bh-theme', newTheme);
-      });
-    }
-
-    // Kinetic Character Scramble Reveal on Tagline
-    (function initScramble() {
-      const titleEl = document.querySelector('.site-header .brand-title');
-      if (!titleEl) return;
-      const targetText = titleEl.textContent || 'Senior Web Developer';
-      const CHARS = '!<>/[]{}=+*^?#_~';
-      let frame = 0;
-      let frameCount = 0;
-
-      function scramble() {
-        let output = '';
-        let complete = 0;
-        for (let i = 0; i < targetText.length; i++) {
-          if (targetText[i] === ' ') {
-            output += ' ';
-            complete++;
-            continue;
-          }
-          if (i < Math.floor(frame / 2)) {
-            output += targetText[i];
-            complete++;
-          } else {
-            output += CHARS[Math.floor(Math.random() * CHARS.length)];
-          }
-        }
-        titleEl.textContent = output;
-        frame++;
-        if (complete < targetText.length && frameCount < 40) {
-          frameCount++;
-          requestAnimationFrame(scramble);
-        } else {
-          titleEl.textContent = targetText;
-        }
-      }
-
-      setTimeout(scramble, 300);
-    })();
-
-    // Sticky Scroll Dynamics
-    function handleScroll() {
-      const siteHeader = document.getElementById('topHeader');
-      const projectSubnav = document.getElementById('projectSubnav');
-      const isScrolled = window.scrollY > 20;
-
-      if (siteHeader) {
-        siteHeader.classList.toggle('scrolled', isScrolled);
-      }
-      if (projectSubnav) {
-        projectSubnav.classList.toggle('scrolled', isScrolled);
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-
-
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -1419,14 +1339,312 @@
         padding: 5vh 0.75rem 1rem;
       }
     }
-  
+  /* =============================================================
+       SITE HEADER (EXACT REPLICA FROM BRANDONHUBBARD.COM)
+       ============================================================= */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--color-bg-primary);
+      border-bottom: 1px solid var(--color-border);
+      transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .site-header.scrolled {
+      background-color: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    [data-theme="light"] .site-header.scrolled {
+      background-color: rgba(248, 249, 250, 0.88);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .bh-square-logo {
+      width: 32px;
+      height: 32px;
+      background: var(--color-text-primary);
+      color: var(--color-bg-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.06em;
+      flex-shrink: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .brand-link:hover .bh-square-logo {
+      opacity: 0.85;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: -0.02em;
+      color: var(--color-text-primary);
+      line-height: 1.2;
+    }
+
+    .brand-title {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .nav-link {
+      font-family: var(--font-mono);
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-text-primary);
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--color-accent-cyan);
+    }
+
+    /* Theme Switcher Toggle */
+    .theme-toggle {
+      background: transparent;
+      border: 1px solid var(--color-border);
+      color: var(--color-text-primary);
+      padding: 0.4rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--color-text-primary);
+    }
+
+    [data-theme="dark"] .moon-icon {
+      display: none !important;
+    }
+    [data-theme="dark"] .sun-icon {
+      display: block !important;
+    }
+
+    [data-theme="light"] .sun-icon {
+      display: none !important;
+    }
+    [data-theme="light"] .moon-icon {
+      display: block !important;
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 14px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-text-primary);
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      padding: 1rem 1.5rem;
+      gap: 0.75rem;
+      background-color: var(--color-bg-surface);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav-link {
+      font-family: var(--font-mono);
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav-link:hover, .mobile-nav-link.active {
+      color: var(--color-text-primary);
+    }
+
+    @media (max-width: 840px) {
+      .desktop-nav {
+        display: none;
+      }
+      .mobile-toggle {
+        display: flex;
+      }
+    }
+
+    /* =============================================================
+       PROJECT SUBMENU (DEDICATED STICKY PROJECT SUB-BAR)
+       ============================================================= */
+    .project-subnav {
+      position: sticky;
+      top: 64px;
+      z-index: 990;
+      background-color: var(--color-bg-surface);
+      border-bottom: 1px solid var(--color-border);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-subnav.scrolled {
+      background-color: rgba(18, 18, 18, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    [data-theme="light"] .project-subnav.scrolled {
+      background-color: rgba(255, 255, 255, 0.92);
+    }
+
+    .subnav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 48px;
+      gap: 1rem;
+    }
+
+    .subnav-breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .subnav-crumb {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+
+    .subnav-crumb:hover {
+      color: var(--color-accent-cyan);
+    }
+
+    .subnav-sep {
+      color: var(--color-border-light);
+    }
+
+    .subnav-current {
+      color: var(--color-text-primary);
+      font-weight: 700;
+    }
+
+    .subnav-badge {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      border: 1px solid var(--color-border);
+      font-size: 0.68rem;
+      color: var(--color-accent-cyan);
+      background: rgba(6, 182, 212, 0.08);
+      border-radius: 2px;
+    }
+
+    .subnav-menu {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .subnav-menu::-webkit-scrollbar {
+      display: none;
+    }
+
+    .subnav-link {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.15s ease;
+    }
+
+    .subnav-link:hover, .subnav-link.active {
+      color: var(--color-accent-cyan);
+    }
+
+    .subnav-link.github-link {
+      color: var(--color-text-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    
 </style>
 </head>
 <body>
 
-  <div class="grid-container">
-    <!-- Brand Header -->
-      <!-- =============================================================
+  <!-- =============================================================
        SITE HEADER (SYNCED WITH BRANDONHUBBARD.COM)
        ============================================================= -->
   <header class="site-header" id="topHeader">
@@ -1472,6 +1690,7 @@
 
         <!-- Theme Switcher Toggle -->
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light or dark theme" title="Toggle Light/Dark Theme">
+          <!-- Sun Icon (visible in dark mode) -->
           <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -1483,6 +1702,8 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
+
+          <!-- Moon Icon (visible in light mode) -->
           <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
@@ -1537,6 +1758,10 @@
       </nav>
     </div>
   </div>
+
+  <div class="grid-container">
+    <!-- Brand Header -->
+    
 
     <!-- Main Hero -->
     <main>
@@ -2537,6 +2762,89 @@
   <div class="toast" id="toast">COMMAND COPIED TO CLIPBOARD</div>
 
   <script>
+
+    // ─── Header & Subnav Interactions ───────────────────────────
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (mobileToggle && mobileNav) {
+      mobileToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        mobileToggle.classList.toggle('active');
+      });
+    }
+
+    // Theme Switcher Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        localStorage.setItem('bh-theme', newTheme);
+      });
+    }
+
+    // Header & Subnav Scroll Dynamics
+    function handleScroll() {
+      const siteHeader = document.getElementById('topHeader');
+      const projectSubnav = document.getElementById('projectSubnav');
+      const isScrolled = window.scrollY > 20;
+
+      if (siteHeader) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
+      }
+      if (projectSubnav) {
+        projectSubnav.classList.toggle('scrolled', isScrolled);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    // Kinetic Character Scramble Reveal on Tagline
+    (function initScramble() {
+      const titleEl = document.querySelector('.site-header .brand-title');
+      if (!titleEl) return;
+      const targetText = (titleEl.getAttribute('data-text') || titleEl.textContent || 'Senior Web Developer').trim();
+      titleEl.setAttribute('data-text', targetText);
+      const CHARS = '!<>/[]{}=+*^?#_~';
+      let frame = 0;
+      let frameCount = 0;
+
+      function scramble() {
+        let output = '';
+        let complete = 0;
+        for (let i = 0; i < targetText.length; i++) {
+          if (targetText[i] === ' ') {
+            output += ' ';
+            complete++;
+            continue;
+          }
+          if (i < Math.floor(frame / 2)) {
+            output += targetText[i];
+            complete++;
+          } else {
+            output += CHARS[Math.floor(Math.random() * CHARS.length)];
+          }
+        }
+        titleEl.textContent = output;
+        frame++;
+        if (complete < targetText.length && frameCount < 35) {
+          frameCount++;
+          requestAnimationFrame(scramble);
+        } else {
+          titleEl.textContent = targetText;
+        }
+      }
+
+      setTimeout(scramble, 250);
+      const brandLink = document.querySelector('.site-header .brand-link');
+      if (brandLink) brandLink.addEventListener('mouseenter', scramble);
+    })();
+
+
     // Comprehensive map of all 48 repositories with GitHub Pages enabled
     const GITHUB_PAGES_MAP = {
       "active-ragdoll-rs": "https://code.brandonhubbard.com/active-ragdoll-rs/",
