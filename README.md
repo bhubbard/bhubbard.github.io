@@ -1,8 +1,12 @@
 # bhubbard.github.io
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-code.brandonhubbard.com-brightgreen?logo=github)](https://code.brandonhubbard.com/)
+
 Official open source software portal and flagship engineering hub for **Brandon Hubbard** ([brandonhubbard.com](https://brandonhubbard.com)).
 
 Built in accordance with strict **Swiss Modernist Grid Design Standards** (dark mode `#0a0a0a`, 0px border-radius, `Plus Jakarta Sans` & `JetBrains Mono` typography).
+
+> 🎮 **Live Interactive Visualizer & Demo:** [bhubbard.github.io on code.brandonhubbard.com](https://code.brandonhubbard.com/)
 
 ---
 
