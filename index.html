@@ -4,6 +4,86 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFEM8TN9ZM"></script>
   <script>
+
+    // ─── Header & Subnav Interactions ───────────────────────────
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (mobileToggle && mobileNav) {
+      mobileToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        mobileToggle.classList.toggle('active');
+      });
+    }
+
+    // Theme Switcher Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        localStorage.setItem('bh-theme', newTheme);
+      });
+    }
+
+    // Kinetic Character Scramble Reveal on Tagline
+    (function initScramble() {
+      const titleEl = document.querySelector('.site-header .brand-title');
+      if (!titleEl) return;
+      const targetText = titleEl.textContent || 'Senior Web Developer';
+      const CHARS = '!<>/[]{}=+*^?#_~';
+      let frame = 0;
+      let frameCount = 0;
+
+      function scramble() {
+        let output = '';
+        let complete = 0;
+        for (let i = 0; i < targetText.length; i++) {
+          if (targetText[i] === ' ') {
+            output += ' ';
+            complete++;
+            continue;
+          }
+          if (i < Math.floor(frame / 2)) {
+            output += targetText[i];
+            complete++;
+          } else {
+            output += CHARS[Math.floor(Math.random() * CHARS.length)];
+          }
+        }
+        titleEl.textContent = output;
+        frame++;
+        if (complete < targetText.length && frameCount < 40) {
+          frameCount++;
+          requestAnimationFrame(scramble);
+        } else {
+          titleEl.textContent = targetText;
+        }
+      }
+
+      setTimeout(scramble, 300);
+    })();
+
+    // Sticky Scroll Dynamics
+    function handleScroll() {
+      const siteHeader = document.getElementById('topHeader');
+      const projectSubnav = document.getElementById('projectSubnav');
+      const isScrolled = window.scrollY > 20;
+
+      if (siteHeader) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
+      }
+      if (projectSubnav) {
+        projectSubnav.classList.toggle('scrolled', isScrolled);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -1339,80 +1419,124 @@
         padding: 5vh 0.75rem 1rem;
       }
     }
-  </style>
+  
+</style>
 </head>
 <body>
 
   <div class="grid-container">
     <!-- Brand Header -->
-    <header>
-      <div class="nav-inner">
-        <!-- Logo: "Open Source" with "by Brandon Hubbard" underneath -->
-        <a href="https://brandonhubbard.com/" class="brand-identity" title="Brandon Hubbard Open Source">
-          <div class="brand-mark">BH</div>
-          <div class="brand-meta">
-            <span class="brand-name">OPEN SOURCE</span>
-            <span class="brand-title">BY BRANDON HUBBARD</span>
-          </div>
-        </a>
+      <!-- =============================================================
+       SITE HEADER (SYNCED WITH BRANDONHUBBARD.COM)
+       ============================================================= -->
+  <header class="site-header" id="topHeader">
+    <div class="container header-content">
+      <a href="https://brandonhubbard.com/" class="brand-link">
+        <div class="bh-square-logo">
+          <span>BH</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">BRANDON HUBBARD</span>
+          <span class="brand-title">Senior Web Developer</span>
+        </div>
+      </a>
 
-        <!-- Middle Quick Nav Links -->
-        <nav class="header-nav-links" aria-label="Quick jump navigation">
-          <a href="#flare-suite" class="nav-anchor">The Flare Suite</a>
-          <a href="#astro-suite" class="nav-anchor">Chrome AI / Astro</a>
-          <a href="#edge-rust" class="nav-anchor">Rust CLIs</a>
-          <a href="#all-repos" class="nav-anchor">All Repos</a>
+      <div class="nav-controls">
+        <nav class="desktop-nav">
+          <a href="https://brandonhubbard.com/" class="nav-link">01. Home</a>
+          <a href="https://brandonhubbard.com/branding" class="nav-link">02. Branding</a>
+          <a href="https://brandonhubbard.com/blog" class="nav-link">03. Blog</a>
+          <a href="https://brandonhubbard.com/contact" class="nav-link">04. Contact</a>
+          <a href="https://webtools.brandonhubbard.com/" class="nav-link" target="_blank" rel="noopener noreferrer">05. Tools</a>
+          <a href="https://code.brandonhubbard.com/" class="nav-link active">06. Code</a>
         </nav>
 
-        <!-- Header Actions: Search Button (Cmd+K), Theme Toggle & GitHub Icon -->
-        <div class="header-right">
-          <button type="button" class="header-search-btn" id="openSearchBtn" aria-label="Search open source repositories">
-            <div class="search-btn-content">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-              <span>SEARCH REPOS...</span>
-            </div>
-            <span class="kbd-tag"><span id="metaKey">⌘</span>K</span>
-          </button>
-
-          <button type="button" class="mobile-search-btn" id="openSearchMobileBtn" aria-label="Search">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <!-- Cmd+K Search Trigger -->
+        <button type="button" class="header-search-btn" id="openSearchBtn" aria-label="Search open source repositories">
+          <div class="search-btn-content">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-          </button>
+            <span>SEARCH REPOS...</span>
+          </div>
+          <span class="kbd-tag"><span id="metaKey">⌘</span>K</span>
+        </button>
 
-          <!-- Theme Toggle Button -->
-          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
-            <!-- Sun Icon (dark mode) -->
-            <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <!-- Moon Icon (light mode) -->
-            <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </button>
+        <button type="button" class="mobile-search-btn" id="openSearchMobileBtn" aria-label="Search repositories">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
 
-          <!-- GitHub Icon Link -->
-          <a href="https://github.com/bhubbard" target="_blank" rel="noopener" class="header-icon-btn" aria-label="GitHub Profile" title="GitHub Profile (@bhubbard)">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
-          </a>
-        </div>
+        <!-- Theme Switcher Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light or dark theme" title="Toggle Light/Dark Theme">
+          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
-    </header>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-nav" class="mobile-nav">
+      <button type="button" class="mobile-nav-search-btn" id="mobileNavSearchBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span>Search Repositories (⌘K)</span>
+      </button>
+      <a href="https://brandonhubbard.com/" class="mobile-nav-link">01. Home</a>
+      <a href="https://brandonhubbard.com/branding" class="mobile-nav-link">02. Branding</a>
+      <a href="https://brandonhubbard.com/blog" class="mobile-nav-link">03. Blog</a>
+      <a href="https://brandonhubbard.com/contact" class="mobile-nav-link">04. Contact</a>
+      <a href="https://webtools.brandonhubbard.com/" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">05. Tools</a>
+      <a href="https://code.brandonhubbard.com/" class="mobile-nav-link active">06. Code</a>
+    </div>
+  </header>
+
+  <!-- =============================================================
+       PAGE SUBMENU (DEDICATED STICKY PORTAL SUB-BAR)
+       ============================================================= -->
+  <div class="project-subnav" id="projectSubnav">
+    <div class="container subnav-inner">
+      <div class="subnav-breadcrumbs">
+        <a href="https://brandonhubbard.com/" class="subnav-crumb">Home</a>
+        <span class="subnav-sep">&gt;</span>
+        <span class="subnav-current">Code</span>
+        <span class="subnav-badge">OPEN SOURCE</span>
+      </div>
+
+      <nav class="subnav-menu">
+        <a href="#flare-suite" class="subnav-link">The Flare Suite</a>
+        <a href="#astro-suite" class="subnav-link">Chrome AI / Astro</a>
+        <a href="#edge-rust" class="subnav-link">Rust CLIs</a>
+        <a href="#all-repos" class="subnav-link">All Repos</a>
+        <a href="https://github.com/bhubbard" target="_blank" rel="noopener noreferrer" class="subnav-link github-link">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub ↗
+        </a>
+      </nav>
+    </div>
+  </div>
 
     <!-- Main Hero -->
     <main>
