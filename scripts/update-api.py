@@ -64,7 +64,27 @@ GITHUB_PAGES_MAP = {
     "vite-plus-commitlint": "https://code.brandonhubbard.com/vite-plus-commitlint/",
     "vite-plus-kumo-ui": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
     "vite-plus-wrangler": "https://code.brandonhubbard.com/vite-plus-wrangler/",
-    "zev-rs": "https://code.brandonhubbard.com/zev-rs/"
+    "zev-rs": "https://code.brandonhubbard.com/zev-rs/",
+    "auge-rs": "https://code.brandonhubbard.com/auge-rs/",
+    "comfyui-ltxvideo-mlx-rs": "https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/",
+    "handbrake-rs": "https://code.brandonhubbard.com/handbrake-rs/",
+    "lossless-cut-rs": "https://code.brandonhubbard.com/lossless-cut-rs/",
+    "lux-rs": "https://code.brandonhubbard.com/lux-rs/",
+    "mflux-rs": "https://code.brandonhubbard.com/mflux-rs/",
+    "mlt-rs": "https://code.brandonhubbard.com/mlt-rs/",
+    "mlx-audio-rs": "https://code.brandonhubbard.com/mlx-audio-rs/",
+    "mlx-embeddings-rs": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
+    "mlx-gen-rs": "https://code.brandonhubbard.com/mlx-gen-rs/",
+    "mlx-serve-rs": "https://code.brandonhubbard.com/mlx-serve-rs/",
+    "mlx-video-rs": "https://code.brandonhubbard.com/mlx-video-rs/",
+    "mlx-vlm-rs": "https://code.brandonhubbard.com/mlx-vlm-rs/",
+    "olive-rs": "https://code.brandonhubbard.com/olive-rs/",
+    "open-generative-ai-rs": "https://code.brandonhubbard.com/open-generative-ai-rs/",
+    "open-higgsfield-ai-rs": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "timesfm-rs": "https://code.brandonhubbard.com/timesfm-rs/",
+    "translate-rs": "https://code.brandonhubbard.com/translate-rs/",
+    "unified-audit-rs": "https://code.brandonhubbard.com/unified-audit-rs/",
+    "yt-dlp-rs": "https://code.brandonhubbard.com/yt-dlp-rs/"
 }
 
 def fetch_repos():

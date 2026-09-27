@@ -95,7 +95,7 @@
       "zero-token"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T06:03:58Z"
+    "pushed_at": "2026-09-27T16:58:19Z"
   },
   {
     "name": "active-ragdoll-rs",
@@ -157,7 +157,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:08:00Z"
+    "pushed_at": "2026-09-27T16:52:55Z"
   },
   {
     "name": "astro-client-directive-ai",
@@ -478,7 +478,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T23:07:18Z"
+    "pushed_at": "2026-09-27T10:54:21Z"
   },
   {
     "name": "bullet3-rs",
@@ -520,6 +520,34 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:56:49Z"
+  },
+  {
+    "name": "comfyui-ltxvideo-mlx-rs",
+    "description": "High-performance LTX-Video 2.3 runtime & ComfyUI node engine for Apple Silicon (Rust fork of dgrauet/ComfyUI-LTXVideo-mlx)",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/",
+    "github_url": "https://github.com/bhubbard/comfyui-ltxvideo-mlx-rs",
+    "target_url": "https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/",
+    "topics": [
+      "apple-silicon",
+      "comfyui",
+      "diffusion",
+      "ltx-video",
+      "mlx",
+      "rust",
+      "stg",
+      "teacache",
+      "video-generation"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T04:22:33Z"
   },
   {
     "name": "defy-rs",
@@ -893,6 +921,34 @@
     "pushed_at": "2026-09-27T06:34:58Z"
   },
   {
+    "name": "mlx-gen-rs",
+    "description": "High-performance generative image & video runtime for Apple Silicon (Rust fork of lpalbou/mlx-gen)",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlx-gen-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-gen-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-gen-rs/",
+    "topics": [
+      "apple-silicon",
+      "diffusion",
+      "flux",
+      "generative-ai",
+      "image-generation",
+      "mlx",
+      "rust",
+      "video-generation",
+      "wan"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T04:17:58Z"
+  },
+  {
     "name": "mlx-serve-rs",
     "description": "Open source software and systems engineering by Brandon Hubbard.",
     "language": "Rust",
@@ -1163,6 +1219,32 @@
     "pushed_at": "2026-09-26T19:30:33Z"
   },
   {
+    "name": "timesfm-rs",
+    "description": "Native Rust implementation of Google Research's TimesFM foundation model for zero-shot time series forecasting via Candle.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/timesfm-rs/",
+    "github_url": "https://github.com/bhubbard/timesfm-rs",
+    "target_url": "https://code.brandonhubbard.com/timesfm-rs/",
+    "topics": [
+      "candle",
+      "forecasting",
+      "google-research",
+      "machine-learning",
+      "rust",
+      "time-series",
+      "timesfm"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:58Z"
+  },
+  {
     "name": "tlab-vehicle-physics-rs",
     "description": "Pure Rust Pacejka Magic Formula tire friction and drift physics model from TLabVehiclePhysics",
     "language": "Rust",
@@ -1197,6 +1279,32 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-09-27T04:01:36Z"
+  },
+  {
+    "name": "unified-audit-rs",
+    "description": "Consolidated high-performance post-build CI verification and auditing gate for Astro and static sites in Rust.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/unified-audit-rs/",
+    "github_url": "https://github.com/bhubbard/unified-audit-rs",
+    "target_url": "https://code.brandonhubbard.com/unified-audit-rs/",
+    "topics": [
+      "astro",
+      "audit",
+      "ci-cd",
+      "quality-gate",
+      "rust",
+      "static-analysis",
+      "web-standards"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:57Z"
   },
   {
     "name": "uxsim-rs",
@@ -1492,7 +1600,7 @@
       "prompt-engineering"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T07:51:47Z"
+    "pushed_at": "2026-09-27T15:53:52Z"
   },
   {
     "name": "woo-order-to-google-storage",
@@ -1714,34 +1822,6 @@
     "pushed_at": "2026-09-26T18:57:02Z"
   },
   {
-    "name": "comfyui-ltxvideo-mlx-rs",
-    "description": "High-performance LTX-Video 2.3 runtime & ComfyUI node engine for Apple Silicon (Rust fork of dgrauet/ComfyUI-LTXVideo-mlx)",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "github_url": "https://github.com/bhubbard/comfyui-ltxvideo-mlx-rs",
-    "target_url": "https://github.com/bhubbard/comfyui-ltxvideo-mlx-rs",
-    "topics": [
-      "apple-silicon",
-      "comfyui",
-      "diffusion",
-      "ltx-video",
-      "mlx",
-      "rust",
-      "stg",
-      "teacache",
-      "video-generation"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-27T04:22:33Z"
-  },
-  {
     "name": "decision-index",
     "description": "Decision Index: reproduce the Jev decision-model benchmark suite locally or as one HF Job",
     "language": "Code",
@@ -1756,7 +1836,7 @@
     "target_url": "https://github.com/bhubbard/decision-index",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-27T07:46:43Z"
+    "pushed_at": "2026-09-27T16:45:59Z"
   },
   {
     "name": "fonoster",
@@ -1848,34 +1928,6 @@
     "pushed_at": "2024-04-11T09:43:13Z"
   },
   {
-    "name": "mlx-gen-rs",
-    "description": "High-performance generative image & video runtime for Apple Silicon (Rust fork of lpalbou/mlx-gen)",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "github_url": "https://github.com/bhubbard/mlx-gen-rs",
-    "target_url": "https://github.com/bhubbard/mlx-gen-rs",
-    "topics": [
-      "apple-silicon",
-      "diffusion",
-      "flux",
-      "generative-ai",
-      "image-generation",
-      "mlx",
-      "rust",
-      "video-generation",
-      "wan"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-27T04:17:58Z"
-  },
-  {
     "name": "opendental",
     "description": "High-performance edge-native serverless fork of Open Dental Practice Management Software on Cloudflare Workers and D1.",
     "language": "C#",
@@ -1901,6 +1953,24 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:57:00Z"
+  },
+  {
+    "name": "partikel",
+    "description": "Sub-atomic micro-agent runtime, native Tier 0 deterministic tool engine, and Model Context Protocol (MCP) server.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/partikel",
+    "target_url": "https://github.com/bhubbard/partikel",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T16:07:43Z"
   },
   {
     "name": "plugin-updater-cf-worker",
@@ -1976,58 +2046,6 @@
     "pushed_at": "2026-09-26T18:56:59Z"
   },
   {
-    "name": "timesfm-rs",
-    "description": "Native Rust implementation of Google Research's TimesFM foundation model for zero-shot time series forecasting via Candle.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "github_url": "https://github.com/bhubbard/timesfm-rs",
-    "target_url": "https://github.com/bhubbard/timesfm-rs",
-    "topics": [
-      "candle",
-      "forecasting",
-      "google-research",
-      "machine-learning",
-      "rust",
-      "time-series",
-      "timesfm"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:58Z"
-  },
-  {
-    "name": "unified-audit-rs",
-    "description": "Consolidated high-performance post-build CI verification and auditing gate for Astro and static sites in Rust.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "github_url": "https://github.com/bhubbard/unified-audit-rs",
-    "target_url": "https://github.com/bhubbard/unified-audit-rs",
-    "topics": [
-      "astro",
-      "audit",
-      "ci-cd",
-      "quality-gate",
-      "rust",
-      "static-analysis",
-      "web-standards"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:57Z"
-  },
-  {
     "name": "unlighthouse-rs",
     "description": "A Rust port of the Unlighthouse Lighthouse auditing tool.",
     "language": "Rust",
@@ -2100,28 +2118,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:57:17Z"
-  },
-  {
-    "name": "wp-givebutter-api",
-    "description": "A WordPress library to work with the GiveButter Public API.",
-    "language": "PHP",
-    "category": "wordpress",
-    "categories": [
-      "wordpress"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "github_url": "https://github.com/bhubbard/wp-givebutter-api",
-    "target_url": "https://github.com/bhubbard/wp-givebutter-api",
-    "topics": [
-      "api",
-      "givebutter",
-      "php",
-      "wordpress"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:20Z"
   },
   {
     "name": "wp-theme-check-cli",
