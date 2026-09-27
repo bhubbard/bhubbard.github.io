@@ -1,5 +1,103 @@
 [
   {
+    "name": "talks",
+    "description": "My talks and presentations!",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://talks.brandonhubbard.com/",
+    "github_url": "https://github.com/bhubbard/talks",
+    "target_url": "https://talks.brandonhubbard.com/",
+    "topics": [
+      "presentations",
+      "talks",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2026-09-26T16:29:54Z"
+  },
+  {
+    "name": "vite-plus-commitlint",
+    "description": "A commitlint plugin for vite plus",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "topics": [
+      "automation",
+      "developer-tools",
+      "vite"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:30Z"
+  },
+  {
+    "name": "vite-plus-kumo-ui",
+    "description": "Vite development preset and bundler plugins tailored for Cloudflare's internal Kumo UI component library.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
+    "github_url": "https://github.com/bhubbard/vite-plus-kumo-ui",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
+    "topics": [
+      "bundler",
+      "cloudflare",
+      "cloudflare-workers",
+      "design-system",
+      "kumo-ui",
+      "react",
+      "serverless",
+      "typescript",
+      "vite"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:29Z"
+  },
+  {
+    "name": "zev-rs",
+    "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/zev-rs/",
+    "github_url": "https://github.com/bhubbard/zev-rs",
+    "target_url": "https://code.brandonhubbard.com/zev-rs/",
+    "topics": [
+      "ai",
+      "ai-inference",
+      "decision-engine",
+      "heuristics",
+      "llm-orchestration",
+      "performance",
+      "rust",
+      "zero-token"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T06:03:58Z"
+  },
+  {
     "name": "active-ragdoll-rs",
     "description": "Open source software and systems engineering by Brandon Hubbard.",
     "language": "Rust",
@@ -15,7 +113,7 @@
     "target_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:54Z"
+    "pushed_at": "2026-09-26T19:22:37Z"
   },
   {
     "name": "aesir-utils-rs",
@@ -33,7 +131,7 @@
     "target_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:53Z"
+    "pushed_at": "2026-09-26T19:52:01Z"
   },
   {
     "name": "apfel-rs",
@@ -59,7 +157,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:52Z"
+    "pushed_at": "2026-09-26T19:08:00Z"
   },
   {
     "name": "astro-client-directive-ai",
@@ -340,6 +438,24 @@
     "pushed_at": "2026-09-26T18:56:15Z"
   },
   {
+    "name": "auge-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/auge-rs/",
+    "github_url": "https://github.com/bhubbard/auge-rs",
+    "target_url": "https://code.brandonhubbard.com/auge-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T04:01:43Z"
+  },
+  {
     "name": "bhubbard.github.io",
     "description": "Official Open Source Software Portal & Chrome Built-in AI Specification Hub by Brandon Hubbard.",
     "language": "HTML",
@@ -362,7 +478,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:13Z"
+    "pushed_at": "2026-09-26T23:07:18Z"
   },
   {
     "name": "bullet3-rs",
@@ -380,7 +496,7 @@
     "target_url": "https://code.brandonhubbard.com/bullet3-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:50Z"
+    "pushed_at": "2026-09-26T19:09:19Z"
   },
   {
     "name": "clippy-cf-reporter",
@@ -421,7 +537,7 @@
     "target_url": "https://code.brandonhubbard.com/defy-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:48Z"
+    "pushed_at": "2026-09-26T19:48:49Z"
   },
   {
     "name": "detour-crowd-rs",
@@ -439,7 +555,7 @@
     "target_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:47Z"
+    "pushed_at": "2026-09-26T19:15:53Z"
   },
   {
     "name": "dialogger-rs",
@@ -457,7 +573,7 @@
     "target_url": "https://code.brandonhubbard.com/dialogger-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:46Z"
+    "pushed_at": "2026-09-26T19:35:31Z"
   },
   {
     "name": "flareguard",
@@ -487,7 +603,7 @@
       "waf"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:46:04Z"
+    "pushed_at": "2026-09-26T18:58:50Z"
   },
   {
     "name": "flarelint",
@@ -547,7 +663,7 @@
       "pages"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:46:09Z"
+    "pushed_at": "2026-09-26T18:58:48Z"
   },
   {
     "name": "flareperf",
@@ -576,7 +692,7 @@
       "workers"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:46:11Z"
+    "pushed_at": "2026-09-26T18:58:46Z"
   },
   {
     "name": "gambetta-netcode-rs",
@@ -594,7 +710,7 @@
     "target_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:45Z"
+    "pushed_at": "2026-09-26T19:28:24Z"
   },
   {
     "name": "godot-rs",
@@ -612,7 +728,25 @@
     "target_url": "https://code.brandonhubbard.com/godot-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:44Z"
+    "pushed_at": "2026-09-26T19:24:27Z"
+  },
+  {
+    "name": "handbrake-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/handbrake-rs/",
+    "github_url": "https://github.com/bhubbard/handbrake-rs",
+    "target_url": "https://code.brandonhubbard.com/handbrake-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T06:55:03Z"
   },
   {
     "name": "hyperframes-rs",
@@ -630,7 +764,61 @@
     "target_url": "https://code.brandonhubbard.com/hyperframes-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:43Z"
+    "pushed_at": "2026-09-26T23:07:12Z"
+  },
+  {
+    "name": "lossless-cut-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/lossless-cut-rs/",
+    "github_url": "https://github.com/bhubbard/lossless-cut-rs",
+    "target_url": "https://code.brandonhubbard.com/lossless-cut-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T05:48:18Z"
+  },
+  {
+    "name": "lux-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/lux-rs/",
+    "github_url": "https://github.com/bhubbard/lux-rs",
+    "target_url": "https://code.brandonhubbard.com/lux-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T05:44:36Z"
+  },
+  {
+    "name": "mflux-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mflux-rs/",
+    "github_url": "https://github.com/bhubbard/mflux-rs",
+    "target_url": "https://code.brandonhubbard.com/mflux-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T06:26:56Z"
   },
   {
     "name": "minimal-hud-rs",
@@ -648,7 +836,115 @@
     "target_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:53:17Z"
+    "pushed_at": "2026-09-26T19:40:14Z"
+  },
+  {
+    "name": "mlt-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlt-rs/",
+    "github_url": "https://github.com/bhubbard/mlt-rs",
+    "target_url": "https://code.brandonhubbard.com/mlt-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T07:00:52Z"
+  },
+  {
+    "name": "mlx-audio-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlx-audio-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-audio-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-audio-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T06:04:24Z"
+  },
+  {
+    "name": "mlx-embeddings-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-embeddings-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T06:34:58Z"
+  },
+  {
+    "name": "mlx-serve-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlx-serve-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-serve-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-serve-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T06:49:38Z"
+  },
+  {
+    "name": "mlx-video-rs",
+    "description": "Native Apple Silicon MLX Video generation and inference in Rust (Wan2.1, Wan2.2, LTX-2)",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlx-video-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-video-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-video-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T05:37:15Z"
+  },
+  {
+    "name": "mlx-vlm-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlx-vlm-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-vlm-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-vlm-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T06:41:57Z"
   },
   {
     "name": "npwd-rs",
@@ -666,17 +962,61 @@
     "target_url": "https://code.brandonhubbard.com/npwd-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:42Z"
+    "pushed_at": "2026-09-26T19:38:14Z"
+  },
+  {
+    "name": "olive-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/olive-rs/",
+    "github_url": "https://github.com/bhubbard/olive-rs",
+    "target_url": "https://code.brandonhubbard.com/olive-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T07:08:41Z"
+  },
+  {
+    "name": "open-generative-ai-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/open-generative-ai-rs/",
+    "github_url": "https://github.com/bhubbard/open-generative-ai-rs",
+    "target_url": "https://code.brandonhubbard.com/open-generative-ai-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T22:58:29Z"
   },
   {
     "name": "open-higgsfield-ai-rs",
-    "fullName": "bhubbard/open-higgsfield-ai-rs",
     "description": "Native Rust engine and studio client for Open-Higgsfield-AI: 220+ image, video, lipsync, and cinema camera models with Axum web studio and CLI.",
-    "url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
-    "pagesUrl": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
-    "primaryLanguage": "Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
     "stars": 0,
-    "latestRelease": "v0.0.1"
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "github_url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
+    "target_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T23:19:22Z"
   },
   {
     "name": "openrw-rs",
@@ -694,7 +1034,7 @@
     "target_url": "https://code.brandonhubbard.com/openrw-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:41Z"
+    "pushed_at": "2026-09-26T19:26:17Z"
   },
   {
     "name": "poormans-camera-rs",
@@ -712,7 +1052,7 @@
     "target_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:40Z"
+    "pushed_at": "2026-09-26T19:33:59Z"
   },
   {
     "name": "radial-menu-rs",
@@ -730,7 +1070,7 @@
     "target_url": "https://code.brandonhubbard.com/radial-menu-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:39Z"
+    "pushed_at": "2026-09-26T19:43:44Z"
   },
   {
     "name": "sdf-math-rs",
@@ -748,7 +1088,7 @@
     "target_url": "https://code.brandonhubbard.com/sdf-math-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:39Z"
+    "pushed_at": "2026-09-26T19:32:38Z"
   },
   {
     "name": "sfxr-rs",
@@ -766,7 +1106,7 @@
     "target_url": "https://code.brandonhubbard.com/sfxr-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:37Z"
+    "pushed_at": "2026-09-26T19:12:46Z"
   },
   {
     "name": "simplecar2-rs",
@@ -784,7 +1124,7 @@
     "target_url": "https://code.brandonhubbard.com/simplecar2-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:36Z"
+    "pushed_at": "2026-09-26T19:19:56Z"
   },
   {
     "name": "sumo-rs",
@@ -802,7 +1142,7 @@
     "target_url": "https://code.brandonhubbard.com/sumo-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:35Z"
+    "pushed_at": "2026-09-26T19:18:17Z"
   },
   {
     "name": "tactical-ai-rs",
@@ -820,28 +1160,7 @@
     "target_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:34Z"
-  },
-  {
-    "name": "talks",
-    "description": "My talks and presentations!",
-    "language": "JavaScript",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://talks.brandonhubbard.com/",
-    "github_url": "https://github.com/bhubbard/talks",
-    "target_url": "https://talks.brandonhubbard.com/",
-    "topics": [
-      "presentations",
-      "talks",
-      "wordpress"
-    ],
-    "is_archived": true,
-    "pushed_at": "2026-09-26T16:29:54Z"
+    "pushed_at": "2026-09-26T19:30:33Z"
   },
   {
     "name": "tlab-vehicle-physics-rs",
@@ -859,7 +1178,25 @@
     "target_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:33Z"
+    "pushed_at": "2026-09-26T19:21:03Z"
+  },
+  {
+    "name": "translate-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/translate-rs/",
+    "github_url": "https://github.com/bhubbard/translate-rs",
+    "target_url": "https://code.brandonhubbard.com/translate-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T04:01:36Z"
   },
   {
     "name": "uxsim-rs",
@@ -877,7 +1214,7 @@
     "target_url": "https://code.brandonhubbard.com/uxsim-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:32Z"
+    "pushed_at": "2026-09-26T19:10:55Z"
   },
   {
     "name": "vhud-rs",
@@ -895,7 +1232,7 @@
     "target_url": "https://code.brandonhubbard.com/vhud-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:31Z"
+    "pushed_at": "2026-09-26T19:42:00Z"
   },
   {
     "name": "video-use-rs",
@@ -921,56 +1258,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:56:14Z"
-  },
-  {
-    "name": "vite-plus-commitlint",
-    "description": "A commitlint plugin for vite plus",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
-    "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
-    "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
-    "topics": [
-      "automation",
-      "developer-tools",
-      "vite"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:30Z"
-  },
-  {
-    "name": "vite-plus-kumo-ui",
-    "description": "Vite development preset and bundler plugins tailored for Cloudflare's internal Kumo UI component library.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
-    "github_url": "https://github.com/bhubbard/vite-plus-kumo-ui",
-    "target_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
-    "topics": [
-      "bundler",
-      "cloudflare",
-      "cloudflare-workers",
-      "design-system",
-      "kumo-ui",
-      "react",
-      "serverless",
-      "typescript",
-      "vite"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:29Z"
   },
   {
     "name": "vite-plus-wrangler",
@@ -1000,30 +1287,21 @@
     "pushed_at": "2026-09-26T18:56:28Z"
   },
   {
-    "name": "zev-rs",
-    "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
+    "name": "yt-dlp-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
     "language": "Rust",
     "category": "cli",
     "categories": [
       "cli",
       "rust"
     ],
-    "stars": 1,
+    "stars": 0,
     "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/zev-rs/",
-    "github_url": "https://github.com/bhubbard/zev-rs",
-    "target_url": "https://code.brandonhubbard.com/zev-rs/",
-    "topics": [
-      "ai",
-      "ai-inference",
-      "decision-engine",
-      "heuristics",
-      "llm-orchestration",
-      "performance",
-      "rust",
-      "zero-token"
-    ],
+    "page_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
+    "github_url": "https://github.com/bhubbard/yt-dlp-rs",
+    "target_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
+    "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:53:30Z"
+    "pushed_at": "2026-09-27T05:54:51Z"
   }
 ]
