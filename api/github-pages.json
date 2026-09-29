@@ -40,7 +40,7 @@
       "vite"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:03:34Z"
+    "pushed_at": "2026-09-28T20:36:46Z"
   },
   {
     "name": "vite-plus-kumo-ui",
@@ -68,7 +68,7 @@
       "vite"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:03:36Z"
+    "pushed_at": "2026-09-28T20:36:57Z"
   },
   {
     "name": "zev-rs",
@@ -99,7 +99,7 @@
   },
   {
     "name": "active-ragdoll-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Pure Rust physical active ragdoll simulation, joint motors, and balance recovery",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -111,13 +111,19 @@
     "page_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
     "github_url": "https://github.com/bhubbard/active-ragdoll-rs",
     "target_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
-    "topics": [],
+    "topics": [
+      "balance-control",
+      "joint-motors",
+      "physics-simulation",
+      "ragdoll",
+      "rust"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:22:37Z"
+    "pushed_at": "2026-09-28T20:17:20Z"
   },
   {
     "name": "aesir-utils-rs",
-    "description": "Pure Rust screen safezone, aspect ratio correction, and UI anchor positioning engine from FiveM aesir_utils",
+    "description": "Pure Rust screen safezone, aspect ratio correction, and UI alignment math for games",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -129,7 +135,14 @@
     "page_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
     "github_url": "https://github.com/bhubbard/aesir-utils-rs",
     "target_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
-    "topics": [],
+    "topics": [
+      "aspect-ratio",
+      "fivem",
+      "gamedev",
+      "math",
+      "rust",
+      "ui-layout"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:52:01Z"
   },
@@ -157,7 +170,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T16:52:55Z"
+    "pushed_at": "2026-09-28T19:56:36Z"
   },
   {
     "name": "astro-client-directive-ai",
@@ -439,7 +452,7 @@
   },
   {
     "name": "auge-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Rust port of Auge video editing automation and generative visual synthesis",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -451,7 +464,12 @@
     "page_url": "https://code.brandonhubbard.com/auge-rs/",
     "github_url": "https://github.com/bhubbard/auge-rs",
     "target_url": "https://code.brandonhubbard.com/auge-rs/",
-    "topics": [],
+    "topics": [
+      "generative-video",
+      "media-processing",
+      "rust",
+      "video-automation"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-27T17:02:49Z"
   },
@@ -478,11 +496,11 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:02:28Z"
+    "pushed_at": "2026-09-28T12:06:23Z"
   },
   {
     "name": "bullet3-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Pure Rust port of Bullet3 3D rigid body dynamics and collision detection",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -494,13 +512,19 @@
     "page_url": "https://code.brandonhubbard.com/bullet3-rs/",
     "github_url": "https://github.com/bhubbard/bullet3-rs",
     "target_url": "https://code.brandonhubbard.com/bullet3-rs/",
-    "topics": [],
+    "topics": [
+      "3d-physics",
+      "bullet-physics",
+      "collision-detection",
+      "rigid-body",
+      "rust"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:09:19Z"
+    "pushed_at": "2026-09-28T20:08:06Z"
   },
   {
     "name": "clippy-cf-reporter",
-    "description": "Translates worker-rs Clippy compiler diagnostics into Code Climate JSON, SARIF v2.1.0, and GitHub PR annotations.",
+    "description": "Automated Cargo Clippy static analysis and GitHub PR annotation reporter for Cloudflare",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -514,8 +538,13 @@
     "target_url": "https://code.brandonhubbard.com/clippy-cf-reporter/",
     "topics": [
       "cli",
+      "clippy",
       "cloudflare",
       "cloudflare-workers",
+      "code-quality",
+      "github-actions",
+      "linter",
+      "rust",
       "serverless"
     ],
     "is_archived": false,
@@ -523,7 +552,7 @@
   },
   {
     "name": "comfyui-ltxvideo-mlx-rs",
-    "description": "High-performance LTX-Video 2.3 runtime & ComfyUI node engine for Apple Silicon (Rust fork of dgrauet/ComfyUI-LTXVideo-mlx)",
+    "description": "ComfyUI LTX-Video generation runner and node pipeline on Apple Silicon in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -551,7 +580,7 @@
   },
   {
     "name": "defy-rs",
-    "description": "Pure Rust port of police wanted-level, pursuit dispatch, and NPC crime interaction systems from Defy",
+    "description": "Pure Rust police wanted-level, pursuit dispatch, and AI aggression state machine",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -563,13 +592,20 @@
     "page_url": "https://code.brandonhubbard.com/defy-rs/",
     "github_url": "https://github.com/bhubbard/defy-rs",
     "target_url": "https://code.brandonhubbard.com/defy-rs/",
-    "topics": [],
+    "topics": [
+      "fivem",
+      "game-ai",
+      "gamedev",
+      "pursuit-ai",
+      "rust",
+      "state-machine"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:48:49Z"
   },
   {
     "name": "detour-crowd-rs",
-    "description": "Pure Rust port of DetourCrowd from RecastNavigation: RVO collision avoidance, proximity grid, and crowd path steering",
+    "description": "Pure Rust port of DetourCrowd: RVO collision avoidance and pathfinding",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -581,13 +617,20 @@
     "page_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
     "github_url": "https://github.com/bhubbard/detour-crowd-rs",
     "target_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
-    "topics": [],
+    "topics": [
+      "crowd-simulation",
+      "navigation-mesh",
+      "pathfinding",
+      "recast",
+      "rust",
+      "rvo"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:15:53Z"
+    "pushed_at": "2026-09-28T20:13:31Z"
   },
   {
     "name": "dialogger-rs",
-    "description": "Pure Rust branching dialogue graph evaluator and NPC bark engine from Dialogger",
+    "description": "Pure Rust branching dialogue graph evaluator and NPC bark engine",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -599,13 +642,19 @@
     "page_url": "https://code.brandonhubbard.com/dialogger-rs/",
     "github_url": "https://github.com/bhubbard/dialogger-rs",
     "target_url": "https://code.brandonhubbard.com/dialogger-rs/",
-    "topics": [],
+    "topics": [
+      "dialogue-tree",
+      "game-narrative",
+      "gamedev",
+      "graph-evaluator",
+      "rust"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:35:31Z"
   },
   {
     "name": "flareguard",
-    "description": "\ud83d\udee1\ufe0f Unified Cloudflare Security Guardian \u2014 AST secret scanning, Worker binding verification, Zone posture auditing, and origin IP leak hunting.",
+    "description": "Unified Cloudflare Security Guardian \u2014 AST secret scanning and edge policy engine",
     "language": "Rust",
     "category": "flare",
     "categories": [
@@ -625,7 +674,9 @@
       "cloudflare",
       "cloudflare-workers",
       "devops",
+      "edge-computing",
       "rust",
+      "secret-scanner",
       "security",
       "serverless",
       "waf"
@@ -665,7 +716,7 @@
   },
   {
     "name": "flareops",
-    "description": "\u26a1 Developer operations & workflow CLI for Cloudflare Workers, Pages, and Astro \u2014 type generation, secret sync, route optimization, and unified verification.",
+    "description": "Developer operations and workflow CLI for Cloudflare Workers, D1, and KV",
     "language": "Rust",
     "category": "flare",
     "categories": [
@@ -687,15 +738,17 @@
       "cloudflare-workers",
       "devops",
       "dx",
+      "edge-computing",
       "headers",
-      "pages"
+      "pages",
+      "rust"
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:58:48Z"
   },
   {
     "name": "flareperf",
-    "description": "Unified Cloudflare Edge Performance & Budget Guardian \u2014 Bundle size budgets, V8 isolate cold-start analysis, 50-subrequest limits, and D1 batching.",
+    "description": "Unified Cloudflare Edge Performance Guardian \u2014 Bundle analyzer and cold-start profiler",
     "language": "Rust",
     "category": "flare",
     "categories": [
@@ -710,11 +763,14 @@
     "target_url": "https://code.brandonhubbard.com/flareperf/",
     "topics": [
       "ast",
+      "bundle-analyzer",
       "cli",
       "cloudflare",
       "cloudflare-workers",
+      "cold-start",
       "d1",
       "performance",
+      "rust",
       "serverless",
       "subrequests",
       "workers"
@@ -724,7 +780,7 @@
   },
   {
     "name": "gambetta-netcode-rs",
-    "description": "Pure Rust client-side prediction, server reconciliation, entity interpolation, and lag compensation netcode from Gabriel Gambetta",
+    "description": "Pure Rust client-side prediction, server reconciliation, and entity interpolation",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -736,13 +792,20 @@
     "page_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
     "github_url": "https://github.com/bhubbard/gambetta-netcode-rs",
     "target_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
-    "topics": [],
+    "topics": [
+      "client-prediction",
+      "gamedev",
+      "multiplayer",
+      "netcode",
+      "reconciliation",
+      "rust"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:28:24Z"
+    "pushed_at": "2026-09-28T20:15:57Z"
   },
   {
     "name": "godot-rs",
-    "description": "Pure Rust port and architecture fork of Godot Engine (godotengine/godot)",
+    "description": "Pure Rust architecture fork of Godot Engine core scene tree and node lifecycle",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -754,13 +817,19 @@
     "page_url": "https://code.brandonhubbard.com/godot-rs/",
     "github_url": "https://github.com/bhubbard/godot-rs",
     "target_url": "https://code.brandonhubbard.com/godot-rs/",
-    "topics": [],
+    "topics": [
+      "game-engine",
+      "godot",
+      "node-system",
+      "rust",
+      "scene-tree"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:24:27Z"
   },
   {
     "name": "handbrake-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "High-efficiency media transcoding and filter pipeline engine in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -772,13 +841,19 @@
     "page_url": "https://code.brandonhubbard.com/handbrake-rs/",
     "github_url": "https://github.com/bhubbard/handbrake-rs",
     "target_url": "https://code.brandonhubbard.com/handbrake-rs/",
-    "topics": [],
+    "topics": [
+      "handbrake",
+      "media-pipeline",
+      "rust",
+      "video-compression",
+      "video-transcoding"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:02:57Z"
+    "pushed_at": "2026-09-28T20:32:30Z"
   },
   {
     "name": "hyperframes-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Generative programmatic video frame composition and motion graphics in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -790,13 +865,19 @@
     "page_url": "https://code.brandonhubbard.com/hyperframes-rs/",
     "github_url": "https://github.com/bhubbard/hyperframes-rs",
     "target_url": "https://code.brandonhubbard.com/hyperframes-rs/",
-    "topics": [],
+    "topics": [
+      "frame-composition",
+      "motion-graphics",
+      "programmatic-video",
+      "rust",
+      "vfx"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T23:07:12Z"
   },
   {
     "name": "lossless-cut-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "High-speed lossless video and audio trimmer and stream extractor in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -808,13 +889,20 @@
     "page_url": "https://code.brandonhubbard.com/lossless-cut-rs/",
     "github_url": "https://github.com/bhubbard/lossless-cut-rs",
     "target_url": "https://code.brandonhubbard.com/lossless-cut-rs/",
-    "topics": [],
+    "topics": [
+      "cli",
+      "ffmpeg",
+      "lossless-cut",
+      "media-processing",
+      "rust",
+      "video-trimmer"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:02:59Z"
+    "pushed_at": "2026-09-28T20:33:46Z"
   },
   {
     "name": "lux-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Physically based volumetric rendering and lighting simulation engine in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -826,13 +914,19 @@
     "page_url": "https://code.brandonhubbard.com/lux-rs/",
     "github_url": "https://github.com/bhubbard/lux-rs",
     "target_url": "https://code.brandonhubbard.com/lux-rs/",
-    "topics": [],
+    "topics": [
+      "computer-graphics",
+      "lighting-engine",
+      "raytracing",
+      "rust",
+      "volumetric-rendering"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-27T17:03:01Z"
   },
   {
     "name": "mflux-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Pure Rust Flux.1 image generation pipeline optimized for Apple Silicon neural inference",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -844,13 +938,20 @@
     "page_url": "https://code.brandonhubbard.com/mflux-rs/",
     "github_url": "https://github.com/bhubbard/mflux-rs",
     "target_url": "https://code.brandonhubbard.com/mflux-rs/",
-    "topics": [],
+    "topics": [
+      "apple-silicon",
+      "diffusion-models",
+      "flux1",
+      "mlx",
+      "rust",
+      "text-to-image"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:03:04Z"
+    "pushed_at": "2026-09-28T20:30:23Z"
   },
   {
     "name": "minimal-hud-rs",
-    "description": "Pure Rust event-driven HUD state tracking, dirty change detection, vital stats, and vehicle telemetry from minimal-hud",
+    "description": "Pure Rust event-driven HUD state tracking with dirty change detection",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -862,13 +963,19 @@
     "page_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
     "github_url": "https://github.com/bhubbard/minimal-hud-rs",
     "target_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
-    "topics": [],
+    "topics": [
+      "gamedev",
+      "hud",
+      "rust",
+      "state-management",
+      "ui-framework"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:40:14Z"
   },
   {
     "name": "mlt-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Pure Rust port of MLT multimedia framework engine for video playback, mixing, and filters",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -880,13 +987,20 @@
     "page_url": "https://code.brandonhubbard.com/mlt-rs/",
     "github_url": "https://github.com/bhubbard/mlt-rs",
     "target_url": "https://code.brandonhubbard.com/mlt-rs/",
-    "topics": [],
+    "topics": [
+      "audio-mixer",
+      "mlt",
+      "multimedia",
+      "rust",
+      "streaming",
+      "video-processing"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:03:06Z"
+    "pushed_at": "2026-09-28T20:35:27Z"
   },
   {
     "name": "mlx-audio-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "On-device speech recognition and neural audio synthesis via MLX in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -898,13 +1012,20 @@
     "page_url": "https://code.brandonhubbard.com/mlx-audio-rs/",
     "github_url": "https://github.com/bhubbard/mlx-audio-rs",
     "target_url": "https://code.brandonhubbard.com/mlx-audio-rs/",
-    "topics": [],
+    "topics": [
+      "apple-silicon",
+      "audio-processing",
+      "mlx",
+      "rust",
+      "speech-to-text",
+      "whisper"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:03:09Z"
+    "pushed_at": "2026-09-28T20:28:32Z"
   },
   {
     "name": "mlx-embeddings-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "High-throughput vector embeddings and semantic search on Apple Silicon in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -916,13 +1037,20 @@
     "page_url": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
     "github_url": "https://github.com/bhubbard/mlx-embeddings-rs",
     "target_url": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
-    "topics": [],
+    "topics": [
+      "apple-silicon",
+      "embeddings",
+      "mlx",
+      "rust",
+      "semantic-search",
+      "vector-search"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:03:11Z"
+    "pushed_at": "2026-09-28T20:25:26Z"
   },
   {
     "name": "mlx-gen-rs",
-    "description": "High-performance generative image & video runtime for Apple Silicon (Rust fork of lpalbou/mlx-gen)",
+    "description": "Fast text generation and LLM sampling on Apple Silicon via Rust and MLX",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -940,17 +1068,20 @@
       "flux",
       "generative-ai",
       "image-generation",
+      "llm",
       "mlx",
       "rust",
+      "text-generation",
+      "transformer",
       "video-generation",
       "wan"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:03:13Z"
+    "pushed_at": "2026-09-28T20:27:12Z"
   },
   {
     "name": "mlx-serve-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Ultra-lean Axum and MLX model inference server with OpenAI-compatible endpoints",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -962,7 +1093,15 @@
     "page_url": "https://code.brandonhubbard.com/mlx-serve-rs/",
     "github_url": "https://github.com/bhubbard/mlx-serve-rs",
     "target_url": "https://code.brandonhubbard.com/mlx-serve-rs/",
-    "topics": [],
+    "topics": [
+      "apple-silicon",
+      "axum",
+      "llm-server",
+      "mlx",
+      "openai-api",
+      "rust",
+      "streaming"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-27T17:03:15Z"
   },
@@ -986,7 +1125,7 @@
   },
   {
     "name": "mlx-vlm-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Vision-language model inference on Apple Silicon using Rust and MLX",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -998,13 +1137,20 @@
     "page_url": "https://code.brandonhubbard.com/mlx-vlm-rs/",
     "github_url": "https://github.com/bhubbard/mlx-vlm-rs",
     "target_url": "https://code.brandonhubbard.com/mlx-vlm-rs/",
-    "topics": [],
+    "topics": [
+      "apple-silicon",
+      "mlx",
+      "multimodal",
+      "rust",
+      "vision-language",
+      "vlm"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-27T17:03:18Z"
   },
   {
     "name": "npwd-rs",
-    "description": "Pure Rust simulated in-game smartphone architecture, OS state machine, apps, and game-world event bridge from NPWD",
+    "description": "Pure Rust simulated in-game smartphone architecture and OS state machine",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1016,13 +1162,19 @@
     "page_url": "https://code.brandonhubbard.com/npwd-rs/",
     "github_url": "https://github.com/bhubbard/npwd-rs",
     "target_url": "https://code.brandonhubbard.com/npwd-rs/",
-    "topics": [],
+    "topics": [
+      "gamedev",
+      "os-architecture",
+      "rust",
+      "smartphone-sim",
+      "state-machine"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:38:14Z"
   },
   {
     "name": "olive-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Pure Rust port of Olive video editor non-linear timeline and node compositor engine",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1034,13 +1186,19 @@
     "page_url": "https://code.brandonhubbard.com/olive-rs/",
     "github_url": "https://github.com/bhubbard/olive-rs",
     "target_url": "https://code.brandonhubbard.com/olive-rs/",
-    "topics": [],
+    "topics": [
+      "node-compositor",
+      "rust",
+      "timeline",
+      "video-editor",
+      "video-processing"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-27T17:03:20Z"
   },
   {
     "name": "open-generative-ai-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Unified neural inference and generative AI orchestration runtime in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1052,13 +1210,19 @@
     "page_url": "https://code.brandonhubbard.com/open-generative-ai-rs/",
     "github_url": "https://github.com/bhubbard/open-generative-ai-rs",
     "target_url": "https://code.brandonhubbard.com/open-generative-ai-rs/",
-    "topics": [],
+    "topics": [
+      "apple-silicon",
+      "generative-ai",
+      "inference-engine",
+      "neural-networks",
+      "rust"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-27T17:03:22Z"
   },
   {
     "name": "open-higgsfield-ai-rs",
-    "description": "Native Rust engine and studio client for Open-Higgsfield-AI: 220+ image, video, lipsync, and cinema camera models with Axum web studio and CLI.",
+    "description": "Open-source video generation and motion-guided neural synthesis pipeline in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1070,13 +1234,19 @@
     "page_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
     "github_url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
     "target_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
-    "topics": [],
+    "topics": [
+      "apple-silicon",
+      "diffusion",
+      "generative-ai",
+      "rust",
+      "video-generation"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-27T17:03:25Z"
   },
   {
     "name": "openrw-rs",
-    "description": "Pure Rust port of GTA III camera follow, weapon targeting math, and player state machines from OpenRW",
+    "description": "Pure Rust port of GTA III camera follow, weapon targeting math, and entity kinematics",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1088,13 +1258,19 @@
     "page_url": "https://code.brandonhubbard.com/openrw-rs/",
     "github_url": "https://github.com/bhubbard/openrw-rs",
     "target_url": "https://code.brandonhubbard.com/openrw-rs/",
-    "topics": [],
+    "topics": [
+      "3d-kinematics",
+      "game-engine",
+      "gta-engine",
+      "openrw",
+      "rust"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:26:17Z"
   },
   {
     "name": "poormans-camera-rs",
-    "description": "Pure Rust 3D third-person camera rig with sphere-cast collision avoidance and spring damping from Evan Todd",
+    "description": "Pure Rust 3D third-person camera rig with sphere-cast collision avoidance",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1106,13 +1282,20 @@
     "page_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
     "github_url": "https://github.com/bhubbard/poormans-camera-rs",
     "target_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
-    "topics": [],
+    "topics": [
+      "3d-math",
+      "camera-rig",
+      "collision-avoidance",
+      "gamedev",
+      "rust",
+      "third-person"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:33:59Z"
   },
   {
     "name": "radial-menu-rs",
-    "description": "Pure Rust radial menu and weapon wheel system with angle math, deadzone filtering, and easing animations",
+    "description": "Pure Rust radial menu and weapon wheel system with angle matching and deadzones",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1124,13 +1307,19 @@
     "page_url": "https://code.brandonhubbard.com/radial-menu-rs/",
     "github_url": "https://github.com/bhubbard/radial-menu-rs",
     "target_url": "https://code.brandonhubbard.com/radial-menu-rs/",
-    "topics": [],
+    "topics": [
+      "gamedev",
+      "input-handling",
+      "radial-menu",
+      "rust",
+      "ui-components"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:43:44Z"
   },
   {
     "name": "sdf-math-rs",
-    "description": "Pure Rust 2D and 3D Signed Distance Fields, CSG smooth blending, and ray marching from Inigo Quilez",
+    "description": "Pure Rust 2D and 3D Signed Distance Fields, CSG smooth blending, and raymarching",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1142,13 +1331,20 @@
     "page_url": "https://code.brandonhubbard.com/sdf-math-rs/",
     "github_url": "https://github.com/bhubbard/sdf-math-rs",
     "target_url": "https://code.brandonhubbard.com/sdf-math-rs/",
-    "topics": [],
+    "topics": [
+      "3d-math",
+      "raymarching",
+      "rust",
+      "sdf",
+      "shaders",
+      "signed-distance-fields"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:32:38Z"
+    "pushed_at": "2026-09-28T20:07:04Z"
   },
   {
     "name": "sfxr-rs",
-    "description": "Pure Rust procedural 8-bit/16-bit sound effect generator and synthesizer from SFXR",
+    "description": "Pure Rust procedural 8-bit sound effect generator and audio synthesizer",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1160,13 +1356,20 @@
     "page_url": "https://code.brandonhubbard.com/sfxr-rs/",
     "github_url": "https://github.com/bhubbard/sfxr-rs",
     "target_url": "https://code.brandonhubbard.com/sfxr-rs/",
-    "topics": [],
+    "topics": [
+      "8-bit",
+      "dsp",
+      "procedural-audio",
+      "rust",
+      "sfxr",
+      "sound-synthesis"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:12:46Z"
+    "pushed_at": "2026-09-28T20:05:52Z"
   },
   {
     "name": "simplecar2-rs",
-    "description": "Pure Rust arcade-sim vehicle dynamics, raycast suspension, drivetrain, and transmission from SimpleCar2",
+    "description": "Pure Rust arcade-sim vehicle dynamics, raycast suspension, and drivetrain",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1178,13 +1381,19 @@
     "page_url": "https://code.brandonhubbard.com/simplecar2-rs/",
     "github_url": "https://github.com/bhubbard/simplecar2-rs",
     "target_url": "https://code.brandonhubbard.com/simplecar2-rs/",
-    "topics": [],
+    "topics": [
+      "car-physics",
+      "gamedev",
+      "raycast-suspension",
+      "rust",
+      "vehicle-dynamics"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:19:56Z"
+    "pushed_at": "2026-09-28T20:10:40Z"
   },
   {
     "name": "sumo-rs",
-    "description": "Pure Rust microscopic traffic simulation engine featuring IDM, Krauss car-following, MOBIL lane changing, and intersection right-of-way from SUMO",
+    "description": "Pure Rust microscopic traffic simulation engine featuring IDM car-following",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1196,13 +1405,20 @@
     "page_url": "https://code.brandonhubbard.com/sumo-rs/",
     "github_url": "https://github.com/bhubbard/sumo-rs",
     "target_url": "https://code.brandonhubbard.com/sumo-rs/",
-    "topics": [],
+    "topics": [
+      "idm",
+      "microscopic-traffic",
+      "mobility",
+      "rust",
+      "sumo",
+      "traffic-simulation"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:18:17Z"
+    "pushed_at": "2026-09-28T20:11:58Z"
   },
   {
     "name": "tactical-ai-rs",
-    "description": "Pure Rust tactical influence maps, spatial reasoning, cover finding, and flanking pathfinder from Game AI Pro",
+    "description": "Pure Rust tactical influence maps, spatial reasoning, and cover evaluation for game AI",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1214,13 +1430,19 @@
     "page_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
     "github_url": "https://github.com/bhubbard/tactical-ai-rs",
     "target_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
-    "topics": [],
+    "topics": [
+      "game-ai",
+      "influence-maps",
+      "rust",
+      "spatial-reasoning",
+      "tactical-ai"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:30:33Z"
   },
   {
     "name": "timesfm-rs",
-    "description": "Native Rust implementation of Google Research's TimesFM foundation model for zero-shot time series forecasting via Candle.",
+    "description": "High-performance Rust inference engine for Google's TimesFM time-series foundation model",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1233,20 +1455,23 @@
     "github_url": "https://github.com/bhubbard/timesfm-rs",
     "target_url": "https://code.brandonhubbard.com/timesfm-rs/",
     "topics": [
+      "apple-silicon",
       "candle",
       "forecasting",
+      "foundation-models",
       "google-research",
       "machine-learning",
+      "mlx",
       "rust",
       "time-series",
       "timesfm"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:03:27Z"
+    "pushed_at": "2026-09-28T20:20:07Z"
   },
   {
     "name": "tlab-vehicle-physics-rs",
-    "description": "Pure Rust Pacejka Magic Formula tire friction and drift physics model from TLabVehiclePhysics",
+    "description": "Pure Rust Pacejka Magic Formula tire friction and vehicle drift physics",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1258,13 +1483,19 @@
     "page_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
     "github_url": "https://github.com/bhubbard/tlab-vehicle-physics-rs",
     "target_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
-    "topics": [],
+    "topics": [
+      "automotive-sim",
+      "pacejka",
+      "rust",
+      "tire-friction",
+      "vehicle-physics"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:21:03Z"
+    "pushed_at": "2026-09-28T20:09:23Z"
   },
   {
     "name": "translate-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Deterministic on-device neural translation CLI and multi-provider HTTP server in Rust (DeepL, LibreTranslate, Google v2 compatible)",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1276,13 +1507,22 @@
     "page_url": "https://code.brandonhubbard.com/translate-rs/",
     "github_url": "https://github.com/bhubbard/translate-rs",
     "target_url": "https://code.brandonhubbard.com/translate-rs/",
-    "topics": [],
+    "topics": [
+      "apple-translation",
+      "benchmarks",
+      "cli",
+      "deepl",
+      "libretranslate",
+      "offline-first",
+      "rust",
+      "translation"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-27T17:03:29Z"
+    "pushed_at": "2026-09-28T19:51:16Z"
   },
   {
     "name": "unified-audit-rs",
-    "description": "Consolidated high-performance post-build CI verification and auditing gate for Astro and static sites in Rust.",
+    "description": "Unified static analysis, license compliance, and security vulnerability auditor in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1298,8 +1538,11 @@
       "astro",
       "audit",
       "ci-cd",
+      "cli",
+      "compliance",
       "quality-gate",
       "rust",
+      "security",
       "static-analysis",
       "web-standards"
     ],
@@ -1308,7 +1551,7 @@
   },
   {
     "name": "uxsim-rs",
-    "description": "Pure Rust macroscopic city-wide traffic network flow simulator from UXsim",
+    "description": "Pure Rust macroscopic city-wide traffic network flow simulation",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1320,13 +1563,19 @@
     "page_url": "https://code.brandonhubbard.com/uxsim-rs/",
     "github_url": "https://github.com/bhubbard/uxsim-rs",
     "target_url": "https://code.brandonhubbard.com/uxsim-rs/",
-    "topics": [],
+    "topics": [
+      "macroscopic-traffic",
+      "rust",
+      "traffic-flow",
+      "transportation",
+      "urban-planning"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T19:10:55Z"
+    "pushed_at": "2026-09-28T20:14:31Z"
   },
   {
     "name": "vhud-rs",
-    "description": "Pure Rust GTA V radar, minimap projection, blip clamping, GPS route, and HUD ring meter engine",
+    "description": "Pure Rust GTA V radar, minimap projection, blip clamping, and GPS route rendering",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1338,7 +1587,14 @@
     "page_url": "https://code.brandonhubbard.com/vhud-rs/",
     "github_url": "https://github.com/bhubbard/vhud-rs",
     "target_url": "https://code.brandonhubbard.com/vhud-rs/",
-    "topics": [],
+    "topics": [
+      "fivem",
+      "gamedev",
+      "minimap",
+      "path-rendering",
+      "radar",
+      "rust"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-26T19:42:00Z"
   },
@@ -1396,7 +1652,7 @@
   },
   {
     "name": "yt-dlp-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Fast, lightweight Rust port of yt-dlp core media extractor and streaming client",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1408,7 +1664,13 @@
     "page_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
     "github_url": "https://github.com/bhubbard/yt-dlp-rs",
     "target_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
-    "topics": [],
+    "topics": [
+      "cli",
+      "media-extraction",
+      "rust",
+      "streaming",
+      "video-downloader"
+    ],
     "is_archived": false,
     "pushed_at": "2026-09-27T17:03:38Z"
   }
