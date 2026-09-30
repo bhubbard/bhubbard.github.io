@@ -1,5 +1,32 @@
 [
   {
+    "name": "zev-rs",
+    "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 2,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/zev-rs/",
+    "github_url": "https://github.com/bhubbard/zev-rs",
+    "target_url": "https://code.brandonhubbard.com/zev-rs/",
+    "topics": [
+      "ai",
+      "ai-inference",
+      "decision-engine",
+      "heuristics",
+      "llm-orchestration",
+      "performance",
+      "rust",
+      "zero-token"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-30T05:35:53Z"
+  },
+  {
     "name": "talks",
     "description": "My talks and presentations!",
     "language": "JavaScript",
@@ -69,33 +96,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-28T20:36:57Z"
-  },
-  {
-    "name": "zev-rs",
-    "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/zev-rs/",
-    "github_url": "https://github.com/bhubbard/zev-rs",
-    "target_url": "https://code.brandonhubbard.com/zev-rs/",
-    "topics": [
-      "ai",
-      "ai-inference",
-      "decision-engine",
-      "heuristics",
-      "llm-orchestration",
-      "performance",
-      "rust",
-      "zero-token"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-27T16:58:19Z"
   },
   {
     "name": "active-ragdoll-rs",
@@ -170,7 +170,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-28T19:56:36Z"
+    "pushed_at": "2026-09-29T16:10:18Z"
   },
   {
     "name": "astro-client-directive-ai",
@@ -496,7 +496,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-28T12:06:23Z"
+    "pushed_at": "2026-09-29T11:39:19Z"
   },
   {
     "name": "bullet3-rs",
