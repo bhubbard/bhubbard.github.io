@@ -27,6 +27,31 @@
     "pushed_at": "2026-09-26T18:57:23Z"
   },
   {
+    "name": "sfxr-rs",
+    "description": "Pure Rust procedural 8-bit sound effect generator and audio synthesizer",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 2,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/sfxr-rs/",
+    "github_url": "https://github.com/bhubbard/sfxr-rs",
+    "target_url": "https://code.brandonhubbard.com/sfxr-rs/",
+    "topics": [
+      "8-bit",
+      "dsp",
+      "procedural-audio",
+      "rust",
+      "sfxr",
+      "sound-synthesis"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:05:52Z"
+  },
+  {
     "name": "zev-rs",
     "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
     "language": "Rust",
@@ -108,31 +133,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:57:12Z"
-  },
-  {
-    "name": "sfxr-rs",
-    "description": "Pure Rust procedural 8-bit sound effect generator and audio synthesizer",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/sfxr-rs/",
-    "github_url": "https://github.com/bhubbard/sfxr-rs",
-    "target_url": "https://code.brandonhubbard.com/sfxr-rs/",
-    "topics": [
-      "8-bit",
-      "dsp",
-      "procedural-audio",
-      "rust",
-      "sfxr",
-      "sound-synthesis"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-28T20:05:52Z"
   },
   {
     "name": "skills",
@@ -791,7 +791,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-01T11:54:09Z"
+    "pushed_at": "2026-10-02T11:26:07Z"
   },
   {
     "name": "bullet3-rs",
