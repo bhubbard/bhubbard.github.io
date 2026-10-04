@@ -183,6 +183,35 @@
     "pushed_at": "2026-09-26T16:29:54Z"
   },
   {
+    "name": "timesfm-rs",
+    "description": "High-performance Rust inference engine for Google's TimesFM time-series foundation model",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/timesfm-rs/",
+    "github_url": "https://github.com/bhubbard/timesfm-rs",
+    "target_url": "https://code.brandonhubbard.com/timesfm-rs/",
+    "topics": [
+      "apple-silicon",
+      "candle",
+      "forecasting",
+      "foundation-models",
+      "google-research",
+      "machine-learning",
+      "mlx",
+      "rust",
+      "time-series",
+      "timesfm"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:20:07Z"
+  },
+  {
     "name": "vite-plus-commitlint",
     "description": "A commitlint plugin for vite plus",
     "language": "Rust",
@@ -791,7 +820,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-02T11:26:07Z"
+    "pushed_at": "2026-10-03T10:42:31Z"
   },
   {
     "name": "bullet3-rs",
@@ -1935,35 +1964,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-30T15:29:03Z"
-  },
-  {
-    "name": "timesfm-rs",
-    "description": "High-performance Rust inference engine for Google's TimesFM time-series foundation model",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/timesfm-rs/",
-    "github_url": "https://github.com/bhubbard/timesfm-rs",
-    "target_url": "https://code.brandonhubbard.com/timesfm-rs/",
-    "topics": [
-      "apple-silicon",
-      "candle",
-      "forecasting",
-      "foundation-models",
-      "google-research",
-      "machine-learning",
-      "mlx",
-      "rust",
-      "time-series",
-      "timesfm"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-28T20:20:07Z"
   },
   {
     "name": "tlab-vehicle-physics-rs",
