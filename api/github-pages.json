@@ -76,7 +76,7 @@
       "zero-token"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-04T17:40:32Z"
+    "pushed_at": "2026-10-05T17:16:52Z"
   },
   {
     "name": "kumo-drift-checks",
@@ -160,27 +160,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-04T23:19:29Z"
-  },
-  {
-    "name": "talks",
-    "description": "My talks and presentations!",
-    "language": "JavaScript",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://talks.brandonhubbard.com/",
-    "github_url": "https://github.com/bhubbard/talks",
-    "target_url": "https://talks.brandonhubbard.com/",
-    "topics": [
-      "presentations",
-      "talks",
-      "wordpress"
-    ],
-    "is_archived": true,
-    "pushed_at": "2026-09-26T16:29:54Z"
   },
   {
     "name": "timesfm-rs",
@@ -392,7 +371,7 @@
       "ui-layout"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:30:40Z"
+    "pushed_at": "2026-10-05T15:49:15Z"
   },
   {
     "name": "apfel-rs",
@@ -442,7 +421,7 @@
       "transpile"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T05:36:44Z"
+    "pushed_at": "2026-10-05T15:49:17Z"
   },
   {
     "name": "astro-client-directive-ai",
@@ -796,7 +775,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-04T11:23:22Z"
+    "pushed_at": "2026-10-05T12:47:14Z"
   },
   {
     "name": "box3d-rs",
@@ -893,7 +872,7 @@
       "serverless"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:19:11Z"
+    "pushed_at": "2026-10-05T15:49:36Z"
   },
   {
     "name": "comfyui-ltxvideo-mlx-rs",
@@ -921,7 +900,7 @@
       "video-generation"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:44:53Z"
+    "pushed_at": "2026-10-05T15:49:39Z"
   },
   {
     "name": "decision-index",
@@ -969,7 +948,7 @@
       "state-machine"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:23:05Z"
+    "pushed_at": "2026-10-05T15:49:40Z"
   },
   {
     "name": "desktop-rs",
@@ -1036,7 +1015,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:46:50Z"
+    "pushed_at": "2026-10-05T15:49:42Z"
   },
   {
     "name": "ffmpeg-skill-rs",
@@ -1247,7 +1226,7 @@
       "scene-tree"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:51:49Z"
+    "pushed_at": "2026-10-05T15:49:50Z"
   },
   {
     "name": "handbrake-rs",
@@ -1336,7 +1315,7 @@
       "vfx"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:47:41Z"
+    "pushed_at": "2026-10-05T15:49:52Z"
   },
   {
     "name": "lossless-cut-rs",
@@ -1385,7 +1364,7 @@
       "volumetric-rendering"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:15:51Z"
+    "pushed_at": "2026-10-05T15:49:55Z"
   },
   {
     "name": "lyra-rs",
@@ -1452,7 +1431,7 @@
       "ui-framework"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:23:57Z"
+    "pushed_at": "2026-10-05T15:49:57Z"
   },
   {
     "name": "mlt-rs",
@@ -1675,7 +1654,7 @@
       "state-machine"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:22:39Z"
+    "pushed_at": "2026-10-05T15:50:03Z"
   },
   {
     "name": "olive-rs",
@@ -1699,7 +1678,7 @@
       "video-processing"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:19:26Z"
+    "pushed_at": "2026-10-05T15:50:05Z"
   },
   {
     "name": "open-generative-ai-rs",
@@ -1723,7 +1702,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:09:24Z"
+    "pushed_at": "2026-10-05T15:50:07Z"
   },
   {
     "name": "open-higgsfield-ai-rs",
@@ -1747,7 +1726,7 @@
       "video-generation"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:05:37Z"
+    "pushed_at": "2026-10-05T15:50:09Z"
   },
   {
     "name": "opendental",
@@ -1774,7 +1753,7 @@
       "serverless"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:00Z"
+    "pushed_at": "2026-10-05T15:48:41Z"
   },
   {
     "name": "openrw-rs",
@@ -1798,7 +1777,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:51:43Z"
+    "pushed_at": "2026-10-05T15:50:11Z"
   },
   {
     "name": "paperclip-rs",
@@ -1846,7 +1825,7 @@
       "vfx"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:59:33Z"
+    "pushed_at": "2026-10-05T15:50:13Z"
   },
   {
     "name": "poormans-camera-rs",
@@ -1871,7 +1850,7 @@
       "third-person"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:48:54Z"
+    "pushed_at": "2026-10-05T15:50:14Z"
   },
   {
     "name": "radial-menu-rs",
@@ -1895,7 +1874,7 @@
       "ui-components"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:48:03Z"
+    "pushed_at": "2026-10-05T15:50:18Z"
   },
   {
     "name": "rea-rs",
@@ -1967,31 +1946,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:57:06Z"
-  },
-  {
-    "name": "serpbear",
-    "description": "Open-source search engine position and keyword rank tracking app built with Next.js.",
-    "language": "TypeScript",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/serpbear/",
-    "github_url": "https://github.com/bhubbard/serpbear",
-    "target_url": "https://code.brandonhubbard.com/serpbear/",
-    "topics": [
-      "keyword-ranking",
-      "nextjs",
-      "rank-tracker",
-      "rank-tracking",
-      "search-engine",
-      "seo",
-      "serp"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:59Z"
   },
   {
     "name": "simplecar2-rs",
@@ -2087,7 +2041,7 @@
       "tactical-ai"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:29:03Z"
+    "pushed_at": "2026-10-05T15:50:27Z"
   },
   {
     "name": "tlab-vehicle-physics-rs",
@@ -2167,7 +2121,7 @@
       "web-standards"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:57:50Z"
+    "pushed_at": "2026-10-05T15:50:29Z"
   },
   {
     "name": "uxsim-rs",
@@ -2216,7 +2170,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T15:24:48Z"
+    "pushed_at": "2026-10-05T15:50:31Z"
   },
   {
     "name": "video-use-rs",
@@ -2241,34 +2195,7 @@
       "video-editing"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:41:34Z"
-  },
-  {
-    "name": "vite-plus-wrangler",
-    "description": "Vite plugin for seamless integration with Cloudflare Wrangler and local Cloudflare Workers / Pages development.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/vite-plus-wrangler/",
-    "github_url": "https://github.com/bhubbard/vite-plus-wrangler",
-    "target_url": "https://code.brandonhubbard.com/vite-plus-wrangler/",
-    "topics": [
-      "cloudflare",
-      "cloudflare-workers",
-      "dx",
-      "edge-computing",
-      "serverless",
-      "vite",
-      "vite-plugin",
-      "wrangler"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:28Z"
+    "pushed_at": "2026-10-05T15:50:33Z"
   },
   {
     "name": "watertight-meshes-rs",
@@ -2448,6 +2375,6 @@
       "video-downloader"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-30T16:12:32Z"
+    "pushed_at": "2026-10-05T15:50:36Z"
   }
 ]
