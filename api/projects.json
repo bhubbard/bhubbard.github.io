@@ -109,6 +109,30 @@
     "pushed_at": "2026-09-26T18:57:07Z"
   },
   {
+    "name": "openrw-rs",
+    "description": "Pure Rust port of GTA III camera follow, weapon targeting math, and entity kinematics",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/openrw-rs/",
+    "github_url": "https://github.com/bhubbard/openrw-rs",
+    "target_url": "https://code.brandonhubbard.com/openrw-rs/",
+    "topics": [
+      "3d-kinematics",
+      "game-engine",
+      "gta-engine",
+      "openrw",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:11Z"
+  },
+  {
     "name": "pressable-cli",
     "description": "Command-line interface for managing Pressable WordPress sites, backups, and deployments",
     "language": "TypeScript",
@@ -189,6 +213,31 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-28T20:20:07Z"
+  },
+  {
+    "name": "vhud-rs",
+    "description": "Pure Rust GTA V radar, minimap projection, blip clamping, and GPS route rendering",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vhud-rs/",
+    "github_url": "https://github.com/bhubbard/vhud-rs",
+    "target_url": "https://code.brandonhubbard.com/vhud-rs/",
+    "topics": [
+      "fivem",
+      "gamedev",
+      "minimap",
+      "path-rendering",
+      "radar",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:31Z"
   },
   {
     "name": "vite-plus-commitlint",
@@ -424,27 +473,6 @@
     "pushed_at": "2026-10-05T15:49:17Z"
   },
   {
-    "name": "astro-client-directive-ai",
-    "description": "Custom Astro client directive (client:ai-ready) delaying component hydration until on-device Gemini Nano is ready.",
-    "language": "TypeScript",
-    "category": "astro",
-    "categories": [
-      "astro"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/astro-client-directive-ai/",
-    "github_url": "https://github.com/bhubbard/astro-client-directive-ai",
-    "target_url": "https://code.brandonhubbard.com/astro-client-directive-ai/",
-    "topics": [
-      "ai",
-      "astro",
-      "cli"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:27Z"
-  },
-  {
     "name": "astro-compress-rs",
     "description": "Blazingly fast post-build compressor, CSS inliner, and HTML minifier in Rust",
     "language": "Rust",
@@ -471,155 +499,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:57:02Z"
-  },
-  {
-    "name": "astro-dev-audit-nano",
-    "description": "Astro Dev Toolbar app auditing WCAG a11y, heading hierarchy, and SEO with real-time Gemini Nano remediations.",
-    "language": "TypeScript",
-    "category": "astro",
-    "categories": [
-      "astro"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
-    "github_url": "https://github.com/bhubbard/astro-dev-audit-nano",
-    "target_url": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
-    "topics": [
-      "astro",
-      "audit",
-      "seo"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:26Z"
-  },
-  {
-    "name": "astro-dev-broken-anchor-healer",
-    "description": "Smart internal anchor link validator and semantic heading ID matcher for Astro Dev Toolbar.",
-    "language": "TypeScript",
-    "category": "astro",
-    "categories": [
-      "astro"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/",
-    "github_url": "https://github.com/bhubbard/astro-dev-broken-anchor-healer",
-    "target_url": "https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/",
-    "topics": [
-      "astro",
-      "automation",
-      "developer-tools"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:25Z"
-  },
-  {
-    "name": "astro-dev-content-linter",
-    "description": "Editorial tone, reading grade level, and brand voice auditor inside the Astro Dev Toolbar with AI rewrites.",
-    "language": "TypeScript",
-    "category": "astro",
-    "categories": [
-      "astro"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/astro-dev-content-linter/",
-    "github_url": "https://github.com/bhubbard/astro-dev-content-linter",
-    "target_url": "https://code.brandonhubbard.com/astro-dev-content-linter/",
-    "topics": [
-      "astro",
-      "audit",
-      "automation",
-      "developer-tools"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:24Z"
-  },
-  {
-    "name": "astro-dev-copy-optimizer",
-    "description": "In-browser copy tuner and rewriter inside the Astro Dev Toolbar powered by Chrome Built-in AI.",
-    "language": "TypeScript",
-    "category": "astro",
-    "categories": [
-      "astro"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/astro-dev-copy-optimizer/",
-    "github_url": "https://github.com/bhubbard/astro-dev-copy-optimizer",
-    "target_url": "https://code.brandonhubbard.com/astro-dev-copy-optimizer/",
-    "topics": [
-      "astro",
-      "automation",
-      "developer-tools"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:23Z"
-  },
-  {
-    "name": "astro-dev-i18n-coverage",
-    "description": "Dev Toolbar missing translation finder with contextual on-device translation and 1-click locale JSON export.",
-    "language": "TypeScript",
-    "category": "astro",
-    "categories": [
-      "astro"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/astro-dev-i18n-coverage/",
-    "github_url": "https://github.com/bhubbard/astro-dev-i18n-coverage",
-    "target_url": "https://code.brandonhubbard.com/astro-dev-i18n-coverage/",
-    "topics": [
-      "astro",
-      "automation",
-      "cli",
-      "developer-tools"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:22Z"
-  },
-  {
-    "name": "astro-dev-island-hydration-advisor",
-    "description": "Astro Dev Toolbar island hydration analyzer flagging eager below-the-fold directives with performance advice.",
-    "language": "TypeScript",
-    "category": "astro",
-    "categories": [
-      "astro"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/",
-    "github_url": "https://github.com/bhubbard/astro-dev-island-hydration-advisor",
-    "target_url": "https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/",
-    "topics": [
-      "astro",
-      "automation",
-      "developer-tools"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:21Z"
-  },
-  {
-    "name": "astro-dev-mock-generator",
-    "description": "Synthetic Zod-compliant mock data generator for Astro Content Collections using on-device Gemini Nano.",
-    "language": "TypeScript",
-    "category": "astro",
-    "categories": [
-      "astro"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/astro-dev-mock-generator/",
-    "github_url": "https://github.com/bhubbard/astro-dev-mock-generator",
-    "target_url": "https://code.brandonhubbard.com/astro-dev-mock-generator/",
-    "topics": [
-      "astro",
-      "automation",
-      "developer-tools"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:20Z"
   },
   {
     "name": "astro-dev-schema-scaffolder",
@@ -775,7 +654,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-05T12:47:14Z"
+    "pushed_at": "2026-10-06T12:17:10Z"
   },
   {
     "name": "box3d-rs",
@@ -1756,30 +1635,6 @@
     "pushed_at": "2026-10-05T15:48:41Z"
   },
   {
-    "name": "openrw-rs",
-    "description": "Pure Rust port of GTA III camera follow, weapon targeting math, and entity kinematics",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/openrw-rs/",
-    "github_url": "https://github.com/bhubbard/openrw-rs",
-    "target_url": "https://code.brandonhubbard.com/openrw-rs/",
-    "topics": [
-      "3d-kinematics",
-      "game-engine",
-      "gta-engine",
-      "openrw",
-      "rust"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-10-05T15:50:11Z"
-  },
-  {
     "name": "paperclip-rs",
     "description": "Open-source orchestration engine for agentic workflows and multi-agent coordination in Rust",
     "language": "TypeScript",
@@ -2148,31 +2003,6 @@
     "pushed_at": "2026-09-28T20:14:31Z"
   },
   {
-    "name": "vhud-rs",
-    "description": "Pure Rust GTA V radar, minimap projection, blip clamping, and GPS route rendering",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/vhud-rs/",
-    "github_url": "https://github.com/bhubbard/vhud-rs",
-    "target_url": "https://code.brandonhubbard.com/vhud-rs/",
-    "topics": [
-      "fivem",
-      "gamedev",
-      "minimap",
-      "path-rendering",
-      "radar",
-      "rust"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-10-05T15:50:31Z"
-  },
-  {
     "name": "video-use-rs",
     "description": "Fast, production-grade Rust port of browser-use/video-use for conversation-driven video editing and timeline generation.",
     "language": "Rust",
@@ -2414,6 +2244,24 @@
     "pushed_at": "2026-10-05T15:49:54Z"
   },
   {
+    "name": "latentsync-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Python",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/latentsync-rs",
+    "target_url": "https://github.com/bhubbard/latentsync-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-06T21:00:44Z"
+  },
+  {
     "name": "minimind",
     "description": "\ud83e\udde0 Train a 64M-parameter LLM from scratch in just 2h!",
     "language": "Python",
@@ -2429,5 +2277,131 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-10-05T15:48:19Z"
+  },
+  {
+    "name": "musetalk-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Python",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/musetalk-rs",
+    "target_url": "https://github.com/bhubbard/musetalk-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-06T20:57:38Z"
+  },
+  {
+    "name": "sadtalker-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Python",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/sadtalker-rs",
+    "target_url": "https://github.com/bhubbard/sadtalker-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-06T20:15:23Z"
+  },
+  {
+    "name": "toontalker-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Python",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/toontalker-rs",
+    "target_url": "https://github.com/bhubbard/toontalker-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-06T20:21:38Z"
+  },
+  {
+    "name": "upscayl-rs",
+    "description": "High-performance, pure-Rust native port and drop-in CLI replacement for Upscayl AI image upscaler",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/upscayl-rs",
+    "target_url": "https://github.com/bhubbard/upscayl-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-07T05:27:38Z"
+  },
+  {
+    "name": "video-retalking-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Python",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/video-retalking-rs",
+    "target_url": "https://github.com/bhubbard/video-retalking-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-06T20:19:19Z"
+  },
+  {
+    "name": "voicestudio-rs",
+    "description": "Open-source, fully-local ElevenLabs alternative in Rust \u2014 voice cloning, design, video dubbing, and transcription",
+    "language": "Python",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/voicestudio-rs",
+    "target_url": "https://github.com/bhubbard/voicestudio-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-06T21:20:57Z"
+  },
+  {
+    "name": "wav2lip-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Python",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wav2lip-rs",
+    "target_url": "https://github.com/bhubbard/wav2lip-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-06T20:55:34Z"
   }
 ]
