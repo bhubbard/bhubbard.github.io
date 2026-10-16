@@ -105,6 +105,28 @@
     "pushed_at": "2026-09-28T20:20:07Z"
   },
   {
+    "name": "vite-plus-commitlint",
+    "description": "A commitlint plugin for vite plus",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 2,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "topics": [
+      "automation",
+      "developer-tools",
+      "vite"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:36:46Z"
+  },
+  {
     "name": "zev-rs",
     "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
     "language": "Rust",
@@ -160,6 +182,30 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:57:07Z"
+  },
+  {
+    "name": "open-higgsfield-ai-rs",
+    "description": "Open-source video generation and motion-guided neural synthesis pipeline in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "github_url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
+    "target_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "topics": [
+      "apple-silicon",
+      "diffusion",
+      "generative-ai",
+      "rust",
+      "video-generation"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:09Z"
   },
   {
     "name": "openrw-rs",
@@ -262,28 +308,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-05T15:50:31Z"
-  },
-  {
-    "name": "vite-plus-commitlint",
-    "description": "A commitlint plugin for vite plus",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
-    "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
-    "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
-    "topics": [
-      "automation",
-      "developer-tools",
-      "vite"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-28T20:36:46Z"
   },
   {
     "name": "vite-plus-kumo-ui",
@@ -651,7 +675,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-14T10:42:03Z"
+    "pushed_at": "2026-10-15T10:25:52Z"
   },
   {
     "name": "box3d-rs",
@@ -1456,30 +1480,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-05T15:50:07Z"
-  },
-  {
-    "name": "open-higgsfield-ai-rs",
-    "description": "Open-source video generation and motion-guided neural synthesis pipeline in Rust",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
-    "github_url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
-    "target_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
-    "topics": [
-      "apple-silicon",
-      "diffusion",
-      "generative-ai",
-      "rust",
-      "video-generation"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-10-05T15:50:09Z"
   },
   {
     "name": "opendental",
