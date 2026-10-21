@@ -1,5 +1,34 @@
 [
   {
+    "name": "timesfm-rs",
+    "description": "High-performance Rust inference engine for Google's TimesFM time-series foundation model",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 3,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/timesfm-rs/",
+    "github_url": "https://github.com/bhubbard/timesfm-rs",
+    "target_url": "https://code.brandonhubbard.com/timesfm-rs/",
+    "topics": [
+      "apple-silicon",
+      "candle",
+      "forecasting",
+      "foundation-models",
+      "google-research",
+      "machine-learning",
+      "mlx",
+      "rust",
+      "time-series",
+      "timesfm"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:20:07Z"
+  },
+  {
     "name": "wp-cloudflare-d1",
     "description": "Modern PHP client library to query Cloudflare D1 SQL databases from WordPress",
     "language": "PHP",
@@ -74,35 +103,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-28T20:05:52Z"
-  },
-  {
-    "name": "timesfm-rs",
-    "description": "High-performance Rust inference engine for Google's TimesFM time-series foundation model",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 2,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/timesfm-rs/",
-    "github_url": "https://github.com/bhubbard/timesfm-rs",
-    "target_url": "https://code.brandonhubbard.com/timesfm-rs/",
-    "topics": [
-      "apple-silicon",
-      "candle",
-      "forecasting",
-      "foundation-models",
-      "google-research",
-      "machine-learning",
-      "mlx",
-      "rust",
-      "time-series",
-      "timesfm"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-28T20:20:07Z"
   },
   {
     "name": "vite-plus-commitlint",
@@ -675,7 +675,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-19T11:21:22Z"
+    "pushed_at": "2026-10-20T10:29:45Z"
   },
   {
     "name": "box3d-rs",
