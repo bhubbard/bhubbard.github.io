@@ -161,98 +161,8 @@
     }
 
     /* -------------------------------------------------------------
-       Top Brand Navigation
+       Cmd+K Search Trigger & Mobile Search Button
        ------------------------------------------------------------- */
-    header {
-      border-bottom: 1px solid var(--concrete);
-      background: var(--void);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      transition: border-color 0.2s ease, background-color 0.2s ease;
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.75rem;
-      gap: 1.5rem;
-    }
-
-    .brand-identity {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      text-decoration: none;
-      color: var(--titanium);
-      flex-shrink: 0;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      background: var(--titanium);
-      color: var(--void);
-      font-family: var(--font-ui);
-      font-weight: 800;
-      font-size: 1.45rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      letter-spacing: -1px;
-      flex-shrink: 0;
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-
-    .brand-meta {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-name {
-      font-size: 0.98rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--titanium);
-      line-height: 1.2;
-    }
-
-    .brand-title {
-      font-size: 0.72rem;
-      font-family: var(--font-mono);
-      color: var(--steel);
-      letter-spacing: 0.04em;
-    }
-
-    .header-nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-    }
-
-    .nav-anchor {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--steel);
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      transition: color 0.15s ease;
-    }
-
-    .nav-anchor:hover {
-      color: var(--titanium);
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    /* Cmd+K Search Trigger */
     .header-search-btn {
       background: var(--charcoal);
       border: 1px solid var(--concrete);
@@ -295,33 +205,6 @@
       color: var(--steel);
     }
 
-    /* Header Icon Buttons */
-    .header-icon-btn, .theme-toggle-btn {
-      background: var(--charcoal);
-      border: 1px solid var(--concrete);
-      color: var(--steel);
-      width: 38px;
-      height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.15s ease;
-      flex-shrink: 0;
-    }
-
-    .header-icon-btn:hover, .theme-toggle-btn:hover {
-      border-color: var(--cobalt);
-      color: var(--titanium);
-      background: var(--void);
-    }
-
-    [data-theme="dark"] .sun-icon { display: block; }
-    [data-theme="dark"] .moon-icon { display: none; }
-    [data-theme="light"] .sun-icon { display: none; }
-    [data-theme="light"] .moon-icon { display: block; }
-
     .mobile-search-btn {
       display: none;
       background: var(--charcoal);
@@ -329,6 +212,25 @@
       color: var(--titanium);
       padding: 0.5rem;
       cursor: pointer;
+    }
+
+    .mobile-nav-search-btn {
+      background: var(--void);
+      border: 1px solid var(--concrete);
+      color: var(--titanium);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      padding: 0.65rem 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.15s ease;
+    }
+
+    .mobile-nav-search-btn:hover {
+      border-color: var(--cobalt);
     }
 
     /* -------------------------------------------------------------
@@ -540,11 +442,15 @@
        ------------------------------------------------------------- */
     .category-nav-bar {
       position: sticky;
-      top: 67px;
+      top: 112px;
       z-index: 90;
       background: var(--charcoal);
       border-bottom: 1px solid var(--concrete);
       overflow-x: auto;
+    }
+
+    section[id], div.section-header[id] {
+      scroll-margin-top: 165px;
     }
 
     .category-nav-inner {
@@ -1058,6 +964,70 @@
       background: var(--void);
     }
 
+    .bench-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .bench-search-wrap {
+      position: relative;
+      flex: 1;
+      max-width: 440px;
+      min-width: 240px;
+    }
+
+    .bench-search-input {
+      width: 100%;
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
+      padding: 0.65rem 1rem 0.65rem 2.35rem;
+      color: var(--titanium);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .bench-search-input:focus {
+      border-color: var(--cobalt);
+    }
+
+    .bench-sort-pills {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .bench-sort-btn {
+      background: var(--charcoal);
+      border: 1px solid var(--concrete);
+      color: var(--steel);
+      padding: 0.45rem 0.85rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: all 0.15s ease;
+    }
+
+    .bench-sort-btn:hover {
+      background: var(--concrete);
+      color: var(--titanium);
+    }
+
+    .bench-sort-btn.active {
+      background: var(--titanium);
+      border-color: var(--titanium);
+      color: var(--void);
+      font-weight: 700;
+    }
+
     .bench-table-wrap {
       width: 100%;
       overflow-x: auto;
@@ -1082,6 +1052,14 @@
       border-bottom: 1px solid var(--concrete);
       border-right: 1px solid var(--concrete);
       white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.15s ease, background 0.15s ease;
+    }
+
+    .bench-table th:hover {
+      color: var(--titanium);
+      background: var(--void);
     }
 
     .bench-table td {
@@ -1110,6 +1088,11 @@
 
     .bench-link:hover {
       text-decoration: underline;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
     }
 
     /* -------------------------------------------------------------
@@ -2166,7 +2149,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-client-directive-ai/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-client-directive-ai/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-client-directive-ai" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2185,7 +2168,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-rehype-nano-code/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-rehype-nano-code/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-rehype-nano-code" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2204,7 +2187,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-prefetch-ai-brief/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-prefetch-ai-brief/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-prefetch-ai-brief" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2223,7 +2206,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-audit-nano/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-dev-audit-nano/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-dev-audit-nano" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2242,7 +2225,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-copy-optimizer/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-dev-copy-optimizer/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-dev-copy-optimizer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2261,7 +2244,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-og-smart-crop/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-og-smart-crop/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-og-smart-crop" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2280,7 +2263,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-schema-ld-verifier/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-schema-ld-verifier/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-schema-ld-verifier" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2299,7 +2282,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-i18n-coverage/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-dev-i18n-coverage/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-dev-i18n-coverage" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2318,7 +2301,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-content-linter/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-dev-content-linter/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-dev-content-linter" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2337,7 +2320,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-schema-scaffolder/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-dev-schema-scaffolder/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-dev-schema-scaffolder" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2356,7 +2339,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-mock-generator/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-dev-mock-generator/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-dev-mock-generator" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2375,7 +2358,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-broken-anchor-healer/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-dev-broken-anchor-healer" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2394,7 +2377,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./astro-dev-island-hydration-advisor/" class="btn btn-primary">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/astro-dev-island-hydration-advisor" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2681,27 +2664,44 @@
            ============================================================= -->
       <div class="section-header" id="benchmarks-matrix">
         <span class="section-title">04. High-Throughput Rust Ports &amp; Empirical Benchmark Suite</span>
-        <span class="section-badge" style="color: var(--emerald);">40 VERIFIED BENCHMARK REPORTS</span>
+        <span class="section-badge" id="benchActiveCount" style="color: var(--emerald);">40 VERIFIED BENCHMARK REPORTS</span>
       </div>
 
       <section class="benchmarks-section">
         <p style="color: var(--steel); font-size: 0.92rem; margin-bottom: 1.25rem; max-width: 960px;">
           Native, compiled, SIMD-accelerated Rust ports engineered to replace heavy Python, C++, C#, and Electron runtimes with sub-millisecond execution and fractional memory footprints. Every project below includes a verified <code style="color: var(--cyan);">BENCHMARKS.md</code> report comparing it directly to the original reference implementation.
         </p>
+
+        <div class="bench-controls">
+          <div class="bench-search-wrap">
+            <svg class="explorer-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="benchSearchInput" class="bench-search-input" aria-label="Filter benchmark reports" placeholder="FILTER BENCHMARKS BY PROJECT, REFERENCE LANGUAGE (PYTHON, C++, C#), OR DOMAIN...">
+          </div>
+
+          <div class="bench-sort-pills">
+            <button type="button" class="bench-sort-btn active" data-bench-sort="speedup-desc">Sort: Highest Speedup ↓</button>
+            <button type="button" class="bench-sort-btn" data-bench-sort="name-asc">Sort: Project A–Z</button>
+            <button type="button" class="bench-sort-btn" data-bench-sort="ref-asc">Sort: Reference Runtime</button>
+          </div>
+        </div>
+
         <div class="bench-table-wrap">
-          <table class="bench-table">
+          <table class="bench-table" id="benchTable">
             <thead>
               <tr>
-                <th>Project</th>
-                <th>Original Reference</th>
-                <th>Domain / Engineering Purpose</th>
-                <th>Verified Speedup</th>
+                <th data-bench-col="name">Project ↕</th>
+                <th data-bench-col="ref">Original Reference ↕</th>
+                <th data-bench-col="domain">Domain / Engineering Purpose</th>
+                <th data-bench-col="speedup">Verified Speedup ↕</th>
                 <th>Live Interactive Site</th>
                 <th>Empirical Report</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody id="benchTableBody">
+              <tr data-bench-name="zev-rs" data-bench-ref="llm routers" data-bench-order="0" data-bench-text="zev-rs llm routers zero-token mathematical decision router instant (5.8 µs)">
                 <td><strong>⚡ zev-rs</strong></td>
                 <td>LLM Routers</td>
                 <td>Zero-token mathematical decision router</td>
@@ -2709,7 +2709,7 @@
                 <td><a href="https://code.brandonhubbard.com/zev-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/zev-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="uxsim-rs" data-bench-ref="uxsim (python)" data-bench-order="1" data-bench-text="uxsim-rs uxsim (python) macroscopic city-wide traffic flow simulator 1,620× faster">
                 <td><strong>🚦 uxsim-rs</strong></td>
                 <td>UXsim (Python)</td>
                 <td>Macroscopic city-wide traffic flow simulator</td>
@@ -2717,7 +2717,7 @@
                 <td><a href="https://code.brandonhubbard.com/uxsim-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/uxsim-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="vite-plus-commitlint" data-bench-ref="@commitlint/cli (node)" data-bench-order="2" data-bench-text="vite-plus-commitlint @commitlint/cli (node) native git commit hook convention linter 525× faster">
                 <td><strong>⚡ vite-plus-commitlint</strong></td>
                 <td>@commitlint/cli (Node)</td>
                 <td>Native Git commit hook convention linter</td>
@@ -2725,7 +2725,7 @@
                 <td><a href="https://code.brandonhubbard.com/vite-plus-commitlint/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/vite-plus-commitlint/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="clippy-cf-reporter" data-bench-ref="node.js action runner" data-bench-order="3" data-bench-text="clippy-cf-reporter node.js action runner clippy sarif &amp; pr annotation ci reporter 181× faster">
                 <td><strong>🩺 clippy-cf-reporter</strong></td>
                 <td>Node.js Action Runner</td>
                 <td>Clippy SARIF &amp; PR annotation CI reporter</td>
@@ -2733,7 +2733,7 @@
                 <td><a href="https://code.brandonhubbard.com/clippy-cf-reporter/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/clippy-cf-reporter/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="vite-plus-kumo-ui" data-bench-ref="storybook / vite (node)" data-bench-order="4" data-bench-text="vite-plus-kumo-ui storybook / vite (node) cloudflare kumo ui token &amp; spec bundler 180× faster">
                 <td><strong>🧩 vite-plus-kumo-ui</strong></td>
                 <td>Storybook / Vite (Node)</td>
                 <td>Cloudflare Kumo UI token &amp; spec bundler</td>
@@ -2741,7 +2741,7 @@
                 <td><a href="https://code.brandonhubbard.com/vite-plus-kumo-ui/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/vite-plus-kumo-ui/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="lossless-cut-rs" data-bench-ref="losslesscut (electron)" data-bench-order="5" data-bench-text="lossless-cut-rs losslesscut (electron) zero-loss keyframe video &amp; audio stream trimmer 154× faster">
                 <td><strong>✂️ lossless-cut-rs</strong></td>
                 <td>LosslessCut (Electron)</td>
                 <td>Zero-loss keyframe video &amp; audio stream trimmer</td>
@@ -2749,7 +2749,7 @@
                 <td><a href="https://code.brandonhubbard.com/lossless-cut-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/lossless-cut-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="lux-rs" data-bench-ref="lux (python / elixir)" data-bench-order="6" data-bench-text="lux-rs lux (python / elixir) volumetric lighting &amp; tensor operator dispatch 132× faster">
                 <td><strong>💡 lux-rs</strong></td>
                 <td>Lux (Python / Elixir)</td>
                 <td>Volumetric lighting &amp; tensor operator dispatch</td>
@@ -2757,7 +2757,7 @@
                 <td><a href="https://code.brandonhubbard.com/lux-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/lux-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="open-generative-ai-rs" data-bench-ref="python genai pipelines" data-bench-order="7" data-bench-text="open-generative-ai-rs python genai pipelines unified neural inference &amp; noise schedule runtime 60.7× faster">
                 <td><strong>🧠 open-generative-ai-rs</strong></td>
                 <td>Python GenAI Pipelines</td>
                 <td>Unified neural inference &amp; noise schedule runtime</td>
@@ -2765,7 +2765,7 @@
                 <td><a href="https://code.brandonhubbard.com/open-generative-ai-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/open-generative-ai-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="auge-rs" data-bench-ref="gazetracking (python)" data-bench-order="8" data-bench-text="auge-rs gazetracking (python) 3,200 fps real-time eye &amp; pupil gaze estimation 47.4× faster">
                 <td><strong>👁️ auge-rs</strong></td>
                 <td>GazeTracking (Python)</td>
                 <td>3,200 FPS real-time eye &amp; pupil gaze estimation</td>
@@ -2773,7 +2773,7 @@
                 <td><a href="https://code.brandonhubbard.com/auge-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/auge-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="open-higgsfield-ai-rs" data-bench-ref="higgsfield (python)" data-bench-order="9" data-bench-text="open-higgsfield-ai-rs higgsfield (python) 6-dof camera trajectory &amp; motion video synthesis 46.3× faster">
                 <td><strong>🎥 open-higgsfield-ai-rs</strong></td>
                 <td>Higgsfield (Python)</td>
                 <td>6-DOF camera trajectory &amp; motion video synthesis</td>
@@ -2781,7 +2781,7 @@
                 <td><a href="https://code.brandonhubbard.com/open-higgsfield-ai-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/open-higgsfield-ai-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="aesir-utils-rs" data-bench-ref="aesirutils (fivem)" data-bench-order="10" data-bench-text="aesir-utils-rs aesirutils (fivem) screen safezone, aspect ratio &amp; ui anchor math 45.0× faster">
                 <td><strong>⚙️ aesir-utils-rs</strong></td>
                 <td>AesirUtils (FiveM)</td>
                 <td>Screen safezone, aspect ratio &amp; UI anchor math</td>
@@ -2789,7 +2789,7 @@
                 <td><a href="https://code.brandonhubbard.com/aesir-utils-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/aesir-utils-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="handbrake-rs" data-bench-ref="handbrake cli (c)" data-bench-order="11" data-bench-text="handbrake-rs handbrake cli (c) hardware video transcode &amp; filter pipeline engine 44.0× faster">
                 <td><strong>🎞️ handbrake-rs</strong></td>
                 <td>HandBrake CLI (C)</td>
                 <td>Hardware video transcode &amp; filter pipeline engine</td>
@@ -2797,7 +2797,7 @@
                 <td><a href="https://code.brandonhubbard.com/handbrake-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/handbrake-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="minimal-hud-rs" data-bench-ref="minimal-hud (lua)" data-bench-order="12" data-bench-text="minimal-hud-rs minimal-hud (lua) event-driven hud telemetry with dirty-state tracking 42.0× faster">
                 <td><strong>🧭 minimal-hud-rs</strong></td>
                 <td>Minimal-HUD (Lua)</td>
                 <td>Event-driven HUD telemetry with dirty-state tracking</td>
@@ -2805,7 +2805,7 @@
                 <td><a href="https://code.brandonhubbard.com/minimal-hud-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/minimal-hud-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="vhud-rs" data-bench-ref="v-hud (lua)" data-bench-order="13" data-bench-text="vhud-rs v-hud (lua) gta v radar, minimap projection &amp; gps route engine 35.0× faster">
                 <td><strong>🗺️ vhud-rs</strong></td>
                 <td>V-HUD (Lua)</td>
                 <td>GTA V radar, minimap projection &amp; GPS route engine</td>
@@ -2813,7 +2813,7 @@
                 <td><a href="https://code.brandonhubbard.com/vhud-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/vhud-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="radial-menu-rs" data-bench-ref="radialmenu (lua/cef)" data-bench-order="14" data-bench-text="radial-menu-rs radialmenu (lua/cef) 60 fps radial weapon wheel &amp; deadzone angle math 28.0× faster">
                 <td><strong>⭕ radial-menu-rs</strong></td>
                 <td>RadialMenu (Lua/CEF)</td>
                 <td>60 FPS radial weapon wheel &amp; deadzone angle math</td>
@@ -2821,7 +2821,7 @@
                 <td><a href="https://code.brandonhubbard.com/radial-menu-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/radial-menu-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="sdf-math-rs" data-bench-ref="inigo quilez (glsl)" data-bench-order="15" data-bench-text="sdf-math-rs inigo quilez (glsl) 2d &amp; 3d signed distance fields &amp; csg raymarching 24.5× faster">
                 <td><strong>📐 sdf-math-rs</strong></td>
                 <td>Inigo Quilez (GLSL)</td>
                 <td>2D &amp; 3D Signed Distance Fields &amp; CSG raymarching</td>
@@ -2829,7 +2829,7 @@
                 <td><a href="https://code.brandonhubbard.com/sdf-math-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/sdf-math-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="yt-dlp-rs" data-bench-ref="yt-dlp (python)" data-bench-order="16" data-bench-text="yt-dlp-rs yt-dlp (python) zero-python media metadata extractor &amp; stream client 23.3× faster">
                 <td><strong>📹 yt-dlp-rs</strong></td>
                 <td>yt-dlp (Python)</td>
                 <td>Zero-Python media metadata extractor &amp; stream client</td>
@@ -2837,7 +2837,7 @@
                 <td><a href="https://code.brandonhubbard.com/yt-dlp-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/yt-dlp-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="defy-rs" data-bench-ref="policetools / defy" data-bench-order="17" data-bench-text="defy-rs policetools / defy pursuit dispatch, wanted level &amp; ai state machine 22.0× faster">
                 <td><strong>🛡️ defy-rs</strong></td>
                 <td>PoliceTools / Defy</td>
                 <td>Pursuit dispatch, wanted level &amp; AI state machine</td>
@@ -2845,7 +2845,7 @@
                 <td><a href="https://code.brandonhubbard.com/defy-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/defy-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="poormans-camera-rs" data-bench-ref="poor man's camera (c#)" data-bench-order="18" data-bench-text="poormans-camera-rs poor man's camera (c#) 3d third-person camera rig with sphere-cast collision 18.5× faster">
                 <td><strong>🎥 poormans-camera-rs</strong></td>
                 <td>Poor Man's Camera (C#)</td>
                 <td>3D third-person camera rig with sphere-cast collision</td>
@@ -2853,7 +2853,7 @@
                 <td><a href="https://code.brandonhubbard.com/poormans-camera-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/poormans-camera-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="sfxr-rs" data-bench-ref="sfxr (c / sdl)" data-bench-order="19" data-bench-text="sfxr-rs sfxr (c / sdl) procedural 8-bit/16-bit sound effect synthesizer 18.0× faster">
                 <td><strong>🔊 sfxr-rs</strong></td>
                 <td>sfxr (C / SDL)</td>
                 <td>Procedural 8-bit/16-bit sound effect synthesizer</td>
@@ -2861,7 +2861,7 @@
                 <td><a href="https://code.brandonhubbard.com/sfxr-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/sfxr-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="dialogger-rs" data-bench-ref="dialogger (c#)" data-bench-order="20" data-bench-text="dialogger-rs dialogger (c#) branching dialogue graph evaluator &amp; npc bark engine 16.5× faster">
                 <td><strong>💬 dialogger-rs</strong></td>
                 <td>Dialogger (C#)</td>
                 <td>Branching dialogue graph evaluator &amp; NPC bark engine</td>
@@ -2869,7 +2869,7 @@
                 <td><a href="https://code.brandonhubbard.com/dialogger-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/dialogger-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="gambetta-netcode-rs" data-bench-ref="gambetta netcode (js)" data-bench-order="21" data-bench-text="gambetta-netcode-rs gambetta netcode (js) client-side prediction, reconciliation &amp; interpolation 14.2× faster">
                 <td><strong>📡 gambetta-netcode-rs</strong></td>
                 <td>Gambetta Netcode (JS)</td>
                 <td>Client-side prediction, reconciliation &amp; interpolation</td>
@@ -2877,7 +2877,7 @@
                 <td><a href="https://code.brandonhubbard.com/gambetta-netcode-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/gambetta-netcode-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="timesfm-rs" data-bench-ref="google timesfm (jax)" data-bench-order="22" data-bench-text="timesfm-rs google timesfm (jax) zero-shot time-series foundation model inference 13.4× faster">
                 <td><strong>📈 timesfm-rs</strong></td>
                 <td>Google TimesFM (JAX)</td>
                 <td>Zero-shot time-series foundation model inference</td>
@@ -2885,7 +2885,7 @@
                 <td><a href="https://code.brandonhubbard.com/timesfm-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/timesfm-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="sumo-rs" data-bench-ref="eclipse sumo (c++)" data-bench-order="23" data-bench-text="sumo-rs eclipse sumo (c++) microscopic traffic simulation &amp; idm car-following 12.1× faster">
                 <td><strong>🚦 sumo-rs</strong></td>
                 <td>Eclipse SUMO (C++)</td>
                 <td>Microscopic traffic simulation &amp; IDM car-following</td>
@@ -2893,7 +2893,7 @@
                 <td><a href="https://code.brandonhubbard.com/sumo-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/sumo-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="apfel-rs" data-bench-ref="apfel (swift / pytorch)" data-bench-order="24" data-bench-text="apfel-rs apfel (swift / pytorch) apple silicon on-device foundationmodels cli &amp; server 11.4× faster">
                 <td><strong>🍏 apfel-rs</strong></td>
                 <td>apfel (Swift / PyTorch)</td>
                 <td>Apple Silicon on-device FoundationModels CLI &amp; server</td>
@@ -2901,7 +2901,7 @@
                 <td><a href="https://code.brandonhubbard.com/apfel-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/apfel-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="translate-rs" data-bench-ref="libretranslate (python)" data-bench-order="25" data-bench-text="translate-rs libretranslate (python) deterministic offline neural machine translation 11.1× faster">
                 <td><strong>🌍 translate-rs</strong></td>
                 <td>LibreTranslate (Python)</td>
                 <td>Deterministic offline neural machine translation</td>
@@ -2909,7 +2909,7 @@
                 <td><a href="https://code.brandonhubbard.com/translate-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/translate-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="tactical-ai-rs" data-bench-ref="game ai pro (c#)" data-bench-order="26" data-bench-text="tactical-ai-rs game ai pro (c#) tactical influence maps, cover &amp; flanking pathfinder 9.2× faster">
                 <td><strong>🎯 tactical-ai-rs</strong></td>
                 <td>Game AI Pro (C#)</td>
                 <td>Tactical influence maps, cover &amp; flanking pathfinder</td>
@@ -2917,7 +2917,7 @@
                 <td><a href="https://code.brandonhubbard.com/tactical-ai-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/tactical-ai-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="tlab-vehicle-physics-rs" data-bench-ref="tlabvehiclephysics (c#)" data-bench-order="27" data-bench-text="tlab-vehicle-physics-rs tlabvehiclephysics (c#) pacejka magic formula tire friction &amp; drift physics 8.4× faster">
                 <td><strong>🏎️ tlab-vehicle-physics-rs</strong></td>
                 <td>TLabVehiclePhysics (C#)</td>
                 <td>Pacejka Magic Formula tire friction &amp; drift physics</td>
@@ -2925,7 +2925,7 @@
                 <td><a href="https://code.brandonhubbard.com/tlab-vehicle-physics-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/tlab-vehicle-physics-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="active-ragdoll-rs" data-bench-ref="activeragdoll (unity)" data-bench-order="28" data-bench-text="active-ragdoll-rs activeragdoll (unity) physical active ragdoll joint motors &amp; balance recovery 7.8× faster">
                 <td><strong>🤸 active-ragdoll-rs</strong></td>
                 <td>ActiveRagdoll (Unity)</td>
                 <td>Physical active ragdoll joint motors &amp; balance recovery</td>
@@ -2933,7 +2933,7 @@
                 <td><a href="https://code.brandonhubbard.com/active-ragdoll-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/active-ragdoll-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="olive-rs" data-bench-ref="olive editor (c++)" data-bench-order="29" data-bench-text="olive-rs olive editor (c++) non-linear timeline &amp; node compositing dag engine 7.2× faster">
                 <td><strong>🫒 olive-rs</strong></td>
                 <td>Olive Editor (C++)</td>
                 <td>Non-linear timeline &amp; node compositing DAG engine</td>
@@ -2941,7 +2941,7 @@
                 <td><a href="https://code.brandonhubbard.com/olive-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/olive-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="simplecar2-rs" data-bench-ref="simplecar2 (gdscript)" data-bench-order="30" data-bench-text="simplecar2-rs simplecar2 (gdscript) arcade-sim vehicle dynamics &amp; raycast suspension 6.8× faster">
                 <td><strong>🚗 simplecar2-rs</strong></td>
                 <td>SimpleCar2 (GDScript)</td>
                 <td>Arcade-sim vehicle dynamics &amp; raycast suspension</td>
@@ -2949,7 +2949,7 @@
                 <td><a href="https://code.brandonhubbard.com/simplecar2-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/simplecar2-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="detour-crowd-rs" data-bench-ref="recast/detour (c++)" data-bench-order="31" data-bench-text="detour-crowd-rs recast/detour (c++) rvo crowd collision avoidance &amp; navmesh steering 5.6× faster">
                 <td><strong>🚶 detour-crowd-rs</strong></td>
                 <td>Recast/Detour (C++)</td>
                 <td>RVO crowd collision avoidance &amp; navmesh steering</td>
@@ -2957,7 +2957,7 @@
                 <td><a href="https://code.brandonhubbard.com/detour-crowd-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/detour-crowd-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="mlx-embeddings-rs" data-bench-ref="sentence-transformers" data-bench-order="32" data-bench-text="mlx-embeddings-rs sentence-transformers apple silicon vector embeddings &amp; cosine search 5.4× faster">
                 <td><strong>🔍 mlx-embeddings-rs</strong></td>
                 <td>sentence-transformers</td>
                 <td>Apple Silicon vector embeddings &amp; cosine search</td>
@@ -2965,7 +2965,7 @@
                 <td><a href="https://code.brandonhubbard.com/mlx-embeddings-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/mlx-embeddings-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="comfyui-ltxvideo-mlx-rs" data-bench-ref="comfyui ltx (pytorch)" data-bench-order="33" data-bench-text="comfyui-ltxvideo-mlx-rs comfyui ltx (pytorch) cinematic dit video generation on apple silicon 4.8× faster">
                 <td><strong>🎬 comfyui-ltxvideo-mlx-rs</strong></td>
                 <td>ComfyUI LTX (PyTorch)</td>
                 <td>Cinematic DiT video generation on Apple Silicon</td>
@@ -2973,7 +2973,7 @@
                 <td><a href="https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/comfyui-ltxvideo-mlx-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="bullet3-rs" data-bench-ref="bullet3 sdk (c++)" data-bench-order="34" data-bench-text="bullet3-rs bullet3 sdk (c++) 3d rigid/soft-body physics &amp; gjk/epa collision 4.2× faster">
                 <td><strong>🎯 bullet3-rs</strong></td>
                 <td>Bullet3 SDK (C++)</td>
                 <td>3D rigid/soft-body physics &amp; GJK/EPA collision</td>
@@ -2981,7 +2981,7 @@
                 <td><a href="https://code.brandonhubbard.com/bullet3-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/bullet3-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="openrw-rs" data-bench-ref="openrw (c++)" data-bench-order="35" data-bench-text="openrw-rs openrw (c++) gta iii camera follow, targeting math &amp; kinematics 4.1× faster">
                 <td><strong>🦹 openrw-rs</strong></td>
                 <td>OpenRW (C++)</td>
                 <td>GTA III camera follow, targeting math &amp; kinematics</td>
@@ -2989,7 +2989,7 @@
                 <td><a href="https://code.brandonhubbard.com/openrw-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/openrw-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="mlt-rs" data-bench-ref="mlt framework (c)" data-bench-order="36" data-bench-text="mlt-rs mlt framework (c) multimedia video playback, mixing &amp; filter graph 3.7× faster">
                 <td><strong>📽️ mlt-rs</strong></td>
                 <td>MLT Framework (C)</td>
                 <td>Multimedia video playback, mixing &amp; filter graph</td>
@@ -2997,7 +2997,7 @@
                 <td><a href="https://code.brandonhubbard.com/mlt-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/mlt-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="mlx-audio-rs" data-bench-ref="mlx-audio (python)" data-bench-order="37" data-bench-text="mlx-audio-rs mlx-audio (python) on-device speech recognition &amp; neural audio synthesis 2.3× faster">
                 <td><strong>🎙️ mlx-audio-rs</strong></td>
                 <td>mlx-audio (Python)</td>
                 <td>On-device speech recognition &amp; neural audio synthesis</td>
@@ -3005,7 +3005,7 @@
                 <td><a href="https://code.brandonhubbard.com/mlx-audio-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/mlx-audio-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="mflux-rs" data-bench-ref="mflux (python mlx)" data-bench-order="38" data-bench-text="mflux-rs mflux (python mlx) flux.1-schnell image generation on apple silicon 1.89× faster">
                 <td><strong>🎨 mflux-rs</strong></td>
                 <td>mflux (Python MLX)</td>
                 <td>Flux.1-schnell image generation on Apple Silicon</td>
@@ -3013,7 +3013,7 @@
                 <td><a href="https://code.brandonhubbard.com/mflux-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
                 <td><a href="https://github.com/bhubbard/mflux-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
               </tr>
-              <tr>
+              <tr data-bench-name="mlx-gen-rs" data-bench-ref="mlx-lm (python mlx)" data-bench-order="39" data-bench-text="mlx-gen-rs mlx-lm (python mlx) high-throughput llm text generation &amp; token sampling 1.37× faster">
                 <td><strong>💬 mlx-gen-rs</strong></td>
                 <td>mlx-lm (Python MLX)</td>
                 <td>High-throughput LLM text generation &amp; token sampling</td>
@@ -6804,16 +6804,130 @@
 
     setupCopyButtons();
 
+    // Interactive Benchmark Matrix Filtering & Sorting
+    function setupBenchmarkMatrix() {
+      const benchSearchInput = document.getElementById('benchSearchInput');
+      const benchTableBody = document.getElementById('benchTableBody');
+      const benchActiveCount = document.getElementById('benchActiveCount');
+      const benchSortBtns = document.querySelectorAll('.bench-sort-btn');
+      const benchHeaders = document.querySelectorAll('#benchTable th[data-bench-col]');
+      if (!benchTableBody) return;
+
+      const allRows = Array.from(benchTableBody.querySelectorAll('tr'));
+      allRows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        if (cells.length >= 4) {
+          const projText = cells[0].textContent.replace(/[^\w-]/g, '').trim().toLowerCase();
+          const refText = cells[1].textContent.trim();
+          const domainText = cells[2].textContent.trim();
+          const speedText = cells[3].textContent.trim();
+          row.dataset.name = projText;
+          row.dataset.ref = refText;
+          row.dataset.domain = domainText;
+          if (!row.dataset.speedup) {
+            if (speedText.toLowerCase().includes('instant')) {
+              row.dataset.speedup = '99999';
+            } else {
+              const numMatch = speedText.replace(/,/g, '').match(/([\d.]+)/);
+              row.dataset.speedup = numMatch ? numMatch[1] : '0';
+            }
+          }
+        }
+      });
+
+      let currentSort = 'speedup-desc';
+
+      function renderBenchmarks() {
+        const query = ((benchSearchInput && benchSearchInput.value) || '').toLowerCase().trim();
+        const sorted = [...allRows].sort((a, b) => {
+          if (currentSort === 'speedup-desc') {
+            return parseFloat(b.dataset.speedup || '0') - parseFloat(a.dataset.speedup || '0');
+          }
+          if (currentSort === 'speedup-asc') {
+            return parseFloat(a.dataset.speedup || '0') - parseFloat(b.dataset.speedup || '0');
+          }
+          if (currentSort === 'name-asc') {
+            return (a.dataset.name || '').localeCompare(b.dataset.name || '');
+          }
+          if (currentSort === 'name-desc') {
+            return (b.dataset.name || '').localeCompare(a.dataset.name || '');
+          }
+          if (currentSort === 'ref-asc') {
+            return (a.dataset.ref || '').localeCompare(b.dataset.ref || '');
+          }
+          return 0;
+        });
+
+        let visibleCount = 0;
+        benchTableBody.innerHTML = '';
+        sorted.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          const matches = !query || text.includes(query);
+          row.style.display = matches ? '' : 'none';
+          if (matches) visibleCount++;
+          benchTableBody.appendChild(row);
+        });
+
+        if (benchActiveCount) {
+          benchActiveCount.textContent = `${visibleCount} VERIFIED BENCHMARK REPORT${visibleCount === 1 ? '' : 'S'}`;
+        }
+      }
+
+      if (benchSearchInput) {
+        benchSearchInput.addEventListener('input', renderBenchmarks);
+      }
+
+      benchSortBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          benchSortBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentSort = btn.dataset.benchSort;
+          renderBenchmarks();
+        });
+      });
+
+      benchHeaders.forEach(th => {
+        th.addEventListener('click', () => {
+          const col = th.dataset.benchCol;
+          if (col === 'name') {
+            currentSort = currentSort === 'name-asc' ? 'name-desc' : 'name-asc';
+          } else if (col === 'ref') {
+            currentSort = 'ref-asc';
+          } else if (col === 'speedup') {
+            currentSort = currentSort === 'speedup-desc' ? 'speedup-asc' : 'speedup-desc';
+          }
+          benchSortBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.benchSort === currentSort);
+          });
+          renderBenchmarks();
+        });
+      });
+    }
+    setupBenchmarkMatrix();
+
     function setupProjectCardClicks() {
-      // Make all featured project cards interactive: clicking anywhere on the card opens the project's GitHub Page
+      // Make all featured project cards interactive & keyboard accessible: clicking or pressing Enter/Space opens the project's GitHub Page
       document.querySelectorAll('.project-card').forEach(card => {
+        if (!card.hasAttribute('tabindex')) {
+          card.setAttribute('tabindex', '0');
+        }
+        const openCardTarget = () => {
+          const primaryLink = card.querySelector('.btn-primary') || card.querySelector('.card-actions a') || card.querySelector('a');
+          if (primaryLink && primaryLink.href) {
+            window.open(primaryLink.href, primaryLink.target || '_blank');
+          }
+        };
         card.addEventListener('click', (e) => {
           if (e.target.closest('a') || e.target.closest('button')) {
             return;
           }
-          const primaryLink = card.querySelector('.btn-primary') || card.querySelector('.card-actions a') || card.querySelector('a');
-          if (primaryLink && primaryLink.href) {
-            window.open(primaryLink.href, primaryLink.target || '_blank');
+          openCardTarget();
+        });
+        card.addEventListener('keydown', (e) => {
+          if (e.target !== card) return;
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openCardTarget();
           }
         });
       });

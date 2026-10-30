@@ -38,9 +38,12 @@ class PortalHTMLParser(HTMLParser):
     def __init__(self):
         super().__init__()
         self.ids = set()
+        self.duplicate_ids = []
         self.hrefs = []
         self.imgs = []
         self.buttons = []
+        self.inputs = []
+        self.bench_rows = []
         self.scripts_json_ld = []
         self.in_json_ld = False
         self.current_json_ld = []
@@ -50,13 +53,20 @@ class PortalHTMLParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         attr_dict = dict(attrs)
         if "id" in attr_dict and attr_dict["id"]:
-            self.ids.add(attr_dict["id"])
+            el_id = attr_dict["id"]
+            if el_id in self.ids:
+                self.duplicate_ids.append(el_id)
+            self.ids.add(el_id)
         if tag == "a" and "href" in attr_dict:
             self.hrefs.append(attr_dict["href"])
         if tag == "img":
             self.imgs.append(attr_dict)
         if tag == "button":
             self.buttons.append(attr_dict)
+        if tag == "input":
+            self.inputs.append(attr_dict)
+        if tag == "tr" and "data-bench-name" in attr_dict:
+            self.bench_rows.append(attr_dict)
         if tag == "meta":
             self.meta_tags.append(attr_dict)
         if tag == "link" and attr_dict.get("rel") == "canonical":
@@ -121,6 +131,34 @@ def validate_all(verify_network=False):
     assert_true(
         len(missing_anchors) == 0,
         f"All {len(anchor_hrefs)} internal #anchor links resolve to valid DOM IDs (missing: {missing_anchors})",
+        failures,
+    )
+
+    assert_true(
+        len(parser.duplicate_ids) == 0,
+        f"Zero duplicate DOM IDs in index.html (duplicates: {parser.duplicate_ids})",
+        failures,
+    )
+
+    relative_hrefs = [h for h in parser.hrefs if h.startswith("./")]
+    assert_true(
+        len(relative_hrefs) == 0,
+        f"Zero ambiguous relative './' links in index.html (found: {relative_hrefs})",
+        failures,
+    )
+
+    assert_true(
+        len(parser.bench_rows) == 40,
+        f"Empirical Benchmark Matrix contains all 40 verified Rust rows (got {len(parser.bench_rows)})",
+        failures,
+    )
+
+    unlabeled_inputs = [
+        inp for inp in parser.inputs if not inp.get("aria-label") and not inp.get("placeholder")
+    ]
+    assert_true(
+        len(unlabeled_inputs) == 0,
+        f"All {len(parser.inputs)} <input> elements have accessible aria-label or placeholder",
         failures,
     )
 
