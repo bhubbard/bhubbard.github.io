@@ -148,8 +148,8 @@ def validate_all(verify_network=False):
     )
 
     assert_true(
-        len(parser.bench_rows) == 40,
-        f"Empirical Benchmark Matrix contains all 40 verified Rust rows (got {len(parser.bench_rows)})",
+        len(parser.bench_rows) >= 40,
+        f"Empirical Benchmark Matrix contains {len(parser.bench_rows)} verified Rust rows (>= 40)",
         failures,
     )
 
@@ -197,8 +197,8 @@ def validate_all(verify_network=False):
         failures,
     )
     assert_true(
-        len(benchmarks) == 40,
-        f"api/benchmarks.json contains all {len(benchmarks)} verified empirical Rust benchmarks",
+        len(benchmarks) == len(parser.bench_rows) and len(benchmarks) >= 40,
+        f"api/benchmarks.json contains all {len(benchmarks)} verified empirical Rust benchmarks (matching index.html)",
         failures,
     )
 

@@ -438,5 +438,16 @@
     "page_url": "https://code.brandonhubbard.com/mlx-gen-rs/",
     "benchmark_url": "https://github.com/bhubbard/mlx-gen-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/mlx-gen-rs"
+  },
+  {
+    "rank": 41,
+    "name": "blender-rs",
+    "reference_runtime": "Blender 4.2 (C/C++)",
+    "domain": "Half-edge BMesh kernel, generational arena & pointerless BVH/KD-tree",
+    "speedup_label": "1.31\u00d7 faster",
+    "speedup_factor": 1.31,
+    "page_url": "https://code.brandonhubbard.com/blender-rs/",
+    "benchmark_url": "https://github.com/bhubbard/blender-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/blender-rs"
   }
 ]

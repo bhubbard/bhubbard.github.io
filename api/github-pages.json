@@ -28,7 +28,7 @@
       "timesfm"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-28T20:20:07Z"
+    "pushed_at": "2026-10-30T14:10:03Z"
   },
   {
     "name": "active-ragdoll-rs",
@@ -134,7 +134,27 @@
       "zero-token"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-19T14:28:57Z"
+    "pushed_at": "2026-10-30T14:11:29Z"
+  },
+  {
+    "name": "blender-rs",
+    "description": "Memory-safe, high-performance pure Rust port of Blender 3D creation suite \u2014 mesh modeling, scene graph, and rendering pipeline.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/blender-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/blender-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/blender-rs",
+    "target_url": "https://code.brandonhubbard.com/blender-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-30T14:41:11Z"
   },
   {
     "name": "open-higgsfield-ai-rs",
@@ -677,7 +697,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-30T11:44:04Z"
+    "pushed_at": "2026-10-30T14:05:40Z"
   },
   {
     "name": "box3d-rs",

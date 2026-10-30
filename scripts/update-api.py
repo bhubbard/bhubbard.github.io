@@ -38,6 +38,7 @@ GITHUB_PAGES_MAP = {
     "astro-schema-ld-verifier": "https://code.brandonhubbard.com/astro-schema-ld-verifier/",
     "auge-rs": "https://code.brandonhubbard.com/auge-rs/",
     "bhubbard.github.io": "https://code.brandonhubbard.com/",
+    "blender-rs": "https://code.brandonhubbard.com/blender-rs/",
     "box3d-rs": "https://code.brandonhubbard.com/box3d-rs/",
     "bullet3-rs": "https://code.brandonhubbard.com/bullet3-rs/",
     "clearwater-rs": "https://code.brandonhubbard.com/clearwater-rs/",
