@@ -677,7 +677,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-29T11:51:11Z"
+    "pushed_at": "2026-10-30T11:44:04Z"
   },
   {
     "name": "box3d-rs",
@@ -1952,24 +1952,156 @@
       "cli",
       "rust"
     ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
-    "github_url": "https://github.com/bhubbard/yt-dlp-rs",
-    "target_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
-    "topics": [
-      "cli",
-      "media-extraction",
-      "rust",
-      "streaming",
-      "video-downloader"
-    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/blender-rs",
+    "target_url": "https://github.com/bhubbard/blender-rs",
+    "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-10-05T15:50:36Z"
+    "pushed_at": "2026-10-19T14:33:33Z"
   },
   {
-    "name": "blender-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "name": "gcf-pubsub-webhook",
+    "description": "A simple cloud function to receive message and post to PubSub Topic. ",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/gcf-pubsub-webhook",
+    "target_url": "https://github.com/bhubbard/gcf-pubsub-webhook",
+    "topics": [
+      "google-cloud",
+      "pubsub",
+      "webhook"
+    ],
+    "is_archived": true,
+    "pushed_at": "2020-02-04T18:14:34Z"
+  },
+  {
+    "name": "kumo-drift-checks",
+    "description": "Automated UI design token drift detection and consistency verification utility",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/kumo-drift-checks",
+    "target_url": "https://github.com/bhubbard/kumo-drift-checks",
+    "topics": [
+      "cloudflare",
+      "cloudflare-workers",
+      "design-system",
+      "design-systems",
+      "design-tokens",
+      "drift-detection",
+      "javascript",
+      "kumo",
+      "kumo-ui",
+      "serverless",
+      "typescript",
+      "ui-components"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:57:07Z"
+  },
+  {
+    "name": "pressable-cli",
+    "description": "Command-line interface for managing Pressable WordPress sites, backups, and deployments",
+    "language": "TypeScript",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/pressable-cli",
+    "target_url": "https://github.com/bhubbard/pressable-cli",
+    "topics": [
+      "api-client",
+      "automation",
+      "cli",
+      "devops",
+      "hosting",
+      "pressable",
+      "typescript",
+      "wordpress"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:57:12Z"
+  },
+  {
+    "name": "send-to-pubsub",
+    "description": "HTTP Cloud Function to send data to PubSub.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/send-to-pubsub",
+    "target_url": "https://github.com/bhubbard/send-to-pubsub",
+    "topics": [
+      "automation",
+      "developer-tools",
+      "google-cloud",
+      "pubsub"
+    ],
+    "is_archived": true,
+    "pushed_at": "2022-09-20T17:37:33Z"
+  },
+  {
+    "name": "skills",
+    "description": "Comprehensive repository of production AI Agent Skills and workflows for Antigravity, Claude, and AI coding assistants.",
+    "language": "HTML",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/skills",
+    "target_url": "https://github.com/bhubbard/skills",
+    "topics": [
+      "agent",
+      "agent-skills",
+      "ai",
+      "ai-agents",
+      "antigravity",
+      "claude",
+      "claude-code",
+      "developer-productivity",
+      "prompt-engineering"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-04T23:19:29Z"
+  },
+  {
+    "name": "voicestudio-rs",
+    "description": "Open-source, fully-local ElevenLabs alternative in Rust \u2014 voice cloning, design, video dubbing, and transcription",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -2453,33 +2585,36 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
-    "github_url": "https://github.com/bhubbard/blender-rs",
-    "target_url": "https://github.com/bhubbard/blender-rs",
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/latentsync-rs",
+    "target_url": "https://github.com/bhubbard/latentsync-rs",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-10-19T14:33:33Z"
+    "pushed_at": "2026-10-12T18:55:10Z"
   },
   {
-    "name": "voicestudio-rs",
-    "description": "Open-source, fully-local ElevenLabs alternative in Rust \u2014 voice cloning, design, video dubbing, and transcription",
-    "language": "Rust",
-    "category": "cli",
+    "name": "locals",
+    "description": "Run many AI agents at once on your Mac, up to 3x faster.",
+    "language": "Code",
+    "category": "tools",
     "categories": [
-      "cli",
-      "rust"
+      "tools"
     ],
-    "stars": 1,
+    "stars": 0,
     "has_pages": false,
     "page_url": null,
-    "github_url": "https://github.com/bhubbard/voicestudio-rs",
-    "target_url": "https://github.com/bhubbard/voicestudio-rs",
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/locals",
+    "target_url": "https://github.com/bhubbard/locals",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-10-12T18:55:33Z"
+    "pushed_at": "2026-10-21T23:31:16Z"
   },
   {
-    "name": "agentarena-rs",
-    "description": "Dynamic simulation test bench and deterministic benchmark arena for AI agents across traffic, tactical combat, crowd steering, and multi-agent coordination",
+    "name": "longcat-video-rs",
+    "description": "LongCat-Video: Long-context video generation and temporal diffusion in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -2489,11 +2624,52 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
-    "github_url": "https://github.com/bhubbard/agentarena-rs",
-    "target_url": "https://github.com/bhubbard/agentarena-rs",
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/longcat-video-rs",
+    "target_url": "https://github.com/bhubbard/longcat-video-rs",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-10-08T06:11:18Z"
+    "pushed_at": "2026-10-12T18:55:12Z"
+  },
+  {
+    "name": "minimind",
+    "description": "\ud83e\udde0 Train a 64M-parameter LLM from scratch in just 2h!",
+    "language": "Python",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/minimind",
+    "target_url": "https://github.com/bhubbard/minimind",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:48:19Z"
+  },
+  {
+    "name": "musetalk-rs",
+    "description": "Pure Rust real-time high-fidelity audio-driven lip-sync and talking head synthesis engine in latent space.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/musetalk-rs",
+    "target_url": "https://github.com/bhubbard/musetalk-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:15Z"
   },
   {
     "name": "neteq-rs",
