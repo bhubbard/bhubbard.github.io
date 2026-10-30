@@ -89,6 +89,7 @@ GITHUB_PAGES_MAP = {
     "vite-plus-commitlint": "https://code.brandonhubbard.com/vite-plus-commitlint/",
     "vite-plus-kumo-ui": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
     "vite-plus-wrangler": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+    "voicestudio-rs": "https://code.brandonhubbard.com/voicestudio-rs/",
     "watertight-meshes-rs": "https://code.brandonhubbard.com/watertight-meshes-rs/",
     "yt-dlp-rs": "https://code.brandonhubbard.com/yt-dlp-rs/",
     "zev-rs": "https://code.brandonhubbard.com/zev-rs/",
@@ -349,11 +350,13 @@ def main():
 
     # Candidate page URLs to verify concurrently
     candidates = {}
+    repo_has_pages = {}
     for r in repos:
         name = r.get("name")
         if not name or name == GITHUB_USER or r.get("private", False):
             continue
         lower = name.lower()
+        repo_has_pages[name] = bool(r.get("has_pages", False))
         if lower in GITHUB_PAGES_MAP:
             candidates[name] = GITHUB_PAGES_MAP[lower]
         elif r.get("has_pages", False):
@@ -368,7 +371,7 @@ def main():
         }
         for future in concurrent.futures.as_completed(future_to_name):
             name, url = future_to_name[future]
-            if future.result():
+            if future.result() or (name.lower() in GITHUB_PAGES_MAP and repo_has_pages.get(name, False)):
                 verified_pages[name] = url
 
     print(f"Verified {len(verified_pages)} live GitHub Pages (HTTP 200).")

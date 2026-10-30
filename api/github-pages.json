@@ -289,6 +289,26 @@
     "pushed_at": "2026-09-28T20:36:57Z"
   },
   {
+    "name": "voicestudio-rs",
+    "description": "Open-source, fully-local ElevenLabs alternative in Rust \u2014 voice cloning, design, video dubbing, and transcription",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/voicestudio-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/voicestudio-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/voicestudio-rs",
+    "target_url": "https://code.brandonhubbard.com/voicestudio-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-30T19:01:09Z"
+  },
+  {
     "name": "aesir-utils-rs",
     "description": "Pure Rust screen safezone, aspect ratio correction, and UI alignment math for games",
     "language": "Rust",
@@ -697,7 +717,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-30T14:05:40Z"
+    "pushed_at": "2026-10-30T14:42:59Z"
   },
   {
     "name": "box3d-rs",
