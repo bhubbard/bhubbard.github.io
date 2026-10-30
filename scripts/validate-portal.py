@@ -240,6 +240,36 @@ def validate_all(verify_network=False):
             failures,
         )
 
+    # Cross-verify all github.com/bhubbard/<repo> and code.brandonhubbard.com/<repo>/ URLs in index.html and README.md
+    known_repos = {p["name"].lower() for p in projects}
+    known_pages = {p["name"].lower() for p in pages}
+    with open(os.path.join(BASE_DIR, "README.md"), "r", encoding="utf-8") as f:
+        readme_content = f.read()
+
+    for label, doc_text in [("index.html", html_content), ("README.md", readme_content)]:
+        gh_refs = {
+            m_gh.group(1).lower()
+            for m_gh in re.finditer(r"https://github\.com/bhubbard/([a-zA-Z0-9_.-]+)", doc_text)
+        }
+        unknown_gh = sorted(gh_refs - known_repos)
+        assert_true(
+            len(unknown_gh) == 0,
+            f"All {len(gh_refs)} GitHub repo links in {label} exist in api/projects.json (unknown: {unknown_gh})",
+            failures,
+        )
+
+        page_refs = {
+            m_pg.group(1).lower()
+            for m_pg in re.finditer(r"https://code\.brandonhubbard\.com/([a-zA-Z0-9_.-]+)/", doc_text)
+            if m_pg.group(1).lower() != "api"
+        }
+        unknown_pages = sorted(page_refs - known_pages)
+        assert_true(
+            len(unknown_pages) == 0,
+            f"All {len(page_refs)} code.brandonhubbard.com/<repo>/ links in {label} exist in api/github-pages.json (unknown: {unknown_pages})",
+            failures,
+        )
+
     print("\n=== 4. Validating CNAME, robots.txt & sitemap.xml ===")
     with open(os.path.join(BASE_DIR, "CNAME"), "r", encoding="utf-8") as f:
         cname = f.read().strip()
