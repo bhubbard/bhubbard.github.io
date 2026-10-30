@@ -154,7 +154,7 @@
     "target_url": "https://code.brandonhubbard.com/blender-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-10-30T14:41:11Z"
+    "pushed_at": "2026-10-30T21:32:45Z"
   },
   {
     "name": "open-higgsfield-ai-rs",
@@ -717,7 +717,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-30T14:42:59Z"
+    "pushed_at": "2026-10-30T19:02:22Z"
   },
   {
     "name": "box3d-rs",
@@ -1538,6 +1538,26 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-05T15:50:07Z"
+  },
+  {
+    "name": "openmontage-rs",
+    "description": "Open-source, agentic video production system in Rust \u2014 pipelines, shot composition, timeline editing, and audio mixing",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/openmontage-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/openmontage-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/openmontage-rs",
+    "target_url": "https://code.brandonhubbard.com/openmontage-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-30T23:03:15Z"
   },
   {
     "name": "poormans-camera-rs",

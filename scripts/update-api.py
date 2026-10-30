@@ -71,6 +71,7 @@ GITHUB_PAGES_MAP = {
     "olive-rs": "https://code.brandonhubbard.com/olive-rs/",
     "open-generative-ai-rs": "https://code.brandonhubbard.com/open-generative-ai-rs/",
     "open-higgsfield-ai-rs": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "openmontage-rs": "https://code.brandonhubbard.com/openmontage-rs/",
     "openrw-rs": "https://code.brandonhubbard.com/openrw-rs/",
     "poormans-camera-rs": "https://code.brandonhubbard.com/poormans-camera-rs/",
     "radial-menu-rs": "https://code.brandonhubbard.com/radial-menu-rs/",
