@@ -85,6 +85,7 @@ GITHUB_PAGES_MAP = {
     "timesfm-rs": "https://code.brandonhubbard.com/timesfm-rs/",
     "tlab-vehicle-physics-rs": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
     "translate-rs": "https://code.brandonhubbard.com/translate-rs/",
+    "upscayl-rs": "https://code.brandonhubbard.com/upscayl-rs/",
     "uxsim-rs": "https://code.brandonhubbard.com/uxsim-rs/",
     "vhud-rs": "https://code.brandonhubbard.com/vhud-rs/",
     "vite-plus-commitlint": "https://code.brandonhubbard.com/vite-plus-commitlint/",

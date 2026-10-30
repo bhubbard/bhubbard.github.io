@@ -717,7 +717,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-30T19:02:22Z"
+    "pushed_at": "2026-10-30T23:04:05Z"
   },
   {
     "name": "box3d-rs",
@@ -1792,6 +1792,26 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-12T18:55:25Z"
+  },
+  {
+    "name": "upscayl-rs",
+    "description": "High-performance, pure-Rust native port and drop-in CLI replacement for Upscayl AI image upscaler",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/upscayl-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/upscayl-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/upscayl-rs",
+    "target_url": "https://code.brandonhubbard.com/upscayl-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-30T23:16:32Z"
   },
   {
     "name": "uxsim-rs",
@@ -3089,26 +3109,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-30T18:01:10Z"
-  },
-  {
-    "name": "upscayl-rs",
-    "description": "High-performance, pure-Rust native port and drop-in CLI replacement for Upscayl AI image upscaler",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/upscayl-rs",
-    "target_url": "https://github.com/bhubbard/upscayl-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-07T05:27:38Z"
   },
   {
     "name": "video-retalking-rs",
