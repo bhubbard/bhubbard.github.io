@@ -654,7 +654,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-28T11:42:47Z"
+    "pushed_at": "2026-10-29T11:51:11Z"
   },
   {
     "name": "box3d-rs",
@@ -2007,6 +2007,24 @@
     "pushed_at": "2026-10-05T15:50:36Z"
   },
   {
+    "name": "blender-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/blender-rs",
+    "target_url": "https://github.com/bhubbard/blender-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-19T14:33:33Z"
+  },
+  {
     "name": "voicestudio-rs",
     "description": "Open-source, fully-local ElevenLabs alternative in Rust \u2014 voice cloning, design, video dubbing, and transcription",
     "language": "Rust",
@@ -2041,24 +2059,6 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-10-08T06:11:18Z"
-  },
-  {
-    "name": "blender-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "github_url": "https://github.com/bhubbard/blender-rs",
-    "target_url": "https://github.com/bhubbard/blender-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-19T14:33:33Z"
   },
   {
     "name": "freevideo-rs",
