@@ -1,6 +1,11 @@
 # Dependencies
 node_modules/
 
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
 # Logs & OS metadata
 .DS_Store
 Thumbs.db

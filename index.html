@@ -13,13 +13,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; Rust Infrastructure</title>
-  <meta name="description" content="Official open source software portal and flagship engineering hub by Brandon Hubbard showcasing The Flare Suite, Astro Chrome Built-in AI, and compiled Rust CLIs.">
-  <link rel="canonical" href="https://bhubbard.github.io/">
+  <meta name="description" content="Official open source software portal and flagship engineering hub by Brandon Hubbard showcasing The Flare Suite, Astro Chrome Built-in AI, and 78+ compiled Rust engines and CLIs.">
+  <link rel="canonical" href="https://code.brandonhubbard.com/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta property="og:title" content="Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; Rust">
-  <meta property="og:description" content="High-performance Cloudflare developer tools (The Flare Suite), Chrome Built-in Gemini Nano dev tools, compiled Rust CLIs, and enterprise web specifications.">
+  <meta property="og:description" content="High-performance Cloudflare developer tools (The Flare Suite), Chrome Built-in Gemini Nano dev tools, 78+ compiled Rust engines, and 40 verified empirical benchmarks.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bhubbard.github.io/">
+  <meta property="og:url" content="https://code.brandonhubbard.com/">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Structured Data (JSON-LD) -->
@@ -29,10 +29,10 @@
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://bhubbard.github.io/#website",
-        "url": "https://bhubbard.github.io/",
+        "@id": "https://code.brandonhubbard.com/#website",
+        "url": "https://code.brandonhubbard.com/",
         "name": "Brandon Hubbard Engineering & Open Source",
-        "description": "Flagship engineering portal showcasing high-performance Rust CLIs, Apple Intelligence FoundationModels, zero-token decision engines, Cloudflare Flare Suite, and Astro Chrome Built-in AI tools.",
+        "description": "Flagship engineering portal showcasing 130+ open-source repositories, 78+ high-performance Rust CLIs and simulation engines, Apple Intelligence FoundationModels, zero-token decision engines, Cloudflare Flare Suite, and Astro Chrome Built-in AI tools.",
         "publisher": {
           "@type": "Person",
           "name": "Brandon Hubbard",
@@ -48,6 +48,7 @@
         "jobTitle": "Principal Engineer & Systems Architect",
         "sameAs": [
           "https://github.com/bhubbard",
+          "https://code.brandonhubbard.com/",
           "https://bhubbard.github.io/"
         ]
       }
@@ -1049,6 +1050,69 @@
     }
 
     /* -------------------------------------------------------------
+       Empirical Rust Benchmark Matrix Section
+       ------------------------------------------------------------- */
+    .benchmarks-section {
+      padding: 2rem;
+      border-bottom: 1px solid var(--concrete);
+      background: var(--void);
+    }
+
+    .bench-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--concrete);
+    }
+
+    .bench-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-align: left;
+    }
+
+    .bench-table th {
+      background: var(--charcoal);
+      color: var(--steel);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--concrete);
+      border-right: 1px solid var(--concrete);
+      white-space: nowrap;
+    }
+
+    .bench-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--concrete);
+      border-right: 1px solid var(--concrete);
+      color: var(--titanium);
+    }
+
+    .bench-table tr:hover td {
+      background: var(--charcoal);
+    }
+
+    .bench-speedup {
+      color: var(--emerald);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .bench-link {
+      color: var(--cyan);
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .bench-link:hover {
+      text-decoration: underline;
+    }
+
+    /* -------------------------------------------------------------
        Footer
        ------------------------------------------------------------- */
     footer {
@@ -1787,7 +1851,8 @@
         <a href="#flare-suite" class="subnav-link">The Flare Suite</a>
         <a href="#astro-suite" class="subnav-link">Chrome AI / Astro</a>
         <a href="#edge-rust" class="subnav-link">Rust CLIs</a>
-        <a href="#all-repos" class="subnav-link">All Repos</a>
+        <a href="#benchmarks-matrix" class="subnav-link">Benchmarks (40)</a>
+        <a href="#all-repos" class="subnav-link">All Repos (130)</a>
         <a href="https://github.com/bhubbard" target="_blank" rel="noopener noreferrer" class="subnav-link github-link">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           GitHub ↗
@@ -1808,7 +1873,7 @@
           <span>ENGINEERING SPECIFICATION // OPEN SOURCE ECOSYSTEM</span>
         </div>
         <h1>The Flare Suite, Local Chrome AI &amp; High-Performance Rust.</h1>
-        <p class="lead">A flagship ecosystem of zero-cost, zero-latency Astro integrations powered by Chrome on-device Gemini Nano, compiled Rust developer tools for Cloudflare Workers &amp; Pages, and enterprise edge infrastructure.</p>
+        <p class="lead">A flagship ecosystem of zero-cost, zero-latency Astro integrations powered by Chrome on-device Gemini Nano, compiled Rust developer tools for Cloudflare Workers &amp; Pages, and 78+ high-throughput native Rust engines.</p>
 
         <div class="hero-actions">
           <button type="button" class="btn btn-primary" id="heroSearchTrigger">
@@ -1816,11 +1881,12 @@
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <span>Search 60+ Repositories (⌘K)</span>
+            <span>Search 130 Repositories (⌘K)</span>
           </button>
           <a href="#flare-suite" class="btn btn-accent">🛡️ The Flare Suite</a>
           <a href="#astro-suite" class="btn btn-secondary">🤖 Chrome AI / Astro</a>
           <a href="#edge-rust" class="btn btn-secondary">🦀 Rust CLIs</a>
+          <a href="#benchmarks-matrix" class="btn btn-secondary">⚡ 40 Benchmarks</a>
         </div>
         
         <div class="hero-metrics">
@@ -1833,11 +1899,11 @@
             <span class="metric-label">Astro AI Packages</span>
           </div>
           <div class="metric-card">
-            <span class="metric-num">20+</span>
+            <span class="metric-num">78+</span>
             <span class="metric-label">Rust &amp; Edge Tools</span>
           </div>
           <div class="metric-card">
-            <span class="metric-num" id="metricRepoCount">63</span>
+            <span class="metric-num" id="metricRepoCount">130</span>
             <span class="metric-label">Open Repositories</span>
           </div>
         </div>
@@ -1903,10 +1969,10 @@
         <div class="category-nav-inner">
           <a href="#flare-suite" class="category-nav-link"><span class="badge-num">01</span> The Flare Suite (4)</a>
           <a href="#astro-suite" class="category-nav-link"><span class="badge-num">02</span> Astro &amp; Local AI (13)</a>
-          <a href="#edge-rust" class="category-nav-link"><span class="badge-num">03</span> Rust &amp; CLI Tools (12)</a>
-          <a href="#wordpress-suite" class="category-nav-link"><span class="badge-num">04</span> WordPress Ecosystem (16)</a>
-          <a href="#cloud-tools" class="category-nav-link"><span class="badge-num">05</span> Cloud &amp; Automation (10)</a>
-          <a href="#all-repos" class="category-nav-link"><span class="badge-num">06</span> All Repositories Index</a>
+          <a href="#edge-rust" class="category-nav-link"><span class="badge-num">03</span> Rust &amp; AI Engines (78)</a>
+          <a href="#benchmarks-matrix" class="category-nav-link"><span class="badge-num">04</span> Verified Benchmarks (40)</a>
+          <a href="#wordpress-suite" class="category-nav-link"><span class="badge-num">05</span> WordPress Ecosystem (21)</a>
+          <a href="#all-repos" class="category-nav-link"><span class="badge-num">06</span> All Repositories Index (130)</a>
         </div>
       </div>
 
@@ -1975,7 +2041,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://bhubbard.github.io/flareguard/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/flareguard/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/flareguard" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -1994,7 +2060,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://bhubbard.github.io/flareperf/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/flareperf/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/flareperf" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2013,7 +2079,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://bhubbard.github.io/flarelint/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/flarelint/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/flarelint" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2032,7 +2098,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://bhubbard.github.io/flareops/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
+            <a href="https://code.brandonhubbard.com/flareops/" class="btn btn-primary" target="_blank" rel="noopener">View Docs ↗</a>
             <a href="https://github.com/bhubbard/flareops" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2415,7 +2481,7 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://bhubbard.github.io/apfel-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://code.brandonhubbard.com/apfel-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
             <a href="https://github.com/bhubbard/apfel-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -2425,7 +2491,7 @@
           <div class="card-top">
             <span class="card-category" style="color: var(--cobalt);">[ Zero-Token Decision Engine // Rust ]</span>
             <h3>⚡ zev-rs</h3>
-            <p>Ultra-fast zero-token LLM decision engine. Evaluates classification, routing, and scoring schemas in 0.37ms with 70.1% JevBench accuracy, 0% order bias, and zero GPU requirement.</p>
+            <p>Ultra-fast zero-token LLM decision engine. Evaluates classification, routing, and scoring schemas in 5.8 µs with 70.1% JevBench accuracy, 0% order bias, and zero GPU requirement.</p>
             <div class="card-cli">
               <code>cargo install zev-rs</code>
               <button class="copy-btn" data-copy="cargo install zev-rs" title="Copy command">
@@ -2434,93 +2500,131 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://bhubbard.github.io/zev-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://code.brandonhubbard.com/zev-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
             <a href="https://github.com/bhubbard/zev-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
-        <!-- Flagship Rust & Local AI 3: video-use-rs -->
+        <!-- Flagship Rust & Local AI 3: nanoswarm-rs -->
         <div class="project-card" style="border-top: 3px solid var(--crimson);">
           <div class="card-top">
-            <span class="card-category" style="color: var(--crimson);">[ AI Video Editing // Coding Agents ]</span>
-            <h3>🎬 video-use-rs</h3>
-            <p>High-performance Rust toolkit for conversation-driven video editing with AI coding agents. Word-level transcripts, phrase packing, lossless cuts, and automated color grading.</p>
+            <span class="card-category" style="color: var(--crimson);">[ Autonomous Agent Swarm // SIMD Routing ]</span>
+            <h3>🐝 nanoswarm-rs</h3>
+            <p>100% on-device autonomous AI agent swarm in native Rust (&lt;30MB RAM, 5.8µs SIMD routing) for deterministic multi-agent orchestration and task execution.</p>
             <div class="card-cli">
-              <code>cargo install video-use-rs</code>
-              <button class="copy-btn" data-copy="cargo install video-use-rs" title="Copy command">
+              <code>cargo install nanoswarm-rs</code>
+              <button class="copy-btn" data-copy="cargo install nanoswarm-rs" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://bhubbard.github.io/video-use-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
-            <a href="https://github.com/bhubbard/video-use-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://code.brandonhubbard.com/nanoswarm-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/nanoswarm-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
-        <!-- Rust Card 1 -->
+        <!-- Flagship Rust 4: timesfm-rs -->
+        <div class="project-card" style="border-top: 3px solid var(--cyan);">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cyan);">[ Time-Series Foundation Model // Rust ]</span>
+            <h3>📈 timesfm-rs</h3>
+            <p>High-performance native Rust inference engine for Google Research's TimesFM foundation model — zero-shot time-series forecasting running 13.4× faster than JAX/Python.</p>
+            <div class="card-cli">
+              <code>cargo install timesfm-rs</code>
+              <button class="copy-btn" data-copy="cargo install timesfm-rs" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://code.brandonhubbard.com/timesfm-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/timesfm-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Flagship Rust 5: uxsim-rs -->
+        <div class="project-card" style="border-top: 3px solid var(--emerald);">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--emerald);">[ Traffic Simulation // 1,620× Speedup ]</span>
+            <h3>🚦 uxsim-rs</h3>
+            <p>Pure Rust macroscopic city-wide traffic network flow simulator executing dynamic kinematic wave routing 1,620× faster than the Python UXsim reference.</p>
+            <div class="card-cli">
+              <code>cargo install uxsim-rs</code>
+              <button class="copy-btn" data-copy="cargo install uxsim-rs" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://code.brandonhubbard.com/uxsim-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/uxsim-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Flagship Rust 6: watertight-meshes-rs -->
+        <div class="project-card" style="border-top: 3px solid var(--cobalt);">
+          <div class="card-top">
+            <span class="card-category" style="color: var(--cobalt);">[ 3D AI Geometry // Mesh Repair ]</span>
+            <h3>🧊 watertight-meshes-rs</h3>
+            <p>High-performance Rust engine and CLI for generating, validating, voxelizing, and repairing 100% watertight 3D AI meshes (TRELLIS.2, Pixal3D, ComfyUI).</p>
+            <div class="card-cli">
+              <code>cargo install watertight-meshes-rs</code>
+              <button class="copy-btn" data-copy="cargo install watertight-meshes-rs" title="Copy command">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://code.brandonhubbard.com/watertight-meshes-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/watertight-meshes-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Flagship Rust 7: lyra-rs -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Cloudflare Ops // CLI ]</span>
-            <h3>flareops</h3>
-            <p>Developer operations & workflow CLI for Cloudflare Workers, Pages, and Astro — type generation, secret sync, and unified verification.</p>
+            <span class="card-category" style="color: var(--cyan);">[ 3D World Models // Gaussian Splatting ]</span>
+            <h3>🌌 lyra-rs</h3>
+            <p>Pure Rust fork and high-performance engine for NVIDIA Project Lyra: Open Generative 3D World Models and real-time 3D Gaussian Splatting.</p>
             <div class="card-cli">
-              <code>cargo install flareops</code>
-              <button class="copy-btn" data-copy="cargo install flareops" title="Copy command">
+              <code>cargo install lyra-rs</code>
+              <button class="copy-btn" data-copy="cargo install lyra-rs" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./flareops/" class="btn btn-primary">Interactive Site ↗</a>
-            <a href="https://github.com/bhubbard/flareops" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://code.brandonhubbard.com/lyra-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/lyra-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
-        <!-- Rust Card 2 -->
+        <!-- Flagship Rust 8: translate-rs -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ AST Static Analysis // Linter ]</span>
-            <h3>flarelint</h3>
-            <p>Unified, nanosecond-fast Rust AST static analysis and edge compatibility linter for Cloudflare Workers & Astro applications.</p>
+            <span class="card-category" style="color: var(--emerald);">[ Neural Translation // Multi-Provider HTTP ]</span>
+            <h3>🌍 translate-rs</h3>
+            <p>Deterministic on-device neural translation CLI and multi-provider HTTP server in Rust compatible with DeepL, LibreTranslate, and Google Translate v2.</p>
             <div class="card-cli">
-              <code>cargo install flarelint</code>
-              <button class="copy-btn" data-copy="cargo install flarelint" title="Copy command">
+              <code>cargo install translate-rs</code>
+              <button class="copy-btn" data-copy="cargo install translate-rs" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="./flarelint/" class="btn btn-primary">Interactive Site ↗</a>
-            <a href="https://github.com/bhubbard/flarelint" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://code.brandonhubbard.com/translate-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/translate-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
-        <!-- Rust Card 3 -->
-        <div class="project-card">
-          <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Edge Latency // Benchmarking ]</span>
-            <h3>flareperf</h3>
-            <p>High-performance Core Web Vitals, edge latency, and TTFB benchmarker for Cloudflare edge deployments.</p>
-            <div class="card-cli">
-              <code>cargo install flareperf</code>
-              <button class="copy-btn" data-copy="cargo install flareperf" title="Copy command">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="./flareperf/" class="btn btn-primary">Interactive Site ↗</a>
-            <a href="https://github.com/bhubbard/flareperf" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-
-        <!-- Rust Card 4 -->
+        <!-- Rust Card: clippy-cf-reporter -->
         <div class="project-card">
           <div class="card-top">
             <span class="card-category" style="color: var(--cyan);">[ Clippy Diagnostics // CI Gate ]</span>
-            <h3>clippy-cf-reporter</h3>
-            <p>Translates worker-rs Clippy compiler diagnostics into Code Climate JSON, SARIF v2.1.0, and PR annotations.</p>
+            <h3>🩺 clippy-cf-reporter</h3>
+            <p>Translates worker-rs Clippy compiler diagnostics into Code Climate JSON, SARIF v2.1.0, and GitHub PR annotations 181× faster than Node.js actions.</p>
             <div class="card-cli">
               <code>cargo install clippy-cf-reporter</code>
               <button class="copy-btn" data-copy="cargo install clippy-cf-reporter" title="Copy command">
@@ -2529,34 +2633,35 @@
             </div>
           </div>
           <div class="card-actions">
-            <a href="./clippy-cf-reporter/" class="btn btn-primary">Interactive Site ↗</a>
+            <a href="https://code.brandonhubbard.com/clippy-cf-reporter/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
             <a href="https://github.com/bhubbard/clippy-cf-reporter" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
-        <!-- Rust Card 5 -->
+        <!-- Rust Card: ffmpeg-skill-rs -->
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Post-Build CI // Audit Gate ]</span>
-            <h3>unified-audit-rs</h3>
-            <p>Consolidated high-performance post-build CI verification and auditing gate for Astro and static sites in Rust.</p>
+            <span class="card-category" style="color: var(--crimson);">[ Media MCP Server // AI Agents ]</span>
+            <h3>🎞️ ffmpeg-skill-rs</h3>
+            <p>High-performance native Rust fork of ffmpeg-skill: deterministic FFmpeg media pipelines and Model Context Protocol (MCP) server for AI coding agents.</p>
             <div class="card-cli">
-              <code>cargo install unified-audit-rs</code>
-              <button class="copy-btn" data-copy="cargo install unified-audit-rs" title="Copy command">
+              <code>cargo install ffmpeg-skill-rs</code>
+              <button class="copy-btn" data-copy="cargo install ffmpeg-skill-rs" title="Copy command">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </button>
             </div>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/bhubbard/unified-audit-rs" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository ↗</a>
+            <a href="https://code.brandonhubbard.com/ffmpeg-skill-rs/" class="btn btn-primary" target="_blank" rel="noopener">Interactive Site ↗</a>
+            <a href="https://github.com/bhubbard/ffmpeg-skill-rs" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
-        <!-- Rust Card 6 -->
+        <!-- Rust Card: astro-compress-rs -->
         <div class="project-card">
           <div class="card-top">
             <span class="card-category" style="color: var(--cyan);">[ Head Optimizer // Compressor ]</span>
-            <h3>astro-compress-rs</h3>
+            <h3>⚡ astro-compress-rs</h3>
             <p>Blazingly fast post-build compressor, CSS inliner, and HTML head optimizer written in Rust for Astro and static sites.</p>
             <div class="card-cli">
               <code>cargo install astro-compress-rs</code>
@@ -2572,11 +2677,361 @@
       </div>
 
       <!-- =============================================================
-           GROUP 4: WordPress Ecosystem & Modern Bridges (VitePlus Style)
+           GROUP 4: Empirical Rust Benchmark Suite (40 Verified Reports)
+           ============================================================= -->
+      <div class="section-header" id="benchmarks-matrix">
+        <span class="section-title">04. High-Throughput Rust Ports &amp; Empirical Benchmark Suite</span>
+        <span class="section-badge" style="color: var(--emerald);">40 VERIFIED BENCHMARK REPORTS</span>
+      </div>
+
+      <section class="benchmarks-section">
+        <p style="color: var(--steel); font-size: 0.92rem; margin-bottom: 1.25rem; max-width: 960px;">
+          Native, compiled, SIMD-accelerated Rust ports engineered to replace heavy Python, C++, C#, and Electron runtimes with sub-millisecond execution and fractional memory footprints. Every project below includes a verified <code style="color: var(--cyan);">BENCHMARKS.md</code> report comparing it directly to the original reference implementation.
+        </p>
+        <div class="bench-table-wrap">
+          <table class="bench-table">
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>Original Reference</th>
+                <th>Domain / Engineering Purpose</th>
+                <th>Verified Speedup</th>
+                <th>Live Interactive Site</th>
+                <th>Empirical Report</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>⚡ zev-rs</strong></td>
+                <td>LLM Routers</td>
+                <td>Zero-token mathematical decision router</td>
+                <td class="bench-speedup">Instant (5.8 µs)</td>
+                <td><a href="https://code.brandonhubbard.com/zev-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/zev-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🚦 uxsim-rs</strong></td>
+                <td>UXsim (Python)</td>
+                <td>Macroscopic city-wide traffic flow simulator</td>
+                <td class="bench-speedup">1,620× faster</td>
+                <td><a href="https://code.brandonhubbard.com/uxsim-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/uxsim-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>⚡ vite-plus-commitlint</strong></td>
+                <td>@commitlint/cli (Node)</td>
+                <td>Native Git commit hook convention linter</td>
+                <td class="bench-speedup">525× faster</td>
+                <td><a href="https://code.brandonhubbard.com/vite-plus-commitlint/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/vite-plus-commitlint/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🩺 clippy-cf-reporter</strong></td>
+                <td>Node.js Action Runner</td>
+                <td>Clippy SARIF &amp; PR annotation CI reporter</td>
+                <td class="bench-speedup">181× faster</td>
+                <td><a href="https://code.brandonhubbard.com/clippy-cf-reporter/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/clippy-cf-reporter/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🧩 vite-plus-kumo-ui</strong></td>
+                <td>Storybook / Vite (Node)</td>
+                <td>Cloudflare Kumo UI token &amp; spec bundler</td>
+                <td class="bench-speedup">180× faster</td>
+                <td><a href="https://code.brandonhubbard.com/vite-plus-kumo-ui/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/vite-plus-kumo-ui/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>✂️ lossless-cut-rs</strong></td>
+                <td>LosslessCut (Electron)</td>
+                <td>Zero-loss keyframe video &amp; audio stream trimmer</td>
+                <td class="bench-speedup">154× faster</td>
+                <td><a href="https://code.brandonhubbard.com/lossless-cut-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/lossless-cut-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>💡 lux-rs</strong></td>
+                <td>Lux (Python / Elixir)</td>
+                <td>Volumetric lighting &amp; tensor operator dispatch</td>
+                <td class="bench-speedup">132× faster</td>
+                <td><a href="https://code.brandonhubbard.com/lux-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/lux-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🧠 open-generative-ai-rs</strong></td>
+                <td>Python GenAI Pipelines</td>
+                <td>Unified neural inference &amp; noise schedule runtime</td>
+                <td class="bench-speedup">60.7× faster</td>
+                <td><a href="https://code.brandonhubbard.com/open-generative-ai-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/open-generative-ai-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>👁️ auge-rs</strong></td>
+                <td>GazeTracking (Python)</td>
+                <td>3,200 FPS real-time eye &amp; pupil gaze estimation</td>
+                <td class="bench-speedup">47.4× faster</td>
+                <td><a href="https://code.brandonhubbard.com/auge-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/auge-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🎥 open-higgsfield-ai-rs</strong></td>
+                <td>Higgsfield (Python)</td>
+                <td>6-DOF camera trajectory &amp; motion video synthesis</td>
+                <td class="bench-speedup">46.3× faster</td>
+                <td><a href="https://code.brandonhubbard.com/open-higgsfield-ai-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/open-higgsfield-ai-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>⚙️ aesir-utils-rs</strong></td>
+                <td>AesirUtils (FiveM)</td>
+                <td>Screen safezone, aspect ratio &amp; UI anchor math</td>
+                <td class="bench-speedup">45.0× faster</td>
+                <td><a href="https://code.brandonhubbard.com/aesir-utils-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/aesir-utils-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🎞️ handbrake-rs</strong></td>
+                <td>HandBrake CLI (C)</td>
+                <td>Hardware video transcode &amp; filter pipeline engine</td>
+                <td class="bench-speedup">44.0× faster</td>
+                <td><a href="https://code.brandonhubbard.com/handbrake-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/handbrake-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🧭 minimal-hud-rs</strong></td>
+                <td>Minimal-HUD (Lua)</td>
+                <td>Event-driven HUD telemetry with dirty-state tracking</td>
+                <td class="bench-speedup">42.0× faster</td>
+                <td><a href="https://code.brandonhubbard.com/minimal-hud-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/minimal-hud-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🗺️ vhud-rs</strong></td>
+                <td>V-HUD (Lua)</td>
+                <td>GTA V radar, minimap projection &amp; GPS route engine</td>
+                <td class="bench-speedup">35.0× faster</td>
+                <td><a href="https://code.brandonhubbard.com/vhud-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/vhud-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>⭕ radial-menu-rs</strong></td>
+                <td>RadialMenu (Lua/CEF)</td>
+                <td>60 FPS radial weapon wheel &amp; deadzone angle math</td>
+                <td class="bench-speedup">28.0× faster</td>
+                <td><a href="https://code.brandonhubbard.com/radial-menu-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/radial-menu-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>📐 sdf-math-rs</strong></td>
+                <td>Inigo Quilez (GLSL)</td>
+                <td>2D &amp; 3D Signed Distance Fields &amp; CSG raymarching</td>
+                <td class="bench-speedup">24.5× faster</td>
+                <td><a href="https://code.brandonhubbard.com/sdf-math-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/sdf-math-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>📹 yt-dlp-rs</strong></td>
+                <td>yt-dlp (Python)</td>
+                <td>Zero-Python media metadata extractor &amp; stream client</td>
+                <td class="bench-speedup">23.3× faster</td>
+                <td><a href="https://code.brandonhubbard.com/yt-dlp-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/yt-dlp-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🛡️ defy-rs</strong></td>
+                <td>PoliceTools / Defy</td>
+                <td>Pursuit dispatch, wanted level &amp; AI state machine</td>
+                <td class="bench-speedup">22.0× faster</td>
+                <td><a href="https://code.brandonhubbard.com/defy-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/defy-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🎥 poormans-camera-rs</strong></td>
+                <td>Poor Man's Camera (C#)</td>
+                <td>3D third-person camera rig with sphere-cast collision</td>
+                <td class="bench-speedup">18.5× faster</td>
+                <td><a href="https://code.brandonhubbard.com/poormans-camera-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/poormans-camera-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🔊 sfxr-rs</strong></td>
+                <td>sfxr (C / SDL)</td>
+                <td>Procedural 8-bit/16-bit sound effect synthesizer</td>
+                <td class="bench-speedup">18.0× faster</td>
+                <td><a href="https://code.brandonhubbard.com/sfxr-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/sfxr-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>💬 dialogger-rs</strong></td>
+                <td>Dialogger (C#)</td>
+                <td>Branching dialogue graph evaluator &amp; NPC bark engine</td>
+                <td class="bench-speedup">16.5× faster</td>
+                <td><a href="https://code.brandonhubbard.com/dialogger-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/dialogger-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>📡 gambetta-netcode-rs</strong></td>
+                <td>Gambetta Netcode (JS)</td>
+                <td>Client-side prediction, reconciliation &amp; interpolation</td>
+                <td class="bench-speedup">14.2× faster</td>
+                <td><a href="https://code.brandonhubbard.com/gambetta-netcode-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/gambetta-netcode-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>📈 timesfm-rs</strong></td>
+                <td>Google TimesFM (JAX)</td>
+                <td>Zero-shot time-series foundation model inference</td>
+                <td class="bench-speedup">13.4× faster</td>
+                <td><a href="https://code.brandonhubbard.com/timesfm-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/timesfm-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🚦 sumo-rs</strong></td>
+                <td>Eclipse SUMO (C++)</td>
+                <td>Microscopic traffic simulation &amp; IDM car-following</td>
+                <td class="bench-speedup">12.1× faster</td>
+                <td><a href="https://code.brandonhubbard.com/sumo-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/sumo-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🍏 apfel-rs</strong></td>
+                <td>apfel (Swift / PyTorch)</td>
+                <td>Apple Silicon on-device FoundationModels CLI &amp; server</td>
+                <td class="bench-speedup">11.4× faster</td>
+                <td><a href="https://code.brandonhubbard.com/apfel-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/apfel-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🌍 translate-rs</strong></td>
+                <td>LibreTranslate (Python)</td>
+                <td>Deterministic offline neural machine translation</td>
+                <td class="bench-speedup">11.1× faster</td>
+                <td><a href="https://code.brandonhubbard.com/translate-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/translate-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🎯 tactical-ai-rs</strong></td>
+                <td>Game AI Pro (C#)</td>
+                <td>Tactical influence maps, cover &amp; flanking pathfinder</td>
+                <td class="bench-speedup">9.2× faster</td>
+                <td><a href="https://code.brandonhubbard.com/tactical-ai-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/tactical-ai-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🏎️ tlab-vehicle-physics-rs</strong></td>
+                <td>TLabVehiclePhysics (C#)</td>
+                <td>Pacejka Magic Formula tire friction &amp; drift physics</td>
+                <td class="bench-speedup">8.4× faster</td>
+                <td><a href="https://code.brandonhubbard.com/tlab-vehicle-physics-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/tlab-vehicle-physics-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🤸 active-ragdoll-rs</strong></td>
+                <td>ActiveRagdoll (Unity)</td>
+                <td>Physical active ragdoll joint motors &amp; balance recovery</td>
+                <td class="bench-speedup">7.8× faster</td>
+                <td><a href="https://code.brandonhubbard.com/active-ragdoll-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/active-ragdoll-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🫒 olive-rs</strong></td>
+                <td>Olive Editor (C++)</td>
+                <td>Non-linear timeline &amp; node compositing DAG engine</td>
+                <td class="bench-speedup">7.2× faster</td>
+                <td><a href="https://code.brandonhubbard.com/olive-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/olive-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🚗 simplecar2-rs</strong></td>
+                <td>SimpleCar2 (GDScript)</td>
+                <td>Arcade-sim vehicle dynamics &amp; raycast suspension</td>
+                <td class="bench-speedup">6.8× faster</td>
+                <td><a href="https://code.brandonhubbard.com/simplecar2-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/simplecar2-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🚶 detour-crowd-rs</strong></td>
+                <td>Recast/Detour (C++)</td>
+                <td>RVO crowd collision avoidance &amp; navmesh steering</td>
+                <td class="bench-speedup">5.6× faster</td>
+                <td><a href="https://code.brandonhubbard.com/detour-crowd-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/detour-crowd-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🔍 mlx-embeddings-rs</strong></td>
+                <td>sentence-transformers</td>
+                <td>Apple Silicon vector embeddings &amp; cosine search</td>
+                <td class="bench-speedup">5.4× faster</td>
+                <td><a href="https://code.brandonhubbard.com/mlx-embeddings-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/mlx-embeddings-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🎬 comfyui-ltxvideo-mlx-rs</strong></td>
+                <td>ComfyUI LTX (PyTorch)</td>
+                <td>Cinematic DiT video generation on Apple Silicon</td>
+                <td class="bench-speedup">4.8× faster</td>
+                <td><a href="https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/comfyui-ltxvideo-mlx-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🎯 bullet3-rs</strong></td>
+                <td>Bullet3 SDK (C++)</td>
+                <td>3D rigid/soft-body physics &amp; GJK/EPA collision</td>
+                <td class="bench-speedup">4.2× faster</td>
+                <td><a href="https://code.brandonhubbard.com/bullet3-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/bullet3-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🦹 openrw-rs</strong></td>
+                <td>OpenRW (C++)</td>
+                <td>GTA III camera follow, targeting math &amp; kinematics</td>
+                <td class="bench-speedup">4.1× faster</td>
+                <td><a href="https://code.brandonhubbard.com/openrw-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/openrw-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>📽️ mlt-rs</strong></td>
+                <td>MLT Framework (C)</td>
+                <td>Multimedia video playback, mixing &amp; filter graph</td>
+                <td class="bench-speedup">3.7× faster</td>
+                <td><a href="https://code.brandonhubbard.com/mlt-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/mlt-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🎙️ mlx-audio-rs</strong></td>
+                <td>mlx-audio (Python)</td>
+                <td>On-device speech recognition &amp; neural audio synthesis</td>
+                <td class="bench-speedup">2.3× faster</td>
+                <td><a href="https://code.brandonhubbard.com/mlx-audio-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/mlx-audio-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>🎨 mflux-rs</strong></td>
+                <td>mflux (Python MLX)</td>
+                <td>Flux.1-schnell image generation on Apple Silicon</td>
+                <td class="bench-speedup">1.89× faster</td>
+                <td><a href="https://code.brandonhubbard.com/mflux-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/mflux-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+              <tr>
+                <td><strong>💬 mlx-gen-rs</strong></td>
+                <td>mlx-lm (Python MLX)</td>
+                <td>High-throughput LLM text generation &amp; token sampling</td>
+                <td class="bench-speedup">1.37× faster</td>
+                <td><a href="https://code.brandonhubbard.com/mlx-gen-rs/" target="_blank" rel="noopener" class="bench-link">Live Site ↗</a></td>
+                <td><a href="https://github.com/bhubbard/mlx-gen-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener" class="bench-link">BENCHMARKS.md ↗</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           GROUP 5: WordPress Ecosystem & Modern Bridges (VitePlus Style)
            ============================================================= -->
       <div class="section-header" id="wordpress-suite">
-        <span class="section-title">04. WordPress Modern Ecosystem</span>
-        <span class="section-badge" style="color: var(--cobalt);">RUST MCPS, D1 &amp; KV BRIDGES</span>
+        <span class="section-title">05. WordPress Modern Ecosystem</span>
+        <span class="section-badge" style="color: var(--cobalt);">21 PACKAGES // RUST MCPS, D1 &amp; KV BRIDGES</span>
       </div>
 
       <!-- Spotlight Split Panel for WordPress -->
@@ -2690,11 +3145,11 @@
       </div>
 
       <!-- =============================================================
-           GROUP 5: All Repositories Interactive Explorer
+           GROUP 6: All Repositories Interactive Explorer
            ============================================================= -->
       <div class="section-header" id="all-repos">
-        <span class="section-title">05. Open Source Repositories Index</span>
-        <span class="section-badge" id="activeCategoryCount" style="color: var(--cyan);">63 REPOSITORIES</span>
+        <span class="section-title">06. Open Source Repositories Index</span>
+        <span class="section-badge" id="activeCategoryCount" style="color: var(--cyan);">130 REPOSITORIES</span>
       </div>
 
       <section class="repo-explorer-section">
@@ -2708,13 +3163,13 @@
           </div>
 
           <div class="filter-pills" id="categoryFilterPills">
-            <button type="button" class="filter-pill active" data-filter="all">All Repos</button>
-            <button type="button" class="filter-pill" data-filter="pages">GitHub Pages (48)</button>
-            <button type="button" class="filter-pill" data-filter="flare">The Flare Suite</button>
-            <button type="button" class="filter-pill" data-filter="astro">Chrome AI / Astro</button>
-            <button type="button" class="filter-pill" data-filter="cli">Rust &amp; CLI</button>
-            <button type="button" class="filter-pill" data-filter="wordpress">WordPress</button>
-            <button type="button" class="filter-pill" data-filter="tools">Cloud &amp; Tools</button>
+            <button type="button" class="filter-pill active" data-filter="all">All Repos (130)</button>
+            <button type="button" class="filter-pill" data-filter="pages">GitHub Pages (71)</button>
+            <button type="button" class="filter-pill" data-filter="flare">The Flare Suite (6)</button>
+            <button type="button" class="filter-pill" data-filter="astro">Chrome AI / Astro (14)</button>
+            <button type="button" class="filter-pill" data-filter="cli">Rust &amp; CLI (78)</button>
+            <button type="button" class="filter-pill" data-filter="wordpress">WordPress (21)</button>
+            <button type="button" class="filter-pill" data-filter="tools">Cloud &amp; Tools (19)</button>
           </div>
         </div>
 
@@ -2725,7 +3180,7 @@
 
       <!-- Section: Core Principles -->
       <div class="section-header">
-        <span class="section-title">06. Engineering Principles</span>
+        <span class="section-title">07. Engineering Principles</span>
         <span class="section-badge" style="color: var(--steel);">BRANDON HUBBARD STANDARDS</span>
       </div>
 
@@ -2775,13 +3230,13 @@
       </div>
 
       <div class="modal-filters">
-        <button type="button" class="modal-filter-btn active" data-filter="all">All</button>
-        <button type="button" class="modal-filter-btn" data-filter="pages">GitHub Pages (48)</button>
-        <button type="button" class="modal-filter-btn" data-filter="flare">The Flare Suite (4)</button>
-        <button type="button" class="modal-filter-btn" data-filter="astro">Chrome AI / Astro (13)</button>
-        <button type="button" class="modal-filter-btn" data-filter="cli">Rust &amp; CLI</button>
-        <button type="button" class="modal-filter-btn" data-filter="wordpress">WordPress (16)</button>
-        <button type="button" class="modal-filter-btn" data-filter="tools">Cloud &amp; Tools</button>
+        <button type="button" class="modal-filter-btn active" data-filter="all">All (130)</button>
+        <button type="button" class="modal-filter-btn" data-filter="pages">GitHub Pages (71)</button>
+        <button type="button" class="modal-filter-btn" data-filter="flare">The Flare Suite (6)</button>
+        <button type="button" class="modal-filter-btn" data-filter="astro">Chrome AI / Astro (14)</button>
+        <button type="button" class="modal-filter-btn" data-filter="cli">Rust &amp; CLI (78)</button>
+        <button type="button" class="modal-filter-btn" data-filter="wordpress">WordPress (21)</button>
+        <button type="button" class="modal-filter-btn" data-filter="tools">Cloud &amp; Tools (19)</button>
       </div>
 
       <div class="modal-body" id="modalResultsList">
@@ -2794,7 +3249,7 @@
           <span><kbd>↵</kbd> OPEN</span>
           <span><kbd>ESC</kbd> CLOSE</span>
         </div>
-        <span id="modalMatchCount">SHOWING 63 REPOSITORIES</span>
+        <span id="modalMatchCount">SHOWING 130 REPOSITORIES</span>
       </div>
     </div>
   </div>
@@ -2812,18 +3267,6 @@
       mobileToggle.addEventListener('click', () => {
         mobileNav.classList.toggle('open');
         mobileToggle.classList.toggle('active');
-      });
-    }
-
-    // Theme Switcher Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        localStorage.setItem('bh-theme', newTheme);
       });
     }
 
@@ -2886,7 +3329,7 @@
     })();
 
 
-    // Comprehensive map of all 48 repositories with GitHub Pages enabled
+    // Comprehensive map of all 71 repositories with verified live GitHub Pages
     const GITHUB_PAGES_MAP = {
       "active-ragdoll-rs": "https://code.brandonhubbard.com/active-ragdoll-rs/",
       "aesir-utils-rs": "https://code.brandonhubbard.com/aesir-utils-rs/",
@@ -2904,61 +3347,262 @@
       "astro-prefetch-ai-brief": "https://code.brandonhubbard.com/astro-prefetch-ai-brief/",
       "astro-rehype-nano-code": "https://code.brandonhubbard.com/astro-rehype-nano-code/",
       "astro-schema-ld-verifier": "https://code.brandonhubbard.com/astro-schema-ld-verifier/",
+      "auge-rs": "https://code.brandonhubbard.com/auge-rs/",
       "bhubbard.github.io": "https://code.brandonhubbard.com/",
+      "box3d-rs": "https://code.brandonhubbard.com/box3d-rs/",
       "bullet3-rs": "https://code.brandonhubbard.com/bullet3-rs/",
+      "clearwater-rs": "https://code.brandonhubbard.com/clearwater-rs/",
       "clippy-cf-reporter": "https://code.brandonhubbard.com/clippy-cf-reporter/",
+      "comfyui-ltxvideo-mlx-rs": "https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/",
       "defy-rs": "https://code.brandonhubbard.com/defy-rs/",
+      "desktop-rs": "https://code.brandonhubbard.com/desktop-rs/",
       "detour-crowd-rs": "https://code.brandonhubbard.com/detour-crowd-rs/",
       "dialogger-rs": "https://code.brandonhubbard.com/dialogger-rs/",
+      "ffmpeg-skill-rs": "https://code.brandonhubbard.com/ffmpeg-skill-rs/",
       "flareguard": "https://code.brandonhubbard.com/flareguard/",
       "flarelint": "https://code.brandonhubbard.com/flarelint/",
       "flareops": "https://code.brandonhubbard.com/flareops/",
       "flareperf": "https://code.brandonhubbard.com/flareperf/",
       "gambetta-netcode-rs": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
-      "godot-rs": "https://code.brandonhubbard.com/godot-rs/",
-      "hyperframes-rs": "https://code.brandonhubbard.com/hyperframes-rs/",
+      "generate-glb-rs": "https://code.brandonhubbard.com/generate-glb-rs/",
+      "handbrake-rs": "https://code.brandonhubbard.com/handbrake-rs/",
+      "hunyuan3d-rs": "https://code.brandonhubbard.com/hunyuan3d-rs/",
+      "lossless-cut-rs": "https://code.brandonhubbard.com/lossless-cut-rs/",
+      "lux-rs": "https://code.brandonhubbard.com/lux-rs/",
+      "lyra-rs": "https://code.brandonhubbard.com/lyra-rs/",
+      "mflux-rs": "https://code.brandonhubbard.com/mflux-rs/",
       "minimal-hud-rs": "https://code.brandonhubbard.com/minimal-hud-rs/",
-      "npwd-rs": "https://code.brandonhubbard.com/npwd-rs/",
+      "mlt-rs": "https://code.brandonhubbard.com/mlt-rs/",
+      "mlx-audio-rs": "https://code.brandonhubbard.com/mlx-audio-rs/",
+      "mlx-embeddings-rs": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
+      "mlx-gen-rs": "https://code.brandonhubbard.com/mlx-gen-rs/",
+      "mlx-video-rs": "https://code.brandonhubbard.com/mlx-video-rs/",
+      "nanoswarm-rs": "https://code.brandonhubbard.com/nanoswarm-rs/",
+      "olive-rs": "https://code.brandonhubbard.com/olive-rs/",
+      "open-generative-ai-rs": "https://code.brandonhubbard.com/open-generative-ai-rs/",
+      "open-higgsfield-ai-rs": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
       "openrw-rs": "https://code.brandonhubbard.com/openrw-rs/",
       "poormans-camera-rs": "https://code.brandonhubbard.com/poormans-camera-rs/",
       "radial-menu-rs": "https://code.brandonhubbard.com/radial-menu-rs/",
+      "rea-rs": "https://code.brandonhubbard.com/rea-rs/",
       "sdf-math-rs": "https://code.brandonhubbard.com/sdf-math-rs/",
       "sfxr-rs": "https://code.brandonhubbard.com/sfxr-rs/",
       "simplecar2-rs": "https://code.brandonhubbard.com/simplecar2-rs/",
       "sumo-rs": "https://code.brandonhubbard.com/sumo-rs/",
       "tactical-ai-rs": "https://code.brandonhubbard.com/tactical-ai-rs/",
       "talks": "https://talks.brandonhubbard.com/",
+      "timesfm-rs": "https://code.brandonhubbard.com/timesfm-rs/",
       "tlab-vehicle-physics-rs": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
+      "translate-rs": "https://code.brandonhubbard.com/translate-rs/",
       "uxsim-rs": "https://code.brandonhubbard.com/uxsim-rs/",
       "vhud-rs": "https://code.brandonhubbard.com/vhud-rs/",
-      "video-use-rs": "https://code.brandonhubbard.com/video-use-rs/",
       "vite-plus-commitlint": "https://code.brandonhubbard.com/vite-plus-commitlint/",
       "vite-plus-kumo-ui": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
       "vite-plus-wrangler": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+      "watertight-meshes-rs": "https://code.brandonhubbard.com/watertight-meshes-rs/",
+      "yt-dlp-rs": "https://code.brandonhubbard.com/yt-dlp-rs/",
       "zev-rs": "https://code.brandonhubbard.com/zev-rs/"
-    };
+};
 
     function getProjectTargetUrl(repo) {
       if (!repo) return "#";
       const name = (repo.name || "").toLowerCase().trim();
+      if (repo.target_url) {
+        return repo.target_url;
+      }
       if (GITHUB_PAGES_MAP[name]) {
         return GITHUB_PAGES_MAP[name];
       }
       if (repo.docs && repo.docs !== "#") {
         return repo.docs;
       }
-      return repo.url || `https://github.com/bhubbard/${name}`;
+      return repo.github_url || repo.url || `https://github.com/bhubbard/${name}`;
     }
 
     // Complete repository catalog with The Flare Suite, Astro Chrome AI, and Rust developer tools
     let REPOSITORIES = [
   {
+    "name": "timesfm-rs",
+    "description": "High-performance Rust inference engine for Google's TimesFM time-series foundation model",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 3,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/timesfm-rs/",
+    "github_url": "https://github.com/bhubbard/timesfm-rs",
+    "target_url": "https://code.brandonhubbard.com/timesfm-rs/",
+    "topics": [
+      "apple-silicon",
+      "candle",
+      "forecasting",
+      "foundation-models",
+      "google-research",
+      "machine-learning",
+      "mlx",
+      "rust",
+      "time-series",
+      "timesfm"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:20:07Z"
+  },
+  {
+    "name": "active-ragdoll-rs",
+    "description": "Pure Rust physical active ragdoll simulation, joint motors, and balance recovery",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 2,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
+    "github_url": "https://github.com/bhubbard/active-ragdoll-rs",
+    "target_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
+    "topics": [
+      "balance-control",
+      "joint-motors",
+      "physics-simulation",
+      "ragdoll",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-01T17:23:12Z"
+  },
+  {
+    "name": "sfxr-rs",
+    "description": "Pure Rust procedural 8-bit sound effect generator and audio synthesizer",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 2,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/sfxr-rs/",
+    "github_url": "https://github.com/bhubbard/sfxr-rs",
+    "target_url": "https://code.brandonhubbard.com/sfxr-rs/",
+    "topics": [
+      "8-bit",
+      "dsp",
+      "procedural-audio",
+      "rust",
+      "sfxr",
+      "sound-synthesis"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:05:52Z"
+  },
+  {
+    "name": "vite-plus-commitlint",
+    "description": "A commitlint plugin for vite plus",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 2,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "topics": [
+      "automation",
+      "developer-tools",
+      "vite"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:36:46Z"
+  },
+  {
+    "name": "zev-rs",
+    "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 2,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/zev-rs/",
+    "github_url": "https://github.com/bhubbard/zev-rs",
+    "target_url": "https://code.brandonhubbard.com/zev-rs/",
+    "topics": [
+      "ai",
+      "ai-inference",
+      "decision-engine",
+      "heuristics",
+      "llm-orchestration",
+      "performance",
+      "rust",
+      "zero-token"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-19T14:28:57Z"
+  },
+  {
+    "name": "open-higgsfield-ai-rs",
+    "description": "Open-source video generation and motion-guided neural synthesis pipeline in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "github_url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
+    "target_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "topics": [
+      "apple-silicon",
+      "diffusion",
+      "generative-ai",
+      "rust",
+      "video-generation"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:09Z"
+  },
+  {
+    "name": "openrw-rs",
+    "description": "Pure Rust port of GTA III camera follow, weapon targeting math, and entity kinematics",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/openrw-rs/",
+    "github_url": "https://github.com/bhubbard/openrw-rs",
+    "target_url": "https://code.brandonhubbard.com/openrw-rs/",
+    "topics": [
+      "3d-kinematics",
+      "game-engine",
+      "gta-engine",
+      "openrw",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:11Z"
+  },
+  {
     "name": "talks",
     "description": "My talks and presentations!",
     "language": "JavaScript",
-    "category": "tools",
+    "category": "wordpress",
     "categories": [
-      "tools"
+      "wordpress"
     ],
     "stars": 1,
     "has_pages": true,
@@ -2974,8 +3618,8 @@
     "pushed_at": "2026-09-26T16:29:54Z"
   },
   {
-    "name": "vite-plus-commitlint",
-    "description": "A commitlint plugin for vite plus",
+    "name": "vhud-rs",
+    "description": "Pure Rust GTA V radar, minimap projection, blip clamping, and GPS route rendering",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -2984,16 +3628,19 @@
     ],
     "stars": 1,
     "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
-    "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
-    "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "page_url": "https://code.brandonhubbard.com/vhud-rs/",
+    "github_url": "https://github.com/bhubbard/vhud-rs",
+    "target_url": "https://code.brandonhubbard.com/vhud-rs/",
     "topics": [
-      "automation",
-      "developer-tools",
-      "vite"
+      "fivem",
+      "gamedev",
+      "minimap",
+      "path-rendering",
+      "radar",
+      "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:05Z"
+    "pushed_at": "2026-10-05T15:50:31Z"
   },
   {
     "name": "vite-plus-kumo-ui",
@@ -3014,63 +3661,18 @@
       "cloudflare",
       "cloudflare-workers",
       "design-system",
+      "kumo-ui",
       "react",
       "serverless",
       "typescript",
-      "vite",
-      "kumo-ui"
+      "vite"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:07Z"
-  },
-  {
-    "name": "zev-rs",
-    "description": "Advanced zero-token LLM decision engine in Rust synthesizing architectural breakthroughs from open-source Jev alternatives.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/zev-rs/",
-    "github_url": "https://github.com/bhubbard/zev-rs",
-    "target_url": "https://code.brandonhubbard.com/zev-rs/",
-    "topics": [
-      "ai",
-      "ai-inference",
-      "decision-engine",
-      "heuristics",
-      "llm-orchestration",
-      "performance",
-      "rust",
-      "zero-token"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:11Z"
-  },
-  {
-    "name": "active-ragdoll-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
-    "github_url": "https://github.com/bhubbard/active-ragdoll-rs",
-    "target_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T17:23:34Z"
+    "pushed_at": "2026-09-28T20:36:57Z"
   },
   {
     "name": "aesir-utils-rs",
-    "description": "Pure Rust screen safezone, aspect ratio correction, and UI anchor positioning engine from FiveM aesir_utils",
+    "description": "Pure Rust screen safezone, aspect ratio correction, and UI alignment math for games",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3082,9 +3684,16 @@
     "page_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
     "github_url": "https://github.com/bhubbard/aesir-utils-rs",
     "target_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
-    "topics": [],
+    "topics": [
+      "aspect-ratio",
+      "fivem",
+      "gamedev",
+      "math",
+      "rust",
+      "ui-layout"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:23:36Z"
+    "pushed_at": "2026-10-05T15:49:15Z"
   },
   {
     "name": "apfel-rs",
@@ -3110,7 +3719,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:23:38Z"
+    "pushed_at": "2026-10-19T14:29:03Z"
   },
   {
     "name": "astro-client-directive-ai",
@@ -3131,7 +3740,7 @@
       "cli"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:02Z"
+    "pushed_at": "2026-09-26T18:56:27Z"
   },
   {
     "name": "astro-dev-audit-nano",
@@ -3152,7 +3761,7 @@
       "seo"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:22Z"
+    "pushed_at": "2026-09-26T18:56:26Z"
   },
   {
     "name": "astro-dev-broken-anchor-healer",
@@ -3173,7 +3782,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:24Z"
+    "pushed_at": "2026-09-26T18:56:25Z"
   },
   {
     "name": "astro-dev-content-linter",
@@ -3195,7 +3804,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:27Z"
+    "pushed_at": "2026-09-26T18:56:24Z"
   },
   {
     "name": "astro-dev-copy-optimizer",
@@ -3216,7 +3825,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:29Z"
+    "pushed_at": "2026-09-26T18:56:23Z"
   },
   {
     "name": "astro-dev-i18n-coverage",
@@ -3238,7 +3847,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:31Z"
+    "pushed_at": "2026-09-26T18:56:22Z"
   },
   {
     "name": "astro-dev-island-hydration-advisor",
@@ -3259,7 +3868,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:33Z"
+    "pushed_at": "2026-09-26T18:56:21Z"
   },
   {
     "name": "astro-dev-mock-generator",
@@ -3280,7 +3889,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:35Z"
+    "pushed_at": "2026-09-26T18:56:20Z"
   },
   {
     "name": "astro-dev-schema-scaffolder",
@@ -3301,7 +3910,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:38Z"
+    "pushed_at": "2026-09-26T18:56:19Z"
   },
   {
     "name": "astro-og-smart-crop",
@@ -3323,7 +3932,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:40Z"
+    "pushed_at": "2026-09-26T18:56:18Z"
   },
   {
     "name": "astro-prefetch-ai-brief",
@@ -3345,7 +3954,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:42Z"
+    "pushed_at": "2026-09-26T18:56:17Z"
   },
   {
     "name": "astro-rehype-nano-code",
@@ -3366,7 +3975,7 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:45Z"
+    "pushed_at": "2026-09-26T18:56:16Z"
   },
   {
     "name": "astro-schema-ld-verifier",
@@ -3388,7 +3997,30 @@
       "developer-tools"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:47Z"
+    "pushed_at": "2026-09-26T18:56:15Z"
+  },
+  {
+    "name": "auge-rs",
+    "description": "Rust port of Auge video editing automation and generative visual synthesis",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/auge-rs/",
+    "github_url": "https://github.com/bhubbard/auge-rs",
+    "target_url": "https://code.brandonhubbard.com/auge-rs/",
+    "topics": [
+      "generative-video",
+      "media-processing",
+      "rust",
+      "video-automation"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-30T15:14:15Z"
   },
   {
     "name": "bhubbard.github.io",
@@ -3413,11 +4045,38 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:27:31Z"
+    "pushed_at": "2026-10-29T11:51:11Z"
+  },
+  {
+    "name": "box3d-rs",
+    "description": "High-performance pure Rust 3D physics engine for games and robotics, forked from Erin Catto's Box3D",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/box3d-rs/",
+    "github_url": "https://github.com/bhubbard/box3d-rs",
+    "target_url": "https://code.brandonhubbard.com/box3d-rs/",
+    "topics": [
+      "3d",
+      "box3d",
+      "game-development",
+      "physics",
+      "physics-engine",
+      "robotics",
+      "rust",
+      "simulation"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T06:12:55Z"
   },
   {
     "name": "bullet3-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Pure Rust port of Bullet3 3D rigid body dynamics and collision detection",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3429,13 +4088,37 @@
     "page_url": "https://code.brandonhubbard.com/bullet3-rs/",
     "github_url": "https://github.com/bhubbard/bullet3-rs",
     "target_url": "https://code.brandonhubbard.com/bullet3-rs/",
+    "topics": [
+      "3d-physics",
+      "bullet-physics",
+      "collision-detection",
+      "rigid-body",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:08:06Z"
+  },
+  {
+    "name": "clearwater-rs",
+    "description": "Real-time, photoreal shallow water physics and rendering engine in Rust. Ported from Aureliengmz/clearwater.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/clearwater-rs/",
+    "github_url": "https://github.com/bhubbard/clearwater-rs",
+    "target_url": "https://code.brandonhubbard.com/clearwater-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:13Z"
+    "pushed_at": "2026-10-05T06:12:53Z"
   },
   {
     "name": "clippy-cf-reporter",
-    "description": "Translates worker-rs Clippy compiler diagnostics into Code Climate JSON, SARIF v2.1.0, and GitHub PR annotations.",
+    "description": "Automated Cargo Clippy static analysis and GitHub PR annotation reporter for Cloudflare",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3449,16 +4132,49 @@
     "target_url": "https://code.brandonhubbard.com/clippy-cf-reporter/",
     "topics": [
       "cli",
+      "clippy",
       "cloudflare",
       "cloudflare-workers",
+      "code-quality",
+      "github-actions",
+      "linter",
+      "rust",
       "serverless"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:15Z"
+    "pushed_at": "2026-10-05T15:49:36Z"
+  },
+  {
+    "name": "comfyui-ltxvideo-mlx-rs",
+    "description": "ComfyUI LTX-Video generation runner and node pipeline on Apple Silicon in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/",
+    "github_url": "https://github.com/bhubbard/comfyui-ltxvideo-mlx-rs",
+    "target_url": "https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/",
+    "topics": [
+      "apple-silicon",
+      "comfyui",
+      "diffusion",
+      "ltx-video",
+      "mlx",
+      "rust",
+      "stg",
+      "teacache",
+      "video-generation"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:49:39Z"
   },
   {
     "name": "defy-rs",
-    "description": "Pure Rust port of police wanted-level, pursuit dispatch, and NPC crime interaction systems from Defy",
+    "description": "Pure Rust police wanted-level, pursuit dispatch, and AI aggression state machine",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3470,13 +4186,38 @@
     "page_url": "https://code.brandonhubbard.com/defy-rs/",
     "github_url": "https://github.com/bhubbard/defy-rs",
     "target_url": "https://code.brandonhubbard.com/defy-rs/",
+    "topics": [
+      "fivem",
+      "game-ai",
+      "gamedev",
+      "pursuit-ai",
+      "rust",
+      "state-machine"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:49:40Z"
+  },
+  {
+    "name": "desktop-rs",
+    "description": "Blazingly fast, lightweight, pure-Rust fork of GitHub Desktop",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/desktop-rs/",
+    "github_url": "https://github.com/bhubbard/desktop-rs",
+    "target_url": "https://code.brandonhubbard.com/desktop-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:17Z"
+    "pushed_at": "2026-10-05T06:13:00Z"
   },
   {
     "name": "detour-crowd-rs",
-    "description": "Pure Rust port of DetourCrowd from RecastNavigation: RVO collision avoidance, proximity grid, and crowd path steering",
+    "description": "Pure Rust port of DetourCrowd: RVO collision avoidance and pathfinding",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3488,13 +4229,20 @@
     "page_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
     "github_url": "https://github.com/bhubbard/detour-crowd-rs",
     "target_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
-    "topics": [],
+    "topics": [
+      "crowd-simulation",
+      "navigation-mesh",
+      "pathfinding",
+      "recast",
+      "rust",
+      "rvo"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:20Z"
+    "pushed_at": "2026-09-28T20:13:31Z"
   },
   {
     "name": "dialogger-rs",
-    "description": "Pure Rust branching dialogue graph evaluator and NPC bark engine from Dialogger",
+    "description": "Pure Rust branching dialogue graph evaluator and NPC bark engine",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3506,13 +4254,37 @@
     "page_url": "https://code.brandonhubbard.com/dialogger-rs/",
     "github_url": "https://github.com/bhubbard/dialogger-rs",
     "target_url": "https://code.brandonhubbard.com/dialogger-rs/",
+    "topics": [
+      "dialogue-tree",
+      "game-narrative",
+      "gamedev",
+      "graph-evaluator",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:49:42Z"
+  },
+  {
+    "name": "ffmpeg-skill-rs",
+    "description": "High-performance native Rust fork of ffmpeg-skill: deterministic FFmpeg tools and Model Context Protocol (MCP) server for AI agents",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/ffmpeg-skill-rs/",
+    "github_url": "https://github.com/bhubbard/ffmpeg-skill-rs",
+    "target_url": "https://code.brandonhubbard.com/ffmpeg-skill-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:22Z"
+    "pushed_at": "2026-10-05T06:12:44Z"
   },
   {
     "name": "flareguard",
-    "description": "\ud83d\udee1\ufe0f Unified Cloudflare Security Guardian \u2014 AST secret scanning, Worker binding verification, Zone posture auditing, and origin IP leak hunting.",
+    "description": "Unified Cloudflare Security Guardian \u2014 AST secret scanning and edge policy engine",
     "language": "Rust",
     "category": "flare",
     "categories": [
@@ -3527,18 +4299,20 @@
     "target_url": "https://code.brandonhubbard.com/flareguard/",
     "topics": [
       "ast",
+      "audit",
       "cli",
       "cloudflare",
-      "devops",
-      "rust",
-      "security",
-      "waf",
-      "audit",
       "cloudflare-workers",
-      "serverless"
+      "devops",
+      "edge-computing",
+      "rust",
+      "secret-scanner",
+      "security",
+      "serverless",
+      "waf"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:35:49Z"
+    "pushed_at": "2026-09-26T18:58:50Z"
   },
   {
     "name": "flarelint",
@@ -3568,11 +4342,11 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:26Z"
+    "pushed_at": "2026-09-26T18:55:17Z"
   },
   {
     "name": "flareops",
-    "description": "\u26a1 Developer operations & workflow CLI for Cloudflare Workers, Pages, and Astro \u2014 type generation, secret sync, route optimization, and unified verification.",
+    "description": "Developer operations and workflow CLI for Cloudflare Workers, D1, and KV",
     "language": "Rust",
     "category": "flare",
     "categories": [
@@ -3587,22 +4361,24 @@
     "target_url": "https://code.brandonhubbard.com/flareops/",
     "topics": [
       "astro",
+      "caching",
       "cli",
       "cloudflare",
       "cloudflare-pages",
       "cloudflare-workers",
-      "dx",
-      "caching",
       "devops",
+      "dx",
+      "edge-computing",
       "headers",
-      "pages"
+      "pages",
+      "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:29Z"
+    "pushed_at": "2026-09-26T18:58:48Z"
   },
   {
     "name": "flareperf",
-    "description": "Unified Cloudflare Edge Performance & Budget Guardian \u2014 Bundle size budgets, V8 isolate cold-start analysis, 50-subrequest limits, and D1 batching.",
+    "description": "Unified Cloudflare Edge Performance Guardian \u2014 Bundle analyzer and cold-start profiler",
     "language": "Rust",
     "category": "flare",
     "categories": [
@@ -3617,21 +4393,24 @@
     "target_url": "https://code.brandonhubbard.com/flareperf/",
     "topics": [
       "ast",
+      "bundle-analyzer",
       "cli",
       "cloudflare",
+      "cloudflare-workers",
+      "cold-start",
       "d1",
       "performance",
+      "rust",
+      "serverless",
       "subrequests",
-      "workers",
-      "cloudflare-workers",
-      "serverless"
+      "workers"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:31Z"
+    "pushed_at": "2026-09-26T18:58:46Z"
   },
   {
     "name": "gambetta-netcode-rs",
-    "description": "Pure Rust client-side prediction, server reconciliation, entity interpolation, and lag compensation netcode from Gabriel Gambetta",
+    "description": "Pure Rust client-side prediction, server reconciliation, and entity interpolation",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3643,13 +4422,20 @@
     "page_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
     "github_url": "https://github.com/bhubbard/gambetta-netcode-rs",
     "target_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
-    "topics": [],
+    "topics": [
+      "client-prediction",
+      "gamedev",
+      "multiplayer",
+      "netcode",
+      "reconciliation",
+      "rust"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:33Z"
+    "pushed_at": "2026-09-28T20:15:57Z"
   },
   {
-    "name": "godot-rs",
-    "description": "Pure Rust port and architecture fork of Godot Engine (godotengine/godot)",
+    "name": "generate-glb-rs",
+    "description": "Fast, pure Rust CLI tool and HTTP server to generate 3D models in binary GLB format using LLaMA-Mesh AI with zero Python dependencies.",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3658,16 +4444,16 @@
     ],
     "stars": 0,
     "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/godot-rs/",
-    "github_url": "https://github.com/bhubbard/godot-rs",
-    "target_url": "https://code.brandonhubbard.com/godot-rs/",
+    "page_url": "https://code.brandonhubbard.com/generate-glb-rs/",
+    "github_url": "https://github.com/bhubbard/generate-glb-rs",
+    "target_url": "https://code.brandonhubbard.com/generate-glb-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:34Z"
+    "pushed_at": "2026-10-05T06:12:49Z"
   },
   {
-    "name": "hyperframes-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "name": "handbrake-rs",
+    "description": "High-efficiency media transcoding and filter pipeline engine in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3676,16 +4462,132 @@
     ],
     "stars": 0,
     "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/hyperframes-rs/",
-    "github_url": "https://github.com/bhubbard/hyperframes-rs",
-    "target_url": "https://code.brandonhubbard.com/hyperframes-rs/",
+    "page_url": "https://code.brandonhubbard.com/handbrake-rs/",
+    "github_url": "https://github.com/bhubbard/handbrake-rs",
+    "target_url": "https://code.brandonhubbard.com/handbrake-rs/",
+    "topics": [
+      "handbrake",
+      "media-pipeline",
+      "rust",
+      "video-compression",
+      "video-transcoding"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:32:30Z"
+  },
+  {
+    "name": "hunyuan3d-rs",
+    "description": "Pure Rust engine and high-performance fork of Tencent Hunyuan3D-2.1: Generative 3D Asset Creation with PBR Textures",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/hunyuan3d-rs/",
+    "github_url": "https://github.com/bhubbard/hunyuan3d-rs",
+    "target_url": "https://code.brandonhubbard.com/hunyuan3d-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:36Z"
+    "pushed_at": "2026-10-05T06:12:51Z"
+  },
+  {
+    "name": "lossless-cut-rs",
+    "description": "High-speed lossless video and audio trimmer and stream extractor in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/lossless-cut-rs/",
+    "github_url": "https://github.com/bhubbard/lossless-cut-rs",
+    "target_url": "https://code.brandonhubbard.com/lossless-cut-rs/",
+    "topics": [
+      "cli",
+      "ffmpeg",
+      "lossless-cut",
+      "media-processing",
+      "rust",
+      "video-trimmer"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:33:46Z"
+  },
+  {
+    "name": "lux-rs",
+    "description": "Physically based volumetric rendering and lighting simulation engine in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/lux-rs/",
+    "github_url": "https://github.com/bhubbard/lux-rs",
+    "target_url": "https://code.brandonhubbard.com/lux-rs/",
+    "topics": [
+      "computer-graphics",
+      "lighting-engine",
+      "raytracing",
+      "rust",
+      "volumetric-rendering"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:49:55Z"
+  },
+  {
+    "name": "lyra-rs",
+    "description": "Pure Rust fork and high-performance engine for NVIDIA Project Lyra: Open Generative 3D World Models and Gaussian Splatting",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/lyra-rs/",
+    "github_url": "https://github.com/bhubbard/lyra-rs",
+    "target_url": "https://code.brandonhubbard.com/lyra-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T06:12:56Z"
+  },
+  {
+    "name": "mflux-rs",
+    "description": "Pure Rust Flux.1 image generation pipeline optimized for Apple Silicon neural inference",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mflux-rs/",
+    "github_url": "https://github.com/bhubbard/mflux-rs",
+    "target_url": "https://code.brandonhubbard.com/mflux-rs/",
+    "topics": [
+      "apple-silicon",
+      "diffusion-models",
+      "flux1",
+      "mlx",
+      "rust",
+      "text-to-image"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:30:23Z"
   },
   {
     "name": "minimal-hud-rs",
-    "description": "Pure Rust event-driven HUD state tracking, dirty change detection, vital stats, and vehicle telemetry from minimal-hud",
+    "description": "Pure Rust event-driven HUD state tracking with dirty change detection",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3697,13 +4599,19 @@
     "page_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
     "github_url": "https://github.com/bhubbard/minimal-hud-rs",
     "target_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
-    "topics": [],
+    "topics": [
+      "gamedev",
+      "hud",
+      "rust",
+      "state-management",
+      "ui-framework"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:14:20Z"
+    "pushed_at": "2026-10-05T15:49:57Z"
   },
   {
-    "name": "npwd-rs",
-    "description": "Pure Rust simulated in-game smartphone architecture, OS state machine, apps, and game-world event bridge from NPWD",
+    "name": "mlt-rs",
+    "description": "Pure Rust port of MLT multimedia framework engine for video playback, mixing, and filters",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3712,16 +4620,23 @@
     ],
     "stars": 0,
     "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/npwd-rs/",
-    "github_url": "https://github.com/bhubbard/npwd-rs",
-    "target_url": "https://code.brandonhubbard.com/npwd-rs/",
-    "topics": [],
+    "page_url": "https://code.brandonhubbard.com/mlt-rs/",
+    "github_url": "https://github.com/bhubbard/mlt-rs",
+    "target_url": "https://code.brandonhubbard.com/mlt-rs/",
+    "topics": [
+      "audio-mixer",
+      "mlt",
+      "multimedia",
+      "rust",
+      "streaming",
+      "video-processing"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:39Z"
+    "pushed_at": "2026-09-28T20:35:27Z"
   },
   {
-    "name": "openrw-rs",
-    "description": "Pure Rust port of GTA III camera follow, weapon targeting math, and player state machines from OpenRW",
+    "name": "mlx-audio-rs",
+    "description": "On-device speech recognition and neural audio synthesis via MLX in Rust",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3730,16 +4645,169 @@
     ],
     "stars": 0,
     "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/openrw-rs/",
-    "github_url": "https://github.com/bhubbard/openrw-rs",
-    "target_url": "https://code.brandonhubbard.com/openrw-rs/",
+    "page_url": "https://code.brandonhubbard.com/mlx-audio-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-audio-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-audio-rs/",
+    "topics": [
+      "apple-silicon",
+      "audio-processing",
+      "mlx",
+      "rust",
+      "speech-to-text",
+      "whisper"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:28:32Z"
+  },
+  {
+    "name": "mlx-embeddings-rs",
+    "description": "High-throughput vector embeddings and semantic search on Apple Silicon in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-embeddings-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
+    "topics": [
+      "apple-silicon",
+      "embeddings",
+      "mlx",
+      "rust",
+      "semantic-search",
+      "vector-search"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:25:26Z"
+  },
+  {
+    "name": "mlx-gen-rs",
+    "description": "Fast text generation and LLM sampling on Apple Silicon via Rust and MLX",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlx-gen-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-gen-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-gen-rs/",
+    "topics": [
+      "apple-silicon",
+      "diffusion",
+      "flux",
+      "generative-ai",
+      "image-generation",
+      "llm",
+      "mlx",
+      "rust",
+      "text-generation",
+      "transformer",
+      "video-generation",
+      "wan"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:27:12Z"
+  },
+  {
+    "name": "mlx-video-rs",
+    "description": "Native Apple Silicon MLX Video generation and inference in Rust (Wan2.1, Wan2.2, LTX-2)",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlx-video-rs/",
+    "github_url": "https://github.com/bhubbard/mlx-video-rs",
+    "target_url": "https://code.brandonhubbard.com/mlx-video-rs/",
+    "topics": [
+      "apple-silicon",
+      "diffusion",
+      "mlx",
+      "rust",
+      "video-generation"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-27T05:37:15Z"
+  },
+  {
+    "name": "nanoswarm-rs",
+    "description": "\ud83d\udc1d 100% on-device autonomous AI agent swarm in native Rust (<30MB RAM, 5.8\u00b5s SIMD routing)",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/nanoswarm-rs/",
+    "github_url": "https://github.com/bhubbard/nanoswarm-rs",
+    "target_url": "https://code.brandonhubbard.com/nanoswarm-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:41Z"
+    "pushed_at": "2026-10-05T06:12:47Z"
+  },
+  {
+    "name": "olive-rs",
+    "description": "Pure Rust port of Olive video editor non-linear timeline and node compositor engine",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/olive-rs/",
+    "github_url": "https://github.com/bhubbard/olive-rs",
+    "target_url": "https://code.brandonhubbard.com/olive-rs/",
+    "topics": [
+      "node-compositor",
+      "rust",
+      "timeline",
+      "video-editor",
+      "video-processing"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:05Z"
+  },
+  {
+    "name": "open-generative-ai-rs",
+    "description": "Unified neural inference and generative AI orchestration runtime in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/open-generative-ai-rs/",
+    "github_url": "https://github.com/bhubbard/open-generative-ai-rs",
+    "target_url": "https://code.brandonhubbard.com/open-generative-ai-rs/",
+    "topics": [
+      "apple-silicon",
+      "generative-ai",
+      "inference-engine",
+      "neural-networks",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:07Z"
   },
   {
     "name": "poormans-camera-rs",
-    "description": "Pure Rust 3D third-person camera rig with sphere-cast collision avoidance and spring damping from Evan Todd",
+    "description": "Pure Rust 3D third-person camera rig with sphere-cast collision avoidance",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3751,13 +4819,20 @@
     "page_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
     "github_url": "https://github.com/bhubbard/poormans-camera-rs",
     "target_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
-    "topics": [],
+    "topics": [
+      "3d-math",
+      "camera-rig",
+      "collision-avoidance",
+      "gamedev",
+      "rust",
+      "third-person"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:43Z"
+    "pushed_at": "2026-10-05T15:50:14Z"
   },
   {
     "name": "radial-menu-rs",
-    "description": "Pure Rust radial menu and weapon wheel system with angle math, deadzone filtering, and easing animations",
+    "description": "Pure Rust radial menu and weapon wheel system with angle matching and deadzones",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3769,13 +4844,37 @@
     "page_url": "https://code.brandonhubbard.com/radial-menu-rs/",
     "github_url": "https://github.com/bhubbard/radial-menu-rs",
     "target_url": "https://code.brandonhubbard.com/radial-menu-rs/",
+    "topics": [
+      "gamedev",
+      "input-handling",
+      "radial-menu",
+      "rust",
+      "ui-components"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:18Z"
+  },
+  {
+    "name": "rea-rs",
+    "description": "High-performance, memory-safe pure Rust CLI and Model Context Protocol (MCP) server for structured codebase investigation.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/rea-rs/",
+    "github_url": "https://github.com/bhubbard/rea-rs",
+    "target_url": "https://code.brandonhubbard.com/rea-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:45Z"
+    "pushed_at": "2026-10-05T06:12:45Z"
   },
   {
     "name": "sdf-math-rs",
-    "description": "Pure Rust 2D and 3D Signed Distance Fields, CSG smooth blending, and ray marching from Inigo Quilez",
+    "description": "Pure Rust 2D and 3D Signed Distance Fields, CSG smooth blending, and raymarching",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3787,31 +4886,20 @@
     "page_url": "https://code.brandonhubbard.com/sdf-math-rs/",
     "github_url": "https://github.com/bhubbard/sdf-math-rs",
     "target_url": "https://code.brandonhubbard.com/sdf-math-rs/",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:47Z"
-  },
-  {
-    "name": "sfxr-rs",
-    "description": "Pure Rust procedural 8-bit/16-bit sound effect generator and synthesizer from SFXR",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
+    "topics": [
+      "3d-math",
+      "raymarching",
+      "rust",
+      "sdf",
+      "shaders",
+      "signed-distance-fields"
     ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/sfxr-rs/",
-    "github_url": "https://github.com/bhubbard/sfxr-rs",
-    "target_url": "https://code.brandonhubbard.com/sfxr-rs/",
-    "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:49Z"
+    "pushed_at": "2026-09-28T20:07:04Z"
   },
   {
     "name": "simplecar2-rs",
-    "description": "Pure Rust arcade-sim vehicle dynamics, raycast suspension, drivetrain, and transmission from SimpleCar2",
+    "description": "Pure Rust arcade-sim vehicle dynamics, raycast suspension, and drivetrain",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3823,13 +4911,19 @@
     "page_url": "https://code.brandonhubbard.com/simplecar2-rs/",
     "github_url": "https://github.com/bhubbard/simplecar2-rs",
     "target_url": "https://code.brandonhubbard.com/simplecar2-rs/",
-    "topics": [],
+    "topics": [
+      "car-physics",
+      "gamedev",
+      "raycast-suspension",
+      "rust",
+      "vehicle-dynamics"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:51Z"
+    "pushed_at": "2026-09-28T20:10:40Z"
   },
   {
     "name": "sumo-rs",
-    "description": "Pure Rust microscopic traffic simulation engine featuring IDM, Krauss car-following, MOBIL lane changing, and intersection right-of-way from SUMO",
+    "description": "Pure Rust microscopic traffic simulation engine featuring IDM car-following",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3841,13 +4935,20 @@
     "page_url": "https://code.brandonhubbard.com/sumo-rs/",
     "github_url": "https://github.com/bhubbard/sumo-rs",
     "target_url": "https://code.brandonhubbard.com/sumo-rs/",
-    "topics": [],
+    "topics": [
+      "idm",
+      "microscopic-traffic",
+      "mobility",
+      "rust",
+      "sumo",
+      "traffic-simulation"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:52Z"
+    "pushed_at": "2026-09-28T20:11:58Z"
   },
   {
     "name": "tactical-ai-rs",
-    "description": "Pure Rust tactical influence maps, spatial reasoning, cover finding, and flanking pathfinder from Game AI Pro",
+    "description": "Pure Rust tactical influence maps, spatial reasoning, and cover evaluation for game AI",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3859,13 +4960,19 @@
     "page_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
     "github_url": "https://github.com/bhubbard/tactical-ai-rs",
     "target_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
-    "topics": [],
+    "topics": [
+      "game-ai",
+      "influence-maps",
+      "rust",
+      "spatial-reasoning",
+      "tactical-ai"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:54Z"
+    "pushed_at": "2026-10-05T15:50:27Z"
   },
   {
     "name": "tlab-vehicle-physics-rs",
-    "description": "Pure Rust Pacejka Magic Formula tire friction and drift physics model from TLabVehiclePhysics",
+    "description": "Pure Rust Pacejka Magic Formula tire friction and vehicle drift physics",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3877,13 +4984,46 @@
     "page_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
     "github_url": "https://github.com/bhubbard/tlab-vehicle-physics-rs",
     "target_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
-    "topics": [],
+    "topics": [
+      "automotive-sim",
+      "pacejka",
+      "rust",
+      "tire-friction",
+      "vehicle-physics"
+    ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:58Z"
+    "pushed_at": "2026-09-28T20:09:23Z"
+  },
+  {
+    "name": "translate-rs",
+    "description": "Deterministic on-device neural translation CLI and multi-provider HTTP server in Rust (DeepL, LibreTranslate, Google v2 compatible)",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/translate-rs/",
+    "github_url": "https://github.com/bhubbard/translate-rs",
+    "target_url": "https://code.brandonhubbard.com/translate-rs/",
+    "topics": [
+      "apple-translation",
+      "benchmarks",
+      "cli",
+      "deepl",
+      "libretranslate",
+      "offline-first",
+      "rust",
+      "translation"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:25Z"
   },
   {
     "name": "uxsim-rs",
-    "description": "Pure Rust macroscopic city-wide traffic network flow simulator from UXsim",
+    "description": "Pure Rust macroscopic city-wide traffic network flow simulation",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -3895,52 +5035,15 @@
     "page_url": "https://code.brandonhubbard.com/uxsim-rs/",
     "github_url": "https://github.com/bhubbard/uxsim-rs",
     "target_url": "https://code.brandonhubbard.com/uxsim-rs/",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T17:24:59Z"
-  },
-  {
-    "name": "vhud-rs",
-    "description": "Pure Rust GTA V radar, minimap projection, blip clamping, GPS route, and HUD ring meter engine",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/vhud-rs/",
-    "github_url": "https://github.com/bhubbard/vhud-rs",
-    "target_url": "https://code.brandonhubbard.com/vhud-rs/",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:01Z"
-  },
-  {
-    "name": "video-use-rs",
-    "description": "Fast, production-grade Rust port of browser-use/video-use for conversation-driven video editing and timeline generation.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/video-use-rs/",
-    "github_url": "https://github.com/bhubbard/video-use-rs",
-    "target_url": "https://code.brandonhubbard.com/video-use-rs/",
     "topics": [
-      "ai-agents",
-      "automation",
-      "media-processing",
+      "macroscopic-traffic",
       "rust",
-      "timeline-editor",
-      "video-editing"
+      "traffic-flow",
+      "transportation",
+      "urban-planning"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:03Z"
+    "pushed_at": "2026-09-28T20:14:31Z"
   },
   {
     "name": "vite-plus-wrangler",
@@ -3967,11 +5070,85 @@
       "wrangler"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T17:25:09Z"
+    "pushed_at": "2026-09-26T18:56:28Z"
+  },
+  {
+    "name": "watertight-meshes-rs",
+    "description": "High-performance Rust engine and cross-platform CLI for generating, validating, voxelizing, and repairing 100% watertight 3D AI meshes (TRELLIS.2 / Pixal3D / ComfyUI)",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/watertight-meshes-rs/",
+    "github_url": "https://github.com/bhubbard/watertight-meshes-rs",
+    "target_url": "https://code.brandonhubbard.com/watertight-meshes-rs/",
+    "topics": [
+      "3d",
+      "comfyui",
+      "marching-cubes",
+      "mesh-processing",
+      "rust",
+      "trellis",
+      "voxelization",
+      "watertight"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T06:12:58Z"
+  },
+  {
+    "name": "yt-dlp-rs",
+    "description": "Fast, lightweight Rust port of yt-dlp core media extractor and streaming client",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
+    "github_url": "https://github.com/bhubbard/yt-dlp-rs",
+    "target_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
+    "topics": [
+      "cli",
+      "media-extraction",
+      "rust",
+      "streaming",
+      "video-downloader"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:36Z"
+  },
+  {
+    "name": "antispambot-cf-worker",
+    "description": "A CloudFlare Worker to return antispambot email.",
+    "language": "JavaScript",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 4,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/antispambot-cf-worker",
+    "target_url": "https://github.com/bhubbard/antispambot-cf-worker",
+    "topics": [
+      "cloudflare",
+      "cloudflare-workers",
+      "serverless",
+      "spam",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2022-09-29T15:56:00Z"
   },
   {
     "name": "wp-cloudflare-d1",
-    "description": "A php class to use CloudFlare D1 database within WordPress.",
+    "description": "Modern PHP client library to query Cloudflare D1 SQL databases from WordPress",
     "language": "PHP",
     "category": "flare",
     "categories": [
@@ -3985,22 +5162,45 @@
     "target_url": "https://github.com/bhubbard/wp-cloudflare-d1",
     "topics": [
       "cloudflare",
+      "cloudflare-d1",
+      "cloudflare-workers",
       "d1",
       "php",
-      "wordpress",
-      "cloudflare-workers",
-      "serverless"
+      "serverless",
+      "sqlite",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-11-12T14:45:32Z"
+    "pushed_at": "2026-09-26T18:57:23Z"
+  },
+  {
+    "name": "rest-api-examples",
+    "description": "Simple examples of custom rest endpoints for common WordPress functions",
+    "language": "PHP",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 2,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/rest-api-examples",
+    "target_url": "https://github.com/bhubbard/rest-api-examples",
+    "topics": [
+      "rest-api",
+      "tutorial",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2024-12-16T18:37:06Z"
   },
   {
     "name": "animated-gradient-cover-block",
     "description": "A WordPress block with animated gradient cover.",
     "language": "JavaScript",
-    "category": "tools",
+    "category": "wordpress",
     "categories": [
-      "tools"
+      "wordpress"
     ],
     "stars": 1,
     "has_pages": false,
@@ -4013,11 +5213,50 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-09-18T17:32:02Z"
+    "pushed_at": "2026-09-26T18:57:25Z"
+  },
+  {
+    "name": "blender-rs",
+    "description": "Memory-safe, high-performance pure Rust port of Blender 3D creation suite \u2014 mesh modeling, scene graph, and rendering pipeline.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/blender-rs",
+    "target_url": "https://github.com/bhubbard/blender-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-19T14:33:33Z"
+  },
+  {
+    "name": "gcf-pubsub-webhook",
+    "description": "A simple cloud function to receive message and post to PubSub Topic. ",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/gcf-pubsub-webhook",
+    "target_url": "https://github.com/bhubbard/gcf-pubsub-webhook",
+    "topics": [
+      "google-cloud",
+      "pubsub",
+      "webhook"
+    ],
+    "is_archived": true,
+    "pushed_at": "2020-02-04T18:14:34Z"
   },
   {
     "name": "kumo-drift-checks",
-    "description": "Automated drift detection and consistency verification utility for Cloudflare Kumo UI components and design tokens.",
+    "description": "Automated UI design token drift detection and consistency verification utility",
     "language": "JavaScript",
     "category": "tools",
     "categories": [
@@ -4032,18 +5271,22 @@
       "cloudflare",
       "cloudflare-workers",
       "design-system",
+      "design-systems",
+      "design-tokens",
       "drift-detection",
+      "javascript",
+      "kumo",
       "kumo-ui",
       "serverless",
       "typescript",
       "ui-components"
     ],
     "is_archived": false,
-    "pushed_at": "2026-08-06T04:41:01Z"
+    "pushed_at": "2026-09-26T18:57:07Z"
   },
   {
     "name": "pressable-cli",
-    "description": "Command-line interface (CLI) for managing Pressable WordPress sites, collaborators, backups, and deployments.",
+    "description": "Command-line interface for managing Pressable WordPress sites, backups, and deployments",
     "language": "TypeScript",
     "category": "wordpress",
     "categories": [
@@ -4055,16 +5298,39 @@
     "github_url": "https://github.com/bhubbard/pressable-cli",
     "target_url": "https://github.com/bhubbard/pressable-cli",
     "topics": [
-      "cli",
-      "hosting",
-      "pressable",
-      "wordpress",
       "api-client",
       "automation",
-      "devops"
+      "cli",
+      "devops",
+      "hosting",
+      "pressable",
+      "typescript",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-04-09T06:13:03Z"
+    "pushed_at": "2026-09-26T18:57:12Z"
+  },
+  {
+    "name": "send-to-pubsub",
+    "description": "HTTP Cloud Function to send data to PubSub.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/send-to-pubsub",
+    "target_url": "https://github.com/bhubbard/send-to-pubsub",
+    "topics": [
+      "automation",
+      "developer-tools",
+      "google-cloud",
+      "pubsub"
+    ],
+    "is_archived": true,
+    "pushed_at": "2022-09-20T17:37:33Z"
   },
   {
     "name": "skills",
@@ -4081,21 +5347,60 @@
     "target_url": "https://github.com/bhubbard/skills",
     "topics": [
       "agent",
-      "ai",
-      "claude",
       "agent-skills",
+      "ai",
       "ai-agents",
       "antigravity",
+      "claude",
       "claude-code",
       "developer-productivity",
       "prompt-engineering"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T15:45:02Z"
+    "pushed_at": "2026-10-04T23:19:29Z"
+  },
+  {
+    "name": "voicestudio-rs",
+    "description": "Open-source, fully-local ElevenLabs alternative in Rust \u2014 voice cloning, design, video dubbing, and transcription",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/voicestudio-rs",
+    "target_url": "https://github.com/bhubbard/voicestudio-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:33Z"
+  },
+  {
+    "name": "woo-order-to-google-storage",
+    "description": "Backup woo order to Google Storage, ideally via pub/sub.",
+    "language": "JavaScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/woo-order-to-google-storage",
+    "target_url": "https://github.com/bhubbard/woo-order-to-google-storage",
+    "topics": [
+      "google-cloud",
+      "storage",
+      "woocommerce"
+    ],
+    "is_archived": true,
+    "pushed_at": "2022-09-20T17:35:22Z"
   },
   {
     "name": "wp-cloudflare-kv",
-    "description": "A WordPress library to work with CloudFlare KV storage.",
+    "description": "WordPress object and transient cache backend powered by Cloudflare KV",
     "language": "PHP",
     "category": "flare",
     "categories": [
@@ -4108,15 +5413,17 @@
     "github_url": "https://github.com/bhubbard/wp-cloudflare-kv",
     "target_url": "https://github.com/bhubbard/wp-cloudflare-kv",
     "topics": [
+      "caching",
       "cloudflare",
+      "cloudflare-kv",
+      "cloudflare-workers",
       "kv",
       "php",
-      "wordpress",
-      "cloudflare-workers",
-      "serverless"
+      "serverless",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-11-12T14:52:00Z"
+    "pushed_at": "2026-09-26T18:57:21Z"
   },
   {
     "name": "wp-gemini-cleaner",
@@ -4141,7 +5448,7 @@
   },
   {
     "name": "wp-pressable-api",
-    "description": "Comprehensive PHP/WordPress client library and wrapper for the Pressable Managed WordPress Hosting REST API.",
+    "description": "PHP and WordPress client library for Pressable Cloud API",
     "language": "PHP",
     "category": "wordpress",
     "categories": [
@@ -4153,24 +5460,53 @@
     "github_url": "https://github.com/bhubbard/wp-pressable-api",
     "target_url": "https://github.com/bhubbard/wp-pressable-api",
     "topics": [
+      "api-client",
       "cli",
       "cloud-hosting",
+      "hosting-automation",
       "managed-wordpress",
+      "php",
       "php-sdk",
       "pressable",
       "rest-api",
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-11-20T15:39:31Z"
+    "pushed_at": "2026-09-26T18:57:19Z"
+  },
+  {
+    "name": "wp-spinupwp-api",
+    "description": "Modern PHP and WordPress client library for the SpinupWP cloud server management REST API.",
+    "language": "PHP",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 1,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wp-spinupwp-api",
+    "target_url": "https://github.com/bhubbard/wp-spinupwp-api",
+    "topics": [
+      "cli",
+      "devops",
+      "hosting-automation",
+      "php",
+      "rest-api",
+      "server-management",
+      "spinupwp",
+      "wordpress"
+    ],
+    "is_archived": true,
+    "pushed_at": "2025-06-15T14:52:56Z"
   },
   {
     "name": "yoast-seo-audit",
-    "description": "Automated SEO schema, graph validation, and meta tag audit tool for WordPress sites utilizing Yoast SEO.",
+    "description": "Automated SEO schema, graph validation, and meta tag audit tool",
     "language": "JavaScript",
-    "category": "tools",
+    "category": "wordpress",
     "categories": [
-      "tools"
+      "wordpress"
     ],
     "stars": 1,
     "has_pages": false,
@@ -4180,15 +5516,18 @@
     "topics": [
       "audit",
       "json-ld",
+      "nodejs",
       "schema-markup",
+      "schema-org",
       "search-engine-optimization",
       "seo",
       "seo-audit",
       "wordpress",
+      "yoast",
       "yoast-seo"
     ],
     "is_archived": false,
-    "pushed_at": "2025-08-01T19:20:41Z"
+    "pushed_at": "2026-09-26T18:57:27Z"
   },
   {
     "name": ".github",
@@ -4212,7 +5551,25 @@
       "security-policy"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T15:20:28Z"
+    "pushed_at": "2026-09-26T18:57:03Z"
+  },
+  {
+    "name": "agentarena-rs",
+    "description": "Dynamic simulation test bench and deterministic benchmark arena for AI agents across traffic, tactical combat, crowd steering, and multi-agent coordination",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/agentarena-rs",
+    "target_url": "https://github.com/bhubbard/agentarena-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-08T06:11:18Z"
   },
   {
     "name": "alt-text-ai",
@@ -4230,17 +5587,17 @@
     "topics": [
       "accessibility",
       "ai",
+      "cloudflare",
       "cloudflare-workers",
       "seo",
-      "cloudflare",
       "serverless"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-30T14:28:14Z"
+    "pushed_at": "2026-09-26T18:57:14Z"
   },
   {
     "name": "astro-compress-rs",
-    "description": "Blazingly fast post-build compressor, CSS inliner, and HTML head optimizer written in Rust for Astro and static sites.",
+    "description": "Blazingly fast post-build compressor, CSS inliner, and HTML minifier in Rust",
     "language": "Rust",
     "category": "astro",
     "categories": [
@@ -4258,12 +5615,36 @@
       "compression",
       "css-inliner",
       "html-minifier",
+      "minification",
       "rust",
       "static-site",
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T16:26:49Z"
+    "pushed_at": "2026-09-26T18:57:02Z"
+  },
+  {
+    "name": "decision-index",
+    "description": "Decision Index: reproduce the Jev decision-model benchmark suite locally or as one HF Job",
+    "language": "Code",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/decision-index",
+    "target_url": "https://github.com/bhubbard/decision-index",
+    "topics": [
+      "benchmark",
+      "decision-engine",
+      "evals",
+      "llm",
+      "zero-token"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-01T01:29:26Z"
   },
   {
     "name": "fonoster",
@@ -4290,6 +5671,24 @@
     "pushed_at": "2026-09-25T16:27:07Z"
   },
   {
+    "name": "freevideo-rs",
+    "description": "High-performance pure Rust video synthesis, frame processing, and neural rendering toolkit.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/freevideo-rs",
+    "target_url": "https://github.com/bhubbard/freevideo-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:04Z"
+  },
+  {
     "name": "homebrew-tap",
     "description": "Official Homebrew tap for CLI developer tools and native binary distributions maintained by bhubbard.",
     "language": "Ruby",
@@ -4304,20 +5703,20 @@
     "target_url": "https://github.com/bhubbard/homebrew-tap",
     "topics": [
       "binary-distribution",
+      "cli",
       "cli-tools",
       "homebrew",
       "homebrew-tap",
       "macos",
-      "package-manager",
-      "cli"
+      "package-manager"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-24T17:29:15Z"
+    "pushed_at": "2026-10-15T17:24:25Z"
   },
   {
     "name": "hyperframes",
     "description": "Write HTML. Render video. Built for agents.",
-    "language": "TypeScript",
+    "language": "Code",
     "category": "tools",
     "categories": [
       "tools"
@@ -4327,9 +5726,180 @@
     "page_url": null,
     "github_url": "https://github.com/bhubbard/hyperframes",
     "target_url": "https://github.com/bhubbard/hyperframes",
+    "topics": [
+      "compositing",
+      "frames",
+      "graphics",
+      "motion",
+      "video-synthesis"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:56Z"
+  },
+  {
+    "name": "hypit-rs",
+    "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
+    "language": "TypeScript",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/hypit-rs",
+    "target_url": "https://github.com/bhubbard/hypit-rs",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-26T15:40:26Z"
+    "pushed_at": "2026-10-14T05:14:44Z"
+  },
+  {
+    "name": "image-altext",
+    "description": "Cloudflare-powered AI image alt text generator using TypeScript and Hono framework for edge environments.",
+    "language": "Code",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/image-altext",
+    "target_url": "https://github.com/bhubbard/image-altext",
+    "topics": [
+      "accessibility",
+      "ai",
+      "cloudflare",
+      "cloudflare-workers",
+      "serverless"
+    ],
+    "is_archived": true,
+    "pushed_at": "2024-04-11T09:43:13Z"
+  },
+  {
+    "name": "kadraj",
+    "description": "The HTML-aware image optimizer \u2014 responsive AVIF for the images your built site actually uses, in Rust.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/kadraj",
+    "target_url": "https://github.com/bhubbard/kadraj",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:49:54Z"
+  },
+  {
+    "name": "latentsync-rs",
+    "description": "High-performance Rust port of LatentSync: audio-conditioned latent diffusion for temporally consistent lip-sync video synthesis.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/latentsync-rs",
+    "target_url": "https://github.com/bhubbard/latentsync-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:10Z"
+  },
+  {
+    "name": "locals",
+    "description": "Run many AI agents at once on your Mac, up to 3x faster.",
+    "language": "Code",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/locals",
+    "target_url": "https://github.com/bhubbard/locals",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-21T23:31:16Z"
+  },
+  {
+    "name": "longcat-video-rs",
+    "description": "LongCat-Video: Long-context video generation and temporal diffusion in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/longcat-video-rs",
+    "target_url": "https://github.com/bhubbard/longcat-video-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:12Z"
+  },
+  {
+    "name": "minimind",
+    "description": "\ud83e\udde0 Train a 64M-parameter LLM from scratch in just 2h!",
+    "language": "Python",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/minimind",
+    "target_url": "https://github.com/bhubbard/minimind",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:48:19Z"
+  },
+  {
+    "name": "musetalk-rs",
+    "description": "Pure Rust real-time high-fidelity audio-driven lip-sync and talking head synthesis engine in latent space.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/musetalk-rs",
+    "target_url": "https://github.com/bhubbard/musetalk-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:15Z"
+  },
+  {
+    "name": "neteq-rs",
+    "description": "Pure Rust standalone port of WebRTC NetEQ: adaptive audio jitter buffer, packet loss concealment (PLC), time-stretching (WSOLA), and comfort noise for real-time voice AI streaming",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/neteq-rs",
+    "target_url": "https://github.com/bhubbard/neteq-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-08T07:10:44Z"
   },
   {
     "name": "opendental",
@@ -4356,12 +5926,78 @@
       "serverless"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T16:27:18Z"
+    "pushed_at": "2026-10-05T15:48:41Z"
   },
   {
-    "name": "plugin-updater-cf-worker",
-    "description": "A Cloudflare Worker for WordPress plugin updates.",
-    "language": "JavaScript",
+    "name": "openmontage-rs",
+    "description": "Open-source, agentic video production system in Rust \u2014 pipelines, shot composition, timeline editing, and audio mixing",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/openmontage-rs",
+    "target_url": "https://github.com/bhubbard/openmontage-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:18Z"
+  },
+  {
+    "name": "paperclip-rs",
+    "description": "Open-source orchestration engine for agentic workflows and multi-agent coordination in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/paperclip-rs",
+    "target_url": "https://github.com/bhubbard/paperclip-rs",
+    "topics": [
+      "agentic-ai",
+      "llm-orchestration",
+      "multi-agent",
+      "rust",
+      "workflow-engine"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-28T20:35:56Z"
+  },
+  {
+    "name": "partikel",
+    "description": "High-performance CPU/GPU particle simulation engine and physics effects in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/partikel",
+    "target_url": "https://github.com/bhubbard/partikel",
+    "topics": [
+      "gamedev",
+      "particle-system",
+      "physics-simulation",
+      "rust",
+      "vfx"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-05T15:50:13Z"
+  },
+  {
+    "name": "plane-cf",
+    "description": "\ud83d\udd25\ud83d\udd25\ud83d\udd25 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+    "language": "TypeScript",
     "category": "tools",
     "categories": [
       "tools"
@@ -4369,25 +6005,42 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "github_url": "https://github.com/bhubbard/plane-cf",
+    "target_url": "https://github.com/bhubbard/plane-cf",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-13T17:25:59Z"
+  },
+  {
+    "name": "plugin-updater-cf-worker",
+    "description": "A Cloudflare Worker for WordPress plugin updates.",
+    "language": "JavaScript",
+    "category": "wordpress",
+    "categories": [
+      "wordpress"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
     "github_url": "https://github.com/bhubbard/plugin-updater-cf-worker",
     "target_url": "https://github.com/bhubbard/plugin-updater-cf-worker",
     "topics": [
+      "cloudflare",
       "cloudflare-workers",
       "plugins",
-      "wordpress",
-      "cloudflare",
-      "serverless"
+      "serverless",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-28T16:42:58Z"
+    "pushed_at": "2026-09-26T18:57:16Z"
   },
   {
     "name": "post-navigation-block",
     "description": "A WordPress block for post navigation.",
     "language": "PHP",
-    "category": "tools",
+    "category": "wordpress",
     "categories": [
-      "tools"
+      "wordpress"
     ],
     "stars": 0,
     "has_pages": false,
@@ -4400,11 +6053,29 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-09-18T17:29:54Z"
+    "pushed_at": "2026-09-26T18:57:26Z"
+  },
+  {
+    "name": "sadtalker-rs",
+    "description": "Pure Rust port of SadTalker: stylized audio-driven single-image talking face animation with 3D motion coefficients.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/sadtalker-rs",
+    "target_url": "https://github.com/bhubbard/sadtalker-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:21Z"
   },
   {
     "name": "searchphone",
-    "description": "Fast, privacy-focused reverse phone lookup and telephony carrier metadata inspection tool.",
+    "description": "Fast, privacy-focused reverse phone lookup and telephony carrier detection CLI",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -4419,21 +6090,24 @@
     "topics": [
       "caller-id",
       "carrier-lookup",
+      "cli",
       "lookup-tool",
       "phone-lookup",
+      "phone-numbers",
       "privacy",
+      "rust",
       "telephony"
     ],
     "is_archived": false,
-    "pushed_at": "2026-08-25T06:13:29Z"
+    "pushed_at": "2026-09-26T18:57:06Z"
   },
   {
     "name": "sensitive-image-block",
     "description": "A WordPress block for sensitive images with a reveal toggle.",
     "language": "JavaScript",
-    "category": "tools",
+    "category": "wordpress",
     "categories": [
-      "tools"
+      "wordpress"
     ],
     "stars": 0,
     "has_pages": false,
@@ -4446,7 +6120,7 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-09-18T17:57:52Z"
+    "pushed_at": "2026-09-26T18:57:24Z"
   },
   {
     "name": "serpbear",
@@ -4471,11 +6145,11 @@
       "serp"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-25T16:27:25Z"
+    "pushed_at": "2026-09-26T18:56:59Z"
   },
   {
     "name": "sitemap-scan",
-    "description": "A simple node package to find and crawl sitemaps",
+    "description": "Fast Node.js crawler and recursive XML sitemap validator",
     "language": "JavaScript",
     "category": "tools",
     "categories": [
@@ -4487,16 +6161,18 @@
     "github_url": "https://github.com/bhubbard/sitemap-scan",
     "target_url": "https://github.com/bhubbard/sitemap-scan",
     "topics": [
+      "crawler",
       "nodejs",
       "seo",
-      "sitemap"
+      "sitemap",
+      "xml-sitemap"
     ],
     "is_archived": false,
-    "pushed_at": "2025-08-01T18:16:42Z"
+    "pushed_at": "2026-09-26T18:57:28Z"
   },
   {
-    "name": "timesfm-rs",
-    "description": "Native Rust implementation of Google Research's TimesFM foundation model for zero-shot time series forecasting via Candle.",
+    "name": "toontalker-rs",
+    "description": "Pure Rust cross-domain cartoon and stylized avatar talking-head synthesis engine driven by audio.",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -4506,45 +6182,11 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
-    "github_url": "https://github.com/bhubbard/timesfm-rs",
-    "target_url": "https://github.com/bhubbard/timesfm-rs",
-    "topics": [
-      "candle",
-      "forecasting",
-      "google-research",
-      "machine-learning",
-      "rust",
-      "time-series",
-      "timesfm"
-    ],
+    "github_url": "https://github.com/bhubbard/toontalker-rs",
+    "target_url": "https://github.com/bhubbard/toontalker-rs",
+    "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-09-25T16:27:31Z"
-  },
-  {
-    "name": "unified-audit-rs",
-    "description": "Consolidated high-performance post-build CI verification and auditing gate for Astro and static sites in Rust.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "github_url": "https://github.com/bhubbard/unified-audit-rs",
-    "target_url": "https://github.com/bhubbard/unified-audit-rs",
-    "topics": [
-      "astro",
-      "audit",
-      "ci-cd",
-      "quality-gate",
-      "rust",
-      "static-analysis",
-      "web-standards"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-25T16:27:57Z"
+    "pushed_at": "2026-10-12T18:55:23Z"
   },
   {
     "name": "unlighthouse-rs",
@@ -4561,18 +6203,72 @@
     "github_url": "https://github.com/bhubbard/unlighthouse-rs",
     "target_url": "https://github.com/bhubbard/unlighthouse-rs",
     "topics": [
+      "audit",
       "cli",
       "lighthouse",
       "performance",
-      "rust",
-      "audit"
+      "rust"
     ],
     "is_archived": false,
     "pushed_at": "2026-06-01T05:24:35Z"
   },
   {
+    "name": "upscayl-rs",
+    "description": "High-performance, pure-Rust native port and drop-in CLI replacement for Upscayl AI image upscaler",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/upscayl-rs",
+    "target_url": "https://github.com/bhubbard/upscayl-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-07T05:27:38Z"
+  },
+  {
+    "name": "video-retalking-rs",
+    "description": "Pure Rust audio-based lip synchronization and facial reenactment pipeline for talking-head video editing.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/video-retalking-rs",
+    "target_url": "https://github.com/bhubbard/video-retalking-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:28Z"
+  },
+  {
+    "name": "wav2lip-rs",
+    "description": "High-speed pure Rust inference engine for Wav2Lip audio-driven lip-sync synthesis and video dubbing.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "github_url": "https://github.com/bhubbard/wav2lip-rs",
+    "target_url": "https://github.com/bhubbard/wav2lip-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-12T18:55:36Z"
+  },
+  {
     "name": "wp-blockmarkup-mcp",
-    "description": "A fast, lightweight, and modern Rust port of wp-blockmarkup-mcp. This tool functions as both a Model Context Protocol (MCP) server for LLMs (like Claude Desktop) and a robust Command Line Interface (CLI) for auditing, linting, formatting, searching, and previewing Gutenberg block markups.",
+    "description": "High-speed Rust Model Context Protocol (MCP) server for WordPress block grammar parsing",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -4586,16 +6282,17 @@
     "github_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
     "target_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
     "topics": [
+      "ai",
+      "audit",
       "cli",
       "gutenberg",
       "mcp",
+      "model-context-protocol",
       "rust",
-      "wordpress",
-      "ai",
-      "audit"
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-05-31T05:42:00Z"
+    "pushed_at": "2026-09-26T18:57:09Z"
   },
   {
     "name": "wp-cleanup-scripts",
@@ -4611,17 +6308,17 @@
     "github_url": "https://github.com/bhubbard/wp-cleanup-scripts",
     "target_url": "https://github.com/bhubbard/wp-cleanup-scripts",
     "topics": [
-      "wordpress",
       "bash",
       "cleanup",
-      "database"
+      "database",
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-29T16:01:26Z"
+    "pushed_at": "2026-09-26T18:57:15Z"
   },
   {
     "name": "wp-clio-api",
-    "description": "A WordPress library for the Clio legal API.",
+    "description": "PHP and WordPress integration library for Clio legal practice management API",
     "language": "PHP",
     "category": "wordpress",
     "categories": [
@@ -4634,17 +6331,19 @@
     "target_url": "https://github.com/bhubbard/wp-clio-api",
     "topics": [
       "api",
+      "api-client",
+      "cli",
       "clio",
+      "legal-tech",
       "php",
-      "wordpress",
-      "cli"
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-02T22:57:27Z"
+    "pushed_at": "2026-09-26T18:57:17Z"
   },
   {
     "name": "wp-givebutter-api",
-    "description": "A WordPress library to work with the GiveButter Public API.",
+    "description": "Modern PHP client library and webhook handler for Givebutter Public API",
     "language": "PHP",
     "category": "wordpress",
     "categories": [
@@ -4657,16 +6356,18 @@
     "target_url": "https://github.com/bhubbard/wp-givebutter-api",
     "topics": [
       "api",
+      "api-client",
+      "fundraising",
       "givebutter",
       "php",
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2025-11-17T16:15:54Z"
+    "pushed_at": "2026-09-26T18:57:20Z"
   },
   {
     "name": "wp-lawmatics-api",
-    "description": "A WordPress library for the Lawmatics CRM API.",
+    "description": "PHP and WordPress integration library for Lawmatics CRM API",
     "language": "PHP",
     "category": "wordpress",
     "categories": [
@@ -4679,12 +6380,14 @@
     "target_url": "https://github.com/bhubbard/wp-lawmatics-api",
     "topics": [
       "api",
+      "crm",
+      "lawmatics",
+      "legal-tech",
       "php",
-      "wordpress",
-      "lawmatics"
+      "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-01-02T22:54:44Z"
+    "pushed_at": "2026-09-26T18:57:18Z"
   },
   {
     "name": "wp-plugin-uninstalls",
@@ -4705,11 +6408,11 @@
       "wordpress"
     ],
     "is_archived": false,
-    "pushed_at": "2026-02-27T16:21:37Z"
+    "pushed_at": "2026-09-26T18:57:13Z"
   },
   {
     "name": "wp-theme-check-cli",
-    "description": "CLI utility and automated CI quality gate for running WordPress Theme Check audits against modern block themes.",
+    "description": "Automated CI/CD quality gate for WordPress themes checking PHPCS, security, and standards",
     "language": "TypeScript",
     "category": "wordpress",
     "categories": [
@@ -4726,12 +6429,14 @@
       "cli",
       "code-quality",
       "gutenberg",
+      "phpcs",
       "theme-check",
+      "typescript",
       "wordpress",
       "wp-cli"
     ],
     "is_archived": false,
-    "pushed_at": "2026-04-10T06:22:56Z"
+    "pushed_at": "2026-09-26T18:57:11Z"
   }
 ];
 
@@ -4743,7 +6448,10 @@
       "PHP": "#3B82F6",
       "HTML": "#F43F5E",
       "Shell": "#10B981",
-      "CSS": "#3B82F6"
+      "CSS": "#3B82F6",
+      "Python": "#10B981",
+      "Ruby": "#F43F5E",
+      "C#": "#3B82F6"
     };
 
     // DOM Elements
@@ -4796,10 +6504,51 @@
     // Check if repo matches category
     function matchCategory(repo, filter) {
       if (filter === 'all') return true;
-      if (filter === 'pages') return Boolean(GITHUB_PAGES_MAP[(repo.name || '').toLowerCase()] || repo.docs);
+      if (filter === 'pages') return Boolean(repo.has_pages || GITHUB_PAGES_MAP[(repo.name || '').toLowerCase()] || repo.docs);
       if (repo.category === filter) return true;
       if (repo.categories && repo.categories.includes(filter)) return true;
       return false;
+    }
+
+    const FILTER_LABELS = {
+      all: 'All Repos',
+      pages: 'GitHub Pages',
+      flare: 'The Flare Suite',
+      astro: 'Chrome AI / Astro',
+      cli: 'Rust & CLI',
+      wordpress: 'WordPress',
+      tools: 'Cloud & Tools'
+    };
+
+    const MODAL_FILTER_LABELS = {
+      all: 'All',
+      pages: 'GitHub Pages',
+      flare: 'The Flare Suite',
+      astro: 'Chrome AI / Astro',
+      cli: 'Rust & CLI',
+      wordpress: 'WordPress',
+      tools: 'Cloud & Tools'
+    };
+
+    function updateCategoryBadges() {
+      const countEl = document.getElementById('metricRepoCount');
+      if (countEl) countEl.textContent = REPOSITORIES.length;
+      const heroBtnSpan = document.querySelector('#heroSearchTrigger span');
+      if (heroBtnSpan) heroBtnSpan.textContent = `Search ${REPOSITORIES.length} Repositories (⌘K)`;
+
+      categoryFilterPills.forEach(pill => {
+        const f = pill.dataset.filter;
+        const c = REPOSITORIES.filter(r => matchCategory(r, f)).length;
+        const base = FILTER_LABELS[f] || f;
+        pill.textContent = `${base} (${c})`;
+      });
+
+      modalFilterBtns.forEach(btn => {
+        const f = btn.dataset.filter;
+        const c = REPOSITORIES.filter(r => matchCategory(r, f)).length;
+        const base = MODAL_FILTER_LABELS[f] || f;
+        btn.textContent = `${base} (${c})`;
+      });
     }
 
     // Render Explorer Grid
@@ -5096,6 +6845,7 @@
           const apiProjects = await res.json();
           if (Array.isArray(apiProjects) && apiProjects.length > 0) {
             REPOSITORIES = apiProjects;
+            updateCategoryBadges();
             renderExplorerGrid();
             renderModalResults();
           }
@@ -5108,48 +6858,47 @@
 
     async function syncGitHubRepos() {
       try {
-        const res = await fetch('https://api.github.com/users/bhubbard/repos?per_page=100&sort=updated');
-        if (res.ok) {
-          const liveRepos = await res.json();
-          if (Array.isArray(liveRepos) && liveRepos.length > 0) {
-            const countEl = document.getElementById('metricRepoCount');
-            if (countEl) countEl.textContent = liveRepos.length;
-
-            liveRepos.forEach(live => {
-              const lower = (live.name || '').toLowerCase();
-              const match = REPOSITORIES.find(r => (r.name || '').toLowerCase() === lower);
-              if (match) {
-                match.stars = live.stargazers_count || match.stars;
-                if (live.has_pages && !GITHUB_PAGES_MAP[lower]) {
-                  GITHUB_PAGES_MAP[lower] = `https://code.brandonhubbard.com/${live.name}/`;
-                }
-              } else if (live.name !== 'bhubbard') {
-                const isRust = live.language === 'Rust';
-                const newRepo = {
-                  name: live.name,
-                  description: live.description || 'Open source repository by Brandon Hubbard.',
-                  language: live.language || 'Code',
-                  category: isRust ? 'cli' : 'tools',
-                  categories: isRust ? ['cli', 'rust'] : ['tools'],
-                  stars: live.stargazers_count || 0,
-                  url: live.html_url
-                };
-                if (live.has_pages) {
-                  const pUrl = `https://code.brandonhubbard.com/${live.name}/`;
-                  newRepo.docs = pUrl;
-                  GITHUB_PAGES_MAP[lower] = pUrl;
-                }
-                REPOSITORIES.push(newRepo);
-              }
-            });
-            renderExplorerGrid();
-          }
+        let allLive = [];
+        for (let page = 1; page <= 3; page++) {
+          const res = await fetch(`https://api.github.com/users/bhubbard/repos?per_page=100&page=${page}&sort=updated`);
+          if (!res.ok) break;
+          const batch = await res.json();
+          if (!Array.isArray(batch) || batch.length === 0) break;
+          allLive = allLive.concat(batch);
+          if (batch.length < 100) break;
+        }
+        if (allLive.length > 0) {
+          allLive.forEach(live => {
+            const lower = (live.name || '').toLowerCase();
+            const match = REPOSITORIES.find(r => (r.name || '').toLowerCase() === lower);
+            if (match) {
+              match.stars = live.stargazers_count || match.stars;
+            } else if (live.name !== 'bhubbard' && !live.private) {
+              const isRust = live.language === 'Rust' || lower.endsWith('-rs');
+              const newRepo = {
+                name: live.name,
+                description: live.description || 'Open source repository by Brandon Hubbard.',
+                language: live.language || 'Code',
+                category: isRust ? 'cli' : 'tools',
+                categories: isRust ? ['cli', 'rust'] : ['tools'],
+                stars: live.stargazers_count || 0,
+                has_pages: Boolean(GITHUB_PAGES_MAP[lower]),
+                github_url: live.html_url,
+                target_url: GITHUB_PAGES_MAP[lower] || live.html_url
+              };
+              REPOSITORIES.push(newRepo);
+            }
+          });
+          updateCategoryBadges();
+          renderExplorerGrid();
+          renderModalResults();
         }
       } catch (e) {
         // Retain offline catalog
       }
     }
 
+    updateCategoryBadges();
     setupProjectCardClicks();
     renderExplorerGrid();
     renderModalResults();

@@ -2,134 +2,422 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Root Flagship Engineering Portal -->
   <url>
-    <loc>https://bhubbard.github.io/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/</loc>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- High-Performance Rust & Local AI Flagships -->
   <url>
-    <loc>https://bhubbard.github.io/apfel-rs/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/apfel-rs/</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/zev-rs/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/bullet3-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/video-use-rs/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/nanoswarm-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- The Flare Suite: Cloudflare Architecture & Security -->
   <url>
-    <loc>https://bhubbard.github.io/flareguard/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/timesfm-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/uxsim-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/zev-rs/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/flareguard/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/flarelint/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/flareops/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/flareperf/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/astro-client-directive-ai/</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/flareperf/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/astro-dev-audit-nano/</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/flarelint/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/flareops/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/astro-dev-content-linter/</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Astro Chrome Built-in AI Suite -->
   <url>
-    <loc>https://bhubbard.github.io/astro-client-directive-ai/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/astro-dev-copy-optimizer/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/astro-dev-i18n-coverage/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/astro-dev-mock-generator/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/astro-dev-schema-scaffolder/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/astro-og-smart-crop/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/astro-prefetch-ai-brief/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/astro-rehype-nano-code/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/astro-schema-ld-verifier/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/active-ragdoll-rs/</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-rehype-nano-code/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/aesir-utils-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-prefetch-ai-brief/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/auge-rs/</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-dev-audit-nano/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/box3d-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-dev-copy-optimizer/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/clearwater-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-og-smart-crop/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/clippy-cf-reporter/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-schema-ld-verifier/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-dev-i18n-coverage/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/defy-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-dev-content-linter/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/desktop-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-dev-schema-scaffolder/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/detour-crowd-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-dev-mock-generator/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/dialogger-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-dev-broken-anchor-healer/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/ffmpeg-skill-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bhubbard.github.io/astro-dev-island-hydration-advisor/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://code.brandonhubbard.com/gambetta-netcode-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/generate-glb-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/handbrake-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/hunyuan3d-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/lossless-cut-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/lux-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/lyra-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/mflux-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/minimal-hud-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/mlt-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/mlx-audio-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/mlx-embeddings-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/mlx-gen-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/mlx-video-rs/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/olive-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/open-generative-ai-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/open-higgsfield-ai-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/openrw-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/poormans-camera-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/radial-menu-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/rea-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/sdf-math-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/sfxr-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/simplecar2-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/sumo-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/tactical-ai-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/tlab-vehicle-physics-rs/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/translate-rs/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/vhud-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/vite-plus-commitlint/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/vite-plus-kumo-ui/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/vite-plus-wrangler/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/watertight-meshes-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/yt-dlp-rs/</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -29,33 +29,6 @@
     "pushed_at": "2026-09-28T20:20:07Z"
   },
   {
-    "name": "wp-cloudflare-d1",
-    "description": "Modern PHP client library to query Cloudflare D1 SQL databases from WordPress",
-    "language": "PHP",
-    "category": "flare",
-    "categories": [
-      "flare",
-      "wordpress"
-    ],
-    "stars": 3,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/wp-cloudflare-d1/",
-    "github_url": "https://github.com/bhubbard/wp-cloudflare-d1",
-    "target_url": "https://code.brandonhubbard.com/wp-cloudflare-d1/",
-    "topics": [
-      "cloudflare",
-      "cloudflare-d1",
-      "cloudflare-workers",
-      "d1",
-      "php",
-      "serverless",
-      "sqlite",
-      "wordpress"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:23Z"
-  },
-  {
     "name": "active-ragdoll-rs",
     "description": "Pure Rust physical active ragdoll simulation, joint motors, and balance recovery",
     "language": "Rust",
@@ -154,36 +127,6 @@
     "pushed_at": "2026-10-19T14:28:57Z"
   },
   {
-    "name": "kumo-drift-checks",
-    "description": "Automated UI design token drift detection and consistency verification utility",
-    "language": "JavaScript",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/kumo-drift-checks/",
-    "github_url": "https://github.com/bhubbard/kumo-drift-checks",
-    "target_url": "https://code.brandonhubbard.com/kumo-drift-checks/",
-    "topics": [
-      "cloudflare",
-      "cloudflare-workers",
-      "design-system",
-      "design-systems",
-      "design-tokens",
-      "drift-detection",
-      "javascript",
-      "kumo",
-      "kumo-ui",
-      "serverless",
-      "typescript",
-      "ui-components"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:07Z"
-  },
-  {
     "name": "open-higgsfield-ai-rs",
     "description": "Open-source video generation and motion-guided neural synthesis pipeline in Rust",
     "language": "Rust",
@@ -232,57 +175,25 @@
     "pushed_at": "2026-10-05T15:50:11Z"
   },
   {
-    "name": "pressable-cli",
-    "description": "Command-line interface for managing Pressable WordPress sites, backups, and deployments",
-    "language": "TypeScript",
+    "name": "talks",
+    "description": "My talks and presentations!",
+    "language": "JavaScript",
     "category": "wordpress",
     "categories": [
       "wordpress"
     ],
     "stars": 1,
     "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/pressable-cli/",
-    "github_url": "https://github.com/bhubbard/pressable-cli",
-    "target_url": "https://code.brandonhubbard.com/pressable-cli/",
+    "page_url": "https://talks.brandonhubbard.com/",
+    "github_url": "https://github.com/bhubbard/talks",
+    "target_url": "https://talks.brandonhubbard.com/",
     "topics": [
-      "api-client",
-      "automation",
-      "cli",
-      "devops",
-      "hosting",
-      "pressable",
-      "typescript",
+      "presentations",
+      "talks",
       "wordpress"
     ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:12Z"
-  },
-  {
-    "name": "skills",
-    "description": "Comprehensive repository of production AI Agent Skills and workflows for Antigravity, Claude, and AI coding assistants.",
-    "language": "HTML",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/skills/",
-    "github_url": "https://github.com/bhubbard/skills",
-    "target_url": "https://code.brandonhubbard.com/skills/",
-    "topics": [
-      "agent",
-      "agent-skills",
-      "ai",
-      "ai-agents",
-      "antigravity",
-      "claude",
-      "claude-code",
-      "developer-productivity",
-      "prompt-engineering"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-10-04T23:19:29Z"
+    "is_archived": true,
+    "pushed_at": "2026-09-26T16:29:54Z"
   },
   {
     "name": "vhud-rs",
@@ -338,90 +249,6 @@
     "pushed_at": "2026-09-28T20:36:57Z"
   },
   {
-    "name": "wp-cloudflare-kv",
-    "description": "WordPress object and transient cache backend powered by Cloudflare KV",
-    "language": "PHP",
-    "category": "flare",
-    "categories": [
-      "flare",
-      "wordpress"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/wp-cloudflare-kv/",
-    "github_url": "https://github.com/bhubbard/wp-cloudflare-kv",
-    "target_url": "https://code.brandonhubbard.com/wp-cloudflare-kv/",
-    "topics": [
-      "caching",
-      "cloudflare",
-      "cloudflare-kv",
-      "cloudflare-workers",
-      "kv",
-      "php",
-      "serverless",
-      "wordpress"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:21Z"
-  },
-  {
-    "name": "wp-pressable-api",
-    "description": "PHP and WordPress client library for Pressable Cloud API",
-    "language": "PHP",
-    "category": "wordpress",
-    "categories": [
-      "wordpress"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/wp-pressable-api/",
-    "github_url": "https://github.com/bhubbard/wp-pressable-api",
-    "target_url": "https://code.brandonhubbard.com/wp-pressable-api/",
-    "topics": [
-      "api-client",
-      "cli",
-      "cloud-hosting",
-      "hosting-automation",
-      "managed-wordpress",
-      "php",
-      "php-sdk",
-      "pressable",
-      "rest-api",
-      "wordpress"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:19Z"
-  },
-  {
-    "name": "yoast-seo-audit",
-    "description": "Automated SEO schema, graph validation, and meta tag audit tool",
-    "language": "JavaScript",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/yoast-seo-audit/",
-    "github_url": "https://github.com/bhubbard/yoast-seo-audit",
-    "target_url": "https://code.brandonhubbard.com/yoast-seo-audit/",
-    "topics": [
-      "audit",
-      "json-ld",
-      "nodejs",
-      "schema-markup",
-      "schema-org",
-      "search-engine-optimization",
-      "seo",
-      "seo-audit",
-      "wordpress",
-      "yoast",
-      "yoast-seo"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:27Z"
-  },
-  {
     "name": "aesir-utils-rs",
     "description": "Pure Rust screen safezone, aspect ratio correction, and UI alignment math for games",
     "language": "Rust",
@@ -473,32 +300,174 @@
     "pushed_at": "2026-10-19T14:29:03Z"
   },
   {
-    "name": "astro-compress-rs",
-    "description": "Blazingly fast post-build compressor, CSS inliner, and HTML minifier in Rust",
-    "language": "Rust",
+    "name": "astro-client-directive-ai",
+    "description": "Custom Astro client directive (client:ai-ready) delaying component hydration until on-device Gemini Nano is ready.",
+    "language": "TypeScript",
     "category": "astro",
     "categories": [
-      "cli",
-      "rust",
       "astro"
     ],
     "stars": 0,
     "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/astro-compress-rs/",
-    "github_url": "https://github.com/bhubbard/astro-compress-rs",
-    "target_url": "https://code.brandonhubbard.com/astro-compress-rs/",
+    "page_url": "https://code.brandonhubbard.com/astro-client-directive-ai/",
+    "github_url": "https://github.com/bhubbard/astro-client-directive-ai",
+    "target_url": "https://code.brandonhubbard.com/astro-client-directive-ai/",
     "topics": [
+      "ai",
       "astro",
-      "compression",
-      "css-inliner",
-      "html-minifier",
-      "minification",
-      "rust",
-      "static-site",
-      "web-performance"
+      "cli"
     ],
     "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:02Z"
+    "pushed_at": "2026-09-26T18:56:27Z"
+  },
+  {
+    "name": "astro-dev-audit-nano",
+    "description": "Astro Dev Toolbar app auditing WCAG a11y, heading hierarchy, and SEO with real-time Gemini Nano remediations.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
+    "github_url": "https://github.com/bhubbard/astro-dev-audit-nano",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
+    "topics": [
+      "astro",
+      "audit",
+      "seo"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:26Z"
+  },
+  {
+    "name": "astro-dev-broken-anchor-healer",
+    "description": "Smart internal anchor link validator and semantic heading ID matcher for Astro Dev Toolbar.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/",
+    "github_url": "https://github.com/bhubbard/astro-dev-broken-anchor-healer",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:25Z"
+  },
+  {
+    "name": "astro-dev-content-linter",
+    "description": "Editorial tone, reading grade level, and brand voice auditor inside the Astro Dev Toolbar with AI rewrites.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-content-linter/",
+    "github_url": "https://github.com/bhubbard/astro-dev-content-linter",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-content-linter/",
+    "topics": [
+      "astro",
+      "audit",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:24Z"
+  },
+  {
+    "name": "astro-dev-copy-optimizer",
+    "description": "In-browser copy tuner and rewriter inside the Astro Dev Toolbar powered by Chrome Built-in AI.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-copy-optimizer/",
+    "github_url": "https://github.com/bhubbard/astro-dev-copy-optimizer",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-copy-optimizer/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:23Z"
+  },
+  {
+    "name": "astro-dev-i18n-coverage",
+    "description": "Dev Toolbar missing translation finder with contextual on-device translation and 1-click locale JSON export.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-i18n-coverage/",
+    "github_url": "https://github.com/bhubbard/astro-dev-i18n-coverage",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-i18n-coverage/",
+    "topics": [
+      "astro",
+      "automation",
+      "cli",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:22Z"
+  },
+  {
+    "name": "astro-dev-island-hydration-advisor",
+    "description": "Astro Dev Toolbar island hydration analyzer flagging eager below-the-fold directives with performance advice.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/",
+    "github_url": "https://github.com/bhubbard/astro-dev-island-hydration-advisor",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:21Z"
+  },
+  {
+    "name": "astro-dev-mock-generator",
+    "description": "Synthetic Zod-compliant mock data generator for Astro Content Collections using on-device Gemini Nano.",
+    "language": "TypeScript",
+    "category": "astro",
+    "categories": [
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-dev-mock-generator/",
+    "github_url": "https://github.com/bhubbard/astro-dev-mock-generator",
+    "target_url": "https://code.brandonhubbard.com/astro-dev-mock-generator/",
+    "topics": [
+      "astro",
+      "automation",
+      "developer-tools"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:20Z"
   },
   {
     "name": "astro-dev-schema-scaffolder",
@@ -710,7 +679,7 @@
   {
     "name": "clearwater-rs",
     "description": "Real-time, photoreal shallow water physics and rendering engine in Rust. Ported from Aureliengmz/clearwater.",
-    "language": "HTML",
+    "language": "Rust",
     "category": "cli",
     "categories": [
       "cli",
@@ -782,29 +751,6 @@
     "pushed_at": "2026-10-05T15:49:39Z"
   },
   {
-    "name": "decision-index",
-    "description": "Decision Index: reproduce the Jev decision-model benchmark suite locally or as one HF Job",
-    "language": "Code",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/decision-index/",
-    "github_url": "https://github.com/bhubbard/decision-index",
-    "target_url": "https://code.brandonhubbard.com/decision-index/",
-    "topics": [
-      "benchmark",
-      "decision-engine",
-      "evals",
-      "llm",
-      "zero-token"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-10-01T01:29:26Z"
-  },
-  {
     "name": "defy-rs",
     "description": "Pure Rust police wanted-level, pursuit dispatch, and AI aggression state machine",
     "language": "Rust",
@@ -832,7 +778,7 @@
   {
     "name": "desktop-rs",
     "description": "Blazingly fast, lightweight, pure-Rust fork of GitHub Desktop",
-    "language": "TypeScript",
+    "language": "Rust",
     "category": "cli",
     "categories": [
       "cli",
@@ -1067,7 +1013,7 @@
   },
   {
     "name": "generate-glb-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "Fast, pure Rust CLI tool and HTTP server to generate 3D models in binary GLB format using LLaMA-Mesh AI with zero Python dependencies.",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1124,29 +1070,6 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-10-05T06:12:51Z"
-  },
-  {
-    "name": "hyperframes",
-    "description": "Write HTML. Render video. Built for agents.",
-    "language": "Code",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/hyperframes/",
-    "github_url": "https://github.com/bhubbard/hyperframes",
-    "target_url": "https://code.brandonhubbard.com/hyperframes/",
-    "topics": [
-      "compositing",
-      "frames",
-      "graphics",
-      "motion",
-      "video-synthesis"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:56:56Z"
   },
   {
     "name": "lossless-cut-rs",
@@ -1461,81 +1384,6 @@
     "pushed_at": "2026-10-05T15:50:07Z"
   },
   {
-    "name": "opendental",
-    "description": "High-performance edge-native serverless fork of Open Dental Practice Management Software on Cloudflare Workers and D1.",
-    "language": "C#",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/opendental/",
-    "github_url": "https://github.com/bhubbard/opendental",
-    "target_url": "https://code.brandonhubbard.com/opendental/",
-    "topics": [
-      "cloudflare",
-      "cloudflare-workers",
-      "d1-database",
-      "dental",
-      "dental-software",
-      "healthcare",
-      "opendental",
-      "practice-management",
-      "serverless"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-10-05T15:48:41Z"
-  },
-  {
-    "name": "paperclip-rs",
-    "description": "Open-source orchestration engine for agentic workflows and multi-agent coordination in Rust",
-    "language": "TypeScript",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/paperclip-rs/",
-    "github_url": "https://github.com/bhubbard/paperclip-rs",
-    "target_url": "https://code.brandonhubbard.com/paperclip-rs/",
-    "topics": [
-      "agentic-ai",
-      "llm-orchestration",
-      "multi-agent",
-      "rust",
-      "workflow-engine"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-28T20:35:56Z"
-  },
-  {
-    "name": "partikel",
-    "description": "High-performance CPU/GPU particle simulation engine and physics effects in Rust",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/partikel/",
-    "github_url": "https://github.com/bhubbard/partikel",
-    "target_url": "https://code.brandonhubbard.com/partikel/",
-    "topics": [
-      "gamedev",
-      "particle-system",
-      "physics-simulation",
-      "rust",
-      "vfx"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-10-05T15:50:13Z"
-  },
-  {
     "name": "poormans-camera-rs",
     "description": "Pure Rust 3D third-person camera rig with sphere-cast collision avoidance",
     "language": "Rust",
@@ -1586,7 +1434,7 @@
   },
   {
     "name": "rea-rs",
-    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "description": "High-performance, memory-safe pure Rust CLI and Model Context Protocol (MCP) server for structured codebase investigation.",
     "language": "Rust",
     "category": "cli",
     "categories": [
@@ -1628,34 +1476,6 @@
     "pushed_at": "2026-09-28T20:07:04Z"
   },
   {
-    "name": "searchphone",
-    "description": "Fast, privacy-focused reverse phone lookup and telephony carrier detection CLI",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/searchphone/",
-    "github_url": "https://github.com/bhubbard/searchphone",
-    "target_url": "https://code.brandonhubbard.com/searchphone/",
-    "topics": [
-      "caller-id",
-      "carrier-lookup",
-      "cli",
-      "lookup-tool",
-      "phone-lookup",
-      "phone-numbers",
-      "privacy",
-      "rust",
-      "telephony"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:06Z"
-  },
-  {
     "name": "simplecar2-rs",
     "description": "Pure Rust arcade-sim vehicle dynamics, raycast suspension, and drivetrain",
     "language": "Rust",
@@ -1678,29 +1498,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-28T20:10:40Z"
-  },
-  {
-    "name": "sitemap-scan",
-    "description": "Fast Node.js crawler and recursive XML sitemap validator",
-    "language": "JavaScript",
-    "category": "tools",
-    "categories": [
-      "tools"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/sitemap-scan/",
-    "github_url": "https://github.com/bhubbard/sitemap-scan",
-    "target_url": "https://code.brandonhubbard.com/sitemap-scan/",
-    "topics": [
-      "crawler",
-      "nodejs",
-      "seo",
-      "sitemap",
-      "xml-sitemap"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:28Z"
   },
   {
     "name": "sumo-rs",
@@ -1827,6 +1624,33 @@
     "pushed_at": "2026-09-28T20:14:31Z"
   },
   {
+    "name": "vite-plus-wrangler",
+    "description": "Vite plugin for seamless integration with Cloudflare Wrangler and local Cloudflare Workers / Pages development.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+    "github_url": "https://github.com/bhubbard/vite-plus-wrangler",
+    "target_url": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+    "topics": [
+      "cloudflare",
+      "cloudflare-workers",
+      "dx",
+      "edge-computing",
+      "serverless",
+      "vite",
+      "vite-plugin",
+      "wrangler"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-09-26T18:56:28Z"
+  },
+  {
     "name": "watertight-meshes-rs",
     "description": "High-performance Rust engine and cross-platform CLI for generating, validating, voxelizing, and repairing 100% watertight 3D AI meshes (TRELLIS.2 / Pixal3D / ComfyUI)",
     "language": "Rust",
@@ -1852,135 +1676,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-05T06:12:58Z"
-  },
-  {
-    "name": "wp-blockmarkup-mcp",
-    "description": "High-speed Rust Model Context Protocol (MCP) server for WordPress block grammar parsing",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust",
-      "wordpress"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/wp-blockmarkup-mcp/",
-    "github_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
-    "target_url": "https://code.brandonhubbard.com/wp-blockmarkup-mcp/",
-    "topics": [
-      "ai",
-      "audit",
-      "cli",
-      "gutenberg",
-      "mcp",
-      "model-context-protocol",
-      "rust",
-      "wordpress"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:09Z"
-  },
-  {
-    "name": "wp-clio-api",
-    "description": "PHP and WordPress integration library for Clio legal practice management API",
-    "language": "PHP",
-    "category": "wordpress",
-    "categories": [
-      "wordpress"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/wp-clio-api/",
-    "github_url": "https://github.com/bhubbard/wp-clio-api",
-    "target_url": "https://code.brandonhubbard.com/wp-clio-api/",
-    "topics": [
-      "api",
-      "api-client",
-      "cli",
-      "clio",
-      "legal-tech",
-      "php",
-      "wordpress"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:17Z"
-  },
-  {
-    "name": "wp-givebutter-api",
-    "description": "Modern PHP client library and webhook handler for Givebutter Public API",
-    "language": "PHP",
-    "category": "wordpress",
-    "categories": [
-      "wordpress"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/wp-givebutter-api/",
-    "github_url": "https://github.com/bhubbard/wp-givebutter-api",
-    "target_url": "https://code.brandonhubbard.com/wp-givebutter-api/",
-    "topics": [
-      "api",
-      "api-client",
-      "fundraising",
-      "givebutter",
-      "php",
-      "wordpress"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:20Z"
-  },
-  {
-    "name": "wp-lawmatics-api",
-    "description": "PHP and WordPress integration library for Lawmatics CRM API",
-    "language": "PHP",
-    "category": "wordpress",
-    "categories": [
-      "wordpress"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/wp-lawmatics-api/",
-    "github_url": "https://github.com/bhubbard/wp-lawmatics-api",
-    "target_url": "https://code.brandonhubbard.com/wp-lawmatics-api/",
-    "topics": [
-      "api",
-      "crm",
-      "lawmatics",
-      "legal-tech",
-      "php",
-      "wordpress"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:18Z"
-  },
-  {
-    "name": "wp-theme-check-cli",
-    "description": "Automated CI/CD quality gate for WordPress themes checking PHPCS, security, and standards",
-    "language": "TypeScript",
-    "category": "wordpress",
-    "categories": [
-      "wordpress"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/wp-theme-check-cli/",
-    "github_url": "https://github.com/bhubbard/wp-theme-check-cli",
-    "target_url": "https://code.brandonhubbard.com/wp-theme-check-cli/",
-    "topics": [
-      "audit",
-      "ci-cd",
-      "cli",
-      "code-quality",
-      "gutenberg",
-      "phpcs",
-      "theme-check",
-      "typescript",
-      "wordpress",
-      "wp-cli"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:11Z"
   },
   {
     "name": "yt-dlp-rs",
