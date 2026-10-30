@@ -3332,9 +3332,9 @@
             <h2>Native Rust Engines for 3D Geometry, Agent Swarms &amp; Media Production</h2>
             <p class="spotlight-desc">Replacing gigabyte-scale Python/C++ pipelines with self-contained, zero-GC Rust workspaces for 3D mesh generation, physics simulation, deterministic multi-agent swarms, and real-time audio/video synthesis.</p>
             <ul class="checkmark-list">
-              <li><span class="check-icon">✓</span> <span><strong>3D Geometry &amp; Physics:</strong> Native Rust ports of Hunyuan3D-2, Erin Catto's Box3D, watertight manifold meshers, and Blender's 23-crate core architecture</span></li>
-              <li><span class="check-icon">✓</span> <span><strong>Multi-Agent Swarms &amp; Desktop Automation:</strong> Deterministic agent tournament engines (<code>agentarena-rs</code>), cross-platform OS automation (<code>desktop-rs</code>), and unified REST/WebSocket gateways (<code>clearwater-rs</code>)</span></li>
-              <li><span class="check-icon">✓</span> <span><strong>Real-Time Audio &amp; Video Production:</strong> WebRTC NetEq adaptive jitter buffers (<code>neteq-rs</code>), Lyra neural speech codecs (<code>lyra-rs</code>), and multi-engine voice/video studios</span></li>
+              <li><span class="check-icon">✓</span> <span><strong>3D Geometry, World Models &amp; Physics:</strong> Native Rust ports of Hunyuan3D-2.1, NVIDIA Project Lyra (<code>lyra-rs</code>), Erin Catto's Box3D, watertight manifold meshers, and Blender's 23-crate core architecture</span></li>
+              <li><span class="check-icon">✓</span> <span><strong>Fluid Simulation &amp; Codebase MCPs:</strong> Real-time shallow water physics (<code>clearwater-rs</code>), structured codebase investigation MCPs (<code>rea-rs</code>), and pure-Rust GitHub Desktop (<code>desktop-rs</code>)</span></li>
+              <li><span class="check-icon">✓</span> <span><strong>Real-Time Audio &amp; Video Production:</strong> WebRTC NetEq adaptive jitter buffers (<code>neteq-rs</code>), agentic video montage pipelines (<code>openmontage-rs</code>), and local AI voice cloning studios (<code>voicestudio-rs</code>)</span></li>
             </ul>
           </div>
           <div class="spotlight-tech-stack">
@@ -3420,9 +3420,9 @@
 
         <div class="project-card" style="border-top: 3px solid var(--emerald);">
           <div class="card-top">
-            <span class="card-category" style="color: var(--emerald);">[ glTF 2.0 / GLB Pipeline // Rust ]</span>
+            <span class="card-category" style="color: var(--emerald);">[ LLaMA-Mesh GLB Pipeline // Rust ]</span>
             <h3>🔮 generate-glb-rs</h3>
-            <p>Procedural 3D mesh generation, PBR material packing, and binary glTF 2.0 (.glb) export library &amp; CLI built in pure safe Rust.</p>
+            <p>Fast, pure Rust CLI tool and HTTP server to generate 3D models in binary GLB format using LLaMA-Mesh AI with zero Python dependencies.</p>
             <div class="card-cli">
               <code>cargo install generate-glb-rs</code>
               <button class="copy-btn" data-copy="cargo install generate-glb-rs" title="Copy command">
@@ -3438,9 +3438,9 @@
 
         <div class="project-card" style="border-top: 3px solid var(--cobalt);">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cobalt);">[ Unified Gateway // REST &amp; WebSocket ]</span>
+            <span class="card-category" style="color: var(--cobalt);">[ Shallow Water Physics // Rust ]</span>
             <h3>🌊 clearwater-rs</h3>
-            <p>High-throughput unified backend gateway and real-time event streaming server in Rust featuring REST, WebSocket, and deterministic state routing.</p>
+            <p>Real-time, photoreal shallow water fluid physics and GPU rendering engine in pure Rust, ported from Aureliengmz/clearwater.</p>
             <div class="card-cli">
               <code>cargo install clearwater-rs</code>
               <button class="copy-btn" data-copy="cargo install clearwater-rs" title="Copy command">
@@ -3456,9 +3456,9 @@
 
         <div class="project-card" style="border-top: 3px solid var(--crimson);">
           <div class="card-top">
-            <span class="card-category" style="color: var(--crimson);">[ Desktop OS Control // AI Agents ]</span>
+            <span class="card-category" style="color: var(--crimson);">[ Native Git Client // Pure Rust ]</span>
             <h3>🖥️ desktop-rs</h3>
-            <p>Native Rust cross-platform desktop automation, window management, screen capture, and input synthesis engine for autonomous AI computer-use agents.</p>
+            <p>Blazingly fast, lightweight, pure-Rust fork of GitHub Desktop replacing Electron with native compiled performance and minimal memory overhead.</p>
             <div class="card-cli">
               <code>cargo install desktop-rs</code>
               <button class="copy-btn" data-copy="cargo install desktop-rs" title="Copy command">
@@ -3474,9 +3474,9 @@
 
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--cyan);">[ Neural Speech Codec // 11.4× Faster ]</span>
-            <h3>🎵 lyra-rs</h3>
-            <p>Ultra-low-bitrate generative speech codec in pure Rust inspired by Google Lyra v2 — log-mel spectrogram extraction and RVQ quantization at 3.2 kbps.</p>
+            <span class="card-category" style="color: var(--cyan);">[ Generative 3D World Models // Rust ]</span>
+            <h3>🌌 lyra-rs</h3>
+            <p>Pure Rust fork and high-performance engine for NVIDIA Project Lyra: Open Generative 3D World Models and real-time 3D Gaussian Splatting.</p>
             <div class="card-cli">
               <code>cargo install lyra-rs</code>
               <button class="copy-btn" data-copy="cargo install lyra-rs" title="Copy command">
@@ -3492,9 +3492,9 @@
 
         <div class="project-card">
           <div class="card-top">
-            <span class="card-category" style="color: var(--emerald);">[ Reasoning &amp; Execution // Rust ]</span>
-            <h3>🧠 rea-rs</h3>
-            <p>High-performance native Rust Reasoning, Execution, and Autonomous Agent architecture for deterministic multi-step planning and tool orchestration.</p>
+            <span class="card-category" style="color: var(--emerald);">[ Codebase Investigation MCP // Rust ]</span>
+            <h3>🔎 rea-rs</h3>
+            <p>High-performance, memory-safe pure Rust CLI and Model Context Protocol (MCP) server for structured codebase investigation and AST indexing.</p>
             <div class="card-cli">
               <code>cargo install rea-rs</code>
               <button class="copy-btn" data-copy="cargo install rea-rs" title="Copy command">
@@ -4080,6 +4080,8 @@
     "stars": 3,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/timesfm-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/timesfm-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/timesfm-rs",
     "target_url": "https://code.brandonhubbard.com/timesfm-rs/",
     "topics": [
@@ -4109,6 +4111,8 @@
     "stars": 2,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/active-ragdoll-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/active-ragdoll-rs",
     "target_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
     "topics": [
@@ -4133,6 +4137,8 @@
     "stars": 2,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/sfxr-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/sfxr-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/sfxr-rs",
     "target_url": "https://code.brandonhubbard.com/sfxr-rs/",
     "topics": [
@@ -4158,6 +4164,8 @@
     "stars": 2,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/vite-plus-commitlint/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/vite-plus-commitlint",
     "target_url": "https://code.brandonhubbard.com/vite-plus-commitlint/",
     "topics": [
@@ -4180,6 +4188,8 @@
     "stars": 2,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/zev-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/zev-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/zev-rs",
     "target_url": "https://code.brandonhubbard.com/zev-rs/",
     "topics": [
@@ -4207,6 +4217,8 @@
     "stars": 1,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/open-higgsfield-ai-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
     "target_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
     "topics": [
@@ -4231,6 +4243,8 @@
     "stars": 1,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/openrw-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/openrw-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/openrw-rs",
     "target_url": "https://code.brandonhubbard.com/openrw-rs/",
     "topics": [
@@ -4254,6 +4268,8 @@
     "stars": 1,
     "has_pages": true,
     "page_url": "https://talks.brandonhubbard.com/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/talks",
     "target_url": "https://talks.brandonhubbard.com/",
     "topics": [
@@ -4276,6 +4292,8 @@
     "stars": 1,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/vhud-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/vhud-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/vhud-rs",
     "target_url": "https://code.brandonhubbard.com/vhud-rs/",
     "topics": [
@@ -4301,6 +4319,8 @@
     "stars": 1,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/vite-plus-kumo-ui/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/vite-plus-kumo-ui",
     "target_url": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
     "topics": [
@@ -4329,6 +4349,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/aesir-utils-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/aesir-utils-rs",
     "target_url": "https://code.brandonhubbard.com/aesir-utils-rs/",
     "topics": [
@@ -4354,6 +4376,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/apfel-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/apfel-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/apfel-rs",
     "target_url": "https://code.brandonhubbard.com/apfel-rs/",
     "topics": [
@@ -4379,6 +4403,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-client-directive-ai/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-client-directive-ai",
     "target_url": "https://code.brandonhubbard.com/astro-client-directive-ai/",
     "topics": [
@@ -4400,6 +4426,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-dev-audit-nano",
     "target_url": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
     "topics": [
@@ -4421,6 +4449,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-dev-broken-anchor-healer",
     "target_url": "https://code.brandonhubbard.com/astro-dev-broken-anchor-healer/",
     "topics": [
@@ -4442,6 +4472,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-dev-content-linter/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-dev-content-linter",
     "target_url": "https://code.brandonhubbard.com/astro-dev-content-linter/",
     "topics": [
@@ -4464,6 +4496,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-dev-copy-optimizer/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-dev-copy-optimizer",
     "target_url": "https://code.brandonhubbard.com/astro-dev-copy-optimizer/",
     "topics": [
@@ -4485,6 +4519,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-dev-i18n-coverage/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-dev-i18n-coverage",
     "target_url": "https://code.brandonhubbard.com/astro-dev-i18n-coverage/",
     "topics": [
@@ -4507,6 +4543,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-dev-island-hydration-advisor",
     "target_url": "https://code.brandonhubbard.com/astro-dev-island-hydration-advisor/",
     "topics": [
@@ -4528,6 +4566,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-dev-mock-generator/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-dev-mock-generator",
     "target_url": "https://code.brandonhubbard.com/astro-dev-mock-generator/",
     "topics": [
@@ -4549,6 +4589,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-dev-schema-scaffolder/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-dev-schema-scaffolder",
     "target_url": "https://code.brandonhubbard.com/astro-dev-schema-scaffolder/",
     "topics": [
@@ -4570,6 +4612,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-og-smart-crop/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-og-smart-crop",
     "target_url": "https://code.brandonhubbard.com/astro-og-smart-crop/",
     "topics": [
@@ -4592,6 +4636,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-prefetch-ai-brief/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-prefetch-ai-brief",
     "target_url": "https://code.brandonhubbard.com/astro-prefetch-ai-brief/",
     "topics": [
@@ -4614,6 +4660,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-rehype-nano-code/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-rehype-nano-code",
     "target_url": "https://code.brandonhubbard.com/astro-rehype-nano-code/",
     "topics": [
@@ -4635,6 +4683,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/astro-schema-ld-verifier/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-schema-ld-verifier",
     "target_url": "https://code.brandonhubbard.com/astro-schema-ld-verifier/",
     "topics": [
@@ -4658,6 +4708,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/auge-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/auge-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/auge-rs",
     "target_url": "https://code.brandonhubbard.com/auge-rs/",
     "topics": [
@@ -4680,6 +4732,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/bhubbard.github.io",
     "target_url": "https://code.brandonhubbard.com/",
     "topics": [
@@ -4706,6 +4760,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/box3d-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/box3d-rs",
     "target_url": "https://code.brandonhubbard.com/box3d-rs/",
     "topics": [
@@ -4733,6 +4789,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/bullet3-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/bullet3-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/bullet3-rs",
     "target_url": "https://code.brandonhubbard.com/bullet3-rs/",
     "topics": [
@@ -4757,6 +4815,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/clearwater-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/clearwater-rs",
     "target_url": "https://code.brandonhubbard.com/clearwater-rs/",
     "topics": [],
@@ -4775,6 +4835,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/clippy-cf-reporter/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/clippy-cf-reporter/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/clippy-cf-reporter",
     "target_url": "https://code.brandonhubbard.com/clippy-cf-reporter/",
     "topics": [
@@ -4803,6 +4865,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/comfyui-ltxvideo-mlx-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/comfyui-ltxvideo-mlx-rs",
     "target_url": "https://code.brandonhubbard.com/comfyui-ltxvideo-mlx-rs/",
     "topics": [
@@ -4831,6 +4895,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/defy-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/defy-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/defy-rs",
     "target_url": "https://code.brandonhubbard.com/defy-rs/",
     "topics": [
@@ -4856,6 +4922,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/desktop-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/desktop-rs",
     "target_url": "https://code.brandonhubbard.com/desktop-rs/",
     "topics": [],
@@ -4874,6 +4942,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/detour-crowd-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/detour-crowd-rs",
     "target_url": "https://code.brandonhubbard.com/detour-crowd-rs/",
     "topics": [
@@ -4899,6 +4969,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/dialogger-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/dialogger-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/dialogger-rs",
     "target_url": "https://code.brandonhubbard.com/dialogger-rs/",
     "topics": [
@@ -4923,6 +4995,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/ffmpeg-skill-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/ffmpeg-skill-rs",
     "target_url": "https://code.brandonhubbard.com/ffmpeg-skill-rs/",
     "topics": [],
@@ -4942,6 +5016,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/flareguard/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/flareguard",
     "target_url": "https://code.brandonhubbard.com/flareguard/",
     "topics": [
@@ -4974,6 +5050,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/flarelint/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/flarelint",
     "target_url": "https://code.brandonhubbard.com/flarelint/",
     "topics": [
@@ -5004,6 +5082,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/flareops/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/flareops",
     "target_url": "https://code.brandonhubbard.com/flareops/",
     "topics": [
@@ -5036,6 +5116,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/flareperf/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/flareperf",
     "target_url": "https://code.brandonhubbard.com/flareperf/",
     "topics": [
@@ -5067,6 +5149,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/gambetta-netcode-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/gambetta-netcode-rs",
     "target_url": "https://code.brandonhubbard.com/gambetta-netcode-rs/",
     "topics": [
@@ -5092,6 +5176,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/generate-glb-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/generate-glb-rs",
     "target_url": "https://code.brandonhubbard.com/generate-glb-rs/",
     "topics": [],
@@ -5110,6 +5196,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/handbrake-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/handbrake-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/handbrake-rs",
     "target_url": "https://code.brandonhubbard.com/handbrake-rs/",
     "topics": [
@@ -5134,6 +5222,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/hunyuan3d-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/hunyuan3d-rs",
     "target_url": "https://code.brandonhubbard.com/hunyuan3d-rs/",
     "topics": [],
@@ -5152,6 +5242,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/lossless-cut-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/lossless-cut-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/lossless-cut-rs",
     "target_url": "https://code.brandonhubbard.com/lossless-cut-rs/",
     "topics": [
@@ -5177,6 +5269,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/lux-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/lux-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/lux-rs",
     "target_url": "https://code.brandonhubbard.com/lux-rs/",
     "topics": [
@@ -5201,6 +5295,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/lyra-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/lyra-rs",
     "target_url": "https://code.brandonhubbard.com/lyra-rs/",
     "topics": [],
@@ -5219,6 +5315,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/mflux-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/mflux-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/mflux-rs",
     "target_url": "https://code.brandonhubbard.com/mflux-rs/",
     "topics": [
@@ -5244,6 +5342,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/minimal-hud-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/minimal-hud-rs",
     "target_url": "https://code.brandonhubbard.com/minimal-hud-rs/",
     "topics": [
@@ -5268,6 +5368,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/mlt-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/mlt-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/mlt-rs",
     "target_url": "https://code.brandonhubbard.com/mlt-rs/",
     "topics": [
@@ -5293,6 +5395,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/mlx-audio-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/mlx-audio-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/mlx-audio-rs",
     "target_url": "https://code.brandonhubbard.com/mlx-audio-rs/",
     "topics": [
@@ -5318,6 +5422,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/mlx-embeddings-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/mlx-embeddings-rs",
     "target_url": "https://code.brandonhubbard.com/mlx-embeddings-rs/",
     "topics": [
@@ -5343,6 +5449,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/mlx-gen-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/mlx-gen-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/mlx-gen-rs",
     "target_url": "https://code.brandonhubbard.com/mlx-gen-rs/",
     "topics": [
@@ -5374,6 +5482,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/mlx-video-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/mlx-video-rs",
     "target_url": "https://code.brandonhubbard.com/mlx-video-rs/",
     "topics": [
@@ -5398,6 +5508,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/nanoswarm-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/nanoswarm-rs",
     "target_url": "https://code.brandonhubbard.com/nanoswarm-rs/",
     "topics": [],
@@ -5416,6 +5528,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/olive-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/olive-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/olive-rs",
     "target_url": "https://code.brandonhubbard.com/olive-rs/",
     "topics": [
@@ -5440,6 +5554,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/open-generative-ai-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/open-generative-ai-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/open-generative-ai-rs",
     "target_url": "https://code.brandonhubbard.com/open-generative-ai-rs/",
     "topics": [
@@ -5464,6 +5580,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/poormans-camera-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/poormans-camera-rs",
     "target_url": "https://code.brandonhubbard.com/poormans-camera-rs/",
     "topics": [
@@ -5489,6 +5607,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/radial-menu-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/radial-menu-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/radial-menu-rs",
     "target_url": "https://code.brandonhubbard.com/radial-menu-rs/",
     "topics": [
@@ -5513,6 +5633,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/rea-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/rea-rs",
     "target_url": "https://code.brandonhubbard.com/rea-rs/",
     "topics": [],
@@ -5531,6 +5653,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/sdf-math-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/sdf-math-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/sdf-math-rs",
     "target_url": "https://code.brandonhubbard.com/sdf-math-rs/",
     "topics": [
@@ -5556,6 +5680,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/simplecar2-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/simplecar2-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/simplecar2-rs",
     "target_url": "https://code.brandonhubbard.com/simplecar2-rs/",
     "topics": [
@@ -5580,6 +5706,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/sumo-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/sumo-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/sumo-rs",
     "target_url": "https://code.brandonhubbard.com/sumo-rs/",
     "topics": [
@@ -5605,6 +5733,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/tactical-ai-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/tactical-ai-rs",
     "target_url": "https://code.brandonhubbard.com/tactical-ai-rs/",
     "topics": [
@@ -5629,6 +5759,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/tlab-vehicle-physics-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/tlab-vehicle-physics-rs",
     "target_url": "https://code.brandonhubbard.com/tlab-vehicle-physics-rs/",
     "topics": [
@@ -5653,6 +5785,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/translate-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/translate-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/translate-rs",
     "target_url": "https://code.brandonhubbard.com/translate-rs/",
     "topics": [
@@ -5680,6 +5814,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/uxsim-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/uxsim-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/uxsim-rs",
     "target_url": "https://code.brandonhubbard.com/uxsim-rs/",
     "topics": [
@@ -5704,6 +5840,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/vite-plus-wrangler",
     "target_url": "https://code.brandonhubbard.com/vite-plus-wrangler/",
     "topics": [
@@ -5731,6 +5869,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/watertight-meshes-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/watertight-meshes-rs",
     "target_url": "https://code.brandonhubbard.com/watertight-meshes-rs/",
     "topics": [
@@ -5758,6 +5898,8 @@
     "stars": 0,
     "has_pages": true,
     "page_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/yt-dlp-rs/blob/main/BENCHMARKS.md",
     "github_url": "https://github.com/bhubbard/yt-dlp-rs",
     "target_url": "https://code.brandonhubbard.com/yt-dlp-rs/",
     "topics": [
@@ -5781,6 +5923,8 @@
     "stars": 4,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/antispambot-cf-worker",
     "target_url": "https://github.com/bhubbard/antispambot-cf-worker",
     "topics": [
@@ -5805,6 +5949,8 @@
     "stars": 3,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-cloudflare-d1",
     "target_url": "https://github.com/bhubbard/wp-cloudflare-d1",
     "topics": [
@@ -5831,6 +5977,8 @@
     "stars": 2,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/rest-api-examples",
     "target_url": "https://github.com/bhubbard/rest-api-examples",
     "topics": [
@@ -5852,6 +6000,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/animated-gradient-cover-block",
     "target_url": "https://github.com/bhubbard/animated-gradient-cover-block",
     "topics": [
@@ -5874,6 +6024,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/blender-rs",
     "target_url": "https://github.com/bhubbard/blender-rs",
     "topics": [],
@@ -5891,6 +6043,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/gcf-pubsub-webhook",
     "target_url": "https://github.com/bhubbard/gcf-pubsub-webhook",
     "topics": [
@@ -5912,6 +6066,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/kumo-drift-checks",
     "target_url": "https://github.com/bhubbard/kumo-drift-checks",
     "topics": [
@@ -5942,6 +6098,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/pressable-cli",
     "target_url": "https://github.com/bhubbard/pressable-cli",
     "topics": [
@@ -5968,6 +6126,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/send-to-pubsub",
     "target_url": "https://github.com/bhubbard/send-to-pubsub",
     "topics": [
@@ -5990,6 +6150,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/skills",
     "target_url": "https://github.com/bhubbard/skills",
     "topics": [
@@ -6018,6 +6180,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/voicestudio-rs",
     "target_url": "https://github.com/bhubbard/voicestudio-rs",
     "topics": [],
@@ -6035,6 +6199,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/woo-order-to-google-storage",
     "target_url": "https://github.com/bhubbard/woo-order-to-google-storage",
     "topics": [
@@ -6057,6 +6223,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-cloudflare-kv",
     "target_url": "https://github.com/bhubbard/wp-cloudflare-kv",
     "topics": [
@@ -6083,6 +6251,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-gemini-cleaner",
     "target_url": "https://github.com/bhubbard/wp-gemini-cleaner",
     "topics": [
@@ -6104,6 +6274,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-pressable-api",
     "target_url": "https://github.com/bhubbard/wp-pressable-api",
     "topics": [
@@ -6132,6 +6304,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-spinupwp-api",
     "target_url": "https://github.com/bhubbard/wp-spinupwp-api",
     "topics": [
@@ -6158,6 +6332,8 @@
     "stars": 1,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/yoast-seo-audit",
     "target_url": "https://github.com/bhubbard/yoast-seo-audit",
     "topics": [
@@ -6187,6 +6363,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/.github",
     "target_url": "https://github.com/bhubbard/.github",
     "topics": [
@@ -6212,6 +6390,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/agentarena-rs",
     "target_url": "https://github.com/bhubbard/agentarena-rs",
     "topics": [],
@@ -6229,6 +6409,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/alt-text-ai",
     "target_url": "https://github.com/bhubbard/alt-text-ai",
     "topics": [
@@ -6255,6 +6437,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/astro-compress-rs",
     "target_url": "https://github.com/bhubbard/astro-compress-rs",
     "topics": [
@@ -6281,6 +6465,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/decision-index",
     "target_url": "https://github.com/bhubbard/decision-index",
     "topics": [
@@ -6304,6 +6490,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/fonoster",
     "target_url": "https://github.com/bhubbard/fonoster",
     "topics": [
@@ -6329,6 +6517,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/freevideo-rs",
     "target_url": "https://github.com/bhubbard/freevideo-rs",
     "topics": [],
@@ -6346,6 +6536,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/homebrew-tap",
     "target_url": "https://github.com/bhubbard/homebrew-tap",
     "topics": [
@@ -6371,6 +6563,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/hyperframes",
     "target_url": "https://github.com/bhubbard/hyperframes",
     "topics": [
@@ -6395,6 +6589,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/hypit-rs",
     "target_url": "https://github.com/bhubbard/hypit-rs",
     "topics": [],
@@ -6412,6 +6608,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/image-altext",
     "target_url": "https://github.com/bhubbard/image-altext",
     "topics": [
@@ -6436,6 +6634,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/kadraj",
     "target_url": "https://github.com/bhubbard/kadraj",
     "topics": [],
@@ -6454,6 +6654,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/latentsync-rs",
     "target_url": "https://github.com/bhubbard/latentsync-rs",
     "topics": [],
@@ -6471,6 +6673,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/locals",
     "target_url": "https://github.com/bhubbard/locals",
     "topics": [],
@@ -6489,6 +6693,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/longcat-video-rs",
     "target_url": "https://github.com/bhubbard/longcat-video-rs",
     "topics": [],
@@ -6506,6 +6712,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/minimind",
     "target_url": "https://github.com/bhubbard/minimind",
     "topics": [],
@@ -6524,6 +6732,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/musetalk-rs",
     "target_url": "https://github.com/bhubbard/musetalk-rs",
     "topics": [],
@@ -6542,6 +6752,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/neteq-rs",
     "target_url": "https://github.com/bhubbard/neteq-rs",
     "topics": [],
@@ -6559,6 +6771,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/opendental",
     "target_url": "https://github.com/bhubbard/opendental",
     "topics": [
@@ -6587,6 +6801,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/openmontage-rs",
     "target_url": "https://github.com/bhubbard/openmontage-rs",
     "topics": [],
@@ -6605,6 +6821,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/paperclip-rs",
     "target_url": "https://github.com/bhubbard/paperclip-rs",
     "topics": [
@@ -6629,6 +6847,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/partikel",
     "target_url": "https://github.com/bhubbard/partikel",
     "topics": [
@@ -6652,6 +6872,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/plane-cf",
     "target_url": "https://github.com/bhubbard/plane-cf",
     "topics": [],
@@ -6669,6 +6891,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/plugin-updater-cf-worker",
     "target_url": "https://github.com/bhubbard/plugin-updater-cf-worker",
     "topics": [
@@ -6692,6 +6916,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/post-navigation-block",
     "target_url": "https://github.com/bhubbard/post-navigation-block",
     "topics": [
@@ -6714,6 +6940,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/sadtalker-rs",
     "target_url": "https://github.com/bhubbard/sadtalker-rs",
     "topics": [],
@@ -6732,6 +6960,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/searchphone",
     "target_url": "https://github.com/bhubbard/searchphone",
     "topics": [
@@ -6759,6 +6989,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/sensitive-image-block",
     "target_url": "https://github.com/bhubbard/sensitive-image-block",
     "topics": [
@@ -6780,6 +7012,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/serpbear",
     "target_url": "https://github.com/bhubbard/serpbear",
     "topics": [
@@ -6805,6 +7039,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/sitemap-scan",
     "target_url": "https://github.com/bhubbard/sitemap-scan",
     "topics": [
@@ -6829,6 +7065,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/toontalker-rs",
     "target_url": "https://github.com/bhubbard/toontalker-rs",
     "topics": [],
@@ -6847,6 +7085,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/unlighthouse-rs",
     "target_url": "https://github.com/bhubbard/unlighthouse-rs",
     "topics": [
@@ -6871,6 +7111,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/upscayl-rs",
     "target_url": "https://github.com/bhubbard/upscayl-rs",
     "topics": [],
@@ -6889,6 +7131,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/video-retalking-rs",
     "target_url": "https://github.com/bhubbard/video-retalking-rs",
     "topics": [],
@@ -6907,6 +7151,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wav2lip-rs",
     "target_url": "https://github.com/bhubbard/wav2lip-rs",
     "topics": [],
@@ -6926,6 +7172,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
     "target_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
     "topics": [
@@ -6952,6 +7200,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-cleanup-scripts",
     "target_url": "https://github.com/bhubbard/wp-cleanup-scripts",
     "topics": [
@@ -6974,6 +7224,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-clio-api",
     "target_url": "https://github.com/bhubbard/wp-clio-api",
     "topics": [
@@ -6999,6 +7251,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-givebutter-api",
     "target_url": "https://github.com/bhubbard/wp-givebutter-api",
     "topics": [
@@ -7023,6 +7277,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-lawmatics-api",
     "target_url": "https://github.com/bhubbard/wp-lawmatics-api",
     "topics": [
@@ -7047,6 +7303,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-plugin-uninstalls",
     "target_url": "https://github.com/bhubbard/wp-plugin-uninstalls",
     "topics": [
@@ -7068,6 +7326,8 @@
     "stars": 0,
     "has_pages": false,
     "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
     "github_url": "https://github.com/bhubbard/wp-theme-check-cli",
     "target_url": "https://github.com/bhubbard/wp-theme-check-cli",
     "topics": [
@@ -7246,9 +7506,20 @@
       if (filtered.length === 0) {
         reposGridContainer.innerHTML = `
           <div style="grid-column: 1 / -1; padding: 3.5rem 1rem; text-align: center; color: var(--steel); font-family: var(--font-mono);">
-            NO REPOSITORIES MATCHED "${query}".
+            <div style="margin-bottom: 1rem;">NO REPOSITORIES MATCHED "${query}".</div>
+            <button type="button" class="filter-pill active" id="resetExplorerFiltersBtn">RESET FILTERS</button>
           </div>
         `;
+        const resetBtn = document.getElementById('resetExplorerFiltersBtn');
+        if (resetBtn) {
+          resetBtn.addEventListener('click', () => {
+            if (explorerSearchInput) explorerSearchInput.value = '';
+            activeExplorerFilter = 'all';
+            categoryFilterPills.forEach(p => p.classList.toggle('active', p.dataset.filter === 'all'));
+            renderExplorerGrid();
+            syncUrlState();
+          });
+        }
         return;
       }
 
@@ -7530,6 +7801,14 @@
       renderExplorerGrid();
       syncUrlState();
     });
+    explorerSearchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && explorerSearchInput.value) {
+        e.preventDefault();
+        explorerSearchInput.value = '';
+        renderExplorerGrid();
+        syncUrlState();
+      }
+    });
 
     modalFilterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -7652,6 +7931,14 @@
         benchSearchInput.addEventListener('input', () => {
           renderBenchmarks();
           syncUrlState();
+        });
+        benchSearchInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && benchSearchInput.value) {
+            e.preventDefault();
+            benchSearchInput.value = '';
+            renderBenchmarks();
+            syncUrlState();
+          }
         });
       }
 

@@ -178,10 +178,13 @@ def validate_all(verify_network=False):
     print("\n=== 3. Validating API JSON Files & Inlined Catalog Sync ===")
     projects_path = os.path.join(BASE_DIR, "api", "projects.json")
     pages_path = os.path.join(BASE_DIR, "api", "github-pages.json")
+    benchmarks_path = os.path.join(BASE_DIR, "api", "benchmarks.json")
     with open(projects_path, "r", encoding="utf-8") as f:
         projects = json.load(f)
     with open(pages_path, "r", encoding="utf-8") as f:
         pages = json.load(f)
+    with open(benchmarks_path, "r", encoding="utf-8") as f:
+        benchmarks = json.load(f)
 
     assert_true(
         len(projects) >= 120,
@@ -191,6 +194,11 @@ def validate_all(verify_network=False):
     assert_true(
         len(pages) >= 65,
         f"api/github-pages.json contains {len(pages)} verified live pages (>= 65)",
+        failures,
+    )
+    assert_true(
+        len(benchmarks) == 40,
+        f"api/benchmarks.json contains all {len(benchmarks)} verified empirical Rust benchmarks",
         failures,
     )
 
@@ -203,6 +211,8 @@ def validate_all(verify_network=False):
         "stars",
         "has_pages",
         "page_url",
+        "has_benchmarks",
+        "benchmark_url",
         "github_url",
         "target_url",
         "topics",

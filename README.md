@@ -129,7 +129,32 @@ Native, compiled, SIMD-accelerated Rust ports engineered to replace heavy Python
 - **[`wp-cloudflare-d1`](https://github.com/bhubbard/wp-cloudflare-d1)** — Native PHP class querying Cloudflare D1 serverless SQL database within WordPress.
 - **[`wp-cloudflare-kv`](https://github.com/bhubbard/wp-cloudflare-kv)** — WordPress object and transient cache backend powered by Cloudflare KV edge storage.
 - **[`wp-pressable-api`](https://github.com/bhubbard/wp-pressable-api)** & **[`pressable-cli`](https://github.com/bhubbard/pressable-cli)** — PHP SDK and TypeScript CLI for Pressable Cloud management.
+- **[`wp-spinupwp-api`](https://github.com/bhubbard/wp-spinupwp-api)** — Modern PHP and WordPress client library for the SpinupWP cloud server management REST API.
+- **[`yoast-seo-audit`](https://github.com/bhubbard/yoast-seo-audit)** — Automated SEO Schema.org JSON-LD graph validator and meta tag audit tool.
 - **[`wp-theme-check-cli`](https://github.com/bhubbard/wp-theme-check-cli)** — Automated CI/CD quality gate for WordPress themes checking PHPCS, security, and standards.
+
+---
+
+## 📡 Public Machine-Readable JSON APIs & Sitemap
+
+This portal publishes static, zero-latency JSON APIs synchronized daily via GitHub Actions:
+
+| Endpoint | Records | Description |
+| :--- | :--- | :--- |
+| **[`/api/projects.json`](https://code.brandonhubbard.com/api/projects.json)** | `130` | Complete catalog of all public repositories with language, categories, topics, live page status, and benchmark links. |
+| **[`/api/github-pages.json`](https://code.brandonhubbard.com/api/github-pages.json)** | `71` | Filtered catalog of all repositories with HTTP-200 verified live documentation sites on `code.brandonhubbard.com`. |
+| **[`/api/benchmarks.json`](https://code.brandonhubbard.com/api/benchmarks.json)** | `40` | Structured empirical benchmark matrix comparing native Rust ports against reference Python, C++, C#, and Node.js runtimes. |
+| **[`/sitemap.xml`](https://code.brandonhubbard.com/sitemap.xml)** | `71` | Canonical XML sitemap indexing the root portal and all verified project documentation sites. |
+
+### Local Synchronization & Validation
+
+```bash
+# Fetch all paginated GitHub repositories, verify HTTP-200 Pages, and regenerate JSON APIs + sitemap.xml + index.html
+python3 scripts/update-api.py
+
+# Run the automated portal structure, schema, accessibility, and cross-document link validator
+python3 scripts/validate-portal.py --verify-network
+```
 
 ---
 

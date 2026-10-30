@@ -226,6 +226,69 @@ def generate_sitemap(pages_projects, base_dir):
     return sitemap_path, len(sorted_pages) + 1
 
 
+def extract_benchmarks_from_index(base_dir):
+    """Extract the 40 verified empirical Rust benchmarks from index.html for api/benchmarks.json."""
+    import re
+    import html as html_lib
+
+    index_path = os.path.join(base_dir, "index.html")
+    if not os.path.exists(index_path):
+        return [], {}
+
+    with open(index_path, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    m = re.search(r'<tbody id="benchTableBody">(.*?)</tbody>', html, re.DOTALL)
+    if not m:
+        return [], {}
+
+    rows = re.findall(r"<tr[^>]*>.*?</tr>", m.group(1), re.DOTALL)
+    benchmarks = []
+    bench_map = {}
+
+    for idx, row in enumerate(rows):
+        tds = re.findall(r"<td[^>]*>(.*?)</td>", row, re.DOTALL)
+        if len(tds) < 6:
+            continue
+        clean_tds = [html_lib.unescape(re.sub(r"<[^>]+>", "", td).strip()) for td in tds]
+        proj_name = clean_tds[0].split()[-1].strip()
+        ref_runtime = clean_tds[1]
+        domain = clean_tds[2]
+        speedup_label = clean_tds[3]
+
+        if "instant" in speedup_label.lower():
+            speedup_factor = None
+        else:
+            num_m = re.search(r"([\d,.]+)", speedup_label)
+            speedup_factor = float(num_m.group(1).replace(",", "")) if num_m else None
+
+        page_m = re.search(r'href="([^"]+)"', tds[4])
+        bench_m = re.search(r'href="([^"]+)"', tds[5])
+        page_url = page_m.group(1) if page_m else f"{CANONICAL_DOMAIN}/{proj_name}/"
+        benchmark_url = (
+            bench_m.group(1)
+            if bench_m
+            else f"https://github.com/{GITHUB_USER}/{proj_name}/blob/main/BENCHMARKS.md"
+        )
+        github_url = f"https://github.com/{GITHUB_USER}/{proj_name}"
+
+        entry = {
+            "rank": idx + 1,
+            "name": proj_name,
+            "reference_runtime": ref_runtime,
+            "domain": domain,
+            "speedup_label": speedup_label,
+            "speedup_factor": speedup_factor,
+            "page_url": page_url,
+            "benchmark_url": benchmark_url,
+            "github_url": github_url,
+        }
+        benchmarks.append(entry)
+        bench_map[proj_name.lower()] = entry
+
+    return benchmarks, bench_map
+
+
 def sync_index_html(clean_projects, pages_projects, base_dir):
     """Synchronize inlined GITHUB_PAGES_MAP and REPOSITORIES in index.html."""
     import re
@@ -309,6 +372,9 @@ def main():
 
     print(f"Verified {len(verified_pages)} live GitHub Pages (HTTP 200).")
 
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    benchmarks, bench_map = extract_benchmarks_from_index(base_dir)
+
     clean_projects = []
     for r in repos:
         name = r.get("name")
@@ -357,6 +423,10 @@ def main():
             or "Open source software and systems engineering by Brandon Hubbard."
         )
 
+        bench_entry = bench_map.get(lower)
+        has_benchmarks = bool(bench_entry)
+        benchmark_url = bench_entry["benchmark_url"] if bench_entry else None
+
         clean_projects.append({
             "name": name,
             "description": description,
@@ -366,6 +436,8 @@ def main():
             "stars": r.get("stargazers_count", 0),
             "has_pages": has_page,
             "page_url": page_url,
+            "has_benchmarks": has_benchmarks,
+            "benchmark_url": benchmark_url,
             "github_url": r.get("html_url"),
             "target_url": target_url,
             "topics": topics,
@@ -375,7 +447,6 @@ def main():
 
     clean_projects.sort(key=lambda p: (not p["has_pages"], -p["stars"], p["name"]))
 
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     api_dir = os.path.join(base_dir, "api")
     os.makedirs(api_dir, exist_ok=True)
 
@@ -390,11 +461,17 @@ def main():
         json.dump(pages_projects, f, indent=2)
         f.write("\n")
 
+    benchmarks_path = os.path.join(api_dir, "benchmarks.json")
+    with open(benchmarks_path, "w", encoding="utf-8") as f:
+        json.dump(benchmarks, f, indent=2)
+        f.write("\n")
+
     sitemap_path, sitemap_count = generate_sitemap(pages_projects, base_dir)
     synced_index = sync_index_html(clean_projects, pages_projects, base_dir)
 
     print(f"Generated {projects_path} ({len(clean_projects)} projects)")
     print(f"Generated {pages_path} ({len(pages_projects)} live pages)")
+    print(f"Generated {benchmarks_path} ({len(benchmarks)} verified benchmarks)")
     print(f"Generated {sitemap_path} ({sitemap_count} canonical URLs)")
     print(f"Synced index.html inlined catalog: {synced_index}")
 
