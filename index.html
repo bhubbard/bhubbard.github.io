@@ -12,15 +12,21 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; Rust Infrastructure</title>
-  <meta name="description" content="Official open source software portal and flagship engineering hub by Brandon Hubbard showcasing The Flare Suite, Astro Chrome Built-in AI, and 78+ compiled Rust engines and CLIs.">
+  <title>Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; 78+ Rust Engines</title>
+  <meta name="description" content="Official open source engineering portal by Brandon Hubbard featuring 130 repositories, 71 live interactive GitHub Pages, 40 verified empirical Rust benchmarks, The Flare Suite, and 13 Astro Chrome Built-in AI packages.">
   <link rel="canonical" href="https://code.brandonhubbard.com/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://code.brandonhubbard.com/sitemap.xml">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="author" content="Brandon Hubbard">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta property="og:site_name" content="Brandon Hubbard Open Source">
   <meta property="og:title" content="Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; Rust">
-  <meta property="og:description" content="High-performance Cloudflare developer tools (The Flare Suite), Chrome Built-in Gemini Nano dev tools, 78+ compiled Rust engines, and 40 verified empirical benchmarks.">
+  <meta property="og:description" content="130 open-source repositories, 71 live interactive GitHub Pages, 40 verified empirical Rust benchmarks, Cloudflare Flare Suite, and Astro Chrome Built-in Gemini Nano tools.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://code.brandonhubbard.com/">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Open Source by Brandon Hubbard — The Flare Suite, Astro Chrome AI &amp; Rust">
+  <meta name="twitter:description" content="130 open-source repositories, 71 live interactive GitHub Pages, 40 verified empirical Rust benchmarks, Cloudflare Flare Suite, and Astro Chrome Built-in Gemini Nano tools.">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -32,11 +38,9 @@
         "@id": "https://code.brandonhubbard.com/#website",
         "url": "https://code.brandonhubbard.com/",
         "name": "Brandon Hubbard Engineering & Open Source",
-        "description": "Flagship engineering portal showcasing 130+ open-source repositories, 78+ high-performance Rust CLIs and simulation engines, Apple Intelligence FoundationModels, zero-token decision engines, Cloudflare Flare Suite, and Astro Chrome Built-in AI tools.",
+        "description": "Flagship engineering portal showcasing 130 open-source repositories, 71 live interactive GitHub Pages, 78+ high-performance Rust CLIs and simulation engines, 40 verified empirical Rust benchmarks, Cloudflare Flare Suite, and Astro Chrome Built-in AI tools.",
         "publisher": {
-          "@type": "Person",
-          "name": "Brandon Hubbard",
-          "url": "https://brandonhubbard.com"
+          "@id": "https://brandonhubbard.com/#person"
         },
         "inLanguage": "en-US"
       },
@@ -49,7 +53,175 @@
         "sameAs": [
           "https://github.com/bhubbard",
           "https://code.brandonhubbard.com/",
-          "https://bhubbard.github.io/"
+          "https://webtools.brandonhubbard.com/",
+          "https://talks.brandonhubbard.com/"
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://code.brandonhubbard.com/#collection",
+        "url": "https://code.brandonhubbard.com/",
+        "name": "Brandon Hubbard Open Source Ecosystem & Empirical Rust Benchmark Index",
+        "isPartOf": {
+          "@id": "https://code.brandonhubbard.com/#website"
+        },
+        "about": {
+          "@id": "https://brandonhubbard.com/#person"
+        },
+        "mainEntity": {
+          "@id": "https://code.brandonhubbard.com/#flagship-list"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://code.brandonhubbard.com/#flagship-list",
+        "name": "Flagship Open Source Suites & Native Rust Engines",
+        "numberOfItems": 12,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "flareguard",
+              "url": "https://code.brandonhubbard.com/flareguard/",
+              "codeRepository": "https://github.com/bhubbard/flareguard",
+              "programmingLanguage": "Rust",
+              "description": "Compiled Rust security auditor and posture validator for Cloudflare Workers, Pages, and multi-zone deployments."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "flareperf",
+              "url": "https://code.brandonhubbard.com/flareperf/",
+              "codeRepository": "https://github.com/bhubbard/flareperf",
+              "programmingLanguage": "Rust",
+              "description": "Edge performance auditor enforcing Cloudflare Worker bundle quotas, V8 isolate cold-start budgets, and subrequest limits."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "flarelint",
+              "url": "https://code.brandonhubbard.com/flarelint/",
+              "codeRepository": "https://github.com/bhubbard/flarelint",
+              "programmingLanguage": "Rust",
+              "description": "OXC AST static analysis linter for Cloudflare Workers, Astro SSR, and edge runtime bindings."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "flareops",
+              "url": "https://code.brandonhubbard.com/flareops/",
+              "codeRepository": "https://github.com/bhubbard/flareops",
+              "programmingLanguage": "Rust",
+              "description": "Automated Wrangler binding synchronization, TypeScript App.Locals codegen, and edge route optimizer."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "zev-rs",
+              "url": "https://code.brandonhubbard.com/zev-rs/",
+              "codeRepository": "https://github.com/bhubbard/zev-rs",
+              "programmingLanguage": "Rust",
+              "description": "Zero-token mathematical LLM decision router evaluating classification and routing schemas in 5.8 microseconds."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "apfel-rs",
+              "url": "https://code.brandonhubbard.com/apfel-rs/",
+              "codeRepository": "https://github.com/bhubbard/apfel-rs",
+              "programmingLanguage": "Rust",
+              "description": "Apple Intelligence on-device FoundationModels in pure Rust with UNIX CLI and OpenAI-compatible HTTP daemon."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "nanoswarm-rs",
+              "url": "https://code.brandonhubbard.com/nanoswarm-rs/",
+              "codeRepository": "https://github.com/bhubbard/nanoswarm-rs",
+              "programmingLanguage": "Rust",
+              "description": "100% on-device autonomous AI agent swarm in native Rust (<30MB RAM, 5.8us SIMD routing)."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "timesfm-rs",
+              "url": "https://code.brandonhubbard.com/timesfm-rs/",
+              "codeRepository": "https://github.com/bhubbard/timesfm-rs",
+              "programmingLanguage": "Rust",
+              "description": "Native Rust inference engine for Google Research's TimesFM foundation model running 13.4x faster than JAX/Python."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "bullet3-rs",
+              "url": "https://code.brandonhubbard.com/bullet3-rs/",
+              "codeRepository": "https://github.com/bhubbard/bullet3-rs",
+              "programmingLanguage": "Rust",
+              "description": "Pure Rust multi-threaded 3D physics simulation engine with SIMD vectorization and GJK/EPA collision detection."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "hunyuan3d-rs",
+              "url": "https://code.brandonhubbard.com/hunyuan3d-rs/",
+              "codeRepository": "https://github.com/bhubbard/hunyuan3d-rs",
+              "programmingLanguage": "Rust",
+              "description": "High-performance native Rust port of Tencent's Hunyuan3D-2 for text-to-3D and image-to-3D shape and PBR texture synthesis."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "box3d-rs",
+              "url": "https://code.brandonhubbard.com/box3d-rs/",
+              "codeRepository": "https://github.com/bhubbard/box3d-rs",
+              "programmingLanguage": "Rust",
+              "description": "Pure safe Rust port of Erin Catto's Box3D 3D rigid body physics engine."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "astro-client-directive-ai",
+              "url": "https://code.brandonhubbard.com/astro-client-directive-ai/",
+              "codeRepository": "https://github.com/bhubbard/astro-client-directive-ai",
+              "programmingLanguage": "TypeScript",
+              "description": "Predictive Astro Island hydration powered by Chrome on-device Gemini Nano."
+            }
+          }
         ]
       }
     ]
@@ -477,6 +649,10 @@
     .category-nav-link:hover, .category-nav-link.active {
       color: var(--titanium);
       background: var(--void);
+    }
+
+    .category-nav-link.active {
+      box-shadow: inset 0 -2px 0 var(--cobalt);
     }
 
     .category-nav-link .badge-num {
@@ -941,6 +1117,13 @@
       padding: 0.12rem 0.45rem;
       text-transform: lowercase;
       letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .repo-topic-pill:hover {
+      color: var(--cyan);
+      border-color: var(--cyan);
     }
 
     .repo-action-link {
@@ -7105,10 +7288,22 @@
       }).join('');
     }
 
-    // Event delegation for Explorer repo-card clicks and keyboard navigation
+    // Event delegation for Explorer repo-card clicks, topic pill filtering, and keyboard navigation
     if (reposGridContainer) {
       reposGridContainer.addEventListener('click', (e) => {
         if (e.target.closest('a')) return;
+        const topicPill = e.target.closest('.repo-topic-pill');
+        if (topicPill) {
+          e.stopPropagation();
+          const topic = (topicPill.textContent || '').trim();
+          if (explorerSearchInput && topic) {
+            explorerSearchInput.value = topic;
+            renderExplorerGrid();
+            syncUrlState();
+            showToast(`FILTERED BY TOPIC: #${topic.toUpperCase()}`);
+          }
+          return;
+        }
         const card = e.target.closest('.repo-card');
         if (card && card.dataset.targetUrl) {
           window.open(card.dataset.targetUrl, '_blank', 'noopener');
@@ -7131,6 +7326,7 @@
         btn.classList.add('active');
         activeExplorerSort = btn.dataset.sort || 'featured';
         renderExplorerGrid();
+        syncUrlState();
       });
     });
 
@@ -7285,7 +7481,55 @@
       renderModalResults();
     });
 
-    explorerSearchInput.addEventListener('input', renderExplorerGrid);
+    // Synchronize Explorer & Benchmark filter/search state with URL query parameters
+    function syncUrlState() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const q = (explorerSearchInput && explorerSearchInput.value || '').trim();
+        const bqEl = document.getElementById('benchSearchInput');
+        const bq = (bqEl && bqEl.value || '').trim();
+        if (q) params.set('q', q); else params.delete('q');
+        if (activeExplorerFilter && activeExplorerFilter !== 'all') params.set('category', activeExplorerFilter); else params.delete('category');
+        if (activeExplorerSort && activeExplorerSort !== 'featured') params.set('sort', activeExplorerSort); else params.delete('sort');
+        if (bq) params.set('bench', bq); else params.delete('bench');
+        const qs = params.toString();
+        const newUrl = window.location.pathname + (qs ? `?${qs}` : '') + window.location.hash;
+        window.history.replaceState(null, '', newUrl);
+      } catch (e) {}
+    }
+
+    function restoreStateFromUrl() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get('q');
+        const cat = params.get('category');
+        const sort = params.get('sort');
+        const bq = params.get('bench');
+        if (q && explorerSearchInput) {
+          explorerSearchInput.value = q;
+        }
+        if (cat && FILTER_LABELS[cat]) {
+          activeExplorerFilter = cat;
+          categoryFilterPills.forEach(p => p.classList.toggle('active', p.dataset.filter === cat));
+        }
+        if (sort && ['featured', 'updated', 'stars', 'alpha'].includes(sort)) {
+          activeExplorerSort = sort;
+          document.querySelectorAll('.explorer-sort-btn').forEach(b => b.classList.toggle('active', b.dataset.sort === sort));
+        }
+        if (bq) {
+          const bqEl = document.getElementById('benchSearchInput');
+          if (bqEl) {
+            bqEl.value = bq;
+            bqEl.dispatchEvent(new Event('input'));
+          }
+        }
+      } catch (e) {}
+    }
+
+    explorerSearchInput.addEventListener('input', () => {
+      renderExplorerGrid();
+      syncUrlState();
+    });
 
     modalFilterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -7303,6 +7547,7 @@
         pill.classList.add('active');
         activeExplorerFilter = pill.dataset.filter;
         renderExplorerGrid();
+        syncUrlState();
       });
     });
 
@@ -7404,7 +7649,10 @@
       }
 
       if (benchSearchInput) {
-        benchSearchInput.addEventListener('input', renderBenchmarks);
+        benchSearchInput.addEventListener('input', () => {
+          renderBenchmarks();
+          syncUrlState();
+        });
       }
 
       benchSortBtns.forEach(btn => {
@@ -7434,6 +7682,43 @@
       });
     }
     setupBenchmarkMatrix();
+
+    // Active Section Scroll-Spy for Subnav and Sticky Category Bar
+    function setupScrollSpy() {
+      const sectionIds = [
+        'flare-suite',
+        'astro-suite',
+        'edge-rust',
+        'benchmarks-matrix',
+        'ai-media-suite',
+        'wordpress-suite',
+        'all-repos'
+      ];
+      const catLinks = Array.from(document.querySelectorAll('.category-nav-link'));
+      const subLinks = Array.from(document.querySelectorAll('.subnav-menu .subnav-link[href^="#"]'));
+
+      function updateActiveSection() {
+        const scrollPos = window.scrollY + 210;
+        let currentId = sectionIds[0];
+        for (const id of sectionIds) {
+          const el = document.getElementById(id);
+          if (el && el.offsetTop <= scrollPos) {
+            currentId = id;
+          }
+        }
+        catLinks.forEach(link => {
+          const isMatch = link.getAttribute('href') === `#${currentId}`;
+          link.classList.toggle('active', isMatch);
+        });
+        subLinks.forEach(link => {
+          const isMatch = link.getAttribute('href') === `#${currentId}`;
+          link.classList.toggle('active', isMatch);
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveSection, { passive: true });
+      updateActiveSection();
+    }
 
     function setupProjectCardClicks() {
       // Make all featured project cards interactive & keyboard accessible: clicking or pressing Enter/Space opens the project's GitHub Page
@@ -7542,8 +7827,10 @@
       }
     }
 
+    restoreStateFromUrl();
     updateCategoryBadges();
     setupProjectCardClicks();
+    setupScrollSpy();
     renderExplorerGrid();
     renderModalResults();
     syncGitHubRepos();
