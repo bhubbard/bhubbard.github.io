@@ -693,6 +693,26 @@
     "pushed_at": "2026-09-30T15:14:15Z"
   },
   {
+    "name": "auto-editor-rs",
+    "description": "High-performance, pure Rust port of WyattBlue/auto-editor \u2014 automatic video & audio editing by acoustic loudness, motion analysis, and NLE timeline export.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/auto-editor-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/auto-editor-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/auto-editor-rs",
+    "target_url": "https://code.brandonhubbard.com/auto-editor-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T00:14:47Z"
+  },
+  {
     "name": "bhubbard.github.io",
     "description": "Official Open Source Software Portal & Chrome Built-in AI Specification Hub by Brandon Hubbard.",
     "language": "HTML",
@@ -717,7 +737,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-30T23:18:16Z"
+    "pushed_at": "2026-10-31T00:07:20Z"
   },
   {
     "name": "box3d-rs",

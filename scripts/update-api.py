@@ -37,6 +37,7 @@ GITHUB_PAGES_MAP = {
     "astro-rehype-nano-code": "https://code.brandonhubbard.com/astro-rehype-nano-code/",
     "astro-schema-ld-verifier": "https://code.brandonhubbard.com/astro-schema-ld-verifier/",
     "auge-rs": "https://code.brandonhubbard.com/auge-rs/",
+    "auto-editor-rs": "https://code.brandonhubbard.com/auto-editor-rs/",
     "bhubbard.github.io": "https://code.brandonhubbard.com/",
     "blender-rs": "https://code.brandonhubbard.com/blender-rs/",
     "box3d-rs": "https://code.brandonhubbard.com/box3d-rs/",
