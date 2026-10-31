@@ -95,6 +95,7 @@ GITHUB_PAGES_MAP = {
     "vite-plus-commitlint": "https://code.brandonhubbard.com/vite-plus-commitlint/",
     "vite-plus-kumo-ui": "https://code.brandonhubbard.com/vite-plus-kumo-ui/",
     "vite-plus-wrangler": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+    "void-model-rs": "https://code.brandonhubbard.com/void-model-rs/",
     "voicestudio-rs": "https://code.brandonhubbard.com/voicestudio-rs/",
     "watertight-meshes-rs": "https://code.brandonhubbard.com/watertight-meshes-rs/",
     "yt-dlp-rs": "https://code.brandonhubbard.com/yt-dlp-rs/",
