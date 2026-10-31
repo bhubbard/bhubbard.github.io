@@ -787,7 +787,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-31T04:45:29Z"
+    "pushed_at": "2026-10-31T08:04:00Z"
   },
   {
     "name": "box3d-rs",
@@ -1982,6 +1982,36 @@
     "pushed_at": "2026-09-28T20:07:04Z"
   },
   {
+    "name": "searchphone",
+    "description": "Fast, privacy-focused reverse phone lookup and telephony carrier detection CLI",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/searchphone/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/searchphone/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/searchphone",
+    "target_url": "https://code.brandonhubbard.com/searchphone/",
+    "topics": [
+      "caller-id",
+      "carrier-lookup",
+      "cli",
+      "lookup-tool",
+      "phone-lookup",
+      "phone-numbers",
+      "privacy",
+      "rust",
+      "telephony"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T08:07:42Z"
+  },
+  {
     "name": "simplecar2-rs",
     "description": "Pure Rust arcade-sim vehicle dynamics, raycast suspension, and drivetrain",
     "language": "Rust",
@@ -3094,36 +3124,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:57:26Z"
-  },
-  {
-    "name": "searchphone",
-    "description": "Fast, privacy-focused reverse phone lookup and telephony carrier detection CLI",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/searchphone",
-    "target_url": "https://github.com/bhubbard/searchphone",
-    "topics": [
-      "caller-id",
-      "carrier-lookup",
-      "cli",
-      "lookup-tool",
-      "phone-lookup",
-      "phone-numbers",
-      "privacy",
-      "rust",
-      "telephony"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:06Z"
   },
   {
     "name": "sensitive-image-block",

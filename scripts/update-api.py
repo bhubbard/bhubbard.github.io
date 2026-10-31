@@ -92,6 +92,7 @@ GITHUB_PAGES_MAP = {
     "rea-rs": "https://code.brandonhubbard.com/rea-rs/",
     "sadtalker-rs": "https://code.brandonhubbard.com/sadtalker-rs/",
     "sdf-math-rs": "https://code.brandonhubbard.com/sdf-math-rs/",
+    "searchphone": "https://code.brandonhubbard.com/searchphone/",
     "sfxr-rs": "https://code.brandonhubbard.com/sfxr-rs/",
     "simplecar2-rs": "https://code.brandonhubbard.com/simplecar2-rs/",
     "sumo-rs": "https://code.brandonhubbard.com/sumo-rs/",
