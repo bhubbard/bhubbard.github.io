@@ -336,6 +336,26 @@
     "pushed_at": "2026-10-05T15:49:15Z"
   },
   {
+    "name": "agentarena-rs",
+    "description": "Dynamic simulation test bench and deterministic benchmark arena for AI agents across traffic, tactical combat, crowd steering, and multi-agent coordination",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/agentarena-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/agentarena-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/agentarena-rs",
+    "target_url": "https://code.brandonhubbard.com/agentarena-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T00:54:01Z"
+  },
+  {
     "name": "apfel-rs",
     "description": "High-performance Rust fork of apfel: Apple Intelligence on-device FoundationModels from the CLI and OpenAI-compatible server.",
     "language": "Rust",
@@ -737,7 +757,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-31T00:07:20Z"
+    "pushed_at": "2026-10-31T00:15:45Z"
   },
   {
     "name": "box3d-rs",
@@ -2390,26 +2410,6 @@
     "pushed_at": "2026-09-26T18:57:03Z"
   },
   {
-    "name": "agentarena-rs",
-    "description": "Dynamic simulation test bench and deterministic benchmark arena for AI agents across traffic, tactical combat, crowd steering, and multi-agent coordination",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/agentarena-rs",
-    "target_url": "https://github.com/bhubbard/agentarena-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-08T06:11:18Z"
-  },
-  {
     "name": "alt-text-ai",
     "description": "Generate SEO-friendly, accessibility-focused alt text for images using Cloudflare\u2019s AI. Supports image uploads or URLs with multi-language options.",
     "language": "TypeScript",
@@ -3108,7 +3108,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-31T00:02:14Z"
+    "pushed_at": "2026-10-31T00:52:06Z"
   },
   {
     "name": "video-retalking-rs",

@@ -22,6 +22,7 @@ TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_PAGES_MAP = {
     "active-ragdoll-rs": "https://code.brandonhubbard.com/active-ragdoll-rs/",
     "aesir-utils-rs": "https://code.brandonhubbard.com/aesir-utils-rs/",
+    "agentarena-rs": "https://code.brandonhubbard.com/agentarena-rs/",
     "apfel-rs": "https://code.brandonhubbard.com/apfel-rs/",
     "astro-client-directive-ai": "https://code.brandonhubbard.com/astro-client-directive-ai/",
     "astro-dev-audit-nano": "https://code.brandonhubbard.com/astro-dev-audit-nano/",
