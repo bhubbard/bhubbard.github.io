@@ -757,7 +757,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-31T01:38:50Z"
+    "pushed_at": "2026-10-31T02:55:09Z"
   },
   {
     "name": "box3d-rs",
@@ -1240,6 +1240,26 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-10-05T06:12:51Z"
+  },
+  {
+    "name": "kubeezcut-rs",
+    "description": "High-performance, pure Rust port of KubeezMedia/KubeezCut \u2014 modern non-linear video editing (NLE) engine, WebGPU shader effects, keyframe Bezier animation, and headless render export.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/kubeezcut-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/kubeezcut-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/kubeezcut-rs",
+    "target_url": "https://code.brandonhubbard.com/kubeezcut-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T04:43:34Z"
   },
   {
     "name": "latentsync-rs",
@@ -1966,7 +1986,7 @@
     "target_url": "https://code.brandonhubbard.com/void-model-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-10-31T02:53:43Z"
+    "pushed_at": "2026-10-31T02:59:34Z"
   },
   {
     "name": "watertight-meshes-rs",

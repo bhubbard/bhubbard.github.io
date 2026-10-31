@@ -59,6 +59,7 @@ GITHUB_PAGES_MAP = {
     "generate-glb-rs": "https://code.brandonhubbard.com/generate-glb-rs/",
     "handbrake-rs": "https://code.brandonhubbard.com/handbrake-rs/",
     "hunyuan3d-rs": "https://code.brandonhubbard.com/hunyuan3d-rs/",
+    "kubeezcut-rs": "https://code.brandonhubbard.com/kubeezcut-rs/",
     "latentsync-rs": "https://code.brandonhubbard.com/latentsync-rs/",
     "lossless-cut-rs": "https://code.brandonhubbard.com/lossless-cut-rs/",
     "lux-rs": "https://code.brandonhubbard.com/lux-rs/",
