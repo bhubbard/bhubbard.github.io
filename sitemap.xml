@@ -74,6 +74,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/astro-compress-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/astro-dev-audit-nano/</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -236,6 +242,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/freevideo-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/gambetta-netcode-rs/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -260,6 +272,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/hypit-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/kadraj/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/kubeezcut-rs/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -267,6 +291,12 @@
   </url>
   <url>
     <loc>https://code.brandonhubbard.com/latentsync-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/longcat-video-rs/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -332,6 +362,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/musetalk-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/neteq-rs/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -368,6 +404,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/opensource-clipping-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/paperclip-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/partikel/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/poormans-camera-rs/</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -382,6 +436,12 @@
   <url>
     <loc>https://code.brandonhubbard.com/rea-rs/</loc>
     <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/sadtalker-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -422,8 +482,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/toontalker-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/translate-rs/</loc>
     <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/unlighthouse-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -436,6 +508,12 @@
   <url>
     <loc>https://code.brandonhubbard.com/vhud-rs/</loc>
     <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/video-retalking-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -472,6 +550,18 @@
   <url>
     <loc>https://code.brandonhubbard.com/watertight-meshes-rs/</loc>
     <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wav2lip-rs/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-blockmarkup-mcp/</loc>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

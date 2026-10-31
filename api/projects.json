@@ -407,6 +407,36 @@
     "pushed_at": "2026-09-26T18:56:27Z"
   },
   {
+    "name": "astro-compress-rs",
+    "description": "Blazingly fast post-build compressor, CSS inliner, and HTML minifier in Rust",
+    "language": "Rust",
+    "category": "astro",
+    "categories": [
+      "cli",
+      "rust",
+      "astro"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/astro-compress-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/astro-compress-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/astro-compress-rs",
+    "target_url": "https://code.brandonhubbard.com/astro-compress-rs/",
+    "topics": [
+      "astro",
+      "compression",
+      "css-inliner",
+      "html-minifier",
+      "minification",
+      "rust",
+      "static-site",
+      "web-performance"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:53:55Z"
+  },
+  {
     "name": "astro-dev-audit-nano",
     "description": "Astro Dev Toolbar app auditing WCAG a11y, heading hierarchy, and SEO with real-time Gemini Nano remediations.",
     "language": "TypeScript",
@@ -730,7 +760,7 @@
     "target_url": "https://code.brandonhubbard.com/auto-editor-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-10-31T00:14:47Z"
+    "pushed_at": "2026-10-31T04:45:50Z"
   },
   {
     "name": "bhubbard.github.io",
@@ -757,7 +787,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-31T02:55:09Z"
+    "pushed_at": "2026-10-31T04:45:29Z"
   },
   {
     "name": "box3d-rs",
@@ -1149,6 +1179,26 @@
     "pushed_at": "2026-09-26T18:58:46Z"
   },
   {
+    "name": "freevideo-rs",
+    "description": "High-performance pure Rust video synthesis, frame processing, and neural rendering toolkit.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/freevideo-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/freevideo-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/freevideo-rs",
+    "target_url": "https://code.brandonhubbard.com/freevideo-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:38:36Z"
+  },
+  {
     "name": "gambetta-netcode-rs",
     "description": "Pure Rust client-side prediction, server reconciliation, and entity interpolation",
     "language": "Rust",
@@ -1242,6 +1292,46 @@
     "pushed_at": "2026-10-05T06:12:51Z"
   },
   {
+    "name": "hypit-rs",
+    "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
+    "language": "TypeScript",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/hypit-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/hypit-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/hypit-rs",
+    "target_url": "https://code.brandonhubbard.com/hypit-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:41:49Z"
+  },
+  {
+    "name": "kadraj",
+    "description": "The HTML-aware image optimizer \u2014 responsive AVIF for the images your built site actually uses, in Rust.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/kadraj/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/kadraj/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/kadraj",
+    "target_url": "https://code.brandonhubbard.com/kadraj/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:51:13Z"
+  },
+  {
     "name": "kubeezcut-rs",
     "description": "High-performance, pure Rust port of KubeezMedia/KubeezCut \u2014 modern non-linear video editing (NLE) engine, WebGPU shader effects, keyframe Bezier animation, and headless render export.",
     "language": "Rust",
@@ -1280,6 +1370,26 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-10-31T01:37:43Z"
+  },
+  {
+    "name": "longcat-video-rs",
+    "description": "LongCat-Video: Long-context video generation and temporal diffusion in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/longcat-video-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/longcat-video-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/longcat-video-rs",
+    "target_url": "https://code.brandonhubbard.com/longcat-video-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:33:06Z"
   },
   {
     "name": "lossless-cut-rs",
@@ -1548,6 +1658,26 @@
     "pushed_at": "2026-09-27T05:37:15Z"
   },
   {
+    "name": "musetalk-rs",
+    "description": "Pure Rust real-time high-fidelity audio-driven lip-sync and talking head synthesis engine in latent space.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/musetalk-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/musetalk-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/musetalk-rs",
+    "target_url": "https://code.brandonhubbard.com/musetalk-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:11:58Z"
+  },
+  {
     "name": "nanoswarm-rs",
     "description": "\ud83d\udc1d 100% on-device autonomous AI agent swarm in native Rust (<30MB RAM, 5.8\u00b5s SIMD routing)",
     "language": "Rust",
@@ -1660,6 +1790,78 @@
     "pushed_at": "2026-10-30T23:03:15Z"
   },
   {
+    "name": "opensource-clipping-rs",
+    "description": "High-performance, pure Rust port of NaufalRizqullah/opensource-clipping \u2014 AI auto-clipper for viral shorts with smart face-tracking, kinetic karaoke subtitles, audio ducking, and auto-hook curation.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/opensource-clipping-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/opensource-clipping-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/opensource-clipping-rs",
+    "target_url": "https://code.brandonhubbard.com/opensource-clipping-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:06:06Z"
+  },
+  {
+    "name": "paperclip-rs",
+    "description": "Open-source orchestration engine for agentic workflows and multi-agent coordination in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/paperclip-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/paperclip-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/paperclip-rs",
+    "target_url": "https://code.brandonhubbard.com/paperclip-rs/",
+    "topics": [
+      "agentic-ai",
+      "llm-orchestration",
+      "multi-agent",
+      "rust",
+      "workflow-engine"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:48:46Z"
+  },
+  {
+    "name": "partikel",
+    "description": "High-performance CPU/GPU particle simulation engine and physics effects in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/partikel/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/partikel/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/partikel",
+    "target_url": "https://code.brandonhubbard.com/partikel/",
+    "topics": [
+      "gamedev",
+      "particle-system",
+      "physics-simulation",
+      "rust",
+      "vfx"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:45:55Z"
+  },
+  {
     "name": "poormans-camera-rs",
     "description": "Pure Rust 3D third-person camera rig with sphere-cast collision avoidance",
     "language": "Rust",
@@ -1731,6 +1933,26 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-10-05T06:12:45Z"
+  },
+  {
+    "name": "sadtalker-rs",
+    "description": "Pure Rust port of SadTalker: stylized audio-driven single-image talking face animation with 3D motion coefficients.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/sadtalker-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/sadtalker-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/sadtalker-rs",
+    "target_url": "https://code.brandonhubbard.com/sadtalker-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:15:58Z"
   },
   {
     "name": "sdf-math-rs",
@@ -1865,6 +2087,26 @@
     "pushed_at": "2026-09-28T20:09:23Z"
   },
   {
+    "name": "toontalker-rs",
+    "description": "Pure Rust cross-domain cartoon and stylized avatar talking-head synthesis engine driven by audio.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/toontalker-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/toontalker-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/toontalker-rs",
+    "target_url": "https://code.brandonhubbard.com/toontalker-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:28:18Z"
+  },
+  {
     "name": "translate-rs",
     "description": "Deterministic on-device neural translation CLI and multi-provider HTTP server in Rust (DeepL, LibreTranslate, Google v2 compatible)",
     "language": "Rust",
@@ -1892,6 +2134,32 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-12T18:55:25Z"
+  },
+  {
+    "name": "unlighthouse-rs",
+    "description": "A Rust port of the Unlighthouse Lighthouse auditing tool.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/unlighthouse-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/unlighthouse-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/unlighthouse-rs",
+    "target_url": "https://code.brandonhubbard.com/unlighthouse-rs/",
+    "topics": [
+      "audit",
+      "cli",
+      "lighthouse",
+      "performance",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:57:30Z"
   },
   {
     "name": "upscayl-rs",
@@ -1938,6 +2206,26 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-28T20:14:31Z"
+  },
+  {
+    "name": "video-retalking-rs",
+    "description": "Pure Rust audio-based lip synchronization and facial reenactment pipeline for talking-head video editing.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/video-retalking-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/video-retalking-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/video-retalking-rs",
+    "target_url": "https://code.brandonhubbard.com/video-retalking-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:20:14Z"
   },
   {
     "name": "vite-plus-wrangler",
@@ -2016,6 +2304,56 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-05T06:12:58Z"
+  },
+  {
+    "name": "wav2lip-rs",
+    "description": "High-speed pure Rust inference engine for Wav2Lip audio-driven lip-sync synthesis and video dubbing.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/wav2lip-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/wav2lip-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/wav2lip-rs",
+    "target_url": "https://code.brandonhubbard.com/wav2lip-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T07:24:38Z"
+  },
+  {
+    "name": "wp-blockmarkup-mcp",
+    "description": "High-speed Rust Model Context Protocol (MCP) server for WordPress block grammar parsing",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust",
+      "wordpress"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/wp-blockmarkup-mcp/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/wp-blockmarkup-mcp/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
+    "target_url": "https://code.brandonhubbard.com/wp-blockmarkup-mcp/",
+    "topics": [
+      "ai",
+      "audit",
+      "cli",
+      "gutenberg",
+      "mcp",
+      "model-context-protocol",
+      "rust",
+      "wordpress"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T08:00:55Z"
   },
   {
     "name": "yt-dlp-rs",
@@ -2496,36 +2834,6 @@
     "pushed_at": "2026-09-26T18:57:14Z"
   },
   {
-    "name": "astro-compress-rs",
-    "description": "Blazingly fast post-build compressor, CSS inliner, and HTML minifier in Rust",
-    "language": "Rust",
-    "category": "astro",
-    "categories": [
-      "cli",
-      "rust",
-      "astro"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/astro-compress-rs",
-    "target_url": "https://github.com/bhubbard/astro-compress-rs",
-    "topics": [
-      "astro",
-      "compression",
-      "css-inliner",
-      "html-minifier",
-      "minification",
-      "rust",
-      "static-site",
-      "web-performance"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:02Z"
-  },
-  {
     "name": "decision-index",
     "description": "Decision Index: reproduce the Jev decision-model benchmark suite locally or as one HF Job",
     "language": "Code",
@@ -2575,26 +2883,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-25T16:27:07Z"
-  },
-  {
-    "name": "freevideo-rs",
-    "description": "High-performance pure Rust video synthesis, frame processing, and neural rendering toolkit.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/freevideo-rs",
-    "target_url": "https://github.com/bhubbard/freevideo-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-12T18:55:04Z"
   },
   {
     "name": "homebrew-tap",
@@ -2649,26 +2937,6 @@
     "pushed_at": "2026-09-26T18:56:56Z"
   },
   {
-    "name": "hypit-rs",
-    "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
-    "language": "TypeScript",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/hypit-rs",
-    "target_url": "https://github.com/bhubbard/hypit-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-14T05:14:44Z"
-  },
-  {
     "name": "image-altext",
     "description": "Cloudflare-powered AI image alt text generator using TypeScript and Hono framework for edge environments.",
     "language": "Code",
@@ -2694,26 +2962,6 @@
     "pushed_at": "2024-04-11T09:43:13Z"
   },
   {
-    "name": "kadraj",
-    "description": "The HTML-aware image optimizer \u2014 responsive AVIF for the images your built site actually uses, in Rust.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/kadraj",
-    "target_url": "https://github.com/bhubbard/kadraj",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-05T15:49:54Z"
-  },
-  {
     "name": "locals",
     "description": "Run many AI agents at once on your Mac, up to 3x faster.",
     "language": "Code",
@@ -2733,26 +2981,6 @@
     "pushed_at": "2026-10-21T23:31:16Z"
   },
   {
-    "name": "longcat-video-rs",
-    "description": "LongCat-Video: Long-context video generation and temporal diffusion in Rust",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/longcat-video-rs",
-    "target_url": "https://github.com/bhubbard/longcat-video-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-12T18:55:12Z"
-  },
-  {
     "name": "minimind",
     "description": "\ud83e\udde0 Train a 64M-parameter LLM from scratch in just 2h!",
     "language": "Python",
@@ -2770,26 +2998,6 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-10-05T15:48:19Z"
-  },
-  {
-    "name": "musetalk-rs",
-    "description": "Pure Rust real-time high-fidelity audio-driven lip-sync and talking head synthesis engine in latent space.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/musetalk-rs",
-    "target_url": "https://github.com/bhubbard/musetalk-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-12T18:55:15Z"
   },
   {
     "name": "opendental",
@@ -2819,78 +3027,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-10-05T15:48:41Z"
-  },
-  {
-    "name": "opensource-clipping-rs",
-    "description": "High-performance, pure Rust port of NaufalRizqullah/opensource-clipping \u2014 AI auto-clipper for viral shorts with smart face-tracking, kinetic karaoke subtitles, audio ducking, and auto-hook curation.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/opensource-clipping-rs",
-    "target_url": "https://github.com/bhubbard/opensource-clipping-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-30T19:46:36Z"
-  },
-  {
-    "name": "paperclip-rs",
-    "description": "Open-source orchestration engine for agentic workflows and multi-agent coordination in Rust",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/paperclip-rs",
-    "target_url": "https://github.com/bhubbard/paperclip-rs",
-    "topics": [
-      "agentic-ai",
-      "llm-orchestration",
-      "multi-agent",
-      "rust",
-      "workflow-engine"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-28T20:35:56Z"
-  },
-  {
-    "name": "partikel",
-    "description": "High-performance CPU/GPU particle simulation engine and physics effects in Rust",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/partikel",
-    "target_url": "https://github.com/bhubbard/partikel",
-    "topics": [
-      "gamedev",
-      "particle-system",
-      "physics-simulation",
-      "rust",
-      "vfx"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-10-05T15:50:13Z"
   },
   {
     "name": "plane-cf",
@@ -2958,26 +3094,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:57:26Z"
-  },
-  {
-    "name": "sadtalker-rs",
-    "description": "Pure Rust port of SadTalker: stylized audio-driven single-image talking face animation with 3D motion coefficients.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/sadtalker-rs",
-    "target_url": "https://github.com/bhubbard/sadtalker-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-12T18:55:21Z"
   },
   {
     "name": "searchphone",
@@ -3083,122 +3199,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-09-26T18:57:28Z"
-  },
-  {
-    "name": "toontalker-rs",
-    "description": "Pure Rust cross-domain cartoon and stylized avatar talking-head synthesis engine driven by audio.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/toontalker-rs",
-    "target_url": "https://github.com/bhubbard/toontalker-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-12T18:55:23Z"
-  },
-  {
-    "name": "unlighthouse-rs",
-    "description": "A Rust port of the Unlighthouse Lighthouse auditing tool.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/unlighthouse-rs",
-    "target_url": "https://github.com/bhubbard/unlighthouse-rs",
-    "topics": [
-      "audit",
-      "cli",
-      "lighthouse",
-      "performance",
-      "rust"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-10-31T01:16:45Z"
-  },
-  {
-    "name": "video-retalking-rs",
-    "description": "Pure Rust audio-based lip synchronization and facial reenactment pipeline for talking-head video editing.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/video-retalking-rs",
-    "target_url": "https://github.com/bhubbard/video-retalking-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-12T18:55:28Z"
-  },
-  {
-    "name": "wav2lip-rs",
-    "description": "High-speed pure Rust inference engine for Wav2Lip audio-driven lip-sync synthesis and video dubbing.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/wav2lip-rs",
-    "target_url": "https://github.com/bhubbard/wav2lip-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-12T18:55:36Z"
-  },
-  {
-    "name": "wp-blockmarkup-mcp",
-    "description": "High-speed Rust Model Context Protocol (MCP) server for WordPress block grammar parsing",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust",
-      "wordpress"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
-    "target_url": "https://github.com/bhubbard/wp-blockmarkup-mcp",
-    "topics": [
-      "ai",
-      "audit",
-      "cli",
-      "gutenberg",
-      "mcp",
-      "model-context-protocol",
-      "rust",
-      "wordpress"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-09-26T18:57:09Z"
   },
   {
     "name": "wp-cleanup-scripts",
