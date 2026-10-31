@@ -68,6 +68,7 @@ GITHUB_PAGES_MAP = {
     "mlx-gen-rs": "https://code.brandonhubbard.com/mlx-gen-rs/",
     "mlx-video-rs": "https://code.brandonhubbard.com/mlx-video-rs/",
     "nanoswarm-rs": "https://code.brandonhubbard.com/nanoswarm-rs/",
+    "neteq-rs": "https://code.brandonhubbard.com/neteq-rs/",
     "olive-rs": "https://code.brandonhubbard.com/olive-rs/",
     "open-generative-ai-rs": "https://code.brandonhubbard.com/open-generative-ai-rs/",
     "open-higgsfield-ai-rs": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",

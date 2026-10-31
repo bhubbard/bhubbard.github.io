@@ -717,7 +717,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-30T23:04:05Z"
+    "pushed_at": "2026-10-30T23:18:16Z"
   },
   {
     "name": "box3d-rs",
@@ -1486,6 +1486,26 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-10-05T06:12:47Z"
+  },
+  {
+    "name": "neteq-rs",
+    "description": "Pure Rust standalone port of WebRTC NetEQ: adaptive audio jitter buffer, packet loss concealment (PLC), time-stretching (WSOLA), and comfort noise for real-time voice AI streaming",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/neteq-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/neteq-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/neteq-rs",
+    "target_url": "https://code.brandonhubbard.com/neteq-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-10-31T00:06:15Z"
   },
   {
     "name": "olive-rs",
@@ -2752,26 +2772,6 @@
     "pushed_at": "2026-10-12T18:55:15Z"
   },
   {
-    "name": "neteq-rs",
-    "description": "Pure Rust standalone port of WebRTC NetEQ: adaptive audio jitter buffer, packet loss concealment (PLC), time-stretching (WSOLA), and comfort noise for real-time voice AI streaming",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": false,
-    "page_url": null,
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/neteq-rs",
-    "target_url": "https://github.com/bhubbard/neteq-rs",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-10-30T15:00:26Z"
-  },
-  {
     "name": "opendental",
     "description": "High-performance edge-native serverless fork of Open Dental Practice Management Software on Cloudflare Workers and D1.",
     "language": "C#",
@@ -3108,7 +3108,7 @@
       "rust"
     ],
     "is_archived": false,
-    "pushed_at": "2026-10-30T18:01:10Z"
+    "pushed_at": "2026-10-31T00:02:14Z"
   },
   {
     "name": "video-retalking-rs",
