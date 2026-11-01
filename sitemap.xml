@@ -170,6 +170,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/alt-text-ai/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/animated-gradient-cover-block/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/antispambot-cf-worker/</loc>
+    <lastmod>2022-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/auge-rs/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -212,6 +230,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/decision-index/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/defy-rs/</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -242,6 +266,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/fonoster/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/freevideo-rs/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -250,6 +280,12 @@
   <url>
     <loc>https://code.brandonhubbard.com/gambetta-netcode-rs/</loc>
     <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/gcf-pubsub-webhook/</loc>
+    <lastmod>2020-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -266,7 +302,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/homebrew-tap/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/hunyuan3d-rs/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/hyperframes/</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -274,6 +322,12 @@
   <url>
     <loc>https://code.brandonhubbard.com/hypit-rs/</loc>
     <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/image-altext/</loc>
+    <lastmod>2024-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -290,8 +344,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/kumo-drift-checks/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/latentsync-rs/</loc>
     <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/locals/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -328,6 +394,12 @@
   <url>
     <loc>https://code.brandonhubbard.com/minimal-hud-rs/</loc>
     <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/minimind/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -392,6 +464,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/opendental/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/openmontage-rs/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -422,8 +500,32 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/plane-cf/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/plugin-updater-cf-worker/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/poormans-camera-rs/</loc>
     <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/post-navigation-block/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/pressable-cli/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -436,6 +538,12 @@
   <url>
     <loc>https://code.brandonhubbard.com/rea-rs/</loc>
     <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/rest-api-examples/</loc>
+    <lastmod>2024-12-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -458,6 +566,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/send-to-pubsub/</loc>
+    <lastmod>2022-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/sensitive-image-block/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/serpbear/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/sfxr-rs/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -466,6 +592,18 @@
   <url>
     <loc>https://code.brandonhubbard.com/simplecar2-rs/</loc>
     <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/sitemap-scan/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/skills/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -566,8 +704,86 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/woo-order-to-google-storage/</loc>
+    <lastmod>2022-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/wp-blockmarkup-mcp/</loc>
     <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-cleanup-scripts/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-clio-api/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-cloudflare-d1/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-cloudflare-kv/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-gemini-cleaner/</loc>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-givebutter-api/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-lawmatics-api/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-plugin-uninstalls/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-pressable-api/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-spinupwp-api/</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/wp-theme-check-cli/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/yoast-seo-audit/</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
