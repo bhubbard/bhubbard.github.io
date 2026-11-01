@@ -12,6 +12,17 @@
   },
   {
     "rank": 2,
+    "name": "nanoswarm-rs",
+    "reference_runtime": "CrewAI / LangGraph (Python)",
+    "domain": "100% on-device autonomous AI agent swarm, Zev SIMD router & Apfel FFI",
+    "speedup_label": "146,500\u00d7 faster",
+    "speedup_factor": 146500.0,
+    "page_url": "https://code.brandonhubbard.com/nanoswarm-rs/",
+    "benchmark_url": "https://github.com/bhubbard/nanoswarm-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/nanoswarm-rs"
+  },
+  {
+    "rank": 3,
     "name": "uxsim-rs",
     "reference_runtime": "UXsim (Python)",
     "domain": "Macroscopic city-wide traffic flow simulator",
@@ -22,7 +33,7 @@
     "github_url": "https://github.com/bhubbard/uxsim-rs"
   },
   {
-    "rank": 3,
+    "rank": 4,
     "name": "vite-plus-commitlint",
     "reference_runtime": "@commitlint/cli (Node)",
     "domain": "Native Git commit hook convention linter",
@@ -33,7 +44,18 @@
     "github_url": "https://github.com/bhubbard/vite-plus-commitlint"
   },
   {
-    "rank": 4,
+    "rank": 5,
+    "name": "flarelint",
+    "reference_runtime": "ESLint + @cloudflare/eslint-plugin-workers",
+    "domain": "Zero-copy OXC AST static analysis & Cloudflare Workers / Astro edge compatibility linter",
+    "speedup_label": "215\u00d7 faster",
+    "speedup_factor": 215.0,
+    "page_url": "https://code.brandonhubbard.com/flarelint/",
+    "benchmark_url": "https://github.com/bhubbard/flarelint/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/flarelint"
+  },
+  {
+    "rank": 6,
     "name": "clippy-cf-reporter",
     "reference_runtime": "Node.js Action Runner",
     "domain": "Clippy SARIF & PR annotation CI reporter",
@@ -44,7 +66,7 @@
     "github_url": "https://github.com/bhubbard/clippy-cf-reporter"
   },
   {
-    "rank": 5,
+    "rank": 7,
     "name": "vite-plus-kumo-ui",
     "reference_runtime": "Storybook / Vite (Node)",
     "domain": "Cloudflare Kumo UI token & spec bundler",
@@ -55,7 +77,18 @@
     "github_url": "https://github.com/bhubbard/vite-plus-kumo-ui"
   },
   {
-    "rank": 6,
+    "rank": 8,
+    "name": "vite-plus-wrangler",
+    "reference_runtime": "Wrangler CLI Config Loader (Node)",
+    "domain": "Monorepo Wrangler config discovery, account guard & D1 migration lexicographical verifier",
+    "speedup_label": "168\u00d7 faster",
+    "speedup_factor": 168.0,
+    "page_url": "https://code.brandonhubbard.com/vite-plus-wrangler/",
+    "benchmark_url": "https://github.com/bhubbard/vite-plus-wrangler/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/vite-plus-wrangler"
+  },
+  {
+    "rank": 9,
     "name": "lossless-cut-rs",
     "reference_runtime": "LosslessCut (Electron)",
     "domain": "Zero-loss keyframe video & audio stream trimmer",
@@ -66,7 +99,29 @@
     "github_url": "https://github.com/bhubbard/lossless-cut-rs"
   },
   {
-    "rank": 7,
+    "rank": 10,
+    "name": "flareguard",
+    "reference_runtime": "TruffleHog / ESLint Security Suite",
+    "domain": "Cloudflare AST secret scanner, Worker binding verifier, Zone posture auditor & origin IP hunter",
+    "speedup_label": "142\u00d7 faster",
+    "speedup_factor": 142.0,
+    "page_url": "https://code.brandonhubbard.com/flareguard/",
+    "benchmark_url": "https://github.com/bhubbard/flareguard/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/flareguard"
+  },
+  {
+    "rank": 11,
+    "name": "flareperf",
+    "reference_runtime": "Webpack Bundle Analyzer + Babel AST",
+    "domain": "Cloudflare Worker bundle budget guardian, Error 1101 cold-start analyzer, 50-subrequest & D1 N+1 auditor",
+    "speedup_label": "136\u00d7 faster",
+    "speedup_factor": 136.0,
+    "page_url": "https://code.brandonhubbard.com/flareperf/",
+    "benchmark_url": "https://github.com/bhubbard/flareperf/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/flareperf"
+  },
+  {
+    "rank": 12,
     "name": "lux-rs",
     "reference_runtime": "Lux (Python / Elixir)",
     "domain": "Volumetric lighting & tensor operator dispatch",
@@ -77,7 +132,40 @@
     "github_url": "https://github.com/bhubbard/lux-rs"
   },
   {
-    "rank": 8,
+    "rank": 13,
+    "name": "flareops",
+    "reference_runtime": "wrangler types + Custom Node Scripts",
+    "domain": "Cloudflare Workers, Pages & Astro DX CLI \u2014 cloudflare-env.d.ts sync, _routes.json optimizer & KV session audit",
+    "speedup_label": "128\u00d7 faster",
+    "speedup_factor": 128.0,
+    "page_url": "https://code.brandonhubbard.com/flareops/",
+    "benchmark_url": "https://github.com/bhubbard/flareops/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/flareops"
+  },
+  {
+    "rank": 14,
+    "name": "desktop-rs",
+    "reference_runtime": "GitHub Desktop (Electron / TS)",
+    "domain": "Pure-Rust GitHub Desktop TUI, GUI & CLI with zero-copy unified diff parser and branch graph engine",
+    "speedup_label": "108\u00d7 faster",
+    "speedup_factor": 108.0,
+    "page_url": "https://code.brandonhubbard.com/desktop-rs/",
+    "benchmark_url": "https://github.com/bhubbard/desktop-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/desktop-rs"
+  },
+  {
+    "rank": 15,
+    "name": "rea-rs",
+    "reference_runtime": "morluto/rea (Node.js + Capstone)",
+    "domain": "Native Mach-O, ELF, PE32+ & .NET CIL binary reverse-engineering engine, CFG decompiler & MCP server",
+    "speedup_label": "94.6\u00d7 faster",
+    "speedup_factor": 94.6,
+    "page_url": "https://code.brandonhubbard.com/rea-rs/",
+    "benchmark_url": "https://github.com/bhubbard/rea-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/rea-rs"
+  },
+  {
+    "rank": 16,
     "name": "partikel",
     "reference_runtime": "After Effects Expressions / Python",
     "domain": "3-tier motion design engine, analytical damped harmonic springs, WCAG 2.1 contrast & Lottie JSON",
@@ -88,7 +176,29 @@
     "github_url": "https://github.com/bhubbard/partikel"
   },
   {
-    "rank": 9,
+    "rank": 17,
+    "name": "ffmpeg-skill-rs",
+    "reference_runtime": "kajisho5/ffmpeg-skill (Python / Node)",
+    "domain": "Deterministic FFmpeg media editing CLI (fms), EBU R128 loudness normalizer & AI agent MCP server",
+    "speedup_label": "86.4\u00d7 faster",
+    "speedup_factor": 86.4,
+    "page_url": "https://code.brandonhubbard.com/ffmpeg-skill-rs/",
+    "benchmark_url": "https://github.com/bhubbard/ffmpeg-skill-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/ffmpeg-skill-rs"
+  },
+  {
+    "rank": 18,
+    "name": "generate-glb-rs",
+    "reference_runtime": "castellotti/generate-glb (Python)",
+    "domain": "Streaming LLaMA-Mesh OBJ token parser, Y-axis gradient vertex colorizer & binary glTF 2.0 (.glb) serializer",
+    "speedup_label": "74.2\u00d7 faster",
+    "speedup_factor": 74.2,
+    "page_url": "https://code.brandonhubbard.com/generate-glb-rs/",
+    "benchmark_url": "https://github.com/bhubbard/generate-glb-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/generate-glb-rs"
+  },
+  {
+    "rank": 19,
     "name": "wp-blockmarkup-mcp",
     "reference_runtime": "@wordpress/default-parser + Babel (Node)",
     "domain": "Zero-copy Gutenberg block grammar parser, oxc_parser save.js AST verifier & SQLite MCP server",
@@ -99,18 +209,7 @@
     "github_url": "https://github.com/bhubbard/wp-blockmarkup-mcp"
   },
   {
-    "rank": 10,
-    "name": "astro-compress-rs",
-    "reference_runtime": "astro-compress (Node / Sharp / SVGO)",
-    "domain": "Parallel Rayon asset minifier, Capo.js 11-weight head tag sorter & critical CSS inliner",
-    "speedup_label": "64.7\u00d7 faster",
-    "speedup_factor": 64.7,
-    "page_url": "https://code.brandonhubbard.com/astro-compress-rs/",
-    "benchmark_url": "https://github.com/bhubbard/astro-compress-rs/blob/main/BENCHMARKS.md",
-    "github_url": "https://github.com/bhubbard/astro-compress-rs"
-  },
-  {
-    "rank": 11,
+    "rank": 20,
     "name": "searchphone",
     "reference_runtime": "PhoneInfoga / phonenumbers (Python)",
     "domain": "ITU-T E.164 OSINT validator, Hudson Rock infostealer threat scorer, STIX 2.1 & D3 graph engine",
@@ -121,7 +220,18 @@
     "github_url": "https://github.com/bhubbard/searchphone"
   },
   {
-    "rank": 12,
+    "rank": 21,
+    "name": "astro-compress-rs",
+    "reference_runtime": "astro-compress (Node / Sharp / SVGO)",
+    "domain": "Parallel Rayon asset minifier, Capo.js 11-weight head tag sorter & critical CSS inliner",
+    "speedup_label": "64.7\u00d7 faster",
+    "speedup_factor": 64.7,
+    "page_url": "https://code.brandonhubbard.com/astro-compress-rs/",
+    "benchmark_url": "https://github.com/bhubbard/astro-compress-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/astro-compress-rs"
+  },
+  {
+    "rank": 22,
     "name": "hypit-rs",
     "reference_runtime": "Celery / Temporal (Python)",
     "domain": "DAG workflow compiler, DP critical-path makespan analyzer & exponential retry orchestrator",
@@ -132,7 +242,7 @@
     "github_url": "https://github.com/bhubbard/hypit-rs"
   },
   {
-    "rank": 13,
+    "rank": 23,
     "name": "freevideo-rs",
     "reference_runtime": "ffmpeg-python / Decord (Python)",
     "domain": "Two-pass adaptive video sampler, Otsu motion threshold & ROI spatial crop planner",
@@ -143,7 +253,7 @@
     "github_url": "https://github.com/bhubbard/freevideo-rs"
   },
   {
-    "rank": 14,
+    "rank": 24,
     "name": "open-generative-ai-rs",
     "reference_runtime": "Python GenAI Pipelines",
     "domain": "Unified neural inference & noise schedule runtime",
@@ -154,7 +264,7 @@
     "github_url": "https://github.com/bhubbard/open-generative-ai-rs"
   },
   {
-    "rank": 15,
+    "rank": 25,
     "name": "paperclip-rs",
     "reference_runtime": "LangGraph / CrewAI (Python)",
     "domain": "Autonomous multi-agent control plane, atomic CAS task checkout & 80% soft-cap budget enforcer",
@@ -165,7 +275,7 @@
     "github_url": "https://github.com/bhubbard/paperclip-rs"
   },
   {
-    "rank": 16,
+    "rank": 26,
     "name": "kadraj",
     "reference_runtime": "SceneDetect + Whisper + MediaPipe (Python)",
     "domain": "Automated podcast-to-shorts engine, spring-damper 9:16 active speaker crop & virality scorer",
@@ -176,7 +286,7 @@
     "github_url": "https://github.com/bhubbard/kadraj"
   },
   {
-    "rank": 17,
+    "rank": 27,
     "name": "wav2lip-rs",
     "reference_runtime": "Wav2Lip (Python / PyTorch)",
     "domain": "80-bin log-Mel spectrogram extractor, SyncNet cosine evaluator & Laplacian pyramid mouth blender",
@@ -187,7 +297,7 @@
     "github_url": "https://github.com/bhubbard/wav2lip-rs"
   },
   {
-    "rank": 18,
+    "rank": 28,
     "name": "unlighthouse-rs",
     "reference_runtime": "Unlighthouse (Node.js / Nitro)",
     "domain": "Site-wide Lighthouse v10 scanner, sitemap/robots route discovery, SQLite WAL & MCP server",
@@ -198,7 +308,7 @@
     "github_url": "https://github.com/bhubbard/unlighthouse-rs"
   },
   {
-    "rank": 19,
+    "rank": 29,
     "name": "toontalker-rs",
     "reference_runtime": "ToonTalker (Python / PyTorch)",
     "domain": "Cross-domain cartoon talking-head transformer, TPS keypoint warp & bidirectional flow",
@@ -209,7 +319,7 @@
     "github_url": "https://github.com/bhubbard/toontalker-rs"
   },
   {
-    "rank": 20,
+    "rank": 30,
     "name": "opensource-clipping-rs",
     "reference_runtime": "OpenSource-Clipping / PySceneDetect (Python)",
     "domain": "650+ FPS 64-bin RGB/HSV shot boundary detector, 9:16 EMA face tracker & kinetic .ass karaoke subtitles",
@@ -220,7 +330,7 @@
     "github_url": "https://github.com/bhubbard/opensource-clipping-rs"
   },
   {
-    "rank": 21,
+    "rank": 31,
     "name": "sadtalker-rs",
     "reference_runtime": "SadTalker (Python / PyTorch)",
     "domain": "3DMM 70-coefficient Audio2Exp + Audio2Pose synthesis, Savitzky-Golay smoothing & 3D face renderer",
@@ -231,7 +341,7 @@
     "github_url": "https://github.com/bhubbard/sadtalker-rs"
   },
   {
-    "rank": 22,
+    "rank": 32,
     "name": "kubeezcut-rs",
     "reference_runtime": "KubeezCut / OpenTimelineIO (TS / Python)",
     "domain": "Multi-track NLE engine, Cubic Bezier keyframes, WebGPU shaders & ASWF .otio / CMX 3600 EDL export",
@@ -242,7 +352,7 @@
     "github_url": "https://github.com/bhubbard/kubeezcut-rs"
   },
   {
-    "rank": 23,
+    "rank": 33,
     "name": "video-retalking-rs",
     "reference_runtime": "Video-ReTalking (Python / PyTorch)",
     "domain": "3-stage canonical expression neutralizer, LNet lip-sync & face restoration enhancer",
@@ -253,7 +363,7 @@
     "github_url": "https://github.com/bhubbard/video-retalking-rs"
   },
   {
-    "rank": 24,
+    "rank": 34,
     "name": "longcat-video-rs",
     "reference_runtime": "LongCat-Video (Python / PyTorch)",
     "domain": "Long-horizon DiT video continuation, KV-cache context ring & temporal overlap blending",
@@ -264,7 +374,7 @@
     "github_url": "https://github.com/bhubbard/longcat-video-rs"
   },
   {
-    "rank": 25,
+    "rank": 35,
     "name": "auge-rs",
     "reference_runtime": "GazeTracking (Python)",
     "domain": "3,200 FPS real-time eye & pupil gaze estimation",
@@ -275,7 +385,7 @@
     "github_url": "https://github.com/bhubbard/auge-rs"
   },
   {
-    "rank": 26,
+    "rank": 36,
     "name": "musetalk-rs",
     "reference_runtime": "MuseTalk (Python / MMPose / PyTorch)",
     "domain": "30+ FPS real-time latent space inpainting, Whisper audio cross-attention & BBox smoothing",
@@ -286,7 +396,7 @@
     "github_url": "https://github.com/bhubbard/musetalk-rs"
   },
   {
-    "rank": 27,
+    "rank": 37,
     "name": "open-higgsfield-ai-rs",
     "reference_runtime": "Higgsfield (Python)",
     "domain": "6-DOF camera trajectory & motion video synthesis",
@@ -297,7 +407,7 @@
     "github_url": "https://github.com/bhubbard/open-higgsfield-ai-rs"
   },
   {
-    "rank": 28,
+    "rank": 38,
     "name": "agentarena-rs",
     "reference_runtime": "Gymnasium / PettingZoo (Python)",
     "domain": "4-domain deterministic AI agent simulation arena, ELO tournament & replay verifier",
@@ -308,7 +418,7 @@
     "github_url": "https://github.com/bhubbard/agentarena-rs"
   },
   {
-    "rank": 29,
+    "rank": 39,
     "name": "aesir-utils-rs",
     "reference_runtime": "AesirUtils (FiveM)",
     "domain": "Screen safezone, aspect ratio & UI anchor math",
@@ -319,18 +429,7 @@
     "github_url": "https://github.com/bhubbard/aesir-utils-rs"
   },
   {
-    "rank": 30,
-    "name": "handbrake-rs",
-    "reference_runtime": "HandBrake CLI (C)",
-    "domain": "Hardware video transcode & filter pipeline engine",
-    "speedup_label": "44.0\u00d7 faster",
-    "speedup_factor": 44.0,
-    "page_url": "https://code.brandonhubbard.com/handbrake-rs/",
-    "benchmark_url": "https://github.com/bhubbard/handbrake-rs/blob/main/BENCHMARKS.md",
-    "github_url": "https://github.com/bhubbard/handbrake-rs"
-  },
-  {
-    "rank": 31,
+    "rank": 40,
     "name": "void-model-rs",
     "reference_runtime": "Netflix VOID (Python / PyTorch)",
     "domain": "4-state QuadMask truth-table, VLM contact graph, Pass 2 flow-warped latent noise & counterfactual physics",
@@ -341,7 +440,18 @@
     "github_url": "https://github.com/bhubbard/void-model-rs"
   },
   {
-    "rank": 32,
+    "rank": 41,
+    "name": "handbrake-rs",
+    "reference_runtime": "HandBrake CLI (C)",
+    "domain": "Hardware video transcode & filter pipeline engine",
+    "speedup_label": "44.0\u00d7 faster",
+    "speedup_factor": 44.0,
+    "page_url": "https://code.brandonhubbard.com/handbrake-rs/",
+    "benchmark_url": "https://github.com/bhubbard/handbrake-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/handbrake-rs"
+  },
+  {
+    "rank": 42,
     "name": "minimal-hud-rs",
     "reference_runtime": "Minimal-HUD (Lua)",
     "domain": "Event-driven HUD telemetry with dirty-state tracking",
@@ -352,7 +462,7 @@
     "github_url": "https://github.com/bhubbard/minimal-hud-rs"
   },
   {
-    "rank": 33,
+    "rank": 43,
     "name": "auto-editor-rs",
     "reference_runtime": "auto-editor (Python)",
     "domain": "Boolean S-expression silence/motion cut AST, margin bridging & 8-format NLE XML export",
@@ -363,7 +473,7 @@
     "github_url": "https://github.com/bhubbard/auto-editor-rs"
   },
   {
-    "rank": 34,
+    "rank": 44,
     "name": "latentsync-rs",
     "reference_runtime": "LatentSync 1.6 (Python / PyTorch)",
     "domain": "16 kHz Whisper 1024-D embeddings, 3D latent lower-face masking & DDIM audio cross-attention",
@@ -374,7 +484,18 @@
     "github_url": "https://github.com/bhubbard/latentsync-rs"
   },
   {
-    "rank": 35,
+    "rank": 45,
+    "name": "watertight-meshes-rs",
+    "reference_runtime": "PixelArtistry-Watertight-Meshes (Python)",
+    "domain": "Spatial-hash vertex welding, 3D flood-fill voxel remeshing, 256-case Marching Cubes & QEM mesh decimation",
+    "speedup_label": "38.5\u00d7 faster",
+    "speedup_factor": 38.5,
+    "page_url": "https://code.brandonhubbard.com/watertight-meshes-rs/",
+    "benchmark_url": "https://github.com/bhubbard/watertight-meshes-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/watertight-meshes-rs"
+  },
+  {
+    "rank": 46,
     "name": "openmontage-rs",
     "reference_runtime": "OpenMontage (Python / moviepy)",
     "domain": "Agentic video production DAGs, 6-track NLE timeline & -12dB ducking",
@@ -385,7 +506,7 @@
     "github_url": "https://github.com/bhubbard/openmontage-rs"
   },
   {
-    "rank": 36,
+    "rank": 47,
     "name": "vhud-rs",
     "reference_runtime": "V-HUD (Lua)",
     "domain": "GTA V radar, minimap projection & GPS route engine",
@@ -396,7 +517,7 @@
     "github_url": "https://github.com/bhubbard/vhud-rs"
   },
   {
-    "rank": 37,
+    "rank": 48,
     "name": "neteq-rs",
     "reference_runtime": "WebRTC NetEQ (Python / aiortc)",
     "domain": "Adaptive jitter buffer, O(1) NCC + MPM WSOLA time-stretching & PLC",
@@ -407,7 +528,18 @@
     "github_url": "https://github.com/bhubbard/neteq-rs"
   },
   {
-    "rank": 38,
+    "rank": 49,
+    "name": "clearwater-rs",
+    "reference_runtime": "Clearwater / NumPy FFT Reference",
+    "domain": "Real-time Tessendorf 2D FFT shallow ocean waves, chromatic dispersion caustics, LEAN mapping & Beer-Lambert optics",
+    "speedup_label": "31.8\u00d7 faster",
+    "speedup_factor": 31.8,
+    "page_url": "https://code.brandonhubbard.com/clearwater-rs/",
+    "benchmark_url": "https://github.com/bhubbard/clearwater-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/clearwater-rs"
+  },
+  {
+    "rank": 50,
     "name": "voicestudio-rs",
     "reference_runtime": "Python (librosa / pyloudnorm / pydub)",
     "domain": "512-dim speaker persona cloning, timed dubbing & -16 LUFS broadcast DSP",
@@ -418,7 +550,7 @@
     "github_url": "https://github.com/bhubbard/voicestudio-rs"
   },
   {
-    "rank": 39,
+    "rank": 51,
     "name": "upscayl-rs",
     "reference_runtime": "Upscayl (Electron / Python PIL)",
     "domain": "Dual-engine AI super-resolution, Lanczos3 + unsharp DSP & 8K seam-feathered tiler",
@@ -429,7 +561,7 @@
     "github_url": "https://github.com/bhubbard/upscayl-rs"
   },
   {
-    "rank": 40,
+    "rank": 52,
     "name": "radial-menu-rs",
     "reference_runtime": "RadialMenu (Lua/CEF)",
     "domain": "60 FPS radial weapon wheel & deadzone angle math",
@@ -440,7 +572,29 @@
     "github_url": "https://github.com/bhubbard/radial-menu-rs"
   },
   {
-    "rank": 41,
+    "rank": 53,
+    "name": "lyra-rs",
+    "reference_runtime": "NVIDIA Project Lyra (Python / PyTorch)",
+    "domain": "Generative 3D world models, parallel 3D Gaussian Splatting software rasterizer, SH degree-3 & Pl\u00fccker ray trajectories",
+    "speedup_label": "27.4\u00d7 faster",
+    "speedup_factor": 27.4,
+    "page_url": "https://code.brandonhubbard.com/lyra-rs/",
+    "benchmark_url": "https://github.com/bhubbard/lyra-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/lyra-rs"
+  },
+  {
+    "rank": 54,
+    "name": "hunyuan3d-rs",
+    "reference_runtime": "Tencent Hunyuan3D-2.1 (Python / PyTorch)",
+    "domain": "3D RoPE Spatio-Temporal DiT, RK4 Rectified Flow matching, 256-table Marching Cubes & multi-view PBR texture baker",
+    "speedup_label": "24.6\u00d7 faster",
+    "speedup_factor": 24.6,
+    "page_url": "https://code.brandonhubbard.com/hunyuan3d-rs/",
+    "benchmark_url": "https://github.com/bhubbard/hunyuan3d-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/hunyuan3d-rs"
+  },
+  {
+    "rank": 55,
     "name": "sdf-math-rs",
     "reference_runtime": "Inigo Quilez (GLSL)",
     "domain": "2D & 3D Signed Distance Fields & CSG raymarching",
@@ -451,7 +605,7 @@
     "github_url": "https://github.com/bhubbard/sdf-math-rs"
   },
   {
-    "rank": 42,
+    "rank": 56,
     "name": "yt-dlp-rs",
     "reference_runtime": "yt-dlp (Python)",
     "domain": "Zero-Python media metadata extractor & stream client",
@@ -462,7 +616,7 @@
     "github_url": "https://github.com/bhubbard/yt-dlp-rs"
   },
   {
-    "rank": 43,
+    "rank": 57,
     "name": "defy-rs",
     "reference_runtime": "PoliceTools / Defy",
     "domain": "Pursuit dispatch, wanted level & AI state machine",
@@ -473,7 +627,7 @@
     "github_url": "https://github.com/bhubbard/defy-rs"
   },
   {
-    "rank": 44,
+    "rank": 58,
     "name": "poormans-camera-rs",
     "reference_runtime": "Poor Man's Camera (C#)",
     "domain": "3D third-person camera rig with sphere-cast collision",
@@ -484,7 +638,7 @@
     "github_url": "https://github.com/bhubbard/poormans-camera-rs"
   },
   {
-    "rank": 45,
+    "rank": 59,
     "name": "sfxr-rs",
     "reference_runtime": "sfxr (C / SDL)",
     "domain": "Procedural 8-bit/16-bit sound effect synthesizer",
@@ -495,7 +649,7 @@
     "github_url": "https://github.com/bhubbard/sfxr-rs"
   },
   {
-    "rank": 46,
+    "rank": 60,
     "name": "dialogger-rs",
     "reference_runtime": "Dialogger (C#)",
     "domain": "Branching dialogue graph evaluator & NPC bark engine",
@@ -506,7 +660,7 @@
     "github_url": "https://github.com/bhubbard/dialogger-rs"
   },
   {
-    "rank": 47,
+    "rank": 61,
     "name": "gambetta-netcode-rs",
     "reference_runtime": "Gambetta Netcode (JS)",
     "domain": "Client-side prediction, reconciliation & interpolation",
@@ -517,7 +671,7 @@
     "github_url": "https://github.com/bhubbard/gambetta-netcode-rs"
   },
   {
-    "rank": 48,
+    "rank": 62,
     "name": "timesfm-rs",
     "reference_runtime": "Google TimesFM (JAX)",
     "domain": "Zero-shot time-series foundation model inference",
@@ -528,7 +682,7 @@
     "github_url": "https://github.com/bhubbard/timesfm-rs"
   },
   {
-    "rank": 49,
+    "rank": 63,
     "name": "sumo-rs",
     "reference_runtime": "Eclipse SUMO (C++)",
     "domain": "Microscopic traffic simulation & IDM car-following",
@@ -539,7 +693,7 @@
     "github_url": "https://github.com/bhubbard/sumo-rs"
   },
   {
-    "rank": 50,
+    "rank": 64,
     "name": "apfel-rs",
     "reference_runtime": "apfel (Swift / PyTorch)",
     "domain": "Apple Silicon on-device FoundationModels CLI & server",
@@ -550,7 +704,7 @@
     "github_url": "https://github.com/bhubbard/apfel-rs"
   },
   {
-    "rank": 51,
+    "rank": 65,
     "name": "translate-rs",
     "reference_runtime": "LibreTranslate (Python)",
     "domain": "Deterministic offline neural machine translation",
@@ -561,7 +715,7 @@
     "github_url": "https://github.com/bhubbard/translate-rs"
   },
   {
-    "rank": 52,
+    "rank": 66,
     "name": "tactical-ai-rs",
     "reference_runtime": "Game AI Pro (C#)",
     "domain": "Tactical influence maps, cover & flanking pathfinder",
@@ -572,7 +726,7 @@
     "github_url": "https://github.com/bhubbard/tactical-ai-rs"
   },
   {
-    "rank": 53,
+    "rank": 67,
     "name": "tlab-vehicle-physics-rs",
     "reference_runtime": "TLabVehiclePhysics (C#)",
     "domain": "Pacejka Magic Formula tire friction & drift physics",
@@ -583,7 +737,7 @@
     "github_url": "https://github.com/bhubbard/tlab-vehicle-physics-rs"
   },
   {
-    "rank": 54,
+    "rank": 68,
     "name": "active-ragdoll-rs",
     "reference_runtime": "ActiveRagdoll (Unity)",
     "domain": "Physical active ragdoll joint motors & balance recovery",
@@ -594,7 +748,7 @@
     "github_url": "https://github.com/bhubbard/active-ragdoll-rs"
   },
   {
-    "rank": 55,
+    "rank": 69,
     "name": "olive-rs",
     "reference_runtime": "Olive Editor (C++)",
     "domain": "Non-linear timeline & node compositing DAG engine",
@@ -605,7 +759,7 @@
     "github_url": "https://github.com/bhubbard/olive-rs"
   },
   {
-    "rank": 56,
+    "rank": 70,
     "name": "simplecar2-rs",
     "reference_runtime": "SimpleCar2 (GDScript)",
     "domain": "Arcade-sim vehicle dynamics & raycast suspension",
@@ -616,7 +770,7 @@
     "github_url": "https://github.com/bhubbard/simplecar2-rs"
   },
   {
-    "rank": 57,
+    "rank": 71,
     "name": "detour-crowd-rs",
     "reference_runtime": "Recast/Detour (C++)",
     "domain": "RVO crowd collision avoidance & navmesh steering",
@@ -627,7 +781,7 @@
     "github_url": "https://github.com/bhubbard/detour-crowd-rs"
   },
   {
-    "rank": 58,
+    "rank": 72,
     "name": "mlx-embeddings-rs",
     "reference_runtime": "sentence-transformers",
     "domain": "Apple Silicon vector embeddings & cosine search",
@@ -638,7 +792,7 @@
     "github_url": "https://github.com/bhubbard/mlx-embeddings-rs"
   },
   {
-    "rank": 59,
+    "rank": 73,
     "name": "comfyui-ltxvideo-mlx-rs",
     "reference_runtime": "ComfyUI LTX (PyTorch)",
     "domain": "Cinematic DiT video generation on Apple Silicon",
@@ -649,7 +803,7 @@
     "github_url": "https://github.com/bhubbard/comfyui-ltxvideo-mlx-rs"
   },
   {
-    "rank": 60,
+    "rank": 74,
     "name": "bullet3-rs",
     "reference_runtime": "Bullet3 SDK (C++)",
     "domain": "3D rigid/soft-body physics & GJK/EPA collision",
@@ -660,7 +814,7 @@
     "github_url": "https://github.com/bhubbard/bullet3-rs"
   },
   {
-    "rank": 61,
+    "rank": 75,
     "name": "openrw-rs",
     "reference_runtime": "OpenRW (C++)",
     "domain": "GTA III camera follow, targeting math & kinematics",
@@ -671,7 +825,7 @@
     "github_url": "https://github.com/bhubbard/openrw-rs"
   },
   {
-    "rank": 62,
+    "rank": 76,
     "name": "mlt-rs",
     "reference_runtime": "MLT Framework (C)",
     "domain": "Multimedia video playback, mixing & filter graph",
@@ -682,7 +836,29 @@
     "github_url": "https://github.com/bhubbard/mlt-rs"
   },
   {
-    "rank": 63,
+    "rank": 77,
+    "name": "box3d-rs",
+    "reference_runtime": "Rigid-Body 3D Physics Baseline (C++)",
+    "domain": "Erin Catto Box3D rigid-body physics engine \u2014 SAH dual dynamic AABB trees, convex SAT & 2\u00d72 block Coulomb friction",
+    "speedup_label": "3.4\u00d7 faster",
+    "speedup_factor": 3.4,
+    "page_url": "https://code.brandonhubbard.com/box3d-rs/",
+    "benchmark_url": "https://github.com/bhubbard/box3d-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/box3d-rs"
+  },
+  {
+    "rank": 78,
+    "name": "mlx-video-rs",
+    "reference_runtime": "Blaizzy/mlx-video (Python MLX)",
+    "domain": "Apple Silicon Metal Wan2.1/Wan2.2 3D-RoPE DiT & LTX-2 FlowDPMPP2M video generation engine via mlx-rs",
+    "speedup_label": "2.65\u00d7 faster",
+    "speedup_factor": 2.65,
+    "page_url": "https://code.brandonhubbard.com/mlx-video-rs/",
+    "benchmark_url": "https://github.com/bhubbard/mlx-video-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/mlx-video-rs"
+  },
+  {
+    "rank": 79,
     "name": "mlx-audio-rs",
     "reference_runtime": "mlx-audio (Python)",
     "domain": "On-device speech recognition & neural audio synthesis",
@@ -693,7 +869,7 @@
     "github_url": "https://github.com/bhubbard/mlx-audio-rs"
   },
   {
-    "rank": 64,
+    "rank": 80,
     "name": "mflux-rs",
     "reference_runtime": "mflux (Python MLX)",
     "domain": "Flux.1-schnell image generation on Apple Silicon",
@@ -704,7 +880,7 @@
     "github_url": "https://github.com/bhubbard/mflux-rs"
   },
   {
-    "rank": 65,
+    "rank": 81,
     "name": "mlx-gen-rs",
     "reference_runtime": "mlx-lm (Python MLX)",
     "domain": "High-throughput LLM text generation & token sampling",
@@ -715,7 +891,7 @@
     "github_url": "https://github.com/bhubbard/mlx-gen-rs"
   },
   {
-    "rank": 66,
+    "rank": 82,
     "name": "blender-rs",
     "reference_runtime": "Blender 4.2 (C/C++)",
     "domain": "Half-edge BMesh kernel, generational arena & pointerless BVH/KD-tree",
