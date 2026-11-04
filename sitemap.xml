@@ -3,7 +3,7 @@
   <!-- Root Flagship Engineering Portal -->
   <url>
     <loc>https://code.brandonhubbard.com/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -201,7 +201,7 @@
   </url>
   <url>
     <loc>https://code.brandonhubbard.com/blender-rs/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
