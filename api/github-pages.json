@@ -111,6 +111,26 @@
     "pushed_at": "2026-11-01T21:43:55Z"
   },
   {
+    "name": "blender-rs",
+    "description": "Memory-safe, high-performance pure Rust port of Blender 3D creation suite \u2014 mesh modeling, scene graph, and rendering pipeline.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 2,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/blender-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/blender-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/blender-rs",
+    "target_url": "https://code.brandonhubbard.com/blender-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-04T06:22:15Z"
+  },
+  {
     "name": "rest-api-examples",
     "description": "Simple examples of custom rest endpoints for common WordPress functions",
     "language": "PHP",
@@ -255,26 +275,6 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-11-01T21:47:38Z"
-  },
-  {
-    "name": "blender-rs",
-    "description": "Memory-safe, high-performance pure Rust port of Blender 3D creation suite \u2014 mesh modeling, scene graph, and rendering pipeline.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/blender-rs/",
-    "has_benchmarks": true,
-    "benchmark_url": "https://github.com/bhubbard/blender-rs/blob/main/BENCHMARKS.md",
-    "github_url": "https://github.com/bhubbard/blender-rs",
-    "target_url": "https://code.brandonhubbard.com/blender-rs/",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-11-04T06:22:15Z"
   },
   {
     "name": "gcf-pubsub-webhook",
@@ -1239,7 +1239,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-03T13:05:24Z"
+    "pushed_at": "2026-11-04T13:20:57Z"
   },
   {
     "name": "box3d-rs",
