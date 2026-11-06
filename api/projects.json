@@ -128,7 +128,7 @@
     "target_url": "https://code.brandonhubbard.com/blender-rs/",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-11-04T06:22:15Z"
+    "pushed_at": "2026-11-06T06:13:10Z"
   },
   {
     "name": "rest-api-examples",
@@ -1239,7 +1239,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-04T13:20:57Z"
+    "pushed_at": "2026-11-05T13:34:14Z"
   },
   {
     "name": "box3d-rs",
@@ -1799,7 +1799,7 @@
       "package-manager"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-01T21:44:24Z"
+    "pushed_at": "2026-11-05T17:24:57Z"
   },
   {
     "name": "hunyuan3d-rs",
@@ -3375,6 +3375,45 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-11-02T03:57:26Z"
+  },
+  {
+    "name": "dossier",
+    "description": "A self-hosted job search and resume builder app that writes tailored resumes and cover letters from your profile.",
+    "language": "TypeScript",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/dossier",
+    "target_url": "https://github.com/bhubbard/dossier",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-06T06:01:00Z"
+  },
+  {
+    "name": "elephant-goldfish-model-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Python",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/elephant-goldfish-model-rs",
+    "target_url": "https://github.com/bhubbard/elephant-goldfish-model-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-06T04:40:56Z"
   },
   {
     "name": "grenade",
