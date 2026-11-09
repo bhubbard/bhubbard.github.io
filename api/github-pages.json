@@ -56,6 +56,32 @@
     "pushed_at": "2026-11-01T21:44:51Z"
   },
   {
+    "name": "active-ragdoll-rs",
+    "description": "Pure Rust physical active ragdoll simulation, joint motors, and balance recovery",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 3,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/active-ragdoll-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/active-ragdoll-rs",
+    "target_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
+    "topics": [
+      "balance-control",
+      "joint-motors",
+      "physics-simulation",
+      "ragdoll",
+      "rust"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-11-01T21:43:55Z"
+  },
+  {
     "name": "wp-cloudflare-d1",
     "description": "Modern PHP client library to query Cloudflare D1 SQL databases from WordPress",
     "language": "PHP",
@@ -83,32 +109,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-11-01T21:45:02Z"
-  },
-  {
-    "name": "active-ragdoll-rs",
-    "description": "Pure Rust physical active ragdoll simulation, joint motors, and balance recovery",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 2,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
-    "has_benchmarks": true,
-    "benchmark_url": "https://github.com/bhubbard/active-ragdoll-rs/blob/main/BENCHMARKS.md",
-    "github_url": "https://github.com/bhubbard/active-ragdoll-rs",
-    "target_url": "https://code.brandonhubbard.com/active-ragdoll-rs/",
-    "topics": [
-      "balance-control",
-      "joint-motors",
-      "physics-simulation",
-      "ragdoll",
-      "rust"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-11-01T21:43:55Z"
   },
   {
     "name": "blender-rs",
@@ -1239,7 +1239,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-07T11:58:25Z"
+    "pushed_at": "2026-11-08T12:17:23Z"
   },
   {
     "name": "box3d-rs",
