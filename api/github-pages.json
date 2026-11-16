@@ -131,6 +131,32 @@
     "pushed_at": "2026-11-06T06:13:10Z"
   },
   {
+    "name": "open-higgsfield-ai-rs",
+    "description": "Open-source video generation and motion-guided neural synthesis pipeline in Rust",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 2,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/open-higgsfield-ai-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
+    "target_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
+    "topics": [
+      "apple-silicon",
+      "diffusion",
+      "generative-ai",
+      "rust",
+      "video-generation"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-11-01T21:44:37Z"
+  },
+  {
     "name": "rest-api-examples",
     "description": "Simple examples of custom rest endpoints for common WordPress functions",
     "language": "PHP",
@@ -330,32 +356,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-11-01T21:44:27Z"
-  },
-  {
-    "name": "open-higgsfield-ai-rs",
-    "description": "Open-source video generation and motion-guided neural synthesis pipeline in Rust",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 1,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
-    "has_benchmarks": true,
-    "benchmark_url": "https://github.com/bhubbard/open-higgsfield-ai-rs/blob/main/BENCHMARKS.md",
-    "github_url": "https://github.com/bhubbard/open-higgsfield-ai-rs",
-    "target_url": "https://code.brandonhubbard.com/open-higgsfield-ai-rs/",
-    "topics": [
-      "apple-silicon",
-      "diffusion",
-      "generative-ai",
-      "rust",
-      "video-generation"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-11-01T21:44:37Z"
   },
   {
     "name": "openrw-rs",
@@ -1239,7 +1239,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-14T12:35:17Z"
+    "pushed_at": "2026-11-15T13:00:18Z"
   },
   {
     "name": "box3d-rs",
