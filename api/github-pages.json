@@ -326,6 +326,26 @@
     "pushed_at": "2020-02-04T18:14:34Z"
   },
   {
+    "name": "kubeezcut-rs",
+    "description": "High-performance, pure Rust port of KubeezMedia/KubeezCut \u2014 modern non-linear video editing (NLE) engine, WebGPU shader effects, keyframe Bezier animation, and headless render export.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/kubeezcut-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/kubeezcut-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/kubeezcut-rs",
+    "target_url": "https://code.brandonhubbard.com/kubeezcut-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-01T21:44:26Z"
+  },
+  {
     "name": "kumo-drift-checks",
     "description": "Automated UI design token drift detection and consistency verification utility",
     "language": "JavaScript",
@@ -356,6 +376,59 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-11-01T21:44:27Z"
+  },
+  {
+    "name": "mlt-rs",
+    "description": "Pure Rust port of MLT multimedia framework engine for video playback, mixing, and filters",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/mlt-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/mlt-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/mlt-rs",
+    "target_url": "https://code.brandonhubbard.com/mlt-rs/",
+    "topics": [
+      "audio-mixer",
+      "mlt",
+      "multimedia",
+      "rust",
+      "streaming",
+      "video-processing"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-11-01T21:44:31Z"
+  },
+  {
+    "name": "olive-rs",
+    "description": "Pure Rust port of Olive video editor non-linear timeline and node compositor engine",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/olive-rs/",
+    "has_benchmarks": true,
+    "benchmark_url": "https://github.com/bhubbard/olive-rs/blob/main/BENCHMARKS.md",
+    "github_url": "https://github.com/bhubbard/olive-rs",
+    "target_url": "https://code.brandonhubbard.com/olive-rs/",
+    "topics": [
+      "node-compositor",
+      "rust",
+      "timeline",
+      "video-editor",
+      "video-processing"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-11-01T21:44:36Z"
   },
   {
     "name": "openrw-rs",
@@ -1239,7 +1312,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-15T13:00:18Z"
+    "pushed_at": "2026-11-16T14:04:57Z"
   },
   {
     "name": "box3d-rs",
@@ -1912,26 +1985,6 @@
     "pushed_at": "2026-11-01T21:44:25Z"
   },
   {
-    "name": "kubeezcut-rs",
-    "description": "High-performance, pure Rust port of KubeezMedia/KubeezCut \u2014 modern non-linear video editing (NLE) engine, WebGPU shader effects, keyframe Bezier animation, and headless render export.",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/kubeezcut-rs/",
-    "has_benchmarks": true,
-    "benchmark_url": "https://github.com/bhubbard/kubeezcut-rs/blob/main/BENCHMARKS.md",
-    "github_url": "https://github.com/bhubbard/kubeezcut-rs",
-    "target_url": "https://code.brandonhubbard.com/kubeezcut-rs/",
-    "topics": [],
-    "is_archived": false,
-    "pushed_at": "2026-11-01T21:44:26Z"
-  },
-  {
     "name": "latentsync-rs",
     "description": "High-performance Rust port of LatentSync: audio-conditioned latent diffusion for temporally consistent lip-sync video synthesis.",
     "language": "Rust",
@@ -2136,33 +2189,6 @@
     "pushed_at": "2026-11-01T21:44:33Z"
   },
   {
-    "name": "mlt-rs",
-    "description": "Pure Rust port of MLT multimedia framework engine for video playback, mixing, and filters",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/mlt-rs/",
-    "has_benchmarks": true,
-    "benchmark_url": "https://github.com/bhubbard/mlt-rs/blob/main/BENCHMARKS.md",
-    "github_url": "https://github.com/bhubbard/mlt-rs",
-    "target_url": "https://code.brandonhubbard.com/mlt-rs/",
-    "topics": [
-      "audio-mixer",
-      "mlt",
-      "multimedia",
-      "rust",
-      "streaming",
-      "video-processing"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-11-01T21:44:31Z"
-  },
-  {
     "name": "mlx-audio-rs",
     "description": "On-device speech recognition and neural audio synthesis via MLX in Rust",
     "language": "Rust",
@@ -2334,32 +2360,6 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-11-01T21:46:48Z"
-  },
-  {
-    "name": "olive-rs",
-    "description": "Pure Rust port of Olive video editor non-linear timeline and node compositor engine",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/olive-rs/",
-    "has_benchmarks": true,
-    "benchmark_url": "https://github.com/bhubbard/olive-rs/blob/main/BENCHMARKS.md",
-    "github_url": "https://github.com/bhubbard/olive-rs",
-    "target_url": "https://code.brandonhubbard.com/olive-rs/",
-    "topics": [
-      "node-compositor",
-      "rust",
-      "timeline",
-      "video-editor",
-      "video-processing"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-11-01T21:44:36Z"
   },
   {
     "name": "open-generative-ai-rs",
