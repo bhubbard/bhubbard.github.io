@@ -3,7 +3,7 @@
   <!-- Root Flagship Engineering Portal -->
   <url>
     <loc>https://code.brandonhubbard.com/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -356,6 +356,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://code.brandonhubbard.com/littlebit-rs/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://code.brandonhubbard.com/locals/</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -634,6 +640,12 @@
   <url>
     <loc>https://code.brandonhubbard.com/translate-rs/</loc>
     <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code.brandonhubbard.com/tufazip-rs/</loc>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
