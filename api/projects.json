@@ -587,6 +587,33 @@
     "pushed_at": "2026-09-26T16:29:54Z"
   },
   {
+    "name": "tufazip-rs",
+    "description": "Pure-Rust port of Tufalabs/tufazip (tufazip v2): neural lossless data compressor and decompressor",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 1,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/tufazip-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/tufazip-rs",
+    "target_url": "https://code.brandonhubbard.com/tufazip-rs/",
+    "topics": [
+      "arithmetic-coding",
+      "candle",
+      "compression",
+      "neural-compression",
+      "rust",
+      "transformer"
+    ],
+    "is_archived": false,
+    "pushed_at": "2026-11-20T20:59:20Z"
+  },
+  {
     "name": "vhud-rs",
     "description": "Pure Rust GTA V radar, minimap projection, blip clamping, and GPS route rendering",
     "language": "Rust",
@@ -1312,7 +1339,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-20T14:27:04Z"
+    "pushed_at": "2026-11-21T13:46:40Z"
   },
   {
     "name": "box3d-rs",
@@ -2947,33 +2974,6 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-11-01T21:44:53Z"
-  },
-  {
-    "name": "tufazip-rs",
-    "description": "Pure-Rust port of Tufalabs/tufazip (tufazip v2): neural lossless data compressor and decompressor",
-    "language": "Rust",
-    "category": "cli",
-    "categories": [
-      "cli",
-      "rust"
-    ],
-    "stars": 0,
-    "has_pages": true,
-    "page_url": "https://code.brandonhubbard.com/tufazip-rs/",
-    "has_benchmarks": false,
-    "benchmark_url": null,
-    "github_url": "https://github.com/bhubbard/tufazip-rs",
-    "target_url": "https://code.brandonhubbard.com/tufazip-rs/",
-    "topics": [
-      "arithmetic-coding",
-      "candle",
-      "compression",
-      "neural-compression",
-      "rust",
-      "transformer"
-    ],
-    "is_archived": false,
-    "pushed_at": "2026-11-20T20:59:20Z"
   },
   {
     "name": "unlighthouse-rs",
