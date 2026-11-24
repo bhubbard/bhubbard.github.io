@@ -1339,7 +1339,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-22T13:39:51Z"
+    "pushed_at": "2026-11-23T16:36:45Z"
   },
   {
     "name": "box3d-rs",
@@ -3503,6 +3503,26 @@
     "pushed_at": "2026-11-14T05:38:58Z"
   },
   {
+    "name": "gs-quant-skills-rs",
+    "description": "Pure Rust fork of Goldman Sachs gs_quant/skills with offline pricing, scenarios, volatility, and backtesting engine",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/gs-quant-skills-rs",
+    "target_url": "https://github.com/bhubbard/gs-quant-skills-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-23T17:50:57Z"
+  },
+  {
     "name": "mailflare",
     "description": "Email for professionals and teams",
     "language": "Code",
@@ -3666,5 +3686,24 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-11-09T04:52:17Z"
+  },
+  {
+    "name": "postiz-app",
+    "description": "\ud83d\udce8 The ultimate agentic social media scheduling tool \ud83e\udd16",
+    "language": "Code",
+    "category": "tools",
+    "categories": [
+      "tools"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/postiz-app",
+    "target_url": "https://github.com/bhubbard/postiz-app",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-23T19:18:07Z"
   }
 ]
