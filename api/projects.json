@@ -611,7 +611,7 @@
       "transformer"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-20T20:59:20Z"
+    "pushed_at": "2026-11-25T05:58:21Z"
   },
   {
     "name": "vhud-rs",
@@ -1339,7 +1339,7 @@
       "web-performance"
     ],
     "is_archived": false,
-    "pushed_at": "2026-11-23T16:36:45Z"
+    "pushed_at": "2026-11-24T16:33:45Z"
   },
   {
     "name": "box3d-rs",
@@ -1990,6 +1990,26 @@
     ],
     "is_archived": true,
     "pushed_at": "2024-04-11T09:43:13Z"
+  },
+  {
+    "name": "juicefs-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": true,
+    "page_url": "https://code.brandonhubbard.com/juicefs-rs/",
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/juicefs-rs",
+    "target_url": "https://code.brandonhubbard.com/juicefs-rs/",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T02:23:06Z"
   },
   {
     "name": "kadraj",
@@ -3444,6 +3464,26 @@
     "pushed_at": "2026-11-02T03:57:26Z"
   },
   {
+    "name": "docetl-rs",
+    "description": "Pure-Rust port of ucbepic/docetl \u2014 declarative LLM map-reduce engine",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/docetl-rs",
+    "target_url": "https://github.com/bhubbard/docetl-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:42Z"
+  },
+  {
     "name": "dossier",
     "description": "A self-hosted job search and resume builder app that writes tailored resumes and cover letters from your profile.",
     "language": "TypeScript",
@@ -3461,6 +3501,26 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-11-06T06:01:00Z"
+  },
+  {
+    "name": "e-means-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/e-means-rs",
+    "target_url": "https://github.com/bhubbard/e-means-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T02:19:21Z"
   },
   {
     "name": "elephant-goldfish-model-rs",
@@ -3481,6 +3541,26 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-11-20T18:35:35Z"
+  },
+  {
+    "name": "genie-worksheets-rs",
+    "description": "Pure-Rust port of stanford-oval/genie-worksheets \u2014 conversational task worksheets",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/genie-worksheets-rs",
+    "target_url": "https://github.com/bhubbard/genie-worksheets-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:35Z"
   },
   {
     "name": "grenade",
@@ -3520,7 +3600,67 @@
     "target_url": "https://github.com/bhubbard/gs-quant-skills-rs",
     "topics": [],
     "is_archived": false,
-    "pushed_at": "2026-11-23T17:50:57Z"
+    "pushed_at": "2026-11-25T05:58:23Z"
+  },
+  {
+    "name": "headroom-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/headroom-rs",
+    "target_url": "https://github.com/bhubbard/headroom-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T06:08:02Z"
+  },
+  {
+    "name": "llmcer-rs",
+    "description": "Pure-Rust port of ZJU-DAILY/LLMCER \u2014 parallelized LLM entity resolution",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/llmcer-rs",
+    "target_url": "https://github.com/bhubbard/llmcer-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:37Z"
+  },
+  {
+    "name": "lmql-rs",
+    "description": "Pure-Rust port of eth-sri/lmql \u2014 constraint-guided LLM query language",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/lmql-rs",
+    "target_url": "https://github.com/bhubbard/lmql-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:23Z"
   },
   {
     "name": "mailflare",
@@ -3540,6 +3680,46 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-11-15T21:12:29Z"
+  },
+  {
+    "name": "matchgpt-rs",
+    "description": "Pure-Rust port of wbsg-uni-mannheim/MatchGPT \u2014 LLM entity matching",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/matchgpt-rs",
+    "target_url": "https://github.com/bhubbard/matchgpt-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:40Z"
+  },
+  {
+    "name": "minions-rs",
+    "description": "Pure-Rust port of HazyResearch/minions \u2014 local-cloud LLM collaboration protocol",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/minions-rs",
+    "target_url": "https://github.com/bhubbard/minions-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:15Z"
   },
   {
     "name": "mlx-d1-gestures-rs",
@@ -3567,6 +3747,26 @@
     ],
     "is_archived": false,
     "pushed_at": "2026-11-16T06:18:08Z"
+  },
+  {
+    "name": "ncm-rs",
+    "description": "Open source software and systems engineering by Brandon Hubbard.",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/ncm-rs",
+    "target_url": "https://github.com/bhubbard/ncm-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T05:36:44Z"
   },
   {
     "name": "open-3d-skills",
@@ -3705,5 +3905,125 @@
     "topics": [],
     "is_archived": false,
     "pushed_at": "2026-11-23T19:18:07Z"
+  },
+  {
+    "name": "qserve-rs",
+    "description": "Pure-Rust port of mit-han-lab/qserve \u2014 W4A8KV4 QoQ quantization and serving",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/qserve-rs",
+    "target_url": "https://github.com/bhubbard/qserve-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:21Z"
+  },
+  {
+    "name": "qtip-rs",
+    "description": "Pure-Rust port of Cornell-RelaxML/qtip \u2014 trellis-coded 2-bit quantization",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/qtip-rs",
+    "target_url": "https://github.com/bhubbard/qtip-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:19Z"
+  },
+  {
+    "name": "quip-sharp-rs",
+    "description": "Pure-Rust port of Cornell-RelaxML/quip-sharp \u2014 2-bit E8P lattice quantization",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/quip-sharp-rs",
+    "target_url": "https://github.com/bhubbard/quip-sharp-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:17Z"
+  },
+  {
+    "name": "skypilot-rs",
+    "description": "Pure-Rust port of skypilot-org/skypilot \u2014 multi-cloud compute broker",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/skypilot-rs",
+    "target_url": "https://github.com/bhubbard/skypilot-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:33Z"
+  },
+  {
+    "name": "storm-rs",
+    "description": "Pure-Rust port of stanford-oval/storm \u2014 multi-agent knowledge curation pipeline",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/storm-rs",
+    "target_url": "https://github.com/bhubbard/storm-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:26Z"
+  },
+  {
+    "name": "thunderkittens-rs",
+    "description": "Pure-Rust port of HazyResearch/ThunderKittens \u2014 tile primitives & FlashAttention",
+    "language": "Rust",
+    "category": "cli",
+    "categories": [
+      "cli",
+      "rust"
+    ],
+    "stars": 0,
+    "has_pages": false,
+    "page_url": null,
+    "has_benchmarks": false,
+    "benchmark_url": null,
+    "github_url": "https://github.com/bhubbard/thunderkittens-rs",
+    "target_url": "https://github.com/bhubbard/thunderkittens-rs",
+    "topics": [],
+    "is_archived": false,
+    "pushed_at": "2026-11-25T07:01:31Z"
   }
 ]
